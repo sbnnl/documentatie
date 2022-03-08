@@ -1,2 +1,3 @@
-# documentatie
-Product documentatie van SBN.
+# Documentatie
+
+Product documentatie van Sociale Banken Nederland.
