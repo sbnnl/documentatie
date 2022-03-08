@@ -1,4 +1,5 @@
-azure-static-web-app:
+hosting:
+  type: azure-static-web-app
   privateAccess:
     roles:
       - beheerder
@@ -9,7 +10,7 @@ azure-static-web-app:
 
   routes:
     signOut: 
-      name: afmelden
+      text: afmelden
       route: /afmelden
 
   responseOverrides:
