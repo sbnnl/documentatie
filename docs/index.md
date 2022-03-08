@@ -25,7 +25,7 @@ Het WBF verwezenlijkt deze doelstelling door:
 
 Het werk van het WBF is belegd bij twee stichtingen:
 
-• Stichting Bemiddeling en Fondsbeheer (SBF) 
-• Stichting Sociale Banken Nederland (SBN)
+* Stichting Bemiddeling en Fondsbeheer (SBF) 
+* Stichting Sociale Banken Nederland (SBN)
 
 De Stichting SBN sluit straks overeenkomsten met de kredietbanken om garant te staan voor afgesloten Saneringskredieten. In de begroting zijn wij in eerste instantie uitgegaan van ca. 5000 - 15000 te borgen kredieten per jaar.
