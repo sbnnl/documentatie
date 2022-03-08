@@ -1,3 +1,4 @@
+theme: sbn.css
 hosting:
   type: azure-static-web-app
   privateAccess:
