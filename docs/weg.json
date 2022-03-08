@@ -1,0 +1,50 @@
+{
+    "routes": [
+        {
+            "route": "/*",
+            "allowedRoles": [
+                "beheerder",
+                "sbn",
+                "kredietbank"
+            ]
+        },
+        {
+            "route": "/aangemeld",
+            "allowedRoles": [
+                "authenticated"
+            ]
+        },
+        {
+            "route": "/aanmelden",
+            "allowedRoles": [
+                "anonymous"
+            ]
+        },
+        {
+            "route": "/afmelden",
+            "redirect": "/.auth/logout"
+        }
+    ],
+    "responseOverrides": {
+        "401": {
+            "redirect": "/aanmelden",
+            "statusCode": 302
+        },
+        "403": {
+            "rewrite": "/niet-geautoriseerd"
+        },
+        "404": {
+            "rewrite": "/404.html"
+        }
+    },
+    "auth": {
+        "identityProviders": {
+            "google": {
+                "registration": {
+                    "clientIdSettingName": "383519636291-gle4b7joqd0b83s7ruqr806a4r3964v0.apps.googleusercontent.com",
+                    "clientSecretSettingName": "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"
+                }
+            }
+        }
+    }
+}

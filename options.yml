@@ -1,0 +1,17 @@
+azure-static-web-app:
+  privateAccess:
+    roles:
+      - beheerder
+      - sbn
+      - kredietbank
+    providers:
+      - github
+
+  routes:
+    signOut: 
+      name: afmelden
+      route: /afmelden
+
+  responseOverrides:
+    401: /aanmelden
+    403: /aangemeld
