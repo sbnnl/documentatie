@@ -13,8 +13,8 @@ het saneringskrediet aan de kredietbank. Omdat kredietbanken soms aan gemeenten 
 
 ## Missie
 
-> De missie van het Waarborgfonds Saneringskredieten is:
-> 
+De missie van het Waarborgfonds Saneringskredieten is:
+ 
 > Saneringskredieten aantrekkelijker en toegankelijker maken voor gemeenten om zo de effectiviteit van de hele ketenaanpak rondom problematische schulden te vergroten.
 
 Het WBF verwezenlijkt deze doelstelling door:
