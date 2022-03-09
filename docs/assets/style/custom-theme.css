@@ -34,6 +34,17 @@
     --drop-shadow-level2: 0 .25rem 1rem rgba(60, 42, 96, .1);
 }
 
+header .logo {
+    display: none;
+}
+
+header .logo img {
+    height: 3.25rem;
+    object-fit: cover;
+    object-position: left;
+    width: 3.25rem;
+}
+
 header a:focus,
 header a:hover {
     background-color: var(--sbn-color-purple-surface);
@@ -50,4 +61,23 @@ header a[aria-expanded="true"] {
 
 main > aside > div:first-child {
     border-bottom-color: var(--color-black-a10);
+}
+
+@media (min-width: 40rem) {
+    header .logo {
+        display: block;
+    }
+
+    header .logo img {
+        height: 5rem;
+        width: 5rem;
+    }
+}
+
+@media (min-width: 70rem) {
+    header .logo img {
+        height: auto;
+        width: auto;
+        object-fit: initial;
+    }
 }
