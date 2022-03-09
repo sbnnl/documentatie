@@ -1,3 +1,4 @@
+locale: nl
 hosting:
   type: azure-static-web-app
   privateAccess:
