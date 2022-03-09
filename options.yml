@@ -1,4 +1,4 @@
-theme: sbn.css
+theme: theme.css
 hosting:
   type: azure-static-web-app
   privateAccess:
@@ -10,7 +10,7 @@ hosting:
       - github
 
   routes:
-    signOut: 
+    logout: 
       text: afmelden
       route: /afmelden
 
