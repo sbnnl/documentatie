@@ -1,0 +1,46 @@
+:root {
+  /* Colors */
+  --sbn-color-purple: #3C2A60;
+  --sbn-color-purple-surface: #D9D3DE;
+  --sbn-color-aqua: #6CCACF;
+  --sbn-color-aqua-surface: #CFE5E8;
+  --sbn-color-aqua-dark: #6aa7b7;
+
+  /* Theming */
+  --background-color-base: var(--sbn-color-aqua-surface);
+  --text-color-heading: var(--sbn-color-purple);
+
+  /* Radii */
+  --radius-base: 1.5rem;
+
+  /* Header */
+  --header-background-color: var(--color-white);
+  --header-text-color: var(--sbn-color-purple);
+  /*--menu-text-color: var(--color-grey-900);*/
+
+  /* Aside */
+  --aside-background-color: var(--color-white);
+  --aside-text-color: var(--sbn-color-purple);
+
+  /* Shadow */
+  --drop-shadow-base: 0 .125rem 1.25rem rgba(60, 42, 96, .05);
+  --drop-shadow-level2: 0 .25rem 1rem rgba(60, 42, 96, .1);
+}
+
+header a:focus,
+header a:hover {
+  background-color: var(--sbn-color-purple-surface);
+}
+
+header a:active {
+  background-color: transparent;
+}
+
+header a[aria-expanded="true"] {
+  background-color: var(--sbn-color-purple-surface);
+  color: var(--sbn-color-purple);
+}
+
+main > aside > div:first-child {
+  border-bottom-color: var(--color-black-a10);
+}
