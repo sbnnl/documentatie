@@ -1,5 +1,4 @@
 locale: nl
-logo: assets/images/cropped-logo-sbn-name-1.png
 hosting:
   type: azure-static-web-app
   privateAccess:

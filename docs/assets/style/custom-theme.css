@@ -34,11 +34,7 @@
     --drop-shadow-level2: 0 .25rem 1rem rgba(60, 42, 96, .1);
 }
 
-header .logo {
-    display: none;
-}
-
-header .logo img {
+header .bar .logo img {
     height: 3.25rem;
     object-fit: cover;
     object-position: left;
@@ -64,18 +60,18 @@ main > aside > div:first-child {
 }
 
 @media (min-width: 40rem) {
-    header .logo {
+    header .bar .logo {
         display: block;
     }
 
-    header .logo img {
+    header .bar .logo img {
         height: 5rem;
         width: 5rem;
     }
 }
 
 @media (min-width: 70rem) {
-    header .logo img {
+    header .bar .logo img {
         height: auto;
         width: auto;
         object-fit: initial;
