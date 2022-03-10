@@ -8,6 +8,11 @@
 * Wat moet het product kunnen?
 * Waar moet het aan voldoen om succesvol te zijn?
 
+## Proces
+
+* [Proces](proces.bpmn)
+* [Acceptatie criteria](proces.feature)
+
 ## Business requirements
 
 Wat zijn de (non)functionele requirements? Denk hierbij aan zaken als doorlooptijd, vierogenprincipe, etc.
