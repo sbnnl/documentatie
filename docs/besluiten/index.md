@@ -4,4 +4,4 @@ Dit zijn de architectuur besluiten die genomen zijn in volgorde van besluit datu
 
 | Nummer | Besluit                                                                                              | Datum         | Auteur                |
 | ------ | ---------------------------------------------------------------------------------------------------- |-------------- | --------------------- |
-| 1      | [Open voor uitbreidingen en gesloten voor wijzigingen](besluit-1/index.md)                           | 10-03-2021    | Arjan Geertsema       |
+| 1      | [Open voor uitbreiding en gesloten voor wijziging](besluit-1/index.md)                               | 10-03-2021    | Arjan Geertsema       |
