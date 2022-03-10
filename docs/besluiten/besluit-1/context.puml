@@ -29,34 +29,20 @@ cloud "Kredietbank D" {
     KbcAllegro <--> KbcAdapter
 }
 
-cloud "Kredietbank E" {
-    [Allegro V1] as KbdAllegro
-    [Adapter] as KbdAdapter
-
-    KbdAdapter <--> KbdAllegro
-}
-
-cloud "Kredietbank F" {
-    [Allegro V2] as KbeAllegro
-    [Adapter] as KbeAdapter
-
-    KbeAdapter <--> KbeAllegro
-}
-
-cloud "SBN" {
+cloud "Sociale Banken Nederland" {
     [Waarborgfonds] as WBF
+    () "API" as API
     [Schuldenknooppunt]    
     [Adapter] as SchuldenknooppuntAdapter
+
+    API --> WBF
+    API <-- SchuldenknooppuntAdapter
+    SchuldenknooppuntAdapter <--> Schuldenknooppunt
 }
 
-KbfAdapter <--> WBF
-KbaAdapter <--> WBF
-KbbAdapter <--> WBF
-KbcAdapter <--> WBF
-WBF <--> SchuldenknooppuntAdapter
-SchuldenknooppuntAdapter <--> Schuldenknooppunt
-
-Schuldenknooppunt <--> KbdAdapter
-Schuldenknooppunt <--> KbeAdapter
+KbfAdapter --> API
+KbaAdapter --> API
+KbbAdapter --> API
+KbcAdapter --> API
 
 @enduml
