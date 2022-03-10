@@ -23,8 +23,8 @@
     - te vorderen kredietvergoeding
   text: Kredietvergoeding over de reeds vervallen termijnen van het saneringskrediet.
 - alias:
-    - Stichting Bemiddeling en Fondsbeheer
     - Stichting Bemiddeling en Fondsbeheer (SBF)
+    - Stichting Bemiddeling en Fondsbeheer
     - SBF
   text: |
     Stichting Bemiddeling en Fondsbeheer (SBF) beheert de middelen van het waarborgfonds, sluit formele overeenkomsten met kredietbanken en verricht alle betalingen (te innen premies en uit te keren middelen). 
@@ -38,3 +38,27 @@
     Stichting Sociale Banken Nederland (SBN) gaat over de uitvoering. Dat houdt onder andere in: het dagelijkse contact en voorbereiden overeenkomsten met kredietbanken, de registratie van borgstellingen, behandelen van aanvragen voor uitkeringen uit het waarborgfonds en continue monitoring. 
     
     De bemensing van SBN bestaat uit een programmamanager en een aantal ondersteunende medewerkers.
+- alias:
+    - Waarborgfonds voor saneringskredieten
+    - Waarborgfonds
+    - WBF
+  text: |
+    @Frank graag hier een definite van het WBF.
+- alias:
+    - kredietbanken
+    - kredietbank
+  text: |
+    @Frank graag hier een definite van een kredietbank  
+- alias:
+    - Allegro
+  text: |
+    @Frank graag hier een definite van een kredietbank
+- alias:
+    - Stratech
+  text: |
+    @Frank graag hier een definite van een kredietbank
+- alias:
+    - Schuldenknooppunt
+  text: |
+    @Frank graag hier een definite van een kredietbank
+

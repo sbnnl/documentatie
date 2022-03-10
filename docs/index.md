@@ -29,3 +29,17 @@ Het werk van het WBF is belegd bij twee stichtingen:
 * Stichting Sociale Banken Nederland (SBN)
 
 De Stichting SBN sluit straks overeenkomsten met de kredietbanken om garant te staan voor afgesloten Saneringskredieten. In de begroting zijn wij in eerste instantie uitgegaan van ca. 5000 - 15000 te borgen kredieten per jaar.
+
+## Randvoorwaarden
+
+@Frank zou je hier nog algemene randvoorwaarden kunnen formuleren die we kunnen gebruiken voor de vertaling naar product doelen en doelstellingen?
+
+* De meeste kredietbanken maken gebruik van Allegro en enkele van Stratech, het ontwerp dient hierbij aan te sluiten.
+* Idealiter wordt voor gegevensuitwisseling gebruik gemaakt van het Schuldenknooppunt. Indien er gegronde redenen zijn hiervan af te wijken, is dat wel mogelijk.
+* Het ontwerp moet tot minimale extra werklast aan de kant van de kredietbanken leiden
+* Uitwisseling van gegevens dient in lijn met de AVG wetgeving te gebeuren
+* **Handelingen zijn herleidbaar:** Elke handeling moet herleidbaar zijn naar een persoon of systeem.
+* **Vierogenprincipe:** Het vierogenprincipe stelt dat voor bepaalde handelingen altijd 2 mensen nodig zijn. Zodat zij elkaar kunnen controleren. Dit om fraude of andere misstanden te voorkomen. 
+* **Minimalisatie van operationele werkzaamheden:** @Frank
+* **Data minimalisatie:** In het ontwerp moet gewaarborgd worden dat er niet méér persoonsgegevens verwerkt worden dan strikt noodzakelijk voor het doel van de verwerking.
+
