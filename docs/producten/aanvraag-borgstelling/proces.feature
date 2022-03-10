@@ -2,19 +2,19 @@
 Functionaliteit: Proces
 
   Scenario: Borgstelling aanvraag beneden 5000 euro vraag geen maatwerk
-    Gegeven proces informatie "{ Bedrag: 4999 }"
+    Gegeven proces informatie "{ Kredietsom: 4999 }"
     Wanneer taak "activity-bepaal-maatwerk" is uitgevoerd
-    Dan is proces informatie "{ Bedrag: 4999, Maatwerk: false }"
+    Dan is proces informatie "{ Kredietsom: 4999, Maatwerk: false }"
 
   Scenario: Borgstelling aanvraag vanaf 5000 euro vraagt om maatwerk
-    Gegeven proces informatie "{ Bedrag: 5000 }"
+    Gegeven proces informatie "{ Kredietsom: 5000 }"
     Wanneer taak "activity-bepaal-maatwerk" is uitgevoerd
-    Dan is proces informatie "{ Bedrag: 5000, Maatwerk: true }"
+    Dan is proces informatie "{ Kredietsom: 5000, Maatwerk: true }"
 
   Scenario: Borgstelling aanvraag vanuit een portefeuille overname vraag nooit om maatwerk
-    Gegeven proces informatie "{ Bedrag: 5000, AanmaakReden: 'Overname' }"
+    Gegeven proces informatie "{ Kredietsom: 5000, AanmaakReden: 'Overname' }"
     Wanneer taak "activity-bepaal-maatwerk" is uitgevoerd
-    Dan is proces informatie "{ Bedrag: 5000, AanmaakReden: 'Overname', Maatwerk: false }"
+    Dan is proces informatie "{ Kredietsom: 5000, AanmaakReden: 'Overname', Maatwerk: false }"
 
   Scenario: Maatwerk
     Gegeven proces informatie "{ Maatwerk: true }"
