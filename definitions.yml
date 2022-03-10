@@ -1,40 +1,53 @@
-- alias:
-    - theoretisch saldo
+- name: Theoretisch saldo
   text: Op dag 0 gelijk aan netto kredietsom, daarna theoretische omvang van wat cliënt nog moet terugbetalen als betaalschema volledig volgens plan verloopt. Het theoretisch saldo is dus exclusief kredietvergoeding.
-- alias: 
-    - uitstaand saldo
+- name: Uitstaand saldo
   text: Op dag 0 gelijk aan netto kredietsom, daarna omvang van wat hulvrager nog moet terugbetalen op basis van de werkelijke betalingen. Het uitstaand saldo is dus exclusief kredietvergoeding.
-- alias:
-    - achterstand
+- name: Achterstand
   text: Uitstaand saldo -/- theoretisch saldo
-- alias:
-    - voorstand
+- name: Voorstand
   text: Theoretisch saldo -/- uitstaand saldo
-- alias:
-    - bruto kredietsom
+- name: Bruto kredietsom
   text: Bedrag uitbetaald aan schuldeisers plus een kredietvergoeding uitgaande van maandaflossing maal de looptijd bij aanvang krediet.
-- alias:
-    - netto kredietsom
+- name: Netto kredietsom
   text: Bedrag uitbetaald aan schuldeisers
-- alias:
-    - kredietvergoeding
+- name: Kredietvergoeding
   text: De vergoeding die een kredietbank ontvangt voor de verstrekking en inning van een saneringskrediet.
-- alias:
-    - te vorderen kredietvergoeding
+- name: Te vorderen kredietvergoeding
   text: Kredietvergoeding over de reeds vervallen termijnen van het saneringskrediet.
-- alias:
+- name: Stichting Bemiddeling en Fondsbeheer (SBF)
+  alias:
     - Stichting Bemiddeling en Fondsbeheer
-    - Stichting Bemiddeling en Fondsbeheer (SBF)
     - SBF
   text: |
     Stichting Bemiddeling en Fondsbeheer (SBF) beheert de middelen van het waarborgfonds, sluit formele overeenkomsten met kredietbanken en verricht alle betalingen (te innen premies en uit te keren middelen). 
     
     De bemensing van SBF bestaat uit een fondsmanager. SBF is opdrachtgever van Stichting Sociale Banken Nederland.
-- alias:
-    - Stichting Sociale Banken Nederland (SBN) 
+- name: Stichting Sociale Banken Nederland (SBN)
+  alias:
     - Stichting Sociale Banken Nederland
     - SBN
   text: |
     Stichting Sociale Banken Nederland (SBN) gaat over de uitvoering. Dat houdt onder andere in: het dagelijkse contact en voorbereiden overeenkomsten met kredietbanken, de registratie van borgstellingen, behandelen van aanvragen voor uitkeringen uit het waarborgfonds en continue monitoring. 
     
     De bemensing van SBN bestaat uit een programmamanager en een aantal ondersteunende medewerkers.
+- name: Waarborgfonds voor saneringskredieten (WBF)
+  alias:
+    - Waarborgfonds voor saneringskredieten
+    - Waarborgfonds
+    - WBF
+  text: |
+    @Frank graag hier een definite van het WBF.
+- name: Kredietbank
+  alias:
+    - kredietbanken
+  text: |
+    @Frank graag hier een definite van een kredietbank  
+- name: Allegro
+  text: |
+    @Frank graag hier een definite van een kredietbank
+- name: Stratech
+  text: |
+    @Frank graag hier een definite van een kredietbank
+- name: Schuldenknooppunt
+  text: |
+    @Frank graag hier een definite van een kredietbank
