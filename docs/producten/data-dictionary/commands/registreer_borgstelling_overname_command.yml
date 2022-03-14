@@ -1,0 +1,41 @@
+type: object
+description: |
+  Een borgstelling aanvraag vanuit een portefeuille overname van actieve saneringskredieten.
+
+  @Frank: volgens mij wil je hier nog meer informatie weten zoals bijvoorbeeld de ingansgdatum van het saneringskrediet?
+properties:
+  objectType:
+    type: string
+    example: overname
+  command:
+    $ref: "types/command.yml" 
+  kredietbank_id:    
+    $ref: "../types/kredietbank_id.yml"
+  kenmerk:
+    $ref: "../types/kenmerk_aanvrager.yml"  
+  gemeente:
+    $ref: "../types/gemeente.yml"
+  kredietsom:
+    type: object
+    properties:
+      bruto:
+        $ref: "../types/bruto_kredietsom.yml"
+      netto:
+        $ref: "../types/netto_kredietsom.yml"
+    required:
+      - bruto
+      - netto    
+  aflossing:
+    $ref: "../types/maandaflossing.yml"
+  looptijd:
+    $ref: "../types/looptijd_in_maanden.yml"
+required:
+  - objectType
+  - command
+  - kredietbank_id
+  - kenmerk
+  - gemeente
+  - kredietsom
+  - aflossing
+  - looptijd
+      

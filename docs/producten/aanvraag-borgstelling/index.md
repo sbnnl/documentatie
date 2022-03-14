@@ -8,10 +8,35 @@
 * Wat moet het product kunnen?
 * Waar moet het aan voldoen om succesvol te zijn?
 
+a
+
+* [API](product.openapi.yml)
+* [Acceptatie criteria](product.feature)
+
 ## Proces
 
 * [Proces](proces.bpmn)
 * [Acceptatie criteria](proces.feature)
+
+## Use-cases
+
+Binnen het proces bestaan de volgende use-cases.
+
+### Bepaal maatwerk
+
+
+### Beantwoord aanvullende vragen
+
+### Beoordeel aanvraag
+
+### Maak contract
+
+* [Contract](contract.message.md)
+
+### Aanvraag afgewezen
+
+### Aanvraag goedgekeurd
+
 
 ## Business requirements
 

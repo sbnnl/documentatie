@@ -1,0 +1,37 @@
+openapi: 3.0.3
+
+info:
+  version: 0.0.1
+  title: Waarborgfonds saneringskredieten
+  description: |
+
+paths:
+
+  /api/borgstellingen:
+    post:
+      tags:
+        - borgstellingen
+      summary: Registreer aanvraag borgstelling saneringskrediet
+      operationId: RegistreerBorgstelling
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              oneOf:
+                - $ref: "../data-dictionary/commands/registreer_borgstelling_aanvraag_command.yml"
+                - $ref: "../data-dictionary/commands/registreer_borgstelling_overname_command.yml"
+              discriminator:
+                propertyName: objectType
+                mapping:
+                  aanvraag: "../data-dictionary/commands/registreer_borgstelling_aanvraag_command.yml"
+                  overname: "../data-dictionary/commands/registreer_borgstelling_overname_command.yml"
+      responses:
+        201:
+          $ref: "../data-dictionary/responses/types/201.yml"
+        400:
+          $ref: "../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../data-dictionary/responses/types/403.yml"

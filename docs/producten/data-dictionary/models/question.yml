@@ -1,0 +1,22 @@
+title: question_model
+type: object
+properties:
+  question_id:
+    $ref: "../types/question_id.yml"
+  recieved_on:
+    $ref: "../types/recieved_on.yml"
+  last_activity_on:
+    $ref: "../types/last_activity_on.yml"
+  subject:
+    $ref: "../types/subject.yml"
+  sender:
+    $ref: "../types/sender.yml"
+  status:
+    $ref: "../types/status.yml"
+required:
+  - question_id
+  - recieved_on
+  - last_activity_on
+  - subject
+  - sender
+  - status
