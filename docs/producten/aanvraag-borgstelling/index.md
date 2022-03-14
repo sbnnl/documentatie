@@ -4,6 +4,8 @@
 
 @Frank, graag hier het doel van het product beschrijven:
 
+Een registratie van een nieuw verstrekt saneringskrediet waarvoor het Wsk borg staat. 
+
 * Vertaling van algemene missie, visie, doelen en randvoorwaarden naar product specifieke doelen en doelstellingen.
 * Wat moet het product kunnen?
 * Waar moet het aan voldoen om succesvol te zijn?
