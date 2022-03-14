@@ -10,7 +10,7 @@ Een registratie van een nieuw verstrekt saneringskrediet waarvoor het Wsk borg s
 * Wat moet het product kunnen?
 * Waar moet het aan voldoen om succesvol te zijn?
 
-a
+** **
 
 * [API](product.openapi.yml)
 * [Acceptatie criteria](product.feature)
@@ -33,7 +33,7 @@ Binnen het proces bestaan de volgende use-cases.
 
 ### Maak contract
 
-* [Contract](contract.message.md)
+[Contract](contract.message.md)
 
 ### Aanvraag afgewezen
 
