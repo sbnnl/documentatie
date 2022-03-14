@@ -1,0 +1,57 @@
+openapi: 3.0.3
+
+info:
+  version: 0.0.1
+  title: Waarborgfonds saneringskredieten
+  description: |
+
+paths:
+
+  /api/borgstellingen/beantwoord_aanvullende_vragen_taken/{taak_id}:    
+    parameters:        
+      - $ref: "../data-dictionary/parameters/taak_id.yml"
+    post:
+      tags:
+        - beantwoord aanvullende vragen taken
+      summary: Geeft een beantwoord aanvullende vragen taak.
+      operationId: GeefBeantwoordAanvullendeVragenTaak
+      responses:
+        200:          
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "../data-dictionary/responses/beantwoord_aanvullende_vragen_taak.yml"
+        400:
+          $ref: "../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../data-dictionary/responses/types/403.yml"
+        404:
+          $ref: "../data-dictionary/responses/types/404.yml"
+    put:
+      tags:
+        - beantwoord aanvullende vragen taken
+      summary: Voltooit de beantwoord aanvullende vragen taak.
+      operationId: VoltooiBeantwoordAanvullendeVragenTaak
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              oneOf:
+                - $ref: "../data-dictionary/commands/beantwoord_aanvullende_vragen.yml"
+              discriminator:
+                propertyName: resultaat
+                mapping:
+                    beantwoord: "../data-dictionary/commands/beantwoord_aanvullende_vragen.yml"
+      responses:
+        202:
+          description: Accepted
+        401:
+          $ref: "../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../data-dictionary/responses/types/403.yml"
+        404:
+          $ref: "../data-dictionary/responses/types/404.yml"

@@ -1,0 +1,17 @@
+type: object
+name: Vraag om aanvullende informatie
+description: |
+  
+properties:
+  command:
+    $ref: "types/command.yml"
+  resultaat:
+    $ref: "../types/beoordeel_aanvraag_resultaat.yml"
+  vraag:
+    $ref: "../types/aanvullende_informatie.yml"
+required:
+  - command
+  - resultaat
+  - vraag
+  
+  

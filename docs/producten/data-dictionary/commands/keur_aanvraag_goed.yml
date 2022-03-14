@@ -1,0 +1,13 @@
+type: object
+name: Keur aanvraag goed
+description: |
+  
+properties:
+  command:
+    $ref: "types/command.yml"
+  resultaat:
+    $ref: "../types/beoordeel_aanvraag_resultaat.yml"
+required:
+  - command
+  - resultaat
+  

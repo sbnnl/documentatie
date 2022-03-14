@@ -1,4 +1,6 @@
-type: string
-format: uuid 
-description: Uniek kenmerk van een borgstelling aanvraag.
-example: afa0f657-ba5b-4f6f-bc4e-6ac8dd63d76b
+type: string 
+description: | 
+  Uniek identificerend van het saneringskrediet vastgesteld en geregistreerd door de aanvrager. Dit kenmerk moet uniek zijn voor de aanvrager.
+
+  Dit veld wordt gebruikt om borgstelling aanvragen idempotent te maken.
+example: 5461135-1

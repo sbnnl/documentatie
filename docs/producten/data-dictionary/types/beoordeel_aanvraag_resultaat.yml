@@ -1,0 +1,9 @@
+type: string
+description: |
+  Het antwoord van de aanvrager op de aanvullende informatie vragen van de beoordelaar:
+  
+  * goedgekeurd
+  * afgekeurd:
+  * onvolledig
+
+example: goedgekeurd

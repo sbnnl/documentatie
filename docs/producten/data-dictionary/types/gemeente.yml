@@ -1,4 +1,6 @@
-type: string
-format: uuid 
-description: Uniek kenmerk van een borgstelling aanvraag.
-example: afa0f657-ba5b-4f6f-bc4e-6ac8dd63d76b
+type: integer
+minimum: 1
+maximum: 9999
+description: |
+  [CBS gemeente code.](https://www.cbs.nl/nl-nl/dossier/nederland-regionaal/gemeente/gemeenten-en-regionale-indelingen/codering-gebieden)
+example: 1940

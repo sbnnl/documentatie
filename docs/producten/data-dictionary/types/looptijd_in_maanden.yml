@@ -1,4 +1,6 @@
-type: string
-format: uuid 
-description: Uniek kenmerk van een borgstelling aanvraag.
-example: afa0f657-ba5b-4f6f-bc4e-6ac8dd63d76b
+type: number
+minimum: 1
+maximum: 100
+description: |
+  De looptijd, in maanden, van het saneringskrediet. @Frank wat is de minimum en maximum looptijd?
+example: 36

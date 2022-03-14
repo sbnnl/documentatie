@@ -1,0 +1,5 @@
+type: string
+format: markdown
+description: Het antwoord / antwoorden van de aanvrager op vragen van de beoordelaar van de aanvraag saneringskrediet.
+example: |
+  @Frank?

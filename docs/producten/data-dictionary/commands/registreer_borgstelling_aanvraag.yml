@@ -1,4 +1,5 @@
 type: object
+name: Registreer borgstelling aanvraag
 description: |
   Een aanvraag borgstelling voor een nog te verstrekken saneringskrediet.
 properties:
@@ -36,4 +37,3 @@ required:
   - kredietsom
   - aflossing
   - looptijd
-      

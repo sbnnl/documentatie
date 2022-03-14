@@ -1,0 +1,4 @@
+type: string
+format: markdown
+description: De vraag / vragen die door de aanvrager aanvullend beantwoord moeten worden voordat de aanvraag beoordeeld kan worden.
+example: '@Frank?'

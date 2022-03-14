@@ -1,0 +1,8 @@
+type: string
+description: |  
+  Dit veld wordt gebruikt om de verschillende soorten borgstelling aanvragen te onderscheiden:
+    
+  * **regulier**: reguliere aanvraag van een nog uit te betalen saneringskrediet
+  * **overname**: overname van een bestaande, al uitbetaalde, saneringskrediet
+  
+example: regulier

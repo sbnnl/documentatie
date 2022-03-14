@@ -1,28 +1,38 @@
 #language: nl
 Functionaliteit: Proces
 
-  Scenario: Borgstelling aanvraag beneden 5000 euro vraag geen maatwerk
+  Scenario: Reguliere borgstelling aanvraag beneden 5000 euro wordt goedgekeurd
     Gegeven proces informatie "{ soort_aanvraag: 'regulier', bruto_kredietsom: 4999 }"
-    Wanneer taak "activity-bepaal-maatwerk" is uitgevoerd
-    Dan is proces informatie "{ soort_aanvraag: 'regulier', bruto_kredietsom: 4999, maatwerk: false }"
+    Wanneer taak "taak-bepaal-status" is uitgevoerd
+    Dan is proces informatie "{ soort_aanvraag: 'regulier', bruto_kredietsom: 4999, status: 'goedgekeurd' }"
 
-  Scenario: Borgstelling aanvraag vanaf 5000 euro vraagt om maatwerk
+  Scenario: Reguliere borgstelling aanvraag vanaf 5000 euro vraagt om maatwerk
     Gegeven proces informatie "{ soort_aanvraag: 'regulier', bruto_kredietsom: 5000 }"
-    Wanneer taak "activity-bepaal-maatwerk" is uitgevoerd
-    Dan is proces informatie "{ soort_aanvraag: 'regulier', bruto_kredietsom: 5000, maatwerk: true }"
+    Wanneer taak "taak-bepaal-status" is uitgevoerd
+    Dan is proces informatie "{ soort_aanvraag: 'regulier', bruto_kredietsom: 5000, status: 'maatwerk' }"
 
-  Scenario: Borgstelling aanvraag vanuit een portefeuille overname vraag nooit om maatwerk
-    Gegeven proces informatie "{ soort_aanvraag: 'overname', bruto_kredietsom: 5000 }"
-    Wanneer taak "activity-bepaal-maatwerk" is uitgevoerd
-    Dan is proces informatie "{ soort_aanvraag: 'overname', bruto_kredietsom: 5000, maatwerk: false }"
+  Scenario: Borgstelling aanvraag vanuit een portefeuille overname waarbij het saneringskrediet korter dan 100 dagen loopt wordt goedgekeurd
+    Gegeven proces informatie "{ soort_aanvraag: 'overname', bruto_kredietsom: 5000. dagen_actief: 100 }"
+    Wanneer taak "taak-bepaal-status" is uitgevoerd
+    Dan is proces informatie "{ soort_aanvraag: 'overname', bruto_kredietsom: 5000, status: 'goedgekeurd' }"
+
+  Scenario: Borgstelling aanvraag vanuit een portefeuille overname waarbij het saneringskrediet langer dan 100 dagen loopt wordt afgewezen
+    Gegeven proces informatie "{ soort_aanvraag: 'overname', bruto_kredietsom: 5000. dagen_actief: 101 }"
+    Wanneer taak "taak-bepaal-status" is uitgevoerd
+    Dan is proces informatie "{ soort_aanvraag: 'overname', bruto_kredietsom: 5000, status: 'afgewezen' }"
+
+  Scenario: Goedgekeurd
+    Gegeven proces informatie "{ status: 'goedgekeurd' }"
+    Wanneer poort "gateway-status" is uitgevoerd
+    Dan is route "flow-goedgekeurd" actief
 
   Scenario: Maatwerk
-    Gegeven proces informatie "{ maatwerk: true }"
-    Wanneer poort "gateway-maatwerk" is uitgevoerd
+    Gegeven proces informatie "{ status: 'maatwerk' }"
+    Wanneer poort "poort-status" is uitgevoerd
     Dan is route "flow-maatwerk" actief
 
-  Scenario: Geen maatwerk
-    Gegeven proces informatie "{ maatwerk: false }"
-    Wanneer poort "gateway-maatwerk" is uitgevoerd
-    Dan is route "flow-geen-maatwerk" actief
+  Scenario: Afgewezen
+    Gegeven proces informatie "{ status: 'afgewezen' }"
+    Wanneer poort "poort-afgewezen" is uitgevoerd
+    Dan is route "flow-afgewezen" actief
   

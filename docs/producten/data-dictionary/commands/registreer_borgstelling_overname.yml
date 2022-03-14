@@ -1,14 +1,15 @@
 type: object
+name: Registreer borgstelling overname
 description: |
   Een borgstelling aanvraag vanuit een portefeuille overname van actieve saneringskredieten.
 
   @Frank: volgens mij wil je hier nog meer informatie weten zoals bijvoorbeeld de ingansgdatum van het saneringskrediet?
 properties:
+  command:
+    $ref: "types/command.yml"
   soort_aanvraag:
     type: string
     example: overname
-  command:
-    $ref: "types/command.yml" 
   kredietbank_id:    
     $ref: "../types/kredietbank_id.yml"
   kenmerk:
