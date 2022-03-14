@@ -17,3 +17,15 @@ hosting:
   responseOverrides:
     401: /aanmelden
     403: /aangemeld
+message:
+  footer: |
+    <address>
+        Sociale Banken Nederland.<br>
+        Koningin Wilhelminalaan 5<br>
+        3527 LA Utrecht
+    </address>
+    <p>
+        KvK: 000000<br>
+        BTW: NL 0000000000B01<br>
+        IBAN: NLXXXXXX000000000000000000000000
+    </p>    
