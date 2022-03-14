@@ -30,24 +30,24 @@
     Stichting Sociale Banken Nederland (SBN) gaat over de uitvoering. Dat houdt onder andere in: het dagelijkse contact en voorbereiden overeenkomsten met kredietbanken, de registratie van borgstellingen, behandelen van aanvragen voor uitkeringen uit het waarborgfonds en continue monitoring. 
     
     De bemensing van SBN bestaat uit een programmamanager en een aantal ondersteunende medewerkers.
-- name: Waarborgfonds voor saneringskredieten (WBF)
+- name: Waarborgfonds saneringskredieten (Wsk)
   alias:
-    - Waarborgfonds voor saneringskredieten
+    - Waarborgfonds saneringskredieten
     - Waarborgfonds
-    - WBF
+    - Wsk
   text: |
-    @Frank graag hier een definite van het WBF.
+    Het waarborgfonds saneringskredieten staat borg voor saneringskredieten die door deelnemende kredietbanken verstrekt worden en wordt gerealiseerd door een gedeelde inspanning van SBF en SBN.
 - name: Kredietbank
   alias:
     - kredietbanken
   text: |
-    @Frank graag hier een definite van een kredietbank  
+    Een kredietbank is een private of publieke organisatie die bankcaire activiteiten kan uitvoeren in het kader van een schuldhulpverleningstraject.
 - name: Allegro
   text: |
-    @Frank graag hier een definite van een kredietbank
+    Allegro is een software pakket dat ondersteuning biedt aan alle primaire processen van schuldhulpverleners.
 - name: Stratech
   text: |
-    @Frank graag hier een definite van een kredietbank
+    Stratech is een software pakket dat ondersteuning biedt aan alle primaire processen van schuldhulpverleners.
 - name: Schuldenknooppunt
   text: |
-    @Frank graag hier een definite van een kredietbank
+    Via het Schuldenknooppunt wisselen schuldhulpverleners en schuldeisers standaard berichten uit.
