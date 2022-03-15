@@ -1,6 +1,6 @@
 #language: nl
-Functionaliteit: Registreer aanvraag use-case
-
+Functionaliteit: Maak contract
+  
   Abstract Scenario: Use-case permissie is juist
     Gegeven een gebruiker met de rollen "<rollen>"
     Dan heeft de gebruiker "<wel-niet>" de permissie "MAAK_CONTRACT"

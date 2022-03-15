@@ -12,6 +12,7 @@ Een registratie van een nieuw verstrekt saneringskrediet waarvoor het Wsk borg s
 
 <!-- einde van de lijst -->
 
+* [Dashboard](product.dashboard.yml)
 * [Formulier](product.user-task.yml)
 * [API](product.openapi.yml)
 * [Acceptatie criteria](product.feature)
@@ -88,7 +89,7 @@ Er ontstaat automatisch een taak in de takenlijst van de aanvrager wanneer de be
 Nadat de aanvraag is goedgekeurd wordt er een borgstelling contract aangemaakt.
 
 * [Document](contract.message.md)
-* [Acceptatie criteria](maak-contract-use-case.feature)
+* [Acceptatie criteria](maak-contract.feature)
 
 ### Aanvraag afgewezen
 
