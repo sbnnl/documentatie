@@ -12,7 +12,7 @@ Een registratie van een nieuw verstrekt saneringskrediet waarvoor het Wsk borg s
 
 <!-- einde van de lijst -->
 
-* [Scherm](product.user-task.yml)
+* [Formulier](product.user-task.yml)
 * [API](product.openapi.yml)
 * [Acceptatie criteria](product.feature)
 
@@ -53,7 +53,7 @@ De aanvrager moet aanvullende informatie aanleveren wanneer [bepaal status](#bep
 
 <!-- einde van de lijst -->
 
-* [Taak](geef-aanvullende-informatie.user-task.yml)
+* [Formulier](geef-aanvullende-informatie.user-task.yml)
 * [API](geef-aanvullende-informatie.openapi.yml)
 * [Acceptatie criteria](geef-aanvullende-informatie.feature)
 
@@ -69,7 +69,7 @@ Deze taak kent de volgende uitkomsten:
 
 <!-- einde van de lijst -->
 
-* [Taak](beoordeel-aanvraag.user-task.yml)
+* [Formulier](beoordeel-aanvraag.user-task.yml)
 * [API](beoordeel-aanvraag.openapi.yml)
 * [Acceptatie criteria](beoordeel-aanvraag.feature)
 
@@ -77,20 +77,26 @@ Deze taak kent de volgende uitkomsten:
 
 Er ontstaat automatisch een taak in de takenlijst van de aanvrager wanneer de beoordelaar om aanvullende informatie heeft gevraagd.
 
+<!-- einde van de lijst -->
+
+* [Formulier](beantwoord-aanvullende-vragen.user-task.yml)
+* [API](beantwoord-aanvullende-vragen.openapi.yml)
+* [Acceptatie criteria](beantwoord-aanvullende-vragen.feature)
+
 ### Maak contract
 
 Nadat de aanvraag is goedgekeurd wordt er een borgstelling contract aangemaakt.
 
-* [Contract](contract.message.md)
+* [Document](contract.message.md)
 * [Acceptatie criteria](maak-contract-use-case.feature)
 
 ### Aanvraag afgewezen
 
-De aanvraag afgewezen gebeurtenis wordt gedeeld met de aanvrager.
+De aanvraag afgewezen gebeurtenis wordt toegevoegd aan de gebeurtenis wachtrij van de aanvrager zodat het door de aanvrager verder verwerkt kan worden.
 
 ### Aanvraag goedgekeurd
 
-De aanvraag afgewezen goedgekeurd gebeurtenis wordt gedeeld met de aanvrager.
+De aanvraag afgewezen goedgekeurd gebeurtenis wordt toegevoegd aan de gebeurtenis wachtrij van de aanvrager zodat het door de aanvrager verder verwerkt kan worden.
 
 ## Business requirements
 

@@ -1,0 +1,16 @@
+type: object
+properties:
+  taak_id:
+   $ref: "types/user_task_id.yml"
+  borgstelling_id:
+   $ref: "../types/borgstelling_id.yml"
+  kenmerk:
+   $ref: "../types/kenmerk_aanvrager.yml"
+  vraag:
+    $ref: "../types/aanvullende_vragen.yml"
+required:
+  - taak_id
+  - borgstelling_id
+  - kenmerk
+  - vraag
+   

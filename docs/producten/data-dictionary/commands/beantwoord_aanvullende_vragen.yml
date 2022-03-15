@@ -1,0 +1,15 @@
+allOf:
+  - $ref: "types/command.yml"
+  - type: object
+    title: Beantwoord aanvullende vragen
+    properties:
+      resultaat:
+        allOf:
+          - example: antwoord
+          - $ref: "../types/beantwoord_aanvullende_vragen_resultaat.yml"
+      antwoord:
+        $ref: "../types/antwoord_op_aanvullende_vragen.yml"
+    required:
+      - resultaat
+      - antwoord
+  

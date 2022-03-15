@@ -1,0 +1,6 @@
+type: string
+description: |
+  Het resultaat van de beantwoord aanvullende vragen taak.
+enum:
+  - antwoord
+example: antwoord

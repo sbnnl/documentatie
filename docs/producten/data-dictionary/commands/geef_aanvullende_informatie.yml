@@ -5,7 +5,7 @@ allOf:
     properties:
       resultaat:
         allOf:
-          - example: aanvullene informatie
+          - example: aanvullende informatie
           - $ref: "../types/geef_aanvullende_informatie_resultaat.yml"
       reden_risico_aanvaardbaar:
         $ref: "../types/reden_risico_aanvaardbaar.yml"
@@ -29,6 +29,7 @@ allOf:
       aanvullende_opmerkingen:
         $ref: "../types/aanvullende_opmerkingen.yml"
     required:
+      - resultaat
       - reden_risico_aanvaardbaar
       - terugbetaling_risicos
       - inkomen
