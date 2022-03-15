@@ -1,9 +1,8 @@
 type: string
 description: |
-  Het antwoord van de aanvrager op de aanvullende informatie vragen van de beoordelaar:
-  
-  * goedgekeurd
-  * afgekeurd:
-  * onvolledig
-
+  Het resultaat van de beoordeel borgstelling aanvraag taak.
+enum:
+  - goedgekeurd
+  - afgewezen
+  - onvolledig
 example: goedgekeurd

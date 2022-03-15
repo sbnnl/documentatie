@@ -1,0 +1,6 @@
+type: string
+format: markdown
+title: Bijzondere omstandigheden
+description: Zijn er bijzondere omstandigheden over het verstrekken van dit saneringskrediet waarover u het WBF wilt informeren?
+example: |
+  @Frank?

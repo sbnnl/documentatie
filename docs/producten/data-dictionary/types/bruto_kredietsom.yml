@@ -1,4 +1,8 @@
 type: number
 minimum: 0
-description: 'De bruto kredietsom van de borgstelling aanvraag. @Frank, is er een maximum?'
+title: Bruto kredietsom
+description: |
+  De bruto kredietsom van de borgstelling aanvraag. 
+  
+  @Frank, is er een maximum bedrag?
 example: 535.45

@@ -1,0 +1,6 @@
+type: integer
+minimum: 0
+title: Inkomen
+description: Wat is de (verwachte) hoogte van het inkomen per maand van de klant?
+example: 1532
+

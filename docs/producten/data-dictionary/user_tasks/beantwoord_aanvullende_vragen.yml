@@ -1,6 +1,0 @@
-type: object
-properties:
-  user_task:
-    $ref: "types/user_task.yml"  
-required:
-  - user_task

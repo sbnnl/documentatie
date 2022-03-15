@@ -1,16 +1,15 @@
-type: object
-name: Wijs aanvraag af
-description: |
-  
-properties:
-  command:
-    $ref: "types/command.yml"
-  resultaat:
-    $ref: "../types/beoordeel_aanvraag_resultaat.yml"
-  reden:
-    $ref: "../types/afwijs_reden.yml"
-required:
-  - command
-  - resultaat
-  - reden
-  
+allOf:
+  - $ref: "types/command.yml"
+  - type: object
+    title: Wijs aanvraag af
+    properties:
+      resultaat:
+        allOf:
+          - example: afgewezen
+          - $ref: "../types/beoordeel_aanvraag_resultaat.yml"
+      reden:
+        $ref: "../types/afwijs_reden.yml"
+    required:
+      - resultaat
+      - reden
+      

@@ -1,39 +1,39 @@
-type: object
-name: Registreer borgstelling aanvraag
-description: |
-  Een aanvraag borgstelling voor een nog te verstrekken saneringskrediet.
-properties:
-  soort_aanvraag:
-    type: string
-    example: regulier
-  command:
-    $ref: "types/command.yml"  
-  kredietbank_id:    
-    $ref: "../types/kredietbank_id.yml"
-  kenmerk:
-    $ref: "../types/kenmerk_aanvrager.yml"  
-  gemeente:
-    $ref: "../types/gemeente.yml"
-  kredietsom:
-    type: object
+allOf:  
+  - $ref: "types/command.yml"
+  - type: object
+    title: Registreer borgstelling aanvraag
+    description: |
+      Een aanvraag borgstelling voor een nog te verstrekken saneringskrediet.
     properties:
-      bruto:
-        $ref: "../types/bruto_kredietsom.yml"
-      netto:
-        $ref: "../types/netto_kredietsom.yml"
+      soort_aanvraag:
+        type: string
+        example: regulier
+      kredietbank_id:    
+        $ref: "../types/kredietbank_id.yml"
+      kenmerk:
+        $ref: "../types/kenmerk_aanvrager.yml"  
+      gemeente:
+        $ref: "../types/gemeente.yml"
+      kredietsom:
+        type: object
+        title: Kredietsom
+        properties:
+          bruto:
+            $ref: "../types/bruto_kredietsom.yml"
+          netto:
+            $ref: "../types/netto_kredietsom.yml"
+        required:
+          - bruto
+          - netto    
+      aflossing:
+        $ref: "../types/maandaflossing.yml"
+      looptijd:
+        $ref: "../types/looptijd_in_maanden.yml"
     required:
-      - bruto
-      - netto    
-  aflossing:
-    $ref: "../types/maandaflossing.yml"
-  looptijd:
-    $ref: "../types/looptijd_in_maanden.yml"
-required:
-  - objectType
-  - command
-  - kredietbank_id
-  - kenmerk
-  - gemeente
-  - kredietsom
-  - aflossing
-  - looptijd
+      - soort_aanvraag
+      - kredietbank_id
+      - kenmerk
+      - gemeente
+      - kredietsom
+      - aflossing
+      - looptijd

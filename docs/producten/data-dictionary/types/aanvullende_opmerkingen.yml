@@ -1,0 +1,6 @@
+type: string
+format: markdown
+title: Opmerkingen
+description: Ruimte voor eventuele opmerkingen
+example: |
+  @Frank?

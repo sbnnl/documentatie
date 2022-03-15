@@ -1,8 +1,0 @@
-type: object
-properties:
-  response:
-    $ref: "types/response.yml"
-  taak:
-    $ref: "../user_tasks/beantwoord_aanvullende_vragen.yml"
-required:
-  - taak

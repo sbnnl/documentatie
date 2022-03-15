@@ -7,13 +7,13 @@ info:
 
 paths:
 
-  /api/borgstellingen/beantwoord_aanvullende_vragen_taken/{taak_id}:    
+  /api/borgstellingen/geef_aanvullende_informatie_taken/{taak_id}:    
     parameters:        
       - $ref: "../data-dictionary/parameters/taak_id.yml"
-    post:
+    get:
       tags:
-        - beantwoord aanvullende vragen taken
-      summary: Geeft een beantwoord aanvullende vragen taak.
+        - geef aanvullende informatie taken
+      summary: Geeft een geef aanvullende informatie taak.
       operationId: GeefBeantwoordAanvullendeVragenTaak
       responses:
         200:          
@@ -21,7 +21,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "../data-dictionary/responses/beantwoord_aanvullende_vragen_taak.yml"
+                $ref: "../data-dictionary/responses/geef_aanvullende_informatie_taak.yml"
         400:
           $ref: "../data-dictionary/responses/types/400.yml"
         401:
@@ -32,8 +32,8 @@ paths:
           $ref: "../data-dictionary/responses/types/404.yml"
     put:
       tags:
-        - beantwoord aanvullende vragen taken
-      summary: Voltooit de beantwoord aanvullende vragen taak.
+        - geef aanvullende informatie taken
+      summary: Voltooit de geef aanvullende informatie taak.
       operationId: VoltooiBeantwoordAanvullendeVragenTaak
       requestBody:
         required: true
@@ -41,11 +41,11 @@ paths:
           application/json:
             schema:
               oneOf:
-                - $ref: "../data-dictionary/commands/beantwoord_aanvullende_vragen.yml"
+                - $ref: "../data-dictionary/commands/geef_aanvullende_informatie.yml"
               discriminator:
                 propertyName: resultaat
                 mapping:
-                    beantwoord: "../data-dictionary/commands/beantwoord_aanvullende_vragen.yml"
+                    antwoord: "../data-dictionary/commands/geef_aanvullende_informatie.yml"
       responses:
         202:
           description: Accepted

@@ -10,7 +10,7 @@ paths:
   /api/borgstellingen/beoordeel_aanvraag_taken/{taak_id}:    
     parameters:        
       - $ref: "../data-dictionary/parameters/taak_id.yml"
-    post:
+    get:
       tags:
         - beeordeel aanvraag taken
       summary: Geeft een beoordeel aanvraag taak.
@@ -48,7 +48,7 @@ paths:
                 propertyName: resultaat
                 mapping:
                     goedgekeurd: "../data-dictionary/commands/keur_aanvraag_goed.yml"
-                    afgekeurd: "../data-dictionary/commands/wijs_aanvraag_af.yml"
+                    afgewezen: "../data-dictionary/commands/wijs_aanvraag_af.yml"
                     onvolledig: "../data-dictionary/commands/vraag_om_aanvullende_informatie.yml"                    
       responses:
         202:

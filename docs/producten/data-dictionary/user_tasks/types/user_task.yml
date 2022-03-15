@@ -1,6 +1,6 @@
 type: object
 properties:
-  id:
+  user_task_id:
     $ref: "user_task_id.yml"
   name:
     $ref: "name.yml"
@@ -19,7 +19,7 @@ properties:
   links:
     $ref: "links.yml"
 required:
-  - id
+  - user_task_id
   - name
   - due_date
   - links

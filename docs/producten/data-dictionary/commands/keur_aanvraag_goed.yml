@@ -1,13 +1,12 @@
-type: object
-name: Keur aanvraag goed
-description: |
-  
-properties:
-  command:
-    $ref: "types/command.yml"
-  resultaat:
-    $ref: "../types/beoordeel_aanvraag_resultaat.yml"
-required:
-  - command
-  - resultaat
+allOf:
+  - $ref: "types/command.yml"
+  - type: object
+    title: Keur aanvraag goed
+    properties:
+      resultaat:
+        allOf:
+          - example: goedgekeurd
+          - $ref: "../types/beoordeel_aanvraag_resultaat.yml"
+    required:
+      - resultaat
   

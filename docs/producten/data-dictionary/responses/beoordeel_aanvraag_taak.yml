@@ -1,8 +1,4 @@
-type: object
-properties:
-  response:
-    $ref: "types/response.yml"
-  taak:
-    $ref: "../user_tasks/beoordeel_aanvraag.yml"
-required:
-  - taak
+allOf:
+  - title: Beoordeel aanvraag taak
+  - $ref: "types/response.yml"
+  - $ref: "../user_tasks/beoordeel_aanvraag.yml"

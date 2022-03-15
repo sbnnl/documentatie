@@ -17,3 +17,4 @@ properties:
     example: e62c8928-026e-493b-9ad1-1ffca6e19e61
 required:
   - command_id
+  - correlation_id

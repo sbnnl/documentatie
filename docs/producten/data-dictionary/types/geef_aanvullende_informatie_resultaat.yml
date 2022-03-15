@@ -1,0 +1,6 @@
+type: string
+description: |
+  Het resultaat van de geef aanvullende informatie taak.
+enum:
+  - aanvullende informatie
+example: aanvullende informatie

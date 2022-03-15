@@ -11,12 +11,12 @@ Functionaliteit: Proces
     Wanneer taak "taak-bepaal-status" is uitgevoerd
     Dan is proces informatie "{ soort_aanvraag: 'regulier', bruto_kredietsom: 5000, status: 'maatwerk' }"
 
-  Scenario: Borgstelling aanvraag vanuit een portefeuille overname waarbij het saneringskrediet korter dan 100 dagen loopt wordt goedgekeurd
+  Scenario: Borgstelling aanvraag vanuit een portefeuille overname waarbij het saneringskrediet korter dan xxx dagen heeft gelopen wordt goedgekeurd
     Gegeven proces informatie "{ soort_aanvraag: 'overname', bruto_kredietsom: 5000. dagen_actief: 100 }"
     Wanneer taak "taak-bepaal-status" is uitgevoerd
     Dan is proces informatie "{ soort_aanvraag: 'overname', bruto_kredietsom: 5000, status: 'goedgekeurd' }"
 
-  Scenario: Borgstelling aanvraag vanuit een portefeuille overname waarbij het saneringskrediet langer dan 100 dagen loopt wordt afgewezen
+  Scenario: Borgstelling aanvraag vanuit een portefeuille overname waarbij het saneringskrediet langer dan xxx dagen heeft gelopen wordt afgewezen
     Gegeven proces informatie "{ soort_aanvraag: 'overname', bruto_kredietsom: 5000. dagen_actief: 101 }"
     Wanneer taak "taak-bepaal-status" is uitgevoerd
     Dan is proces informatie "{ soort_aanvraag: 'overname', bruto_kredietsom: 5000, status: 'afgewezen' }"

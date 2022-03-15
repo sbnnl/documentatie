@@ -1,17 +1,14 @@
-type: object
-name: Vraag om aanvullende informatie
-description: |
-  
-properties:
-  command:
-    $ref: "types/command.yml"
-  resultaat:
-    $ref: "../types/beoordeel_aanvraag_resultaat.yml"
-  vraag:
-    $ref: "../types/aanvullende_informatie.yml"
-required:
-  - command
-  - resultaat
-  - vraag
-  
-  
+allOf:
+  - $ref: "types/command.yml"
+  - type: object
+    title: Vraag om aanvullende informatie  
+    properties:
+      resultaat:
+        allOf:
+          - example: onvolledig
+          - $ref: "../types/beoordeel_aanvraag_resultaat.yml"
+      vragen:
+        $ref: "../types/aanvullende_vragen.yml"
+    required:
+      - resultaat
+      - vragen
