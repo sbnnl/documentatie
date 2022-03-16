@@ -2,8 +2,8 @@
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_15cggpc" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.12.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="1.1.0">
   <bpmn:collaboration id="Collaboration_14sgm9f">
     <bpmn:participant id="Participant_07uypnn" name="Aanvragen borgstelling" processRef="proces-aanvragen-borgstelling-v1" />
-    <bpmn:participant id="rol-aanvrager" name="Aanvrager" />
-    <bpmn:participant id="rol-beoordelaar" name="Beoordelaar" />
+    <bpmn:participant id="rol-aanvrager" name="Aanvragende kredietbank" />
+    <bpmn:participant id="rol-beoordelaar" name="Beoordelende kredietbank" />
     <bpmn:messageFlow id="Flow_1t5g2jt" sourceRef="rol-aanvrager" targetRef="gebeurtenis-aanvraag-ontvangen" />
     <bpmn:messageFlow id="Flow_030jsvo" sourceRef="taak-geef-aanvullende-informatie" targetRef="rol-aanvrager" />
     <bpmn:messageFlow id="Flow_1mhrg3z" sourceRef="gebeurtenis-aanvraag-afgewezen" targetRef="rol-aanvrager" />
