@@ -11,7 +11,7 @@ allOf:
       kredietbank_id:    
         $ref: "../types/kredietbank_id.yml"
       kenmerk:
-        $ref: "../types/kenmerk_aanvrager.yml"  
+        $ref: "../types/kenmerk_kredietbank.yml"  
       gemeente:
         $ref: "../types/gemeente.yml"
       kredietsom:

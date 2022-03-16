@@ -1,0 +1,7 @@
+type: string 
+title: kenmerk
+description: | 
+  Uniek identificerend kenmerk van het saneringskrediet vastgesteld en geregistreerd door de kredietbank. Dit kenmerk moet uniek zijn voor de kredietbank.
+
+  Dit veld wordt gebruikt om borgstelling aanvragen idempotent te maken.
+example: 5461135-1

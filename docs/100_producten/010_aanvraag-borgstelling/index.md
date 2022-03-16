@@ -48,7 +48,7 @@ De status van een aanvraag wordt automatisch vastgesteld op basis van regels in 
 
 ### Geef aanvullende informatie
 
-De aanvrager moet aanvullende informatie aanleveren wanneer [bepaal status](#bepaal-status) heeft geleid tot de status **maatwerk**. Er ontstaat automatisch een taak in de takenlijst van de aanvrager.
+De kredietbank moet aanvullende informatie aanleveren wanneer [bepaal status](#bepaal-status) heeft geleid tot de status **maatwerk**. Er ontstaat automatisch een taak in de takenlijst van de kredietbank.
 
 <!-- einde van de lijst -->
 
@@ -74,7 +74,7 @@ Deze taak kent de volgende uitkomsten:
 
 ### Beantwoord aanvullende vragen
 
-Er ontstaat automatisch een taak in de takenlijst van de aanvrager wanneer de beoordelaar om aanvullende informatie heeft gevraagd.
+Er ontstaat automatisch een taak in de takenlijst van de kredietbank wanneer de beoordelaar om aanvullende informatie heeft gevraagd.
 
 <!-- einde van de lijst -->
 
@@ -91,11 +91,11 @@ Nadat de aanvraag is goedgekeurd wordt er een borgstelling contract aangemaakt.
 
 ### Aanvraag afgewezen
 
-De aanvraag afgewezen gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de aanvrager zodat de gebeurtenis door de aanvrager, decentraal, verder verwerkt kan worden.
+De aanvraag afgewezen gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden.
 
 ### Aanvraag goedgekeurd
 
-De aanvraag goedgekeurd gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de aanvrager zodat de gebeurtenis door de aanvrager, decentraal, verder verwerkt kan worden.
+De aanvraag goedgekeurd gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden.
 
 ## Business requirements
 

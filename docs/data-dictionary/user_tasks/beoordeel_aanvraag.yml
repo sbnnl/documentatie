@@ -6,11 +6,11 @@ properties:
     $ref: "../types/borgstelling_id.yml"
   aanvraag:
     type: object
-    title: Aanvraag
+    title: aanvraag
     properties:
       kredietsom:
         type: object
-        title: Kredietsom
+        title: kredietsom
         properties:
           bruto:
             $ref: "../types/bruto_kredietsom.yml"
@@ -29,7 +29,7 @@ properties:
       - looptijd
   aanvullende_informatie:
     type: object
-    title: Aanvullende informatie
+    title: aanvullende informatie
     properties:
       reden_risico_aanvaardbaar:
         $ref: "../types/reden_risico_aanvaardbaar.yml"
@@ -37,7 +37,7 @@ properties:
         $ref: "../types/terugbetaling_risicos.yml"
       inkomen:
         type: object
-        title: Inkomen
+        title: inkomen
         properties:
           bedrag:
             $ref: "../types/inkomen_per_maand.yml"
@@ -61,7 +61,7 @@ properties:
       - aanvullende_opmerkingen
   aanvullende_vragen:
     type: array
-    title: Aanvullende vragen
+    title: aanvullende vragen
     items:
       type: object
       properties:

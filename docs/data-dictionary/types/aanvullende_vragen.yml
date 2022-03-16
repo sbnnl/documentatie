@@ -1,6 +1,6 @@
 type: string
 format: markdown
 title: vragen
-description: De vraag / vragen die door de aanvrager aanvullend beantwoord moeten worden voordat de aanvraag beoordeeld kan worden.
+description: De vraag / vragen die door de kredietbank aanvullend beantwoord moeten worden voordat de aanvraag beoordeeld kan worden.
 example: |
   @Frank?
