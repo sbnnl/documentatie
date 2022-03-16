@@ -1,13 +1,12 @@
 type: object
 properties:
   taak_id:
-   $ref: "types/user_task_id.yml"
+    $ref: "../types/taak_id.yml"
   borgstelling_id:
-   $ref: "../types/borgstelling_id.yml"
+    $ref: "../types/borgstelling_id.yml"
   kenmerk:
-   $ref: "../types/kenmerk_aanvrager.yml"
+    $ref: "../types/kenmerk_aanvrager.yml"
 required:
   - taak_id
   - borgstelling_id
   - kenmerk
-   

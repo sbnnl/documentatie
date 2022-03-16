@@ -1,7 +1,7 @@
 type: number
 format: float 
 minimum: 0
-title: Maandaflossing
+title: maandaflossing
 description: |
   Het bedrag waarmee het saneringskrediet maandelijks mee afgelost gaat worden.
 example: 32.46

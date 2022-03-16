@@ -1,6 +1,5 @@
-in: path
-name: taak_id
-type: string
-required: true
-description: Unieke identificerend kenmerk van een taak.
-example: 12a0f16b-7d4c-436b-9a6c-f324eac52922
+allOf:
+  - in: path    
+    name: taak_id
+    required: true
+  - $ref: "../types/taak_id.yml"

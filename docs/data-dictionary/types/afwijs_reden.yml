@@ -1,6 +1,6 @@
 type: string
 format: markdown
-title: Reden van afwijzing
+title: reden van afwijzing
 description: De reden waarom de aanvraag is afgewezen door de beoordelaar.
 example:  |
   @Frank?
