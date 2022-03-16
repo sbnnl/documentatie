@@ -1,4 +1,4 @@
 type: string
-format: material-icon
-description: See https://fonts.google.com/icons
-example: Task alt
+format: fontawesome
+description: Een fontawesome.com icoon.
+example: asterix

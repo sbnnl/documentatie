@@ -1,0 +1,17 @@
+title: Badge
+type: object
+description: Geeft additionele meta informatie over een taak.
+properties:
+  type:
+    type: string
+    enum:
+      - FOUT
+      - WAARSCHUWING
+      - INFO
+    example: INFO
+  bericht:
+    type: string
+    example: De taak verloopt bijna.
+required:
+  - type
+  - bericht

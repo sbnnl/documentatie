@@ -1,0 +1,5 @@
+type: string
+format: uuid
+title: Taak
+description: Uniek identificerend kenmerk van een taak.
+example: 8d566a2d-ca2f-4412-9c68-f5751bf0d058
