@@ -24,8 +24,6 @@ Een registratie van een nieuw verstrekt saneringskrediet waarvoor het Wsk borg s
 
 ## Use-cases
 
-Dit product bestaat uit de volgende use-cases:
-
 ### Registreer aanvraag
 
 Registreer aanvraag wordt vanuit de REST adapter aangeroepen. De use-case is verantwoordelijk voor:
@@ -93,11 +91,11 @@ Nadat de aanvraag is goedgekeurd wordt er een borgstelling contract aangemaakt.
 
 ### Aanvraag afgewezen
 
-De aanvraag afgewezen gebeurtenis wordt toegevoegd aan de gebeurtenis wachtrij van de aanvrager zodat het door de aanvrager verder verwerkt kan worden.
+De aanvraag afgewezen gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de aanvrager zodat de gebeurtenis door de aanvrager, decentraal, verder verwerkt kan worden.
 
 ### Aanvraag goedgekeurd
 
-De aanvraag afgewezen goedgekeurd gebeurtenis wordt toegevoegd aan de gebeurtenis wachtrij van de aanvrager zodat het door de aanvrager verder verwerkt kan worden.
+De aanvraag goedgekeurd gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de aanvrager zodat de gebeurtenis door de aanvrager, decentraal, verder verwerkt kan worden.
 
 ## Business requirements
 

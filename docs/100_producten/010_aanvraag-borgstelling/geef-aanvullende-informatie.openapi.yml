@@ -9,7 +9,7 @@ paths:
 
   /api/borgstellingen/geef_aanvullende_informatie_taken/{taak_id}:    
     parameters:        
-      - $ref: "../data-dictionary/parameters/taak_id.yml"
+      - $ref: "../../data-dictionary/parameters/taak_id.yml"
     get:
       tags:
         - geef aanvullende informatie taken
@@ -21,15 +21,15 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "../data-dictionary/responses/geef_aanvullende_informatie_taak.yml"
+                $ref: "../../data-dictionary/responses/geef_aanvullende_informatie_taak.yml"
         400:
-          $ref: "../data-dictionary/responses/types/400.yml"
+          $ref: "../../data-dictionary/responses/types/400.yml"
         401:
-          $ref: "../data-dictionary/responses/types/401.yml"
+          $ref: "../../data-dictionary/responses/types/401.yml"
         403:
-          $ref: "../data-dictionary/responses/types/403.yml"
+          $ref: "../../data-dictionary/responses/types/403.yml"
         404:
-          $ref: "../data-dictionary/responses/types/404.yml"
+          $ref: "../../data-dictionary/responses/types/404.yml"
     put:
       tags:
         - geef aanvullende informatie taken
@@ -41,17 +41,17 @@ paths:
           application/json:
             schema:
               oneOf:
-                - $ref: "../data-dictionary/commands/geef_aanvullende_informatie.yml"
+                - $ref: "../../data-dictionary/commands/geef_aanvullende_informatie.yml"
               discriminator:
                 propertyName: resultaat
                 mapping:
-                    antwoord: "../data-dictionary/commands/geef_aanvullende_informatie.yml"
+                    antwoord: "../../data-dictionary/commands/geef_aanvullende_informatie.yml"
       responses:
         202:
           description: Accepted
         401:
-          $ref: "../data-dictionary/responses/types/401.yml"
+          $ref: "../../data-dictionary/responses/types/401.yml"
         403:
-          $ref: "../data-dictionary/responses/types/403.yml"
+          $ref: "../../data-dictionary/responses/types/403.yml"
         404:
-          $ref: "../data-dictionary/responses/types/404.yml"
+          $ref: "../../data-dictionary/responses/types/404.yml"
