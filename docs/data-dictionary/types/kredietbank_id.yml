@@ -1,5 +1,5 @@
 type: string
 format: uuid
-title: Kredietbank
-description: Uniek, identificerend, kenmerk van een kredietbank.
+title: kredietbank
+description: Uniek identificerend kenmerk van een kredietbank.
 example: 88b33783-0a04-4d94-afae-a6d117d63ad8

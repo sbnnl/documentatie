@@ -1,6 +1,6 @@
 type: number
 minimum: 0
-title: Netto kredietsom
+title: netto kredietsom
 description: |
   De netto kredietsom van de borgstelling aanvraag. 
   

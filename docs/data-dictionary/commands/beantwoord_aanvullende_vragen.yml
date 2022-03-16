@@ -1,7 +1,7 @@
 allOf:
   - $ref: "types/command.yml"
   - type: object
-    title: Beantwoord aanvullende vragen
+    title: beantwoord aanvullende vragen
     properties:
       resultaat:
         allOf:

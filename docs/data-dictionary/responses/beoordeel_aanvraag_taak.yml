@@ -1,4 +1,4 @@
 allOf:
-  - title: Beoordeel aanvraag taak
+  - title: beoordeel aanvraag taak
   - $ref: "types/response.yml"
   - $ref: "../user_tasks/beoordeel_aanvraag.yml"

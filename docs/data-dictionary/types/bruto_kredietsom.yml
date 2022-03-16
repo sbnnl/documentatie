@@ -1,6 +1,6 @@
 type: number
 minimum: 0
-title: Bruto kredietsom
+title: bruto kredietsom
 description: |
   De bruto kredietsom van de borgstelling aanvraag. 
   

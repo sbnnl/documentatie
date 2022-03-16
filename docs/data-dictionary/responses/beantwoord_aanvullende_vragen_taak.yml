@@ -1,4 +1,4 @@
 allOf:
-  - title: Beantwoord aanvullende vragen
+  - title: beantwoord aanvullende vragen taak
   - $ref: "types/response.yml"
   - $ref: "../user_tasks/beantwoord_aanvullende_vragen.yml"

@@ -7,7 +7,7 @@ info:
 
 paths:
 
-  /api/borgstellingen/beantwoord_aanvullende_vragen/{taak_id}:    
+  /api/borgstellingen/beantwoord-aanvullende-vragen/{taak_id}:    
     parameters:        
       - $ref: "../../data-dictionary/parameters/taak_id.yml"
     get:

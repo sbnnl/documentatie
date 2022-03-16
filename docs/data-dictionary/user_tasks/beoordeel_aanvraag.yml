@@ -1,9 +1,9 @@
 type: object
 properties:
   taak_id:
-   $ref: "types/user_task_id.yml"
+    $ref: "../types/taak_id.yml"
   borgstelling_id:
-   $ref: "../types/borgstelling_id.yml"
+    $ref: "../types/borgstelling_id.yml"
   aanvraag:
     type: object
     title: Aanvraag
@@ -18,7 +18,7 @@ properties:
             $ref: "../types/netto_kredietsom.yml"
         required:
           - bruto
-          - netto    
+          - netto
       aflossing:
         $ref: "../types/maandaflossing.yml"
       looptijd:
@@ -30,13 +30,13 @@ properties:
   aanvullende_informatie:
     type: object
     title: Aanvullende informatie
-    properties:  
+    properties:
       reden_risico_aanvaardbaar:
         $ref: "../types/reden_risico_aanvaardbaar.yml"
       terugbetaling_risicos:
         $ref: "../types/terugbetaling_risicos.yml"
       inkomen:
-        type: object        
+        type: object
         title: Inkomen
         properties:
           bedrag:
@@ -65,7 +65,7 @@ properties:
     items:
       type: object
       properties:
-        vraag:          
+        vraag:
           $ref: "../types/aanvullende_vragen.yml"
         antwoord:
           $ref: "../types/antwoord_op_aanvullende_vragen.yml"
@@ -78,4 +78,3 @@ required:
   - aanvraag
   - aanvullende_informatie
   - aanvullende_vragen
-   

@@ -1,6 +1,6 @@
 type: string
 format: markdown
-title: Reden risico aanvaardbaar
+title: reden risico aanvaardbaar
 description: Om welke reden is vindt u het risico voor dit saneringskrediet aanvaardbaar?
 example: |
     @Frank?
