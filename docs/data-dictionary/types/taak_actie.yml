@@ -1,6 +1,0 @@
-type: string
-description: |
-  De actie die uitgevoerd wordt op een taak.
-enum:
-  - claim
-example: claim

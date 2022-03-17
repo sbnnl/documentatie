@@ -1,14 +1,14 @@
 allOf:
   - $ref: "types/command.yml"
   - type: object
-    title: vraag om aanvullende informatie  
+    title: onvolledig
     properties:
-      resultaat:
+      actie:
         allOf:
           - example: onvolledig
-          - $ref: "../types/beoordeel_aanvraag_resultaat.yml"
+          - $ref: "../types/actie.yml"
       vragen:
         $ref: "../types/aanvullende_vragen.yml"
     required:
-      - resultaat
+      - actie
       - vragen

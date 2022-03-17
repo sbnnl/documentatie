@@ -1,13 +1,14 @@
 allOf:  
   - $ref: "types/command.yml"
   - type: object
-    title: registreer borgstelling aanvraag
+    title: aanvraag
     description: |
       Een aanvraag borgstelling voor een nog te verstrekken saneringskrediet.
     properties:
-      soort_aanvraag:
-        type: string
-        example: regulier
+      actie:
+        allOf:
+          - example: aanvraag
+          - $ref: "../types/actie.yml"
       kredietbank_id:    
         $ref: "../types/kredietbank_id.yml"
       kenmerk:
@@ -16,7 +17,7 @@ allOf:
         $ref: "../types/gemeente.yml"
       kredietsom:
         type: object
-        title: Kredietsom
+        title: kredietsom
         properties:
           bruto:
             $ref: "../types/bruto_kredietsom.yml"
@@ -30,7 +31,7 @@ allOf:
       looptijd:
         $ref: "../types/looptijd_in_maanden.yml"
     required:
-      - soort_aanvraag
+      - actie
       - kredietbank_id
       - kenmerk
       - gemeente

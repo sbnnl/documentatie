@@ -16,7 +16,7 @@ actions:
         - command_id
         - correlation_id
         - causation_id
-        - resultaat
+        - actie
   afwijzen:
     name: Afwijzen
     schema: 
@@ -26,7 +26,7 @@ actions:
         - command_id
         - correlation_id
         - causation_id
-        - resultaat
+        - actie
   onvolledig:
     name: Onvolledig
     schema: 
@@ -36,4 +36,4 @@ actions:
         - command_id
         - correlation_id
         - causation_id
-        - resultaat
+        - actie

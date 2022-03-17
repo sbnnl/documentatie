@@ -7,12 +7,35 @@ info:
 
 paths:
 
-  /api/borgstellingen/beantwoord-aanvullende-vragen/{taak_id}:    
+  /api/borgstellingen/mijn-beantwoord-aanvullende-vragen-taken:
+    get:
+      tags:
+        - beantwoord aanvullende vragen taken
+      summary: Geeft een persoonlijke lijst van beantwoord aanvullende vragen taken.
+      description: |
+        Geeft een lijst van geclaimde taken. Wanneer de gebruiker geen taken heeft geclaimed dan worden de niet geclaimde taken met de hoogste prioriteit waarvoor de gebruiker geautoriseerd is getoond.
+      operationId: GeefMijnBeantwoordAanvullendeVragenTaken
+      parameters:
+        - $ref: "../../data-dictionary/parameters/limit.yml"
+        - $ref: "../../data-dictionary/parameters/offset.yml"
+      responses:
+        200:          
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "../../data-dictionary/responses/mijn_taken.yml"
+        401:
+          $ref: "../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../data-dictionary/responses/types/403.yml"
+
+  /api/borgstellingen/beantwoord-aanvullende-vragen-taken/{taak_id}:    
     parameters:        
       - $ref: "../../data-dictionary/parameters/taak_id.yml"
     get:
       tags:
-        - beantwoord aanvullende vragen
+        - beantwoord aanvullende vragen taken
       summary: Geeft een beantwoord aanvullende vragen taak.
       operationId: GeefBeantwoordAanvullendeVragenTaak
       responses:
@@ -32,7 +55,7 @@ paths:
           $ref: "../../data-dictionary/responses/types/404.yml"
     put:
       tags:
-        - beantwoord aanvullende vragen
+        - beantwoord aanvullende vragen taken
       summary: Voltooit de beantwoord aanvullende vragen taak.
       operationId: VoltooiBeantwoordAanvullendeVragenTaak
       requestBody:
@@ -42,10 +65,9 @@ paths:
             schema:
               oneOf:
                 - $ref: "../../data-dictionary/commands/beantwoord_aanvullende_vragen.yml"
+                - $ref: "../../data-dictionary/commands/claim_taak.yml"
               discriminator:
-                propertyName: resultaat
-                mapping:
-                    antwoord: "../../data-dictionary/commands/beantwoord_aanvullende_vragen.yml"
+                propertyName: actie
       responses:
         202:
           description: Accepted

@@ -16,4 +16,4 @@ actions:
         - command_id
         - correlation_id
         - causation_id
-        - resultaat
+        - actie

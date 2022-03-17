@@ -1,15 +1,15 @@
 allOf:
   - $ref: "types/command.yml"
   - type: object
-    title: wijs aanvraag af
+    title: afwijzen
     properties:
-      resultaat:
+      actie:
         allOf:
-          - example: afgewezen
-          - $ref: "../types/beoordeel_aanvraag_resultaat.yml"
+          - example: afwijzen
+          - $ref: "../types/actie.yml"
       reden:
         $ref: "../types/afwijs_reden.yml"
     required:
-      - resultaat
+      - actie
       - reden
       

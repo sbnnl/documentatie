@@ -7,8 +7,8 @@ user-task:
       - taak_id
       - borgstelling_id
 actions:
-  antwoord:
-    name: Aanvullende informatie
+  beantwoorden:
+    name: Beantwoorden
     schema: 
       $ref: "../../data-dictionary/commands/geef_aanvullende_informatie.yml"
     ui:
@@ -16,4 +16,4 @@ actions:
         - command_id
         - correlation_id
         - causation_id
-        - resultaat
+        - actie
