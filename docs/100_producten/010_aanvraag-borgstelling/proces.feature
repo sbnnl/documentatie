@@ -16,12 +16,12 @@ Functionaliteit: Proces
     Wanneer poort "poort-status" is uitgevoerd
     Dan is route "route-afgewezen" actief
 
-  Scenario: Afgewezen route is actief
+  Scenario: Pro forma route is actief
     Gegeven proces informatie "{ pro_forma: true }"
     Wanneer poort "poort-pro-forma-aanvraag" is uitgevoerd
     Dan is route "route-pro-forma-aanvraag" actief
 
-  Scenario: Afgewezen route is actief
+  Scenario: Geen pro forma route is actief
     Gegeven proces informatie "{ pro_forma: false }"
     Wanneer poort "poort-pro-forma-aanvraag" is uitgevoerd
     Dan is route "route-geen-pro-forma-aanvraag" actief
