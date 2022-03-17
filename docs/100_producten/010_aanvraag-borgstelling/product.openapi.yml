@@ -12,7 +12,7 @@ paths:
       tags:
         - borgstellingen
       summary: Registreer aanvraag borgstelling saneringskrediet
-      operationId: RegistreerAanvraag
+      operationId: RegistreerAanvraagV1
       requestBody:
         required: true
         content:

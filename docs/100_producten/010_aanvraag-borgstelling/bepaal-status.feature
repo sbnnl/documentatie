@@ -22,7 +22,7 @@ Functionaliteit: Bepaal status
     Dan is proces informatie "{ soort_aanvraag: 'overname', bruto_kredietsom: 5000, status: 'afgewezen' }"
 
    Abstract Scenario: Reguliere borgstelling aanvraag vanaf 5000 euro met een pro forma aanvraag
-    Gegeven proces informatie "{ soort_aanvraag: 'regulier', bruto_kredietsom: <bruto_kredietsom>, pro_forma_aanvraag: { bruto_kredietsom: <pro_forma_bruto_kredietsom>, status: '<pro_forma_status>'  } }"
+    Gegeven proces informatie "{ soort_aanvraag: 'regulier', bruto_kredietsom: <bruto_kredietsom>, pro_forma_aanvraag: { bruto_kredietsom: <pro_forma_bruto_kredietsom>, status: '<pro_forma_status>' } }"
     Wanneer taak "taak-bepaal-status" is uitgevoerd
     Dan is proces informatie "{ soort_aanvraag: 'regulier', bruto_kredietsom: <bruto_kredietsom>, status: '<status>' }"
 

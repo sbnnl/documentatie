@@ -1,5 +1,6 @@
 features:
   - product.feature
+  - bepaal-status.feature
   - beantwoord-aanvullende-vragen.feature
   - beoordeel-aanvraag.feature
   - geef-aanvullende-informatie.feature

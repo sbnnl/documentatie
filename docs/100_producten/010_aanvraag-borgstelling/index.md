@@ -46,6 +46,8 @@ De status van een aanvraag wordt automatisch vastgesteld op basis van regels in 
 * afgewezen
 * maatwerk
 
+@Frank hoeveel (absoluut of percentage) mag de bruto kredietsom afwijken van een geaccepteerde pro forma aanvraag om ook geaccepteerd te worden?
+
 <!-- einde -->
 
 * [Acceptatie criteria](bepaal-status.feature)
@@ -92,6 +94,22 @@ Nadat de aanvraag is goedgekeurd wordt er een borgstelling contract aangemaakt.
 
 * [Document](contract.message.md)
 * [Acceptatie criteria](maak-contract.feature)
+
+### Activeer borgstelling
+
+
+
+### Registreer verkoop
+
+Wsf maakt gebruik van Exact online. Voor 1% van de bruto kredietsom van de geaccepteerde borgstelling aanvraag moet er automatisch een factuurregel aangemaakt worden via de [API van Exact online](https://start.exactonline.nl/docs/HlpRestAPIResourcesDetails.aspx?name=SalesInvoiceSalesInvoiceLines).
+
+**pseudo code**:
+
+[pseudo code](maak-factuurregel.java)
+
+Zie [exact knowledge base](https://support.exactonline.com/community/s/knowledge-base#All-All-DNO-Content-restapibusinessexamplesalesorder) voor meer informatie.
+
+
 
 ### Aanvraag afgewezen
 

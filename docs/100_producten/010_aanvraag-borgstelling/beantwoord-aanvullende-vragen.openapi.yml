@@ -14,7 +14,7 @@ paths:
       tags:
         - beantwoord aanvullende vragen
       summary: Geeft een beantwoord aanvullende vragen taak.
-      operationId: GeefBeantwoordAanvullendeVragenTaak
+      operationId: GeefBeantwoordAanvullendeVragenTaakV1
       responses:
         200:          
           description: OK
@@ -34,7 +34,7 @@ paths:
       tags:
         - beantwoord aanvullende vragen
       summary: Voltooit de beantwoord aanvullende vragen taak.
-      operationId: VoltooiBeantwoordAanvullendeVragenTaak
+      operationId: VoltooiBeantwoordAanvullendeVragenTaakV1
       requestBody:
         required: true
         content:

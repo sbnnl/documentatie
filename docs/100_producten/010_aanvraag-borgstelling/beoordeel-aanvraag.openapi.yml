@@ -14,7 +14,7 @@ paths:
       tags:
         - beoordeel aanvraag taken
       summary: Geeft een beoordeel aanvraag taak.
-      operationId: GeefBeoordeelAanvraagTaak
+      operationId: GeefBeoordeelAanvraagTaakV1
       responses:
         200:          
           description: OK
@@ -34,7 +34,7 @@ paths:
       tags:
         - beoordeel aanvraag taken
       summary: Voltooit de beoordeel aanvraag taken taak.
-      operationId: VoltooiBeoordelAanvraagTaak
+      operationId: VoltooiBeoordelAanvraagTaakV1
       requestBody:
         required: true
         content:
