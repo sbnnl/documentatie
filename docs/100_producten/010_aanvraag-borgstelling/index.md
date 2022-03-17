@@ -64,19 +64,24 @@ De kredietbank moet aanvullende informatie aanleveren wanneer [bepaal status](#b
 
 ### Beoordeel aanvraag
 
-Een aanvraag en de aanvullende informatie wordt beoordeeld door een andere aangesloten kredietbank. Deze "beoordeel aanvraag taken" moeten evenredig over de kredietbanken verdeeld worden. Er ontstaat automatisch een taak in de takenlijst van de beoordelende kredietbank.
+Een maatwerk aanvraag met de aanvullende informatie, eventuele antwoorden op vragen en een eventueel advies van een andere kredietbank wordt beoordeeld door het Wsk.
 
 Deze taak kent de volgende uitkomsten:
 
-* goedgekeurd
-* afgewezen
-* onvolledig
+* Aanvraag goedgekeurd
+* Aanvraag afgewezen
+* Aanvraag onvolledig
+* Vraag om advies
 
 <!-- einde van de lijst -->
 
 * [Formulier](beoordeel-aanvraag.user-task.yml)
 * [API](beoordeel-aanvraag.openapi.yml)
 * [Acceptatie criteria](beoordeel-aanvraag.feature)
+
+### Geef advies
+
+Aangesloten kredietbanken kunnen door het Wsk gevraagd worden om een advies uit te brengen over een maatwerk borgstelling aanvraag. Deze "geef advies taken" moeten evenredig over de kredietbanken verdeeld worden. Er ontstaat automatisch een taak in de takenlijst van de adviserende kredietbank.
 
 ### Beantwoord aanvullende vragen
 
