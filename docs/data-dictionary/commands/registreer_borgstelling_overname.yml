@@ -8,5 +8,5 @@ allOf:
     properties:
       soort_aanvraag:
         type: string
-        example: overname  
-  - $ref: "registreer_borgstelling_aanvraag.yml"
+        example: overname
+  - $ref: "../models/borgstelling_aanvraag.yml"

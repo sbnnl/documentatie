@@ -40,11 +40,15 @@ Registreer aanvraag wordt vanuit de REST adapter aangeroepen. De use-case is ver
 
 ### Bepaal status
 
-De status van een aanvraag wordt automatisch vastgesteld op basis van regels in het beslissingsmodel. [Zie het proces voor meer informatie](#proces). Het beslissingsmodel kent de volgende uitkomsten:
+De status van een aanvraag wordt automatisch vastgesteld op basis van regels in het beslissingsmodel. Het beslissingsmodel kent de volgende uitkomsten:
 
 * goedgekeurd
 * afgewezen
 * maatwerk
+
+<!-- einde -->
+
+* [Acceptatie criteria](bepaal-status.feature)
 
 ### Geef aanvullende informatie
 
