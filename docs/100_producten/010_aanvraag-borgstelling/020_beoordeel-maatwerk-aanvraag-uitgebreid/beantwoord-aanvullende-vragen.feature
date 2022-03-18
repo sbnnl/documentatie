@@ -1,5 +1,5 @@
 #language: nl
-Functionaliteit: Beantwoord aanvullende vragen
+Functionaliteit: Beantwoord aanvullende vragen use-case
 
     Abstract Scenario: Use-case permissie is juist
     Gegeven een gebruiker met de rollen "<rollen>"
@@ -8,6 +8,7 @@ Functionaliteit: Beantwoord aanvullende vragen
     Voorbeelden:
     | rollen      | wel-niet |
     | systeem     | niet     |
+    | wsk         | niet     |
     | kredietbank | wel      |
 
   Abstract Scenario: Use-case heeft de juiste autorisaties

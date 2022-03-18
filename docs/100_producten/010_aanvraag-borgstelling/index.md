@@ -36,7 +36,7 @@ Registreer aanvraag wordt vanuit de REST adapter aangeroepen. De use-case is ver
 
 <!-- einde -->
 
-* [Acceptatie criteria](registreer-aanvraag-use-case.feature)
+* [Acceptatie criteria](registreer-aanvraag.feature)
 
 ### Beoordeel aanvraag
 
@@ -69,6 +69,8 @@ Voor de invulling van beoordeel maatwerk aanvraag bestaan twee opties:
 
 Nadat de aanvraag is goedgekeurd wordt er een borgstelling contract aangemaakt.
 
+<!-- einde -->
+
 * [Document](contract.message.md)
 * [Acceptatie criteria](maak-contract.feature)
 
@@ -76,14 +78,18 @@ Nadat de aanvraag is goedgekeurd wordt er een borgstelling contract aangemaakt.
 
 Verander de status van de borgstelling aanvraag in actief.
 
+<!-- einde -->
+
+* [Acceptatie criteria](activeer-borgstelling.feature)
+
 ### Registreer verkoop
 
 Wsf maakt gebruik van Exact online. Voor **1% van de bruto kredietsom** van de geaccepteerde borgstelling aanvraag moet er automatisch een factuurregel aangemaakt worden via de [API van Exact online](https://start.exactonline.nl/docs/HlpRestAPIResourcesDetails.aspx?name=SalesInvoiceSalesInvoiceLines).
 
-**pseudo code**:
+<!-- einde -->
 
-[pseudo code](RegistreerBorgstellingVerkoopUseCase.java)
-
+* [Pseudo code](RegistreerBorgstellingVerkoopUseCase.java)
+* [Acceptatie criteria](registreer-verkoop.feature)
 
 Zie [exact knowledge base](https://support.exactonline.com/community/s/knowledge-base#All-All-DNO-Content-restapibusinessexamplesalesorder) voor meer informatie.
 
@@ -97,9 +103,17 @@ Zie [exact knowledge base](https://support.exactonline.com/community/s/knowledge
 
 De aanvraag afgewezen gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden.
 
+<!-- einde -->
+
+* [Acceptatie criteria](aanvraag-afgewezen.feature)
+
 ### Aanvraag goedgekeurd
 
 De aanvraag goedgekeurd gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden.
+
+<!-- einde -->
+
+* [Acceptatie criteria](aanvraag-goedgekeurd.feature)
 
 ## Business requirements
 

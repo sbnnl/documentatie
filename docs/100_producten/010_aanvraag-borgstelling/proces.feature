@@ -1,5 +1,5 @@
 #language: nl
-Functionaliteit: Proces
+Functionaliteit: Aanvraag borgstelling proces
 
   Scenario: Goedgekeurd route is actief
     Gegeven proces informatie "{ status: 'goedgekeurd' }"

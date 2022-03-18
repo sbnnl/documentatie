@@ -1,5 +1,10 @@
 features:
   - product.feature
+  - proces.feature
+  - registreer-aanvraag.feature
   - beoordeel-aanvraag.feature
   - maak-contract.feature
-  - registreer-aanvraag-use-case.feature
+  - activeer-borgstelling.feature
+  - registreer-verkoop.feature
+  - aanvraag-afgewezen.feature
+  - aanvraag-goedgekeurd.feature
