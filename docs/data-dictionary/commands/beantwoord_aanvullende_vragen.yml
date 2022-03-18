@@ -12,4 +12,3 @@ allOf:
     required:
       - actie
       - antwoord
-  
