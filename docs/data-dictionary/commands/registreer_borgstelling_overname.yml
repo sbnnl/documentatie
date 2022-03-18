@@ -1,6 +1,6 @@
 allOf:
   - $ref: "types/command.yml"
-  - title: overname
+  - title: registreer overname
     description: |
       Een borgstelling aanvraag vanuit een portefeuille overname van actieve saneringskredieten.
 

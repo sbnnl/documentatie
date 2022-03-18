@@ -8,7 +8,7 @@ user-task:
       - borgstelling_id
 actions:
   beantwoorden:
-    name: Beantwoorden
+    name: Aanvullende informatie
     schema: 
       $ref: "../../../data-dictionary/commands/geef_aanvullende_informatie.yml"
     ui:
