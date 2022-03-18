@@ -1,5 +1,28 @@
 #language: nl
-Functionaliteit: Beoordeel aanvraag
+Functionaliteit: Beoordeel aanvraag use-case
+
+  Abstract Scenario: Use-case permissie is juist
+    Gegeven een gebruiker met de rollen "<rollen>"
+    Dan heeft de gebruiker "<wel-niet>" de permissie "BEOORDEEL_AANVRAAG"
+
+    Voorbeelden:
+    | rollen      | wel-niet |
+    | wsk         | niet     |
+    | kredietbank | niet     |
+    | systeem     | wel      |
+    
+
+  Abstract Scenario: Use-case heeft de juiste autorisaties
+    Gegeven een aanvraag van "<kredietbank>"
+    En een gebruiker met de rollen "<rollen>"
+    Wanneer use-case "registreer aanvraag" wordt uitgevoerd
+    Dan is de gebruiker "<wel-niet>" geautoriseerd
+
+    Voorbeelden:
+    | rollen      | wel-niet |
+    | kredietbank | niet     |
+    | wsk         | niet     |
+    | systeem     | wel      |
 
   Scenario: Reguliere borgstelling aanvraag beneden 5000 euro wordt goedgekeurd
     Gegeven proces informatie "{ soort_aanvraag: 'regulier', bruto_kredietsom: 4999 }"

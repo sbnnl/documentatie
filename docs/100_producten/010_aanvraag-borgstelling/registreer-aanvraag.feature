@@ -7,8 +7,9 @@ Functionaliteit: Registreer aanvraag use-case
 
     Voorbeelden:
     | rollen      | wel-niet |
-    | kredietbank | wel      |
+    | wsk         | niet     |
     | systeem     | niet     |
+    | kredietbank | wel      |
 
   Abstract Scenario: Use-case heeft de juiste autorisaties
     Gegeven een aanvraag van "<kredietbank>"
@@ -18,9 +19,12 @@ Functionaliteit: Registreer aanvraag use-case
 
     Voorbeelden:
     | kredietbank   | rollen                                                    | wel-niet |
-    | kredietbank_a | kredietbank, kredietbank_a                                | wel      |
-    | kredietbank_a | kredietbank, kredietbank_a, kredietbank_b, kredietbank_c  | wel      |
+    | kredietbank_a | systeem                                                   | niet     |
+    | kredietbank_a | wsk                                                       | niet     |
     | kredietbank_a | kredietbank                                               | niet     |
     | kredietbank_a | kredietbank_a                                             | niet     |
     | kredietbank_a | kredietbank, kredietbank_b                                | niet     |
-    | kredietbank_b | kredietbankkredietbank_a, kredietbank_c, kredietbank_d    | niet     |
+    | kredietbank_b | kredietbankkredietbank_a, kredietbank_c, kredietbank_d    | niet     |    
+    | kredietbank_a | kredietbank, kredietbank_a                                | wel      |
+    | kredietbank_a | kredietbank, kredietbank_a, kredietbank_b, kredietbank_c  | wel      |
+    

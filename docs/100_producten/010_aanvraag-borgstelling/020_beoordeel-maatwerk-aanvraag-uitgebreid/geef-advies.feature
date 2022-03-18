@@ -1,5 +1,5 @@
 #language: nl
-Functionaliteit: Geef aanvullende informatie taak
+Functionaliteit: Geef aanvullende informatie use-case
 
   Abstract Scenario: Use-case permissie is juist
     Gegeven een gebruiker met de rollen "<rollen>"
@@ -8,6 +8,7 @@ Functionaliteit: Geef aanvullende informatie taak
     Voorbeelden:
     | rollen      | wel-niet |
     | systeem     | niet     |
+    | wsk         | niet     |
     | kredietbank | wel      |
 
   Abstract Scenario: Use-case heeft de juiste autorisaties
@@ -20,6 +21,7 @@ Functionaliteit: Geef aanvullende informatie taak
     | kredietbank   | rollen                     | wel-niet |
     | kredietbank_a |                            | niet     |
     | kredietbank_a | systeem                    | niet     |
+    | kredietbank_a | wsk                        | niet     |
     | kredietbank_a | kredietbank                | niet     |
     | kredietbank_a | kredietbank_a              | niet     |
     | kredietbank_a | kredietbank, kredietbank_a | niet     |

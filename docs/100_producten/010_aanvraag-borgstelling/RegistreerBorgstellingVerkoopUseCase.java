@@ -1,4 +1,4 @@
-public class RegistreerBorgstellingerkoopUseCaseHandler implements UseCaseHandler<RegistreerBorgstellingVerkoopUseCase>
+public class RegistreerBorgstellingVerkoopUseCaseHandler implements UseCaseHandler<RegistreerBorgstellingVerkoopUseCase>
 {
     private readonly Mediator mediator;
 
@@ -30,8 +30,8 @@ public class ExactService implements PortHandler<RegistreerBorgstellingVerkoop>
     }
 
     public void handle(RegistreerVerkoop port) {
-        var accountId = api.GetAccountId(port.KredietbankId);        
-        var itemId =  api.GetItemId("Borgstelling"));
+        var accountId = api.getAccountId(port.KredietbankId);        
+        var itemId =  api.getItemId("Borgstelling"));
 
         const salesOrder = new SalesOrder();
         salesOrder.OrderID = port.BorgstellingId;
@@ -45,6 +45,6 @@ public class ExactService implements PortHandler<RegistreerBorgstellingVerkoop>
 
         salesOrder.SalesOrderLines = { salesOrderLine };
 
-        api.CreateSalesOrder(salesOrder);
+        api.createSalesOrder(salesOrder);
     }
 }

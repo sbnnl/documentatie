@@ -1,14 +1,15 @@
 #language: nl
-Functionaliteit: Beoordeel aanvraag taak
+Functionaliteit: Beoordeel aanvraag use-case
 
   Abstract Scenario: Use-case permissie is juist
     Gegeven een gebruiker met de rollen "<rollen>"
-    Dan heeft de gebruiker "<wel-niet>" de permissie "BEOORDEEL_AANVRAAG"
+    Dan heeft de gebruiker "<wel-niet>" de permissie "BEOORDEEL_MAATWERK_AANVRAAG"
 
     Voorbeelden:
     | rollen      | wel-niet |
     | systeem     | niet     |
-    | kredietbank | wel      |
+    | kredietbank | niet     |
+    | wsk         | wel      |
 
   Abstract Scenario: Use-case heeft de juiste autorisaties
     Gegeven een gebruiker met de rollen "<rollen>"
@@ -21,6 +22,4 @@ Functionaliteit: Beoordeel aanvraag taak
     | kredietbank_a |                            | niet     |
     | kredietbank_a | systeem                    | niet     |
     | kredietbank_a | kredietbank                | niet     |
-    | kredietbank_a | kredietbank_a              | niet     |
-    | kredietbank_a | kredietbank, kredietbank_a | niet     |
-    | kredietbank_a | kredietbank, kredietbank_b | wel      |
+    | kredietbank_a | wsk                        | wel      |

@@ -1,2 +1,2 @@
 #language: nl
-Functionaliteit: Product
+Functionaliteit: Aanvraag borgstelling product
