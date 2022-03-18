@@ -30,7 +30,7 @@ actions:
   onvolledig:
     name: Onvolledig
     schema: 
-      $ref: "../../../data-dictionary/commands/vraag_om_aanvullende_informatie.yml"
+      $ref: "../../../data-dictionary/commands/stel_aanvullende_vragen.yml"
     ui:
       hidden:
         - command_id

@@ -32,7 +32,7 @@ paths:
           $ref: "../../../data-dictionary/responses/types/404.yml"
     put:
       tags:
-        - geef aanvullende informatie taken
+        - geef advies taken
       summary: Voltooit de geef aanvullende informatie taak.
       operationId: VoltooiBeantwoordAanvullendeVragenTaakV1
       requestBody:

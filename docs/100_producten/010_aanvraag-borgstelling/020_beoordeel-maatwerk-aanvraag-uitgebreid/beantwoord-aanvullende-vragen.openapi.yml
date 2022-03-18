@@ -12,7 +12,7 @@ paths:
       - $ref: "../../../data-dictionary/parameters/taak_id.yml"
     get:
       tags:
-        - beantwoord aanvullende vragen
+        - beantwoord aanvullende vragen taken
       summary: Geeft een beantwoord aanvullende vragen taak.
       operationId: GeefBeantwoordAanvullendeVragenTaakV1
       responses:
@@ -32,7 +32,7 @@ paths:
           $ref: "../../../data-dictionary/responses/types/404.yml"
     put:
       tags:
-        - beantwoord aanvullende vragen
+        - beantwoord aanvullende vragen taken
       summary: Voltooit de beantwoord aanvullende vragen taak.
       operationId: VoltooiBeantwoordAanvullendeVragenTaakV1
       requestBody:

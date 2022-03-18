@@ -26,12 +26,12 @@
       <bpmn:outgoing>route-aanvraag-afgewezen</bpmn:outgoing>
       <bpmn:outgoing>route-aanvraag-onvolledig</bpmn:outgoing>
     </bpmn:eventBasedGateway>
-    <bpmn:intermediateCatchEvent id="gebeurtenis-aanvraag-ovolledig" name="Aanvraag onvolledig">
+    <bpmn:intermediateCatchEvent id="gebeurtenis-aanvullende-vragen-gesteld" name="Aanvullende vragen gesteld">
       <bpmn:incoming>route-aanvraag-onvolledig</bpmn:incoming>
       <bpmn:outgoing>Flow_1ip1xp7</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_0uu9wo1" messageRef="Message_098nubl" />
     </bpmn:intermediateCatchEvent>
-    <bpmn:intermediateCatchEvent id="Event_1h4rmsy" name="Vraag om advies">
+    <bpmn:intermediateCatchEvent id="gebeurtenis-advies-gevraagd" name="Advies gevraagd">
       <bpmn:incoming>route-vraag-om-advies</bpmn:incoming>
       <bpmn:outgoing>Flow_17abcju</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_0lhs4dr" messageRef="Message_081oahk" />
@@ -72,20 +72,20 @@
     </bpmn:userTask>
     <bpmn:sequenceFlow id="Flow_10clktt" sourceRef="gebeurtenis-maatwerk-aanvraag-ontvangen" targetRef="taak-geef-aanvullende-informatie-v1" />
     <bpmn:sequenceFlow id="Flow_1vo9jkm" sourceRef="taak-geef-advies-v1" targetRef="taak-beoordel-aanvraag-v1" />
-    <bpmn:sequenceFlow id="Flow_17abcju" sourceRef="Event_1h4rmsy" targetRef="taak-geef-advies-v1" />
-    <bpmn:sequenceFlow id="route-vraag-om-advies" sourceRef="Gateway_006xk2e" targetRef="Event_1h4rmsy" />
+    <bpmn:sequenceFlow id="Flow_17abcju" sourceRef="gebeurtenis-advies-gevraagd" targetRef="taak-geef-advies-v1" />
+    <bpmn:sequenceFlow id="route-vraag-om-advies" sourceRef="Gateway_006xk2e" targetRef="gebeurtenis-advies-gevraagd" />
     <bpmn:sequenceFlow id="Flow_1gj8zqz" sourceRef="taak-geef-aanvullende-informatie-v1" targetRef="taak-beoordel-aanvraag-v1" />
     <bpmn:sequenceFlow id="Flow_1eybg16" sourceRef="taak-beoordel-aanvraag-v1" targetRef="Gateway_006xk2e" />
     <bpmn:sequenceFlow id="route-aanvraag-goedgekeurd" sourceRef="Gateway_006xk2e" targetRef="gebeurtenis-positief-beoordeeld" />
     <bpmn:sequenceFlow id="Flow_0q8t8u8" sourceRef="gebeurtenis-positief-beoordeeld" targetRef="gebeurtenis-maatwerk-aanvraag-geaccepteerd" />
     <bpmn:sequenceFlow id="route-aanvraag-afgewezen" sourceRef="Gateway_006xk2e" targetRef="gebeurtenis-negatief-beoordeeld" />
-    <bpmn:sequenceFlow id="route-aanvraag-onvolledig" sourceRef="Gateway_006xk2e" targetRef="gebeurtenis-aanvraag-ovolledig" />
+    <bpmn:sequenceFlow id="route-aanvraag-onvolledig" sourceRef="Gateway_006xk2e" targetRef="gebeurtenis-aanvullende-vragen-gesteld" />
     <bpmn:sequenceFlow id="Flow_0nujviu" sourceRef="gebeurtenis-negatief-beoordeeld" targetRef="Event_09bfbs8" />
-    <bpmn:sequenceFlow id="Flow_1ip1xp7" sourceRef="gebeurtenis-aanvraag-ovolledig" targetRef="taak-beantwoord-aanvullende-vragen-v1" />
+    <bpmn:sequenceFlow id="Flow_1ip1xp7" sourceRef="gebeurtenis-aanvullende-vragen-gesteld" targetRef="taak-beantwoord-aanvullende-vragen-v1" />
     <bpmn:sequenceFlow id="Flow_1cly7gh" sourceRef="taak-beantwoord-aanvullende-vragen-v1" targetRef="taak-beoordel-aanvraag-v1" />
   </bpmn:process>
-  <bpmn:message id="Message_098nubl" name="AanvraagOnvolledigBeoordeeld" />
-  <bpmn:message id="Message_081oahk" name="AanvraagAdviesGevraagd" />
+  <bpmn:message id="Message_098nubl" name="AanvullendeVragenGesteld" />
+  <bpmn:message id="Message_081oahk" name="AdviesGevraagd" />
   <bpmn:message id="Message_0eu09eh" name="AanvraagGoedgekeurd" />
   <bpmn:message id="Message_1nt0xvi" name="AanvraagAfgewezen" />
   <bpmn:error id="Error_0onip5d" name="MAATWERK_AANVRAAG_AFGEWEZEN" />
@@ -158,16 +158,16 @@
       <bpmndi:BPMNShape id="Gateway_006xk2e_di" bpmnElement="Gateway_006xk2e">
         <dc:Bounds x="859" y="365" width="50" height="50" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="gebeurtenis-aanvraag-ovolledig_di" bpmnElement="gebeurtenis-aanvraag-ovolledig">
+      <bpmndi:BPMNShape id="gebeurtenis-aanvraag-ovolledig_di" bpmnElement="gebeurtenis-aanvullende-vragen-gesteld">
         <dc:Bounds x="866" y="215" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="859" y="188" width="50" height="27" />
+          <dc:Bounds x="848" y="188" width="73" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_1h4rmsy_di" bpmnElement="Event_1h4rmsy">
+      <bpmndi:BPMNShape id="Event_1h4rmsy_di" bpmnElement="gebeurtenis-advies-gevraagd">
         <dc:Bounds x="866" y="515" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="843" y="558" width="83" height="14" />
+          <dc:Bounds x="844" y="558" width="82" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="taak-beoordel-aanvraag_di" bpmnElement="taak-beoordel-aanvraag-v1">
