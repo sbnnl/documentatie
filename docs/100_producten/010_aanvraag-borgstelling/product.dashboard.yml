@@ -1,7 +1,5 @@
 features:
   - product.feature
-  - beantwoord-aanvullende-vragen.feature
   - beoordeel-aanvraag.feature
-  - geef-aanvullende-informatie.feature
   - maak-contract.feature
   - registreer-aanvraag-use-case.feature

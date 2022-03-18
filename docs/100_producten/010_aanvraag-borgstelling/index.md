@@ -34,53 +34,36 @@ Registreer aanvraag wordt vanuit de REST adapter aangeroepen. De use-case is ver
 * registratie van de aanvraag;
 * starten van het proces;
 
-<!-- einde van de lijst -->
+<!-- einde -->
 
 * [Acceptatie criteria](registreer-aanvraag-use-case.feature)
 
-### Bepaal status
+### Beoordeel aanvraag
 
-De status van een aanvraag wordt automatisch vastgesteld op basis van regels in het beslissingsmodel. [Zie het proces voor meer informatie](#proces). Het beslissingsmodel kent de volgende uitkomsten:
+De aanvraag wordt automatisch beoordeeld op basis van regels in het beslissingsmodel. Het beslissingsmodel kent de volgende uitkomsten:
 
 * goedgekeurd
 * afgewezen
 * maatwerk
 
-### Geef aanvullende informatie
+<!-- einde -->
 
-De kredietbank moet aanvullende informatie aanleveren wanneer [bepaal status](#bepaal-status) heeft geleid tot de status **maatwerk**. Er ontstaat automatisch een taak in de takenlijst van de kredietbank.
-
-<!-- einde van de lijst -->
-
-* [Formulier](geef-aanvullende-informatie.user-task.yml)
-* [API](geef-aanvullende-informatie.openapi.yml)
-* [Acceptatie criteria](geef-aanvullende-informatie.feature)
-
-### Beoordeel aanvraag
-
-Een aanvraag en de aanvullende informatie wordt beoordeeld door een andere aangesloten kredietbank. Deze "beoordeel aanvraag taken" moeten evenredig over de kredietbanken verdeeld worden. Er ontstaat automatisch een taak in de takenlijst van de beoordelende kredietbank.
-
-Deze taak kent de volgende uitkomsten:
-
-* goedgekeurd
-* afgewezen
-* onvolledig
-
-<!-- einde van de lijst -->
-
-* [Formulier](beoordeel-aanvraag.user-task.yml)
-* [API](beoordeel-aanvraag.openapi.yml)
 * [Acceptatie criteria](beoordeel-aanvraag.feature)
 
-### Beantwoord aanvullende vragen
+:::info
 
-Er ontstaat automatisch een taak in de takenlijst van de kredietbank wanneer de beoordelaar om aanvullende informatie heeft gevraagd.
+**Vragen:**
 
-<!-- einde van de lijst -->
+* @Frank hoeveel (absoluut of percentage) mag de bruto kredietsom afwijken van een geaccepteerde pro forma aanvraag om ook geaccepteerd te worden?
 
-* [Formulier](beantwoord-aanvullende-vragen.user-task.yml)
-* [API](beantwoord-aanvullende-vragen.openapi.yml)
-* [Acceptatie criteria](beantwoord-aanvullende-vragen.feature)
+:::
+
+### Beoordeel maatwerk aanvraag
+
+Voor de invulling van beoordeel maatwerk aanvraag bestaan twee opties:
+
+* [optie 1 (simpel)](beoordeel-maatwerk-aanvraag-simpel/index.md)
+* [optie 2 (uitgebreid)](beoordeel-maatwerk-aanvraag-uitgebreid/index.md)
 
 ### Maak contract
 
@@ -88,6 +71,27 @@ Nadat de aanvraag is goedgekeurd wordt er een borgstelling contract aangemaakt.
 
 * [Document](contract.message.md)
 * [Acceptatie criteria](maak-contract.feature)
+
+### Activeer borgstelling
+
+Verander de status van de borgstelling aanvraag in actief.
+
+### Registreer verkoop
+
+Wsf maakt gebruik van Exact online. Voor **1% van de bruto kredietsom** van de geaccepteerde borgstelling aanvraag moet er automatisch een factuurregel aangemaakt worden via de [API van Exact online](https://start.exactonline.nl/docs/HlpRestAPIResourcesDetails.aspx?name=SalesInvoiceSalesInvoiceLines).
+
+**pseudo code**:
+
+[pseudo code](RegistreerBorgstellingVerkoopUseCase.java)
+
+
+Zie [exact knowledge base](https://support.exactonline.com/community/s/knowledge-base#All-All-DNO-Content-restapibusinessexamplesalesorder) voor meer informatie.
+
+:::info
+
+* @Frank zou je kunnen uitzoeken hoe verzamelfacturen in exact werken? Ik ben uitgekomen op een sales order en ik verwacht dat je meerdere sales oders aan een factuur kan koppelen....
+
+:::
 
 ### Aanvraag afgewezen
 

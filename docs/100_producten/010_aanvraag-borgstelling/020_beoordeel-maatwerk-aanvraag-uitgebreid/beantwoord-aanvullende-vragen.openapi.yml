@@ -16,64 +16,63 @@ paths:
         Geeft een lijst van geclaimde taken. Wanneer de gebruiker geen taken heeft geclaimed dan worden de niet geclaimde taken met de hoogste prioriteit waarvoor de gebruiker geautoriseerd is getoond.
       operationId: GeefMijnBeantwoordAanvullendeVragenTaken
       parameters:
-        - $ref: "../../data-dictionary/parameters/limit.yml"
-        - $ref: "../../data-dictionary/parameters/offset.yml"
+        - $ref: "../../../data-dictionary/parameters/limit.yml"
+        - $ref: "../../../data-dictionary/parameters/offset.yml"
       responses:
         200:          
           description: OK
           content:
             application/json:
               schema:
-                $ref: "../../data-dictionary/responses/mijn_taken.yml"
+                $ref: "../../../data-dictionary/responses/mijn_taken.yml"
         401:
-          $ref: "../../data-dictionary/responses/types/401.yml"
+          $ref: "../../../data-dictionary/responses/types/401.yml"
         403:
-          $ref: "../../data-dictionary/responses/types/403.yml"
+          $ref: "../../../data-dictionary/responses/types/403.yml"
 
-  /api/borgstellingen/beantwoord-aanvullende-vragen-taken/{taak_id}:    
+  /api/borgstellingen/beantwoord-aanvullende-vragen/{taak_id}:    
     parameters:        
-      - $ref: "../../data-dictionary/parameters/taak_id.yml"
+      - $ref: "../../../data-dictionary/parameters/taak_id.yml"
     get:
       tags:
         - beantwoord aanvullende vragen taken
       summary: Geeft een beantwoord aanvullende vragen taak.
-      operationId: GeefBeantwoordAanvullendeVragenTaak
+      operationId: GeefBeantwoordAanvullendeVragenTaakV1
       responses:
         200:          
           description: OK
           content:
             application/json:
               schema:
-                $ref: "../../data-dictionary/responses/beantwoord_aanvullende_vragen_taak.yml"
+                $ref: "../../../data-dictionary/responses/beantwoord_aanvullende_vragen_taak.yml"
         400:
-          $ref: "../../data-dictionary/responses/types/400.yml"
+          $ref: "../../../data-dictionary/responses/types/400.yml"
         401:
-          $ref: "../../data-dictionary/responses/types/401.yml"
+          $ref: "../../../data-dictionary/responses/types/401.yml"
         403:
-          $ref: "../../data-dictionary/responses/types/403.yml"
+          $ref: "../../../data-dictionary/responses/types/403.yml"
         404:
-          $ref: "../../data-dictionary/responses/types/404.yml"
+          $ref: "../../../data-dictionary/responses/types/404.yml"
     put:
       tags:
         - beantwoord aanvullende vragen taken
       summary: Voltooit de beantwoord aanvullende vragen taak.
-      operationId: VoltooiBeantwoordAanvullendeVragenTaak
+      operationId: VoltooiBeantwoordAanvullendeVragenTaakV1
       requestBody:
         required: true
         content:
           application/json:
             schema:
               oneOf:
-                - $ref: "../../data-dictionary/commands/beantwoord_aanvullende_vragen.yml"
-                - $ref: "../../data-dictionary/commands/claim_taak.yml"
+                - $ref: "../../../data-dictionary/commands/beantwoord_aanvullende_vragen.yml"
               discriminator:
                 propertyName: actie
       responses:
         202:
           description: Accepted
         401:
-          $ref: "../../data-dictionary/responses/types/401.yml"
+          $ref: "../../../data-dictionary/responses/types/401.yml"
         403:
-          $ref: "../../data-dictionary/responses/types/403.yml"
+          $ref: "../../../data-dictionary/responses/types/403.yml"
         404:
-          $ref: "../../data-dictionary/responses/types/404.yml"
+          $ref: "../../../data-dictionary/responses/types/404.yml"

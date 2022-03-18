@@ -1,7 +1,7 @@
 user-task:
   name: Geef aanvullende informatie
   schema:
-    $ref: "../../data-dictionary/user_tasks/geef_aanvullende_informatie.yml"
+    $ref: "../../../data-dictionary/user_tasks/geef_aanvullende_informatie.yml"
   ui:
     hidden:
       - taak_id
@@ -10,7 +10,7 @@ actions:
   beantwoorden:
     name: Beantwoorden
     schema: 
-      $ref: "../../data-dictionary/commands/geef_aanvullende_informatie.yml"
+      $ref: "../../../data-dictionary/commands/geef_aanvullende_informatie.yml"
     ui:
       hidden:
         - command_id
