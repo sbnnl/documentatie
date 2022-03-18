@@ -21,8 +21,11 @@ properties:
     properties:
       pagina:
         $ref: "../types/taak_pagina_link.yml"
+      api:
+        $ref: "../types/taak_api_link.yml"
     required:
       - pagina
+      - api
 required:
   - taak_id
   - naam

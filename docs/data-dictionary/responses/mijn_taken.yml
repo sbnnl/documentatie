@@ -5,4 +5,4 @@ allOf:
      taken:
         type: array
         items:
-          $ref: "../user_tasks/taak.yml"
+          $ref: "../models/taak.yml"

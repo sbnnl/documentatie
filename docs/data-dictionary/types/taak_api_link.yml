@@ -1,0 +1,4 @@
+type: string
+format: uri
+description: De link naar api resource van deze taak.
+example: https://api.wsk.nl/borgstellingen/beoordeel-aanvraag-taken/f242f4e7-4ddc-4dbb-a3c1-9ab1a1dea74e
