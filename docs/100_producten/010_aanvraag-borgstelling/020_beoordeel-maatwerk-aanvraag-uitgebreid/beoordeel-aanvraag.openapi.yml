@@ -66,7 +66,7 @@ paths:
               oneOf:
                 - $ref: "../../../data-dictionary/commands/keur_aanvraag_goed.yml"
                 - $ref: "../../../data-dictionary/commands/wijs_aanvraag_af.yml"
-                - $ref: "../../../data-dictionary/commands/vraag_om_aanvullende_informatie.yml"
+                - $ref: "../../../data-dictionary/commands/stel_aanvullende_vragen.yml"
               discriminator:
                 propertyName: actie         
       responses:
