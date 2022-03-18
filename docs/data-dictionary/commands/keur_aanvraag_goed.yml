@@ -9,4 +9,3 @@ allOf:
           - $ref: "../types/actie.yml"
     required:
       - actie
-  
