@@ -3,12 +3,12 @@ allOf:
   - type: object
     title: vraag om aanvullende informatie  
     properties:
-      resultaat:
+      actie:
         allOf:
-          - example: onvolledig
-          - $ref: "../types/beoordeel_aanvraag_resultaat.yml"
+          - example: aanvullende_informatie_vragen
+          - $ref: "../types/actie.yml"
       vragen:
         $ref: "../types/aanvullende_vragen.yml"
     required:
-      - resultaat
+      - actie
       - vragen

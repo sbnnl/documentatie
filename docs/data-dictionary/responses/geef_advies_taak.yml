@@ -1,0 +1,4 @@
+allOf:
+  - title: geef advies taak
+  - $ref: "types/response.yml"
+  - $ref: "../user_tasks/geef_advies.yml"

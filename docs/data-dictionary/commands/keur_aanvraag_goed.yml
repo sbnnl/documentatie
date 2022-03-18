@@ -3,10 +3,10 @@ allOf:
   - type: object
     title: keur aanvraag goed
     properties:
-      resultaat:
+      actie:
         allOf:
-          - example: goedgekeurd
-          - $ref: "../types/beoordeel_aanvraag_resultaat.yml"
+          - example: goedkeuren
+          - $ref: "../types/actie.yml"
     required:
-      - resultaat
+      - actie
   

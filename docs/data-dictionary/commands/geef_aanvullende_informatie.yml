@@ -3,10 +3,10 @@ allOf:
   - type: object
     title: geef aanvullende informatie
     properties:
-      resultaat:
+      actie:
         allOf:
-          - example: aanvullende informatie
-          - $ref: "../types/geef_aanvullende_informatie_resultaat.yml"
+          - example: geef_informatie
+          - $ref: "../types/actie.yml"
       reden_risico_aanvaardbaar:
         $ref: "../types/reden_risico_aanvaardbaar.yml"
       terugbetaling_risicos:
@@ -29,7 +29,7 @@ allOf:
       aanvullende_opmerkingen:
         $ref: "../types/aanvullende_opmerkingen.yml"
     required:
-      - resultaat
+      - actie
       - reden_risico_aanvaardbaar
       - terugbetaling_risicos
       - inkomen

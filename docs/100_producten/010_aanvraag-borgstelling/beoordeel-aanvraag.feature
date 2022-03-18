@@ -1,26 +1,35 @@
 #language: nl
-Functionaliteit: Beoordeel aanvraag taak
+Functionaliteit: Beoordeel aanvraag
 
-  Abstract Scenario: Use-case permissie is juist
-    Gegeven een gebruiker met de rollen "<rollen>"
-    Dan heeft de gebruiker "<wel-niet>" de permissie "BEOORDEEL_AANVRAAG"
+  Scenario: Reguliere borgstelling aanvraag beneden 5000 euro wordt goedgekeurd
+    Gegeven proces informatie "{ soort_aanvraag: 'regulier', bruto_kredietsom: 4999 }"
+    Wanneer taak "taak-bepaal-beoordeling" is uitgevoerd
+    Dan is proces informatie "{ soort_aanvraag: 'regulier', bruto_kredietsom: 4999, beoordeling: 'goedgekeurd' }"
 
-    Voorbeelden:
-    | rollen      | wel-niet |
-    | systeem     | niet     |
-    | kredietbank | wel      |
+  Scenario: Reguliere borgstelling aanvraag vanaf 5000 euro vraagt om maatwerk
+    Gegeven proces informatie "{ soort_aanvraag: 'regulier', bruto_kredietsom: 5000 }"
+    Wanneer taak "taak-bepaal-beoordeling" is uitgevoerd
+    Dan is proces informatie "{ soort_aanvraag: 'regulier', bruto_kredietsom: 5000, beoordeling: 'maatwerk' }"
 
-  Abstract Scenario: Use-case heeft de juiste autorisaties
-    Gegeven een gebruiker met de rollen "<rollen>"
-    En een aanvraag van "<kredietbank>"
-    Wanneer use-case "beoordeel aanvraag" wordt uitgevoerd
-    Dan is de gebruiker "<wel-niet>" geautoriseerd
+  Scenario: Borgstelling aanvraag vanuit een portefeuille overname waarbij het saneringskrediet korter dan 36 maanden heeft gelopen wordt goedgekeurd
+    Gegeven proces informatie "{ soort_aanvraag: 'overname', bruto_kredietsom: 5000. maanden_actief: 35 }"
+    Wanneer taak "taak-bepaal-beoordeling" is uitgevoerd
+    Dan is proces informatie "{ soort_aanvraag: 'overname', bruto_kredietsom: 5000, beoordeling: 'goedgekeurd' }"
 
-    Voorbeelden:
-    | kredietbank   | rollen                     | wel-niet |
-    | kredietbank_a |                            | niet     |
-    | kredietbank_a | systeem                    | niet     |
-    | kredietbank_a | kredietbank                | niet     |
-    | kredietbank_a | kredietbank_a              | niet     |
-    | kredietbank_a | kredietbank, kredietbank_a | niet     |
-    | kredietbank_a | kredietbank, kredietbank_b | wel      |
+  Scenario: Borgstelling aanvraag vanuit een portefeuille overname waarbij het saneringskrediet langer dan 36 maanden heeft gelopen wordt afgewezen
+    Gegeven proces informatie "{ soort_aanvraag: 'overname', bruto_kredietsom: 5000, maanden_actief: 36 }"
+    Wanneer taak "taak-bepaal-beoordeling" is uitgevoerd
+    Dan is proces informatie "{ soort_aanvraag: 'overname', bruto_kredietsom: 5000, beoordeling: 'afgewezen' }"
+
+   Abstract Scenario: Reguliere borgstelling aanvraag vanaf 5000 euro met een pro forma aanvraag
+    Gegeven proces informatie "{ soort_aanvraag: 'regulier', bruto_kredietsom: <bruto_kredietsom>, pro_forma_aanvraag: { bruto_kredietsom: <pro_forma_bruto_kredietsom>, beoordeling: '<pro_forma_beoordeling>' } }"
+    Wanneer taak "taak-bepaal-beoordeling" is uitgevoerd
+    Dan is proces informatie "{ soort_aanvraag: 'regulier', bruto_kredietsom: <bruto_kredietsom>, beoordeling: '<beoordeling>' }"
+
+  Voorbeelden:
+  | bruto_kredietsom | pro_forma_bruto_kredietsom | pro_forma_beoordeling | beoordeling      |
+  | 5000             | 5000                       | goedgekeurd           | goedgekeurd |
+  | 4999             | 5000                       | afgewezen             | goedgekeurd |
+  | 5499             | 5000                       | goedgekeurd           | goedgekeurd |
+  | 5500             | 5000                       | goedgekeurd           | maatwerk    |
+  

@@ -1,7 +1,7 @@
 user-task:
   name: Beoordeel aanvraag
   schema:
-    $ref: "../../data-dictionary/user_tasks/beoordeel_aanvraag.yml"
+    $ref: "../../../data-dictionary/user_tasks/beoordeel_aanvraag.yml"
   ui:
     hidden:
       - taak_id
@@ -10,30 +10,30 @@ actions:
   goedkeuren:
     name: Goedkeuren
     schema: 
-      $ref: "../../data-dictionary/commands/keur_aanvraag_goed.yml"
+      $ref: "../../../data-dictionary/commands/keur_aanvraag_goed.yml"
     ui:
       hidden:
         - command_id
         - correlation_id
         - causation_id
-        - resultaat
+        - actie
   afwijzen:
     name: Afwijzen
     schema: 
-      $ref: "../../data-dictionary/commands/wijs_aanvraag_af.yml"
+      $ref: "../../../data-dictionary/commands/wijs_aanvraag_af.yml"
     ui:
       hidden:
         - command_id
         - correlation_id
         - causation_id
-        - resultaat
+        - actie
   onvolledig:
     name: Onvolledig
     schema: 
-      $ref: "../../data-dictionary/commands/vraag_om_aanvullende_informatie.yml"
+      $ref: "../../../data-dictionary/commands/vraag_om_aanvullende_informatie.yml"
     ui:
       hidden:
         - command_id
         - correlation_id
         - causation_id
-        - resultaat
+        - actie

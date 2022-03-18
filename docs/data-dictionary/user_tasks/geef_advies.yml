@@ -1,4 +1,5 @@
 type: object
+title: gee advies
 properties:
   taak_id:
     $ref: "../types/taak_id.yml"
@@ -72,18 +73,9 @@ properties:
       required:
         - vraag
         - antwoord
-  advies:
-    type: object
-    title: advies van kredietbank
-    properties:
-      uitkomst:
-        $ref: "../types/uitkomst_advies.yml"
-      toelichting:
-        $ref: "../types/toelichting_advies.yml"
-    required:
-      - uitkomst
-      - toelichting        
 required:
   - taak_id
   - borgstelling_id
   - aanvraag
+  - aanvullende_informatie
+  - aanvullende_vragen
