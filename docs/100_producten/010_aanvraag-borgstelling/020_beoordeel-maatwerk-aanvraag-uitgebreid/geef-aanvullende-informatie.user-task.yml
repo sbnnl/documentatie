@@ -7,7 +7,7 @@ user-task:
       - taak_id
       - borgstelling_id
 actions:
-  antwoord:
+  beantwoorden:
     name: Aanvullende informatie
     schema: 
       $ref: "../../../data-dictionary/commands/geef_aanvullende_informatie.yml"
