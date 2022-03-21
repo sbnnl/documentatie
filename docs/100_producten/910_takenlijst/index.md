@@ -12,6 +12,7 @@ Wanneer de gebruiker een taak opent dan wordt er eerst een claim verzoek verstuu
 
 * [Context](../../besluiten/taken-plugin-architectuur/context.puml)
 * [API](product.openapi.yml)
+* [Ssequence diagram](sequence-diagram.puml)
 
 ## Business requirements
 

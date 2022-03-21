@@ -1,0 +1,26 @@
+@startuml
+autonumber
+
+actor Gebruiker as user
+participant "Mijn taken pagina" as taken
+participant "Taak api" as api
+participant "Taak pagina" as taak
+
+user -> taken : geef mijn taken
+activate taken
+taken -> user : taken
+deactivate taken
+
+user -> taken : geef taak
+activate taken
+taken -> api : claim
+api -> taken: accepted
+taken --> taken : stuur door
+deactivate taken
+
+taken -> taak : geef taak
+activate taak
+taak -> user : taak
+deactivate taak
+
+@enduml
