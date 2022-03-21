@@ -15,3 +15,4 @@ Wat zijn de (non)functionele requirements? Denk hierbij aan zaken als doorloopti
 | Nummer | Omschrijving                         | Eigenaar                  |
 | -------| ------------------------------------ | ------------------------- |
 | 1      | Omschrijving                         | Frank Dijkstra            |
+
