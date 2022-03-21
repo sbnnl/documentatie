@@ -55,7 +55,7 @@ header a[aria-expanded="true"] {
     color: var(--sbn-color-purple);
 }
 
-main > aside > div:first-child {
+main > aside > div.header {
     border-bottom-color: var(--color-black-a10);
 }
 
