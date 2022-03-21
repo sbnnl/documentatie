@@ -17,12 +17,12 @@ Functionaliteit: Aanvraag borgstelling proces
     Dan is route "route-afgewezen" actief
 
   Scenario: Pro forma route is actief
-    Gegeven proces informatie "{ pro_forma: true }"
+    Gegeven proces informatie "{ soort_aanvraag: 'pro_forma_aanvraag' }"
     Wanneer poort "poort-pro-forma-aanvraag" is uitgevoerd
     Dan is route "route-pro-forma-aanvraag" actief
 
   Scenario: Geen pro forma route is actief
-    Gegeven proces informatie "{ pro_forma: false }"
+    Gegeven proces informatie "{ soort_aanvraag: 'aanvraag' }"
     Wanneer poort "poort-pro-forma-aanvraag" is uitgevoerd
     Dan is route "route-geen-pro-forma-aanvraag" actief
   

@@ -7,7 +7,4 @@ allOf:
       soort_aanvraag:
         type: string
         example: aanvraag
-  - $ref: "../models/borgstelling_aanvraag.yml"    
-  - properties:
-      pro_forma:
-        $ref: "../types/pro_forma_aanvraag.yml"
+  - $ref: "../models/borgstelling_aanvraag.yml"

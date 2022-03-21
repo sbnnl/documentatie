@@ -2,20 +2,24 @@
 
 ## Product
 
-@Frank, graag hier het doel van het product beschrijven:
+Een aanvraag van een borgstelling door een kredietbank voor een saneringskrediet waarvoor het Wsk borg staat. De volgende aanvraag borgstelling producten kunnen afgenomen worden:
 
-Een registratie van een nieuw verstrekt saneringskrediet waarvoor het Wsk borg staat. 
+* pro-forma-aanvraag borgstelling;
+* aanvraag borgstelling;
+* aanvraag vanuit een portefeuille overname;
+
+<!-- einde -->
 
 * Vertaling van algemene missie, visie, doelen en randvoorwaarden naar product specifieke doelen en doelstellingen.
 * Wat moet het product kunnen?
 * Waar moet het aan voldoen om succesvol te zijn?
 
-<!-- einde van de lijst -->
+<!-- einde -->
 
-* [Dashboard](product.dashboard.yml)
 * [Formulier](product.user-task.yml)
 * [API](product.openapi.yml)
 * [Acceptatie criteria](product.feature)
+* [Dashboard](product.dashboard.yml)
 
 ## Proces
 
@@ -32,7 +36,7 @@ Registreer aanvraag wordt vanuit de REST adapter aangeroepen. De use-case is ver
     * de gebruiker moet beschikken over **"REGISTREER_AANVRAAG"** permissie;
     * de gebruiker moet beschikken over een **kredietbank claim** die overeenkomt met de kredietbank uit de aanvraag;
 * registratie van de aanvraag;
-* starten van het proces;
+* starten van het proces, een pro-forma aanvraag die eventueel in een eerder stadium met hetzelfde kenmerk is uitgevoerd moet aan de procesinformatie toegevoegd worden.
 
 <!-- einde -->
 
@@ -40,11 +44,13 @@ Registreer aanvraag wordt vanuit de REST adapter aangeroepen. De use-case is ver
 
 ### Beoordeel aanvraag
 
-De aanvraag wordt automatisch beoordeeld op basis van regels in het beslissingsmodel. Het beslissingsmodel kent de volgende uitkomsten:
+De informatie van de aanvraag wordt automatisch beoordeeld op basis van regels in het beslissingsmodel. Het beslissingsmodel kent de volgende uitkomsten:
 
 * goedgekeurd
 * afgewezen
 * maatwerk
+
+Een pro-forma-aanvraag met hetzelfde kenmerk die in een eerder stadium is uitgevoerd maakt ook deel uit van de informatie.
 
 <!-- einde -->
 

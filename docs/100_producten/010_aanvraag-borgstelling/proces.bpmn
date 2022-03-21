@@ -86,7 +86,7 @@
       <bpmn:errorEventDefinition id="ErrorEventDefinition_0jckn3e" errorRef="Error_1jh6r5b" />
     </bpmn:boundaryEvent>
     <bpmn:sequenceFlow id="route-pro-forna-aanvraag" name="Ja" sourceRef="poort-pro-forma-aanvraag" targetRef="Gateway_19jfq07">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">= soort_aanvraag = 'pro_forma'</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=soort_aanvraag = 'pro_forma_aanvraag'</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_031hk4l" sourceRef="Gateway_19jfq07" targetRef="gebeurtenis-aanvraag-geaccepteerd" />
     <bpmn:sequenceFlow id="Flow_1esw0ad" sourceRef="gebeurtenis-maatwerk-aanvraag-afgewezen" targetRef="gebeurtenis-aanvraag-afgewezen" />
