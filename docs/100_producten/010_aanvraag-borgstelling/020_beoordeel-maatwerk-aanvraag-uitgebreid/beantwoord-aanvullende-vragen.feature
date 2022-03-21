@@ -8,7 +8,8 @@ Functionaliteit: Beantwoord aanvullende vragen use-case
     Voorbeelden:
     | rollen      | wel-niet |
     | systeem     | niet     |
-    | wsk         | niet     |
+    | sbn         | niet     |
+    | sbf         | niet     |
     | kredietbank | wel      |
 
   Abstract Scenario: Use-case heeft de juiste autorisaties

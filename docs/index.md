@@ -24,12 +24,16 @@ Het Wsk verwezenlijkt deze doelstelling door:
 1. Zorgvuldig beheer van de haar toevertrouwde middelen en de eventueel te werven middelen.
 1. Het belang van saneringskredieten en de voordelen van het fonds actief onder de aandacht brengen van relevante partijen in het schuldhulpverleningsveld.
 
+## Organisatie
+
 Het werk van het Wsk is belegd bij twee stichtingen:
 
 * Stichting Bemiddeling en Fondsbeheer (SBF) 
 * Stichting Sociale Banken Nederland (SBN)
 
-De Stichting SBF sluit overeenkomsten met de kredietbanken om garant te staan voor afgesloten Saneringskredieten. 
+De Stichting SBF sluit overeenkomsten met de kredietbanken om garant te staan voor afgesloten Saneringskredieten.
+
+[Context](context.puml)
 
 ## Randvoorwaarden
 

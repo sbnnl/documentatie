@@ -2,8 +2,7 @@ type: object
 title: borgstelling aanvraag
 properties:
   soort_aanvraag:
-    type: string
-    example: regulier
+    $ref: "../types/soort_aanvraag.yml"
   kredietbank_id:    
     $ref: "../types/kredietbank_id.yml"
   kenmerk:

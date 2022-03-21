@@ -7,7 +7,8 @@ Functionaliteit: Registreer aanvraag use-case
 
     Voorbeelden:
     | rollen      | wel-niet |
-    | wsk         | niet     |
+    | sbn         | niet     |
+    | sbf         | niet     |
     | systeem     | niet     |
     | kredietbank | wel      |
 
@@ -20,7 +21,8 @@ Functionaliteit: Registreer aanvraag use-case
     Voorbeelden:
     | kredietbank   | rollen                                                    | wel-niet |
     | kredietbank_a | systeem                                                   | niet     |
-    | kredietbank_a | wsk                                                       | niet     |
+    | kredietbank_a | sbn                                                       | niet     |
+    | kredietbank_a | sbf                                                       | niet     |
     | kredietbank_a | kredietbank                                               | niet     |
     | kredietbank_a | kredietbank_a                                             | niet     |
     | kredietbank_a | kredietbank, kredietbank_b                                | niet     |

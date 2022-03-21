@@ -7,21 +7,21 @@ info:
 
 paths:
 
-  /api/borgstellingen/beoordeel-aanvraag-taken/{taak_id}:    
+  /api/borgstellingen/fiatteer-aanvraag-taken/{taak_id}:    
     parameters:        
       - $ref: "../../../data-dictionary/parameters/taak_id.yml"
     get:
       tags:
-        - beoordeel aanvraag taken
-      summary: Geeft een beoordeel aanvraag taak.
-      operationId: GeefBeoordeelAanvraagTaakV1
+        - fiatteer aanvraag taken
+      summary: Geeft een fiatteer aanvraag taak.
+      operationId: GeefFiatteerAanvraagTaakV1
       responses:
         200:          
           description: OK
           content:
             application/json:
               schema:
-                $ref: "../../../data-dictionary/responses/beoordeel_aanvraag_taak.yml"
+                $ref: "../../../data-dictionary/responses/fiatteer_aanvraag_taak.yml"
         400:
           $ref: "../../../data-dictionary/responses/types/400.yml"
         401:
@@ -32,19 +32,19 @@ paths:
           $ref: "../../../data-dictionary/responses/types/404.yml"
     put:
       tags:
-        - beoordeel aanvraag taken
-      summary: Voltooit de beoordeel aanvraag taak.
-      operationId: VoltooiBeoordeelAanvraagTaakV1
+        - fiatteer aanvraag taken
+      summary: Voltooit de fiatteer aanvraag taak.
+      operationId: VoltooiBeoordelAanvraagTaakV1
       requestBody:
         required: true
         content:
           application/json:
             schema:
               oneOf:
-                - $ref: "../../../data-dictionary/commands/keur_aanvraag_goed.yml"
+                - $ref: "../../../data-dictionary/commands/fiatteer_aanvraag.yml"
                 - $ref: "../../../data-dictionary/commands/wijs_aanvraag_af.yml"
               discriminator:
-                propertyName: actie                  
+                propertyName: actie         
       responses:
         202:
           description: Accepted

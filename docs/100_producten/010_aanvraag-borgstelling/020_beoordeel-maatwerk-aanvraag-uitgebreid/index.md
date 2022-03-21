@@ -66,6 +66,16 @@ Er ontstaat automatisch een taak in de takenlijst van de kredietbank wanneer de 
 * [API](beantwoord-aanvullende-vragen.openapi.yml)
 * [Acceptatie criteria](beantwoord-aanvullende-vragen.feature)
 
+### Fiatteer aanvraag
+
+Elke maatwerk aanvraag moet gefiatteerd worden door SBF als invulling van het vier-ogen-principe.
+
+<!-- einde -->
+
+* [Formulier](fiatteer-aanvraag.user-task.yml)
+* [API](fiatteer-aanvraag.openapi.yml)
+* [Acceptatie criteria](fiatteer-aanvraag.feature)
+
 ## Business requirements
 
 Wat zijn de (non)functionele requirements? Denk hierbij aan zaken als doorlooptijd, vierogenprincipe, etc.
