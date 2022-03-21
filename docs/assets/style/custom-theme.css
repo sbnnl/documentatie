@@ -1,0 +1,14 @@
+:root {
+    /* Colors */
+    --sbn-color-purple: #3C2A60;
+    --sbn-color-purple-surface: #D9D3DE;
+    --sbn-color-purple-dark: #23104a;
+    --sbn-color-aqua: #6CCACF;
+    --sbn-color-aqua-surface: #CFE5E8;
+    --sbn-color-aqua-dark: #6aa7b7;
+
+    /* Theming */
+    --color-brand-base: var(--sbn-color-aqua);
+    --color-brand-light: var(--sbn-color-aqua-surface);
+    --text-color-heading: var(--sbn-color-purple);
+}
