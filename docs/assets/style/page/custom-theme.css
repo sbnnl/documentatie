@@ -47,8 +47,8 @@ header a[aria-expanded="true"] {
     color: var(--sbn-color-purple);
 }
 
-main > aside > div.header {
-    border-bottom-color: var(--color-black-a10);
+main > aside > .header {
+    border-top-color: var(--color-black-a10);
 }
 
 @media (min-width: 40rem) {
