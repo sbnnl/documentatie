@@ -4,8 +4,13 @@
 
 Vanuit producten ontstaan er taken die door mensen uitgevoerd moeten worden. De takenlijst stelt deze taken op een centrale plek beschikbaar op basis van decentrale taak bronnen.
 
+Wanneer de gebruiker een taak opent dan wordt er eerst een claim verzoek verstuurd naar de API die bij de taak is geregistreerd. De gebruiker wordt doorgestuurd naar de pagina die bij de taak staat geregistreerd wanneer de API succesvol heeft geantwoord.
+
+
+
 <!-- einde -->
 
+* [Context](../../besluiten/taken-plugin-architectuur/context.puml)
 * [API](product.openapi.yml)
 
 ## Business requirements

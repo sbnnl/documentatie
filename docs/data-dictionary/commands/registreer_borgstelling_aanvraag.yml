@@ -1,13 +1,10 @@
 allOf:  
   - $ref: "types/command.yml"
-  - title: registreer reguliere aanvraag
+  - title: registreer aanvraag
     description: |
       Een aanvraag borgstelling voor een nog te verstrekken saneringskrediet.
     properties:
-      actie:
+      soort_aanvraag:
         type: string
-        example: reguliere_aanvraag
-  - $ref: "../models/borgstelling_aanvraag.yml"    
-  - properties:
-      pro_forma:
-        $ref: "../types/pro_forma_aanvraag.yml"
+        example: aanvraag
+  - $ref: "../models/borgstelling_aanvraag.yml"

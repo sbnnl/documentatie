@@ -19,10 +19,11 @@ paths:
           application/json:
             schema:
               oneOf:
+                - $ref: "../../data-dictionary/commands/registreer_pro_forma_borgstelling-aanvraag.yml"
                 - $ref: "../../data-dictionary/commands/registreer_borgstelling_aanvraag.yml"
                 - $ref: "../../data-dictionary/commands/registreer_borgstelling_overname.yml"
               discriminator:
-                propertyName: actie
+                propertyName: soort_aanvraag
       responses:
         201:
           $ref: "../../data-dictionary/responses/types/201.yml"

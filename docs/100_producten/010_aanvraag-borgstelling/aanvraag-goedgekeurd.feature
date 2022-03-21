@@ -8,7 +8,8 @@ Functionaliteit: Aanvraag goedgekeurd use-case
     Voorbeelden:
     | rollen      | wel-niet |
     | kredietbank | niet     |
-    | wsk         | niet     |
+    | sbn         | niet     |
+    | sbf         | niet     |
     | systeem     | wel      |
 
   Abstract Scenario: Use-case heeft de juiste autorisaties
@@ -19,5 +20,6 @@ Functionaliteit: Aanvraag goedgekeurd use-case
     Voorbeelden:
     | rollen      | wel-niet |
     | kredietbank | niet     |
-    | wsk         | niet     |
+    | sbn         | niet     |
+    | sbf         | niet     |
     | systeem     | wel      |

@@ -56,8 +56,8 @@ paths:
     put:
       tags:
         - beoordeel aanvraag taken
-      summary: Voltooit de beoordeel aanvraag taken taak.
-      operationId: VoltooiBeoordelAanvraagTaakV1
+      summary: Voltooit de beoordeel aanvraag taak.
+      operationId: VoltooiBeoordeelAanvraagTaakV1
       requestBody:
         required: true
         content:

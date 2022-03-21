@@ -9,7 +9,8 @@ Functionaliteit: Beoordeel aanvraag use-case
     | rollen      | wel-niet |
     | systeem     | niet     |
     | kredietbank | niet     |
-    | wsk         | wel      |
+    | sbf         | niet     |
+    | sbn         | wel      |
 
   Abstract Scenario: Use-case heeft de juiste autorisaties
     Gegeven een gebruiker met de rollen "<rollen>"
@@ -22,4 +23,5 @@ Functionaliteit: Beoordeel aanvraag use-case
     | kredietbank_a |                            | niet     |
     | kredietbank_a | systeem                    | niet     |
     | kredietbank_a | kredietbank                | niet     |
-    | kredietbank_a | wsk                        | wel      |
+    | kredietbank_a | sbf                        | niet     |
+    | kredietbank_a | sbn                        | wel      |

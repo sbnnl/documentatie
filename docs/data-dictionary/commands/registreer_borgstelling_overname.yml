@@ -6,7 +6,7 @@ allOf:
 
       @Frank: volgens mij wil je hier nog meer informatie weten zoals bijvoorbeeld de ingansgdatum van het saneringskrediet?
     properties:
-      actie:
+      soort_aanvraag:
         type: string
         example: overname
   - $ref: "../models/borgstelling_aanvraag.yml"
