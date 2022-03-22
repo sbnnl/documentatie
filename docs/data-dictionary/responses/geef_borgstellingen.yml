@@ -1,0 +1,14 @@
+allOf:
+  - title: geef borgstellingen
+    properties:
+      items:
+        type: array
+        items:
+          properties:
+            borgstelling_id:
+              $ref: "../types/borgstelling_id.yml"
+            kredietbank_id:
+              $ref: "../types/kredietbank_id.yml"
+            kenmerk:
+              $ref: "../types/kenmerk_kredietbank.yml"
+  - $ref: "types/offset_response.yml" 

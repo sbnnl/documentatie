@@ -1,0 +1,10 @@
+allOf:
+  - title: geef borgstellingen dashboard
+    properties:
+      items:
+        type: array
+        items:
+          type: object
+          description: |
+            @Frank, welke informatie wil je zien in het dashboard?            
+  - $ref: "types/offset_response.yml" 

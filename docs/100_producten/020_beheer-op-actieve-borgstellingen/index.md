@@ -1,4 +1,4 @@
-# Dashboard
+# Beheer op actieve borgstelling
 
 ## Context
 
@@ -7,6 +7,10 @@
 * Vertaling van algemene missie, visie, doelen en randvoorwaarden naar product specifieke doelen en doelstellingen.
 * Wat moet het product kunnen?
 * Waar moet het aan voldoen om succesvol te zijn?
+
+<!-- einde -->
+
+* [API](product.openapi.yml)
 
 ## Business requirements
 

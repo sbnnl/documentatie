@@ -1,0 +1,13 @@
+in: query    
+name: kenmerken
+description: Een lijst van minimaal 1 en maximaal 500 saneringskrediet kenmerken van een kredietbank.
+required: false
+type: array
+items:
+  $ref: "../types/kenmerk_kredietbank.yml"
+minItems: 1
+maxItems: 500
+example:
+  - 5461135-1
+  - 4458455-4
+  - 8875554-1
