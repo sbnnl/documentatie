@@ -1,4 +1,4 @@
-# Beheer op actieve borgstelling
+# Beheer op actieve borgstellingen
 
 ## Context
 
