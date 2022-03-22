@@ -6,23 +6,19 @@ info:
   description: |
 paths:
 
-  /api/borgstellingen/{borgstelling_id}:
+  /api/borgstellingen/{borgstelling_id}/beeindigen:
     parameters:        
       - $ref: "../../data-dictionary/parameters/borgstelling_id.yml"
-    patch:
+    put:
       tags:
         - borgstelling
-      summary: Actieve borgstelling aanvullen met informatie.
-      operationId: VulBorgstellingAanV1
+      summary: Beeindigt de borgstelling.
+      operationId: BeeindigBorgstellingV1
       requestBody:
         required: true
         content:
           application/json:
-            schema:
-              oneOf:
-                - $ref: "../../data-dictionary/commands/beeindig_borgstelling.yml"
-              discriminator:
-                propertyName: actie
+            $ref: "../../data-dictionary/commands/beeindig_borgstelling.yml"
       responses:
         201:
           $ref: "../../data-dictionary/responses/types/201.yml"

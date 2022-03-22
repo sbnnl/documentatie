@@ -2,10 +2,3 @@ allOf:
   - $ref: "types/command.yml"
   - type: object
     title: beëindig borgstelling
-    properties:
-      actie:        
-        allOf:
-          - example: beeindig_borgstelling
-          - $ref: "../types/actie.yml"
-    required:
-      - actie
