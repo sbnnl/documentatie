@@ -1,0 +1,5 @@
+type: string
+format: uuid 
+title: borgstelling
+description: Uniek identificerend kenmerk van de borgstelling aanvraag.
+example: afa0f657-ba5b-4f6f-bc4e-6ac8dd63d76b

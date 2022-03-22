@@ -1,0 +1,5 @@
+in: query
+name: offset
+description: An id reference to indicate until where items must be skipped.
+schema:
+  type: string

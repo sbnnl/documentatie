@@ -1,0 +1,4 @@
+type: string
+description: Unieke identificerend kenmerk van een taak.
+title: taak
+example: 12a0f16b-7d4c-436b-9a6c-f324eac52922
