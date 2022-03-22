@@ -30,24 +30,46 @@
     Stichting Sociale Banken Nederland (SBN) gaat over de uitvoering. Dat houdt onder andere in: het dagelijkse contact en voorbereiden overeenkomsten met kredietbanken, de registratie van borgstellingen, behandelen van aanvragen voor uitkeringen uit het waarborgfonds en continue monitoring. 
     
     De bemensing van SBN bestaat uit een programmamanager en een aantal ondersteunende medewerkers.
-- name: Waarborgfonds voor saneringskredieten (WBF)
+- name: Waarborgfonds saneringskredieten (Wsk)
   alias:
-    - Waarborgfonds voor saneringskredieten
+    - Waarborgfonds saneringskredieten
     - Waarborgfonds
-    - WBF
+    - Wsk
   text: |
-    @Frank graag hier een definite van het WBF.
+    Het waarborgfonds saneringskredieten staat borg voor saneringskredieten die door deelnemende kredietbanken verstrekt worden en wordt gerealiseerd door een gedeelde inspanning van SBF en SBN.
+
+    Wsk is een handelsmerk van SBF.
 - name: Kredietbank
   alias:
     - kredietbanken
   text: |
-    @Frank graag hier een definite van een kredietbank  
+    Een kredietbank is een private of publieke organisatie die bankcaire activiteiten kan uitvoeren in het kader van een schuldhulpverleningstraject.
 - name: Allegro
   text: |
-    @Frank graag hier een definite van een kredietbank
+    Allegro is een software pakket dat ondersteuning biedt aan alle primaire processen van schuldhulpverleners.
 - name: Stratech
   text: |
-    @Frank graag hier een definite van een kredietbank
+    Stratech is een software pakket dat ondersteuning biedt aan alle primaire processen van schuldhulpverleners.
 - name: Schuldenknooppunt
   text: |
-    @Frank graag hier een definite van een kredietbank
+    Via het Schuldenknooppunt wisselen schuldhulpverleners en schuldeisers standaard berichten uit.
+- name: takenlijst
+  text: |
+    Vanuit producten ontstaan er taken die door mensen uitgevoerd moeten worden. De takenlijst stelt deze taken op een centrale plek beschikbaar op basis van decentrale taak bronnen.
+  link: producten/takenlijst/index.html
+- name: gebeurtenissen
+  text: |
+    Vanuit producten ontstaan er gebeurtenissen. Dit product stelt deze gebeurtenissen centraal beschikbaar zodat die door andere producten, decentraal, verder verwerkt kunnen worden.
+  link: producten/gebeurtenissen/index.html
+- name: pro-forma-aanvraag
+  alias:
+    - pro forma aanvraag
+    - pro-forma aanvraag
+    - pro-forma
+    - pro forma
+  text: |
+    Kredietbanken moeten al in een vroeg stadium weten of een saneringskrediet ingezet kan worden. Via een pro-forma-aanvraag kan de kredietbank een borgstelling aanvragen op basis van de informatie die op dat moment bekent is. 
+  
+    Een pro-forma-aanvraag wordt geaccepteerd of afgwezen. Ingeval van acceptatie wordt de aanvraag niet geactiveerd en ook niet in rekening gebracht, echter kredietbank kan mag wel rechten ontlenen aan de pro-forma-aanvraag.
+    
+    Op het moment dat de kredietbank de borgstelling wil gebruiken moet het een nieuwe aanvraag in dienen met definitieve gegevens. De pro-forma-aanvraag maakt onderdeel uit van deze nieuwe aanvraag en wordt gebruikt om de definitieve aanvraag te beoordelen.
