@@ -9,10 +9,10 @@ paths:
   /api/borgstellingen/{borgstelling_id}/uitbetalen:
     parameters:        
       - $ref: "../../data-dictionary/parameters/borgstelling_id.yml"
-    post:
+    put:
       tags:
         - borgstelling uitbetalen
-      summary: Start het verzoek tot uitbetalen van de borgstelling proces.
+      summary: Vezoekt uitbetaling van de borgstelling.
       operationId: VerzoekUitbetalingBorgstellingV1
       requestBody:
         required: true
