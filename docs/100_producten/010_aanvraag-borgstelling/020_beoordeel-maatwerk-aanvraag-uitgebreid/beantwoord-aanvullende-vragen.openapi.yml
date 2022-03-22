@@ -14,7 +14,7 @@ paths:
       summary: Geeft een persoonlijke lijst van beantwoord aanvullende vragen taken.
       description: |
         Geeft een lijst van geclaimde taken. Wanneer de gebruiker geen taken heeft geclaimed dan worden de niet geclaimde taken met de hoogste prioriteit waarvoor de gebruiker geautoriseerd is getoond.
-      operationId: GeefMijnBeantwoordAanvullendeVragenTaken
+      operationId: GeefMijnBeantwoordAanvullendeVragenTakenV1
       parameters:
         - $ref: "../../../data-dictionary/parameters/limit.yml"
         - $ref: "../../../data-dictionary/parameters/offset.yml"
