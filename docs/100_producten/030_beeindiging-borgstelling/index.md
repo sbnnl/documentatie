@@ -8,6 +8,10 @@
 * Wat moet het product kunnen?
 * Waar moet het aan voldoen om succesvol te zijn?
 
+<!-- einde -->
+
+* [API](product.openapi.yml)
+
 ## Business requirements
 
 Wat zijn de (non)functionele requirements? Denk hierbij aan zaken als doorlooptijd, vierogenprincipe, etc.

@@ -1,0 +1,36 @@
+openapi: 3.0.3
+
+info:
+  version: 0.0.1
+  title: Waarborgfonds saneringskredieten
+  description: |
+paths:
+
+  /api/borgstellingen/{borgstelling_id}:
+    parameters:        
+      - $ref: "../../data-dictionary/parameters/borgstelling_id.yml"
+    patch:
+      tags:
+        - borgstelling
+      summary: Actieve borgstelling aanvullen met actuele saneringskrediet informatie.
+      operationId: VulBorgstellingAanV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              oneOf:
+                - $ref: "../../data-dictionary/commands/beeindig_borgstelling.yml"
+              discriminator:
+                propertyName: actie
+      responses:
+        201:
+          $ref: "../../data-dictionary/responses/types/201.yml"
+        400:
+          $ref: "../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../data-dictionary/responses/types/403.yml"
+        404:
+          $ref: "../../data-dictionary/responses/types/404.yml"
