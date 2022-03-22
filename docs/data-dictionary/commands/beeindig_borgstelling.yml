@@ -1,4 +1,3 @@
 allOf:
   - $ref: "types/command.yml"
-  - type: object
-    title: beëindig borgstelling
+  - title: beëindig borgstelling
