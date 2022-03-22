@@ -18,7 +18,8 @@ paths:
         required: true
         content:
           application/json:
-            $ref: "../../data-dictionary/commands/beeindig_borgstelling.yml"
+            schema:
+              $ref: "../../data-dictionary/commands/beeindig_borgstelling.yml"
       responses:
         201:
           $ref: "../../data-dictionary/responses/types/201.yml"
