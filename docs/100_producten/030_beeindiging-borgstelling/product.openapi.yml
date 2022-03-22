@@ -12,7 +12,7 @@ paths:
     patch:
       tags:
         - borgstelling
-      summary: Actieve borgstelling aanvullen met actuele saneringskrediet informatie.
+      summary: Actieve borgstelling aanvullen met informatie.
       operationId: VulBorgstellingAanV1
       requestBody:
         required: true
