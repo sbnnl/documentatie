@@ -14,7 +14,7 @@ paths:
       tags:
         - borgstelling
       summary: Borgstelling aanvraag aanvullen met extra informatie.
-      operationId: BorgstellingAanvullen
+      operationId: VulBorgstellingAanvraagAanV1
       requestBody:
         required: true
         content:
