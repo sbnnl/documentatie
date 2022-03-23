@@ -19,4 +19,4 @@
     * [ ] https://github.com/sbnnl/documentatie/blob/feature/aanvraag-borgstelling/docs/data-dictionary/types/toelichting_advies.yml
 * [ ] [Is er een maximum bruto_kredietsom?](https://github.com/sbnnl/documentatie/blob/feature/aanvraag-borgstelling/docs/data-dictionary/types/bruto_kredietsom.yml)
 * [ ] [Is er een maximum netto kredietsom?](https://github.com/sbnnl/documentatie/blob/feature/aanvraag-borgstelling/docs/data-dictionary/types/netto_kredietsom.yml)
-
+* [ ] [Moet er extra informatie aangeleverd worden bij een beeindiging van een borgstelling?](https://github.com/sbnnl/documentatie/blob/feature/beeindiging-borgstelling/docs/100_producten/030_beeindiging-borgstelling/product.openapi.yml)
