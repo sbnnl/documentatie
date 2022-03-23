@@ -21,8 +21,8 @@ paths:
             schema:
               $ref: "../../data-dictionary/commands/beeindig_borgstelling.yml"
       responses:
-        201:
-          $ref: "../../data-dictionary/responses/types/201.yml"
+        202:
+          $ref: "../../data-dictionary/responses/types/202.yml"
         400:
           $ref: "../../data-dictionary/responses/types/400.yml"
         401:
