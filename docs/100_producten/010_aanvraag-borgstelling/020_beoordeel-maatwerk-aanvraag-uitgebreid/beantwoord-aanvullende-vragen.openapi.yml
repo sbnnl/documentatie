@@ -7,7 +7,7 @@ info:
 
 paths:
 
-  /api/borgstellingen/beantwoord-aanvullende-vragen/{taak_id}:    
+  /api/beantwoord-aanvullende-vragen/{taak_id}:    
     parameters:        
       - $ref: "../../../data-dictionary/parameters/taak_id.yml"
     get:
@@ -30,23 +30,26 @@ paths:
           $ref: "../../../data-dictionary/responses/types/403.yml"
         404:
           $ref: "../../../data-dictionary/responses/types/404.yml"
+
+  /api/beantwoord-aanvullende-vragen/{taak_id}/beantwoorden:
+    parameters:        
+      - $ref: "../../../data-dictionary/parameters/taak_id.yml"
     put:
       tags:
         - beantwoord aanvullende vragen taken
-      summary: Voltooit de beantwoord aanvullende vragen taak.
-      operationId: VoltooiBeantwoordAanvullendeVragenTaakV1
+      summary: Voltooit de beantwoord aanvullende vragen taak met beantwoorden.
+      operationId: VoltooiBeantwoordAanvullendeVragenTaakMetBeantwoordenV1
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              oneOf:
-                - $ref: "../../../data-dictionary/commands/beantwoord_aanvullende_vragen.yml"
-              discriminator:
-                propertyName: actie
+              $ref: "../../../data-dictionary/commands/beantwoord_aanvullende_vragen.yml"
       responses:
         202:
-          description: Accepted
+          $ref: "../../../data-dictionary/responses/types/202.yml"
+        400:
+          $ref: "../../../data-dictionary/responses/types/400.yml"
         401:
           $ref: "../../../data-dictionary/responses/types/401.yml"
         403:

@@ -12,7 +12,7 @@ paths:
       tags:
         - borgstellingen
       summary: Registreer aanvraag borgstelling saneringskrediet
-      operationId: RegistreerAanvraagV1
+      operationId: RegistreerAanvraagBorgstellingV1
       requestBody:
         required: true
         content:
@@ -24,6 +24,10 @@ paths:
                 - $ref: "../../data-dictionary/commands/registreer_borgstelling_overname.yml"
               discriminator:
                 propertyName: soort_aanvraag
+                mapping:
+                  pro_forma_aanvraag: "../../data-dictionary/commands/registreer_pro_forma_borgstelling-aanvraag.yml"
+                  aanvraag: "../../data-dictionary/commands/registreer_borgstelling_aanvraag.yml"
+                  overname: "../../data-dictionary/commands/registreer_borgstelling_overname.yml"
       responses:
         201:
           $ref: "../../data-dictionary/responses/types/201.yml"

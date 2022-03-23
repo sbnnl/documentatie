@@ -7,14 +7,14 @@ info:
 
 paths:
 
-  /api/borgstellingen/geef-aanvullende-informatie-taken/{taak_id}:
+  /api/geef-aanvullende-informatie-taken/{taak_id}:
     parameters:        
       - $ref: "../../../data-dictionary/parameters/taak_id.yml"
     get:
       tags:
         - geef aanvullende informatie taken
       summary: Geeft een geef aanvullende informatie taak.
-      operationId: GeefBeantwoordAanvullendeVragenTaakV1
+      operationId: GeefGeefAanvullendeInformatieTaakV1
       responses:
         200:          
           description: OK
@@ -30,23 +30,26 @@ paths:
           $ref: "../../../data-dictionary/responses/types/403.yml"
         404:
           $ref: "../../../data-dictionary/responses/types/404.yml"
+
+  /api/geef-aanvullende-informatie-taken/{taak_id}/informeren:
+    parameters:        
+      - $ref: "../../../data-dictionary/parameters/taak_id.yml"
     put:
       tags:
         - geef aanvullende informatie taken
-      summary: Voltooit de geef aanvullende informatie taak.
-      operationId: VoltooiBeantwoordAanvullendeVragenTaakV1
+      summary: Voltooit de geef aanvullende informatie taak met informeren.
+      operationId: VoltooiGeefAanvullendeInformatieTaakMetInformerenTaakV1
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              oneOf:
-                - $ref: "../../../data-dictionary/commands/geef_aanvullende_informatie.yml"
-              discriminator:
-                propertyName: actie
+              $ref: "../../../data-dictionary/commands/geef_aanvullende_informatie.yml"
       responses:
         202:
-          description: Accepted
+          $ref: "../../../data-dictionary/responses/types/202.yml"
+        400:
+          $ref: "../../../data-dictionary/responses/types/400.yml"
         401:
           $ref: "../../../data-dictionary/responses/types/401.yml"
         403:

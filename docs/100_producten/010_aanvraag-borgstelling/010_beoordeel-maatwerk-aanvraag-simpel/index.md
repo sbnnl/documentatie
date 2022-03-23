@@ -8,10 +8,7 @@
 * Wat moet het product kunnen?
 * Waar moet het aan voldoen om succesvol te zijn?
 
-<!-- einde van de lijst -->
-
-* [API](product.openapi.yml)
-* [Acceptatie criteria](product.feature)
+<!-- einde -->
 
 ## Proces
 
@@ -30,7 +27,7 @@ De maatwerk aanvraag wordt beoordeeld door een medewerker van het Wsk (beoordela
 
 De beoordelaar is verantwoordelijk om de reacties op de email berichten in het systeem vast te leggen.
 
-<!-- einde van de lijst -->
+<!-- einde -->
 
 * [Formulier](beoordeel-aanvraag.user-task.yml)
 * [API](beoordeel-aanvraag.openapi.yml)
