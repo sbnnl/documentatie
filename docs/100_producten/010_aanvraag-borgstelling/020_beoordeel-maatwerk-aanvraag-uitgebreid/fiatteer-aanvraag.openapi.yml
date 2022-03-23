@@ -7,7 +7,7 @@ info:
 
 paths:
 
-  /api/borgstellingen/mijn-fiatteer-aanvraag-taken:
+  /api/mijn-fiatteer-aanvraag-taken:
     get:
       tags:
         - fiatteer aanvraag taken
@@ -30,7 +30,7 @@ paths:
         403:
           $ref: "../../../data-dictionary/responses/types/403.yml"
 
-  /api/borgstellingen/fiatteer-aanvraag-taken/{taak_id}:    
+  /api/fiatteer-aanvraag-taken/{taak_id}:    
     parameters:        
       - $ref: "../../../data-dictionary/parameters/taak_id.yml"
     get:
@@ -52,25 +52,53 @@ paths:
         403:
           $ref: "../../../data-dictionary/responses/types/403.yml"
         404:
-          $ref: "../../../data-dictionary/responses/types/404.yml"
+          $ref: "../../../data-dictionary/responses/types/404.yml"  
+
+  /api/fiatteer-aanvraag-taken/{taak_id}/fiatteren:
+    parameters:        
+      - $ref: "../../../data-dictionary/parameters/taak_id.yml"
     put:
       tags:
         - fiatteer aanvraag taken
-      summary: Voltooit de fiatteer aanvraag taak.
-      operationId: VoltooiFiatteerAanvraagTaakV1
+      summary: Fiatteert de aanvraag borgstelling goed.
+      operationId: VoltooiFiatteerAanvraagTaakMetFiatterenV1
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              oneOf:
-                - $ref: "../../../data-dictionary/commands/fiatteer_aanvraag.yml"
-                - $ref: "../../../data-dictionary/commands/wijs_aanvraag_af.yml"
-              discriminator:
-                propertyName: actie         
+              $ref: "../../../data-dictionary/commands/fiatteer_aanvraag.yml"
       responses:
         202:
-          description: Accepted
+          $ref: "../../../data-dictionary/responses/types/202.yml"
+        400:
+          $ref: "../../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../../data-dictionary/responses/types/403.yml"
+        404:
+          $ref: "../../../data-dictionary/responses/types/404.yml"
+
+  /api/fiatteer-aanvraag-taken/{taak_id}/afwijzen:
+    parameters:        
+      - $ref: "../../../data-dictionary/parameters/taak_id.yml"
+    put:
+      tags:
+        - fiatteer aanvraag taken
+      summary: Wijst de aanvraag borgstelling af.
+      operationId: VoltooiFiatteerAanvraagMetAfwijzenV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "../../../data-dictionary/commands/wijs_aanvraag_af.yml"
+      responses:
+        202:
+          $ref: "../../../data-dictionary/responses/types/202.yml"
+        400:
+          $ref: "../../../data-dictionary/responses/types/400.yml"
         401:
           $ref: "../../../data-dictionary/responses/types/401.yml"
         403:

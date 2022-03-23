@@ -7,7 +7,7 @@ info:
 
 paths:
 
-  /api/borgstellingen/mijn-geef-advies-taken:
+  /api/mijn-geef-advies-taken:
     get:
       tags:
         - geef advies taken
@@ -30,7 +30,7 @@ paths:
         403:
           $ref: "../../../data-dictionary/responses/types/403.yml"
 
-  /api/borgstellingen/geef-advies-taken/{taak_id}:
+  /api/geef-advies-taken/{taak_id}:
     parameters:        
       - $ref: "../../../data-dictionary/parameters/taak_id.yml"
     get:
@@ -53,24 +53,52 @@ paths:
           $ref: "../../../data-dictionary/responses/types/403.yml"
         404:
           $ref: "../../../data-dictionary/responses/types/404.yml"
+
+  /api/geef-advies-taken/{taak_id}/positief-adviseren:
+    parameters:        
+      - $ref: "../../../data-dictionary/parameters/taak_id.yml"
     put:
       tags:
         - geef advies taken
-      summary: Voltooit de geef aanvullende informatie taak.
-      operationId: VoltooiBeantwoordAanvullendeVragenTaakV1
+      summary: Voltooit de geef aanvullende informatie taak met een positief advies.
+      operationId: VoltooiBeantwoordAanvullendeVragenTaakMetPositiefAdviserenV1
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              oneOf:
-                - $ref: "../../../data-dictionary/commands/geef_positief_advies.yml"
-                - $ref: "../../../data-dictionary/commands/geef_negatief_advies.yml"
-              discriminator:
-                propertyName: actie
+              $ref: "../../../data-dictionary/commands/geef_positief_advies.yml"
       responses:
         202:
-          description: Accepted
+          $ref: "../../../data-dictionary/responses/types/202.yml"
+        400:
+          $ref: "../../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../../data-dictionary/responses/types/403.yml"
+        404:
+          $ref: "../../../data-dictionary/responses/types/404.yml"
+
+  /api/geef-advies-taken/{taak_id}/negatief-adviseren:
+    parameters:        
+      - $ref: "../../../data-dictionary/parameters/taak_id.yml"
+    put:
+      tags:
+        - geef advies taken
+      summary: Voltooit de geef aanvullende informatie taak met een negatief advies.
+      operationId: VoltooiBeantwoordAanvullendeVragenTaakMetNegatiefAdviserenV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "../../../data-dictionary/commands/geef_negatief_advies.yml"
+      responses:
+        202:
+          $ref: "../../../data-dictionary/responses/types/202.yml"
+        400:
+          $ref: "../../../data-dictionary/responses/types/400.yml"
         401:
           $ref: "../../../data-dictionary/responses/types/401.yml"
         403:
