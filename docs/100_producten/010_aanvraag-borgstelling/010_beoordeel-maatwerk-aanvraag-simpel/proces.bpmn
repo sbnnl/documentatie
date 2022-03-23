@@ -16,62 +16,38 @@
   <bpmn:process id="proces-beoordelen-maatwerk-aanvraag-v1" isExecutable="true">
     <bpmn:userTask id="taak-beoordeel-aanvraag-v1" name="Beoordeel aanvraag">
       <bpmn:incoming>Flow_10clktt</bpmn:incoming>
-      <bpmn:outgoing>Flow_08begxc</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0gl7pt4</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:startEvent id="gebeurtenis-maatwerk-aanvraag-ontvangen" name="Maatwerk aanvraag ontvangen">
       <bpmn:outgoing>Flow_10clktt</bpmn:outgoing>
     </bpmn:startEvent>
-    <bpmn:eventBasedGateway id="Gateway_006xk2e">
-      <bpmn:incoming>Flow_08begxc</bpmn:incoming>
-      <bpmn:outgoing>route-aanvraag-goedgekeurd</bpmn:outgoing>
-      <bpmn:outgoing>route-aanvraag-afgewezen</bpmn:outgoing>
-    </bpmn:eventBasedGateway>
-    <bpmn:intermediateCatchEvent id="gebeurtenis-positief-beoordeeld" name="Aanvraag goedgekeurd">
-      <bpmn:incoming>route-aanvraag-goedgekeurd</bpmn:incoming>
-      <bpmn:outgoing>Flow_0cltj2j</bpmn:outgoing>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_1btnqdx" messageRef="Message_0eu09eh" />
-    </bpmn:intermediateCatchEvent>
-    <bpmn:sequenceFlow id="route-aanvraag-afgewezen" sourceRef="Gateway_006xk2e" targetRef="gebeurtenis-negatief-beoordeeld" />
-    <bpmn:sequenceFlow id="route-aanvraag-goedgekeurd" sourceRef="Gateway_006xk2e" targetRef="gebeurtenis-positief-beoordeeld" />
     <bpmn:sequenceFlow id="Flow_10clktt" sourceRef="gebeurtenis-maatwerk-aanvraag-ontvangen" targetRef="taak-beoordeel-aanvraag-v1" />
-    <bpmn:sequenceFlow id="Flow_08begxc" sourceRef="taak-beoordeel-aanvraag-v1" targetRef="Gateway_006xk2e" />
-    <bpmn:endEvent id="gebeurtenis-maatwerk-aanvraag-geaccepteerd" name="Maatwerk aanvraag geaccepteerd">
-      <bpmn:incoming>Flow_19gkfnn</bpmn:incoming>
-    </bpmn:endEvent>
-    <bpmn:exclusiveGateway id="Gateway_1t32tnh">
+    <bpmn:sequenceFlow id="Flow_05yrvyv" sourceRef="taak-fiatteer-aanvraag-1" targetRef="poort-gefiatteerd" />
+    <bpmn:sequenceFlow id="route-gefiatteerd" name="Gefiatteerd" sourceRef="poort-gefiatteerd" targetRef="gebeurtenis-maatwerk-aanvraag-geaccepteerd" />
+    <bpmn:sequenceFlow id="route-niet-gefiatteerd" name="Afgewezen" sourceRef="poort-gefiatteerd" targetRef="Event_09bfbs8" />
+    <bpmn:exclusiveGateway id="poort-beoordeel-aanvraag-uitkomst" name="Uitkomst?">
+      <bpmn:incoming>Flow_0gl7pt4</bpmn:incoming>
+      <bpmn:outgoing>route-geaccepteerd</bpmn:outgoing>
+      <bpmn:outgoing>route-afgewezen</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_0gl7pt4" sourceRef="taak-beoordeel-aanvraag-v1" targetRef="poort-beoordeel-aanvraag-uitkomst" />
+    <bpmn:sequenceFlow id="route-geaccepteerd" name="Geacepteerd" sourceRef="poort-beoordeel-aanvraag-uitkomst" targetRef="taak-fiatteer-aanvraag-1" />
+    <bpmn:sequenceFlow id="route-afgewezen" name="Afgewezen" sourceRef="poort-beoordeel-aanvraag-uitkomst" targetRef="Event_09bfbs8" />
+    <bpmn:exclusiveGateway id="poort-gefiatteerd" name="Gefiatteerd?">
       <bpmn:incoming>Flow_05yrvyv</bpmn:incoming>
-      <bpmn:outgoing>Flow_03otfko</bpmn:outgoing>
-      <bpmn:outgoing>Flow_12e2bt8</bpmn:outgoing>
+      <bpmn:outgoing>route-gefiatteerd</bpmn:outgoing>
+      <bpmn:outgoing>route-niet-gefiatteerd</bpmn:outgoing>
     </bpmn:exclusiveGateway>
     <bpmn:userTask id="taak-fiatteer-aanvraag-1" name="Fiatteer aanvraag">
-      <bpmn:incoming>Flow_0cltj2j</bpmn:incoming>
+      <bpmn:incoming>route-geaccepteerd</bpmn:incoming>
       <bpmn:outgoing>Flow_05yrvyv</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:intermediateCatchEvent id="gebeurtenis-aanvraag-gefiatteerd" name="Aanvraag gefiatteerd">
-      <bpmn:incoming>Flow_03otfko</bpmn:incoming>
-      <bpmn:outgoing>Flow_19gkfnn</bpmn:outgoing>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_1daid0g" messageRef="Message_03j5rm1" />
-    </bpmn:intermediateCatchEvent>
-    <bpmn:intermediateCatchEvent id="gebeurtenis-aanvraag-afgwewezen" name="Aanvraag afgwezen">
-      <bpmn:incoming>Flow_12e2bt8</bpmn:incoming>
-      <bpmn:outgoing>Flow_02awag0</bpmn:outgoing>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_0oqp044" messageRef="Message_1nt0xvi" />
-    </bpmn:intermediateCatchEvent>
-    <bpmn:sequenceFlow id="Flow_05yrvyv" sourceRef="taak-fiatteer-aanvraag-1" targetRef="Gateway_1t32tnh" />
-    <bpmn:sequenceFlow id="Flow_03otfko" sourceRef="Gateway_1t32tnh" targetRef="gebeurtenis-aanvraag-gefiatteerd" />
-    <bpmn:sequenceFlow id="Flow_12e2bt8" sourceRef="Gateway_1t32tnh" targetRef="gebeurtenis-aanvraag-afgwewezen" />
-    <bpmn:sequenceFlow id="Flow_0cltj2j" sourceRef="gebeurtenis-positief-beoordeeld" targetRef="taak-fiatteer-aanvraag-1" />
-    <bpmn:sequenceFlow id="Flow_02awag0" sourceRef="gebeurtenis-aanvraag-afgwewezen" targetRef="Event_09bfbs8" />
-    <bpmn:sequenceFlow id="Flow_19gkfnn" sourceRef="gebeurtenis-aanvraag-gefiatteerd" targetRef="gebeurtenis-maatwerk-aanvraag-geaccepteerd" />
-    <bpmn:sequenceFlow id="Flow_0riv3r1" sourceRef="gebeurtenis-negatief-beoordeeld" targetRef="Event_09bfbs8" />
-    <bpmn:intermediateCatchEvent id="gebeurtenis-negatief-beoordeeld" name="Aanvraag afgewezen">
-      <bpmn:incoming>route-aanvraag-afgewezen</bpmn:incoming>
-      <bpmn:outgoing>Flow_0riv3r1</bpmn:outgoing>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_0zzxf3k" messageRef="Message_1nt0xvi" />
-    </bpmn:intermediateCatchEvent>
+    <bpmn:endEvent id="gebeurtenis-maatwerk-aanvraag-geaccepteerd" name="Maatwerk aanvraag geaccepteerd">
+      <bpmn:incoming>route-gefiatteerd</bpmn:incoming>
+    </bpmn:endEvent>
     <bpmn:endEvent id="Event_09bfbs8" name="Maatwerk aanvraag afgewezen">
-      <bpmn:incoming>Flow_02awag0</bpmn:incoming>
-      <bpmn:incoming>Flow_0riv3r1</bpmn:incoming>
+      <bpmn:incoming>route-niet-gefiatteerd</bpmn:incoming>
+      <bpmn:incoming>route-afgewezen</bpmn:incoming>
       <bpmn:errorEventDefinition id="ErrorEventDefinition_19iftui" errorRef="Error_0onip5d" />
     </bpmn:endEvent>
   </bpmn:process>
@@ -79,54 +55,49 @@
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_14sgm9f">
       <bpmndi:BPMNShape id="Participant_19xq51s_di" bpmnElement="Participant_19xq51s" isHorizontal="true">
-        <dc:Bounds x="159" y="80" width="1201" height="413" />
+        <dc:Bounds x="159" y="80" width="1051" height="363" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="Flow_08begxc_di" bpmnElement="Flow_08begxc">
-        <di:waypoint x="480" y="180" />
-        <di:waypoint x="535" y="180" />
+      <bpmndi:BPMNEdge id="Flow_12e2bt8_di" bpmnElement="route-niet-gefiatteerd">
+        <di:waypoint x="930" y="205" />
+        <di:waypoint x="930" y="343" />
+        <di:waypoint x="1091" y="343" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="942" y="243" width="55" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_03otfko_di" bpmnElement="route-gefiatteerd">
+        <di:waypoint x="955" y="180" />
+        <di:waypoint x="1091" y="180" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="982" y="162" width="55" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_05yrvyv_di" bpmnElement="Flow_05yrvyv">
+        <di:waypoint x="840" y="180" />
+        <di:waypoint x="905" y="180" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_10clktt_di" bpmnElement="Flow_10clktt">
         <di:waypoint x="295" y="180" />
         <di:waypoint x="380" y="180" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="route-aanvraag-goedgekeurd_di" bpmnElement="route-aanvraag-goedgekeurd">
-        <di:waypoint x="585" y="180" />
-        <di:waypoint x="666" y="180" />
+      <bpmndi:BPMNEdge id="Flow_0gl7pt4_di" bpmnElement="Flow_0gl7pt4">
+        <di:waypoint x="480" y="180" />
+        <di:waypoint x="565" y="180" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="route-aanvraag-afgewezen_di" bpmnElement="route-aanvraag-afgewezen">
-        <di:waypoint x="560" y="205" />
-        <di:waypoint x="560" y="393" />
-        <di:waypoint x="666" y="393" />
+      <bpmndi:BPMNEdge id="Flow_0x08wt9_di" bpmnElement="route-geaccepteerd">
+        <di:waypoint x="615" y="180" />
+        <di:waypoint x="740" y="180" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="628" y="162" width="64" height="14" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_05yrvyv_di" bpmnElement="Flow_05yrvyv">
-        <di:waypoint x="890" y="180" />
-        <di:waypoint x="955" y="180" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_03otfko_di" bpmnElement="Flow_03otfko">
-        <di:waypoint x="1005" y="180" />
-        <di:waypoint x="1072" y="180" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_12e2bt8_di" bpmnElement="Flow_12e2bt8">
-        <di:waypoint x="980" y="205" />
-        <di:waypoint x="980" y="290" />
-        <di:waypoint x="1072" y="290" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0cltj2j_di" bpmnElement="Flow_0cltj2j">
-        <di:waypoint x="702" y="180" />
-        <di:waypoint x="790" y="180" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_02awag0_di" bpmnElement="Flow_02awag0">
-        <di:waypoint x="1108" y="290" />
-        <di:waypoint x="1259" y="290" />
-        <di:waypoint x="1259" y="375" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_19gkfnn_di" bpmnElement="Flow_19gkfnn">
-        <di:waypoint x="1108" y="180" />
-        <di:waypoint x="1241" y="180" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0riv3r1_di" bpmnElement="Flow_0riv3r1">
-        <di:waypoint x="702" y="393" />
-        <di:waypoint x="1241" y="393" />
+      <bpmndi:BPMNEdge id="Flow_06262oi_di" bpmnElement="route-afgewezen">
+        <di:waypoint x="590" y="205" />
+        <di:waypoint x="590" y="343" />
+        <di:waypoint x="1091" y="343" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="612" y="313" width="55" height="14" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="taak-geef-aanvullende-informatie_di" bpmnElement="taak-beoordeel-aanvraag-v1">
         <dc:Bounds x="380" y="140" width="100" height="80" />
@@ -137,64 +108,46 @@
           <dc:Bounds x="251" y="205" width="52" height="40" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_006xk2e_di" bpmnElement="Gateway_006xk2e">
-        <dc:Bounds x="535" y="155" width="50" height="50" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="gebeurtenis-positief-beoordeeld_di" bpmnElement="gebeurtenis-positief-beoordeeld">
-        <dc:Bounds x="666" y="162" width="36" height="36" />
+      <bpmndi:BPMNShape id="Gateway_0vb4leb_di" bpmnElement="poort-beoordeel-aanvraag-uitkomst" isMarkerVisible="true">
+        <dc:Bounds x="565" y="155" width="50" height="50" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="652" y="205" width="65" height="27" />
+          <dc:Bounds x="536" y="138" width="49" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="gebeurtenis-maatwerk-aanvraag-geaccepteerd_di" bpmnElement="gebeurtenis-maatwerk-aanvraag-geaccepteerd">
-        <dc:Bounds x="1241" y="162" width="36" height="36" />
+      <bpmndi:BPMNShape id="Gateway_1t32tnh_di" bpmnElement="poort-gefiatteerd" isMarkerVisible="true">
+        <dc:Bounds x="905" y="155" width="50" height="50" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1226" y="205" width="67" height="40" />
+          <dc:Bounds x="900" y="125" width="61" height="14" />
         </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_1t32tnh_di" bpmnElement="Gateway_1t32tnh" isMarkerVisible="true">
-        <dc:Bounds x="955" y="155" width="50" height="50" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="taak-fiatteer-aanvraag-1_di" bpmnElement="taak-fiatteer-aanvraag-1">
-        <dc:Bounds x="790" y="140" width="100" height="80" />
+        <dc:Bounds x="740" y="140" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="gebeurtenis-aanvraag-gefiatteerd_di" bpmnElement="gebeurtenis-aanvraag-gefiatteerd">
-        <dc:Bounds x="1072" y="162" width="36" height="36" />
+      <bpmndi:BPMNShape id="gebeurtenis-maatwerk-aanvraag-geaccepteerd_di" bpmnElement="gebeurtenis-maatwerk-aanvraag-geaccepteerd">
+        <dc:Bounds x="1091" y="162" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1064" y="205" width="52" height="27" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="gebeurtenis-aanvraag-afgwewezen_di" bpmnElement="gebeurtenis-aanvraag-afgwewezen">
-        <dc:Bounds x="1072" y="272" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="1066" y="315" width="48" height="27" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="gebeurtenis-negatief-beoordeeld_di" bpmnElement="gebeurtenis-negatief-beoordeeld">
-        <dc:Bounds x="666" y="375" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="657" y="418" width="54" height="27" />
+          <dc:Bounds x="1076" y="205" width="67" height="40" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_09bfbs8_di" bpmnElement="Event_09bfbs8">
-        <dc:Bounds x="1241" y="375" width="36" height="36" />
+        <dc:Bounds x="1091" y="325" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1232" y="420" width="54" height="40" />
+          <dc:Bounds x="1082" y="370" width="54" height="40" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="rol-beoordelaar_di" bpmnElement="rol-beoordelaar" isHorizontal="true">
-        <dc:Bounds x="280" y="516" width="300" height="60" />
+        <dc:Bounds x="280" y="466" width="300" height="60" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="rol-fiatteerder_di" bpmnElement="rol-fiatteerder" isHorizontal="true">
-        <dc:Bounds x="690" y="516" width="300" height="60" />
+        <dc:Bounds x="640" y="466" width="300" height="60" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_1bqsxzh_di" bpmnElement="Flow_1bqsxzh">
         <di:waypoint x="430" y="220" />
-        <di:waypoint x="430" y="516" />
+        <di:waypoint x="430" y="466" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_031gz31_di" bpmnElement="Flow_031gz31">
-        <di:waypoint x="840" y="220" />
-        <di:waypoint x="840" y="516" />
+        <di:waypoint x="790" y="220" />
+        <di:waypoint x="790" y="466" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
