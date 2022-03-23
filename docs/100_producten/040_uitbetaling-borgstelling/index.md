@@ -16,6 +16,7 @@
 ## Proces
 
 * [Proces](proces.bpmn)
+* [Acceptatie criteria](proces.feature)
 
 ## Business requirements
 
