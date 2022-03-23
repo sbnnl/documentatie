@@ -18,4 +18,8 @@
     * [ ] https://github.com/sbnnl/documentatie/blob/feature/aanvraag-borgstelling/docs/data-dictionary/types/toelichting_advies.yml
 * [ ] [Is er een maximum bruto_kredietsom?](https://github.com/sbnnl/documentatie/blob/feature/aanvraag-borgstelling/docs/data-dictionary/types/bruto_kredietsom.yml)
 * [ ] [Is er een maximum netto kredietsom?](https://github.com/sbnnl/documentatie/blob/feature/aanvraag-borgstelling/docs/data-dictionary/types/netto_kredietsom.yml)
-* [ ] [Moet er extra informatie aangeleverd worden bij een beeindiging van een borgstelling?](https://github.com/sbnnl/documentatie/blob/feature/beeindiging-borgstelling/docs/100_producten/030_beeindiging-borgstelling/product.openapi.yml)
+* [ ] [Moet er extra informatie aangeleverd worden bij een beëindiging van een borgstelling?](https://github.com/sbnnl/documentatie/blob/feature/beeindiging-borgstelling/docs/100_producten/030_beeindiging-borgstelling/product.openapi.yml)
+* [ ] [Wat moet er gebeuren nadat een borgstelling beëindigt wordt?](https://github.com/sbnnl/documentatie/blob/feature/beeindiging-borgstelling/docs/100_producten/030_beeindiging-borgstelling/index.md)
+* [ ] [Kan de informatie verwijderd worden na afwijzing van een borgstelling aanvraag?](https://github.com/sbnnl/documentatie/blob/feature/aanvraag-borgstelling/docs/100_producten/010_aanvraag-borgstelling/index.md)
+* [ ] [Kan de informatie verwijderd worden na beëindiging van een borgstelling?](https://github.com/sbnnl/documentatie/blob/feature/beeindiging-borgstelling/docs/100_producten/030_beeindiging-borgstelling/index.md)
+* [ ] [Kan de informatie verwijderd worden na uitbetaling van een borgstelling?](https://github.com/sbnnl/documentatie/blob/feature/uitbetaling-borgstelling/docs/100_producten/040_uitbetaling-borgstelling/index.md)
