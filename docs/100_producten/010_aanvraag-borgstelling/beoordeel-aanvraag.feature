@@ -27,8 +27,9 @@ Functionaliteit: Beoordeel aanvraag use-case
     Wanneer beoordeeld
     Dan is de beeordeling "afgewezen"
 
-  Abstract Scenario: Borgstelling aanvraag vanaf 5000 euro met een pro forma aanvraag
-    Gegeven overname
+  Abstract Scenario: Borgstelling aanvraag met een pro forma aanvraag: <opmerking>
+
+    Gegeven aanvraag
     En bruto kredietsom is "<bruto_kredietsom>"
     En pro-forma-aanvraag bruto kredietsom was "<pro_forma_bruto_kredietsom>"
     En pro-forma-aanvraag beoordeling was "<pro_forma_beoordeling>"
@@ -36,11 +37,11 @@ Functionaliteit: Beoordeel aanvraag use-case
     Dan is de beeordeling "<beoordeling>"
 
     Voorbeelden:
-    | pro_forma_bruto_kredietsom | pro_forma_beoordeling | bruto_kredietsom | beoordeling | 
-    | 5000                       | geaccepteerd          | 5000             | geaccepteerd  |
-    | 5000                       | afgewezen             | 4999             | geaccepteerd  |
-    | 5000                       | geaccepteerd          | 5499             | geaccepteerd  |
-    | 5000                       | geaccepteerd          | 5500             | maatwerk      |
+    | pro_forma_bruto_kredietsom | pro_forma_beoordeling | bruto_kredietsom | beoordeling  | opmerking                                       |
+    | 5000                       | geaccepteerd          | 5000             | geaccepteerd | pro-forma aanvraag is identiek aan de aanvraag. |
+    | 5000                       | afgewezen             | 4999             | geaccepteerd  | kredietsom valt onder maatwerk grens. |
+    | 5000                       | geaccepteerd          | 5249             | geaccepteerd  | kredietsom wijkt minder dan 5% af van de pro-forma-aanvraag. |
+    | 5000                       | geaccepteerd          | 5250             | maatwerk      | kredietsom wijkt 5% of meer af van de pro-forma-aanvraag. |
 
   Abstract Scenario: Use-case permissie is juist
     Gegeven een gebruiker met de rollen "<rollen>"
