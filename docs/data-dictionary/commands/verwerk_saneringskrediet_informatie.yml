@@ -9,8 +9,8 @@ allOf:
         $ref: "../types/saneringskrediet_theoretisch_saldo.yml"
       uitstaand_saldo:
         $ref: "../types/saneringskrediet_uitstaand_saldo.yml"
-      voorstand:
-        $ref: "../types/saneringskrediet_voorstand.yml"
+      stand:
+        $ref: "../types/saneringskrediet_stand.yml"
       kredietvergoeding:
         $ref: "../types/saneringskrediet_kredietvergoeding.yml"
       laatste_aflosdatum:
