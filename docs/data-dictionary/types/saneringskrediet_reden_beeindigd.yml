@@ -1,7 +1,7 @@
 type: string
-nullable: true
 title: reden beëindiging
 enum:
   - afgelost
   - afgeboekt
+  - onbekend
 example: afgelost

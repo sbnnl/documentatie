@@ -2,9 +2,9 @@ allOf:
   - $ref: "types/command.yml"
   - title: beëindig borgstelling
     properties:
-      datum_beeindigd:
+      datum:
         $ref: "../types/saneringskrediet_datum_beeindigd.yml"
-      reden_beeindigd:
+      reden:
         $ref: "../types/saneringskrediet_reden_beeindigd.yml"
     required:
       - datum_beeindigd

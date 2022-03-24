@@ -1,4 +1,4 @@
-# Beëindiging borgstelling
+# Intrekken borgstelling
 
 ## Context
 
@@ -19,9 +19,9 @@
 
 ## Use-case
 
-### Beëindigen borgstelling
+### Intrekken borgstelling
 
-### Beëindig borgstelling
+### Trek borgstelling in
 
 ### Maak document
 
