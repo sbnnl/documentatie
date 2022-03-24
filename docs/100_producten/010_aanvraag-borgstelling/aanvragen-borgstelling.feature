@@ -1,9 +1,9 @@
 #language: nl
-Functionaliteit: Registreer aanvraag use-case
+Functionaliteit: Aanvragen borgstelling use-case
 
   Abstract Scenario: Use-case permissie is juist
     Gegeven een gebruiker met de rollen "<rollen>"
-    Dan heeft de gebruiker "<wel-niet>" de permissie "REGISTREER_AANVRAAG"
+    Dan heeft de gebruiker "<wel-niet>" de permissie "AANVRAGEN_BORGSTELLING"
 
     Voorbeelden:
     | rollen      | wel-niet |
@@ -15,7 +15,7 @@ Functionaliteit: Registreer aanvraag use-case
   Abstract Scenario: Use-case heeft de juiste autorisaties
     Gegeven een aanvraag van "<kredietbank>"
     En een gebruiker met de rollen "<rollen>"
-    Wanneer use-case "registreer aanvraag" wordt uitgevoerd
+    Wanneer use-case "aanvragen borgstelling" wordt uitgevoerd
     Dan is de gebruiker "<wel-niet>" geautoriseerd
 
     Voorbeelden:
