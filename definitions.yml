@@ -61,15 +61,10 @@
   text: |
     Vanuit producten ontstaan er gebeurtenissen. Dit product stelt deze gebeurtenissen centraal beschikbaar zodat die door andere producten, decentraal, verder verwerkt kunnen worden.
   link: producten/gebeurtenissen/index.html
-- name: pro-forma-aanvraag
-  alias:
-    - pro forma aanvraag
-    - pro-forma aanvraag
-    - pro-forma
-    - pro forma
+- name: Voorbeoordeling
   text: |
-    Kredietbanken moeten al in een vroeg stadium weten of een saneringskrediet ingezet kan worden. Via een pro-forma-aanvraag kan de kredietbank een borgstelling aanvragen op basis van de informatie die op dat moment bekent is. 
+    Kredietbanken moeten al in een vroeg stadium weten of een saneringskrediet ingezet kan worden. Via een voorbeoordeling kan de kredietbank een borgstelling aanvragen op basis van de informatie die op dat moment bekent is. 
   
-    Een pro-forma-aanvraag wordt geaccepteerd of afgwezen. Ingeval van acceptatie wordt de aanvraag niet geactiveerd en ook niet in rekening gebracht, echter kredietbank kan mag wel rechten ontlenen aan de pro-forma-aanvraag.
+    Een voorbeoordeling wordt geaccepteerd of afgewezen. Ingeval van acceptatie wordt de borgstelling niet geactiveerd en dus ook niet in rekening gebracht De kredietbank kan wel rechten ontlenen aan de voorbeoordeling en onvangt ook een contract te bevestiging van de geaccepteerde voorbeoordeling.
     
-    Op het moment dat de kredietbank de borgstelling wil gebruiken moet het een nieuwe aanvraag in dienen met definitieve gegevens. De pro-forma-aanvraag maakt onderdeel uit van deze nieuwe aanvraag en wordt gebruikt om de definitieve aanvraag te beoordelen.
+    Op het moment dat de kredietbank de borgstelling wil gebruiken moet het een nieuwe aanvraag in dienen met definitieve gegevens. De voorbeoordeling maakt onderdeel uit van deze nieuwe aanvraag en wordt gebruikt om de definitieve aanvraag te beoordelen.
