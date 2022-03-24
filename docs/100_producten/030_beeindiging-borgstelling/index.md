@@ -12,6 +12,10 @@
 
 * [API](product.openapi.yml)
 
+## Proces
+
+* [Proces](proces.bpmn)
+
 ## Business requirements
 
 Wat zijn de (non)functionele requirements? Denk hierbij aan zaken als doorlooptijd, vierogenprincipe, etc.

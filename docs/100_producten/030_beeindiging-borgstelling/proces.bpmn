@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_05sqje2" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.12.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="1.1.0">
+  <bpmn:collaboration id="Collaboration_1e4tu7v">
+    <bpmn:participant id="Participant_1xctonu" name="Beëindigen borgstelling" processRef="Process_0zhsu1g" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_0zhsu1g" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1" name="Borgstellinfg beëindigd">
+      <bpmn:messageEventDefinition id="MessageEventDefinition_1f4jxw4" />
+    </bpmn:startEvent>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1e4tu7v">
+      <bpmndi:BPMNShape id="Participant_1xctonu_di" bpmnElement="Participant_1xctonu" isHorizontal="true">
+        <dc:Bounds x="160" y="52" width="600" height="250" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0g2ydep_di" bpmnElement="StartEvent_1">
+        <dc:Bounds x="269" y="159" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="257" y="202" width="61" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
