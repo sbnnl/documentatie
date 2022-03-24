@@ -1,4 +1,4 @@
-# Aanvraag borgstelling
+# Uitbetalen borgstelling
 
 ## Context
 
@@ -12,11 +12,34 @@
 
 * [API](product.openapi.yml)
 
-
 ## Proces
 
 * [Proces](proces.bpmn)
 * [Acceptatie criteria](proces.feature)
+
+## Use-cases
+
+### Uitbetalen borgstelling
+
+### Geef aanvullende informatie
+
+### Beoordeel uitbetaling verzoek
+
+::: info
+
+Opmerking Frank: het bedrag moet definitief worden vastgesteld.
+
+:::
+
+### Fiatteer uitbetaling
+
+### Registreer uitbetaling
+
+* [Document](uitbetaling.message.md)
+
+### Registreer afwijzing
+
+* [Document](afwijzing.message.md)
 
 ## Business requirements
 
