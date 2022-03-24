@@ -2,7 +2,5 @@ type: number
 minimum: 0
 title: bruto kredietsom
 description: |
-  De bruto kredietsom van de borgstelling aanvraag. 
-  
-  @Frank, is er een maximum bedrag?
+  {{Bruto kredietsom}}
 example: 535.45

@@ -9,4 +9,8 @@ allOf:
       soort_aanvraag:
         type: string
         example: overname
+      datum_uitbetaald:
+        $ref: "../types/saneringskrediet_uitbetaaldatum.yml"
+    required:
+      - datum_uitbetaald
   - $ref: "../models/borgstelling_aanvraag.yml"

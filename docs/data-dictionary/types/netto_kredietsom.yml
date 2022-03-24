@@ -2,7 +2,5 @@ type: number
 minimum: 0
 title: netto kredietsom
 description: |
-  De netto kredietsom van de borgstelling aanvraag. 
-  
-  @Frank, is er een maximum?
+  {{{{Netto kredietsom}}}}
 example: 535.45

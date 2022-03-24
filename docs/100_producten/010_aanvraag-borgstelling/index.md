@@ -56,14 +56,6 @@ Een pro-forma-aanvraag met hetzelfde kenmerk die in een eerder stadium is uitgev
 
 * [Acceptatie criteria](beoordeel-aanvraag.feature)
 
-:::info
-
-**Vragen:**
-
-* @Frank hoeveel (absoluut of percentage) mag de bruto kredietsom afwijken van een geaccepteerde pro forma aanvraag om ook geaccepteerd te worden?
-
-:::
-
 ### Beoordeel maatwerk aanvraag
 
 Voor de invulling van beoordeel maatwerk aanvraag bestaan twee opties:
