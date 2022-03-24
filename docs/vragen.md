@@ -32,4 +32,5 @@
     * [ ] FD: Nee, deze gegevens moeten ook bewaard blijven.
     * [ ] AJG: Er moet doelbinding zijn. Wat is het doel?
 * [ ] [Hoe kan Exact online ingezet worden voor verzamel facturatie? Zijn sales orders een optie?](https://github.com/sbnnl/documentatie/blob/feature/aanvraag-borgstelling/docs/100_producten/010_aanvraag-borgstelling/index.md#registreer-verkoop)
+* [ ] Hoe om te gaan met beheer op stamgegevens zoals kredietbanken? (lean and mean via een API aanroep door een DB of via schermen?
     
