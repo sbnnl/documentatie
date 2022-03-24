@@ -2,9 +2,13 @@ allOf:
   - $ref: "types/command.yml"
   - title: registreer aanvraag
     description: |
-      Een aanvraag borgstelling voor een nog te verstrekken saneringskrediet.
+      Een aanvraag borgstelling of een voorbeoordeling voor een nog te verstrekken saneringskrediet.
     properties:
       soort_aanvraag:
         type: string
         example: aanvraag
+      voorbeoordeling:
+        $ref: "../types/is_voorbeoordeling.yml"
+    required:
+      - voorbeoordeling
   - $ref: "../models/borgstelling_aanvraag.yml"

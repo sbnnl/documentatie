@@ -4,7 +4,6 @@
 
 Een aanvraag van een borgstelling door een kredietbank voor een saneringskrediet waarvoor het Wsk borg staat. De volgende aanvraag borgstelling producten kunnen afgenomen worden:
 
-* pro-forma-aanvraag borgstelling;
 * aanvraag borgstelling;
 * aanvraag vanuit een portefeuille overname;
 
@@ -36,7 +35,7 @@ Registreer aanvraag wordt vanuit de REST adapter aangeroepen. De use-case is ver
     * de gebruiker moet beschikken over **"REGISTREER_AANVRAAG"** permissie;
     * de gebruiker moet beschikken over een **kredietbank claim** die overeenkomt met de kredietbank uit de aanvraag;
 * registratie van de aanvraag;
-* starten van het proces, een pro-forma aanvraag die eventueel in een eerder stadium met hetzelfde kenmerk is uitgevoerd moet aan de procesinformatie toegevoegd worden.
+* starten van het proces, een voorbeoordeling die eventueel in een eerder stadium met hetzelfde kenmerk is uitgevoerd moet aan de procesinformatie toegevoegd worden.
 
 <!-- einde -->
 
@@ -50,7 +49,7 @@ De informatie van de aanvraag wordt automatisch beoordeeld op basis van regels i
 * afgewezen
 * maatwerk
 
-Een pro-forma-aanvraag met hetzelfde kenmerk die in een eerder stadium is uitgevoerd maakt ook deel uit van de informatie.
+Een voorbeoordeling met hetzelfde kenmerk die in een eerder stadium is uitgevoerd maakt ook deel uit van de informatie.
 
 <!-- einde -->
 
@@ -90,12 +89,6 @@ Wsf maakt gebruik van Exact online. Voor **1% van de bruto kredietsom** van de g
 * [Acceptatie criteria](registreer-verkoop.feature)
 
 Zie [exact knowledge base](https://support.exactonline.com/community/s/knowledge-base#All-All-DNO-Content-restapibusinessexamplesalesorder) voor meer informatie.
-
-:::info
-
-* @Frank zou je kunnen uitzoeken hoe verzamelfacturen in exact werken? Ik ben uitgekomen op een sales order en ik verwacht dat je meerdere sales oders aan een factuur kan koppelen....
-
-:::
 
 ### Aanvraag afgewezen
 
