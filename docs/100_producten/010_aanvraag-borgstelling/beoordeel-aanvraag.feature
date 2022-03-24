@@ -5,43 +5,43 @@ Functionaliteit: Beoordeel aanvraag use-case
     Gegeven aanvraag
     En bruto kredietsom is "4999"
     Wanneer beoordeeld
-    Dan is de beeordeling "geaccepteerd"
+    Dan is de beoordeling "geaccepteerd"
 
   Scenario: Borgstelling aanvraag vanaf 5000 euro vraagt om maatwerk
     Gegeven aanvraag
     En bruto kredietsom is "5000"
     Wanneer beoordeeld
-    Dan is de beeordeling "maatwerk"
+    Dan is de beoordeling "maatwerk"
 
   Scenario: Borgstelling aanvraag vanuit een portefeuille overname waarbij het saneringskrediet korter dan 36 maanden heeft gelopen wordt geaccepteerd
     Gegeven overname
     En bruto kredietsom is "5000"
     En maanden actief is "35"
     Wanneer beoordeeld
-    Dan is de beeordeling "geaccepteerd"
+    Dan is de beoordeling "geaccepteerd"
 
   Scenario: Borgstelling aanvraag vanuit een portefeuille overname waarbij het saneringskrediet langer dan 36 maanden heeft gelopen wordt afgewezen
     Gegeven overname
     En bruto kredietsom is "5000"
     En maanden actief is "36"
     Wanneer beoordeeld
-    Dan is de beeordeling "afgewezen"
+    Dan is de beoordeling "afgewezen"
 
-  Abstract Scenario: Borgstelling aanvraag met een pro forma aanvraag: <opmerking>
+  Abstract Scenario: Borgstelling aanvraag met een voorbeoordeling: <opmerking>
 
     Gegeven aanvraag
     En bruto kredietsom is "<bruto_kredietsom>"
-    En pro-forma-aanvraag bruto kredietsom was "<pro_forma_bruto_kredietsom>"
-    En pro-forma-aanvraag beoordeling was "<pro_forma_beoordeling>"
+    En bruto kredietsom van de voorbeoordeling "<voorbeoordeling_bruto_kredietsom>"
+    En de beoordeling was "<voorbeoordeling_beoordeling>"
     Wanneer beoordeeld
-    Dan is de beeordeling "<beoordeling>"
+    Dan is de beoordeling "<beoordeling>"
 
     Voorbeelden:
-    | pro_forma_bruto_kredietsom | pro_forma_beoordeling | bruto_kredietsom | beoordeling  | opmerking                                       |
-    | 5000                       | geaccepteerd          | 5000             | geaccepteerd | pro-forma aanvraag is identiek aan de aanvraag. |
-    | 5000                       | afgewezen             | 4999             | geaccepteerd  | kredietsom valt onder maatwerk grens. |
-    | 5000                       | geaccepteerd          | 5249             | geaccepteerd  | kredietsom wijkt minder dan 5% af van de pro-forma-aanvraag. |
-    | 5000                       | geaccepteerd          | 5250             | maatwerk      | kredietsom wijkt 5% of meer af van de pro-forma-aanvraag. |
+    | voorbeoordeling_bruto_kredietsom | voorbeoordeling_beoordeling | bruto_kredietsom | beoordeling  | opmerking                                       |
+    | 5000                             | geaccepteerd                | 5000             | geaccepteerd | pro-voorbeoordeling is identiek aan de aanvraag. |
+    | 5000                             | afgewezen                   | 4999             | geaccepteerd | kredietsom valt onder maatwerk grens. |
+    | 5000                             | geaccepteerd                | 5249             | geaccepteerd | kredietsom wijkt minder dan 5% af van de voorbeoordeling. |
+    | 5000                             | geaccepteerd                | 5250             | maatwerk     | kredietsom wijkt 5% of meer af van de voorbeoordeling. |
 
   Abstract Scenario: Use-case permissie is juist
     Gegeven een gebruiker met de rollen "<rollen>"
