@@ -1,9 +1,9 @@
 features:
   - product.feature
   - proces.feature
-  - registreer-aanvraag.feature
+  - aanvragen-borgstelling.feature
   - beoordeel-aanvraag.feature
-  - maak-contract.feature
+  - archiveer-contract.feature
   - activeer-borgstelling.feature
   - registreer-verkoop.feature
   - aanvraag-afgewezen.feature

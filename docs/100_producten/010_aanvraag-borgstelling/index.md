@@ -27,9 +27,9 @@ Een aanvraag van een borgstelling door een kredietbank voor een saneringskrediet
 
 ## Use-cases
 
-### Registreer aanvraag
+### Aanvragen borgstelling
 
-Registreer aanvraag wordt vanuit de REST adapter aangeroepen. De use-case is verantwoordelijk voor:
+Aanvragen borgstelling wordt vanuit de REST adapter aangeroepen. De use-case is verantwoordelijk voor:
 
 * autorisatie controle:
     * de gebruiker moet beschikken over **"REGISTREER_AANVRAAG"** permissie;
@@ -39,7 +39,7 @@ Registreer aanvraag wordt vanuit de REST adapter aangeroepen. De use-case is ver
 
 <!-- einde -->
 
-* [Acceptatie criteria](registreer-aanvraag.feature)
+* [Acceptatie criteria](aanvragen-borgstelling.feature)
 
 ### Beoordeel aanvraag
 
@@ -62,14 +62,15 @@ Voor de invulling van beoordeel maatwerk aanvraag bestaan twee opties:
 * [optie 1 (simpel)](beoordeel-maatwerk-aanvraag-simpel/index.md)
 * [optie 2 (uitgebreid)](beoordeel-maatwerk-aanvraag-uitgebreid/index.md)
 
-### Maak contract
+### Archiveer contract
 
-Nadat de aanvraag is goedgekeurd wordt er een borgstelling contract aangemaakt.
+Nadat de aanvraag is goedgekeurd wordt er een borgstelling contract aangemaakt en opgeslagen in het archief van Exact online. De wettelijke bewaartermijn voor dit soort documenten is 7 jaar.
 
 <!-- einde -->
 
 * [Document](contract.message.md)
-* [Acceptatie criteria](maak-contract.feature)
+* [Pseudo code](ArchiveerContractUseCase.java)
+* [Acceptatie criteria](archiveer-contract.feature)
 
 ### Activeer borgstelling
 
