@@ -1,0 +1,17 @@
+allOf:
+  - $ref: "types/event.yml"
+  - type: object
+    title: gebeurtenis
+    properties:
+      naam:
+        $ref: "../types/gebeurtenis_naam.yml"
+      links:
+        type: object
+        properties:
+          api:
+             $ref: "../types/gebeurteniss_api_link.yml"
+        required:
+          - api
+    required:
+      - naam
+      - links

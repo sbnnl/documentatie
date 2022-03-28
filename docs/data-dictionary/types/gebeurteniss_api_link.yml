@@ -1,0 +1,4 @@
+type: string
+format: uri
+description: De link naar de api resource (aggregate root) van deze gebeurtenins.
+example: https://api.wsk.nl/borgstellingen/f242f4e7-4ddc-4dbb-a3c1-9ab1a1dea74e
