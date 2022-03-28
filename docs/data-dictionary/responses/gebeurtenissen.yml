@@ -2,7 +2,7 @@ allOf:
   - title: gebeurtenissen
   - $ref: "types/offset_response.yml"
   - properties:
-     taken:
+     gebeurtenissen:
         type: array
         items:
           $ref: "../events/gebeurtenis.yml"
