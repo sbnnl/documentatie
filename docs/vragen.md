@@ -1,5 +1,6 @@
 # Vragen
 
+* [ ] Is de DNS instelling voor waarborgfonds.sbn.nl al doorgevoerd?
 * [ ] [Hoe ziet het contract eruit? Graag in Word of PDF formaat aanleveren in of zelf toevoegen.](https://github.com/sbnnl/documentatie/blob/feature/aanvraag-borgstelling/docs/100_producten/010_aanvraag-borgstelling/contract.message.md) --> FD: dan bedoel je denk ik de bevestiging van de borgstelling van een lening? Deze moet nog gemaakt worden.
 * [ ] Wat is de huisstijl van Wsk? Graag een logo in vector formaat en een document die de huisstijl beschrijf (kleurgebruik, lettertypes, spatiëring, etc.) --> FD: Ik ga navragen of wij een logo in vector formaat kunnen ontvangen. Wij beschikken nog niet over een geformuleerde huisstijl.
 * [ ] Welke dashboards moeten er beschikbaar gesteld worden (zijn aparte dashboards voor SBN en SBF noodzakelijk)? --> FD: ik denk dat een dashboard genoeg is.
