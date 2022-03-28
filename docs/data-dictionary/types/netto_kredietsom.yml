@@ -1,0 +1,6 @@
+type: number
+minimum: 0
+title: netto kredietsom
+description: |
+  {{{{Netto kredietsom}}}}
+example: 535.45

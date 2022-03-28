@@ -1,0 +1,10 @@
+type: array
+title: redenen oninbaar
+description: Om welke reden is het saneringskrediet oninbaar gebleken?
+items:
+  oneOf:
+    - $ref: "reden_oninbaar.yml"
+    - $ref: "reden_oninbaar_opmerkingen.yml"
+    - $ref: "herberekening_bewijs.yml"
+minItems: 1
+uniqueItems: true

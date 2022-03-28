@@ -1,0 +1,24 @@
+type: object
+title: herberekening bewijs
+properties:
+  mime_type:
+    type: string
+    example: application/pdf
+  data:
+    type: string
+    format: byte
+    description: base64 encoded string van een bestand.
+    writeOnly: true
+  links:
+    type: object
+    properties:
+      bestand:
+        type: string
+        format: uri
+        description: Link naar het bestand.
+        readOnly: true
+required:
+  - mime_type
+
+
+    
