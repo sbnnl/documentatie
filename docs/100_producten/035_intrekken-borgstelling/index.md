@@ -21,11 +21,32 @@
 
 ### Intrekken borgstelling
 
-### Trek borgstelling in
+Start het proces intrekken borgstelling.
 
-### Maak document
+* [Acceptatie criteria](intrekken-borgstelling.feature)
+
+### Archiveer
+
+Slaat alle relevante informatie op in een document. Het document wordt in Exact online gearchiveerd als bron van waarheid voor de borgstelling.
 
 * [Document](bevestging.message.md)
+* [Acceptatie criteria](../beeindiging-borgstelling/archiveer.feature)
+
+### Consolideer
+
+Relevante (@Frank, welke informatie?) borgstelling informatie wordt toegevoegd aan een geconsolideerde verzameling zodat het gebruikt kan worden voor:
+
+* @Frank?
+
+<!-- einde -->
+
+* [Acceptatie criteria](../beeindiging-borgstelling/consolideer.feature)
+
+### Trek in
+
+Beëindigt de borgstelling door alle proces informatie te verwijderen en de status te wijzigen in ingetrokken.
+
+* [Acceptatie criteria](trek-in.feature)
 
 ## Business requirements
 
