@@ -1,4 +1,4 @@
-# Gebeurtenissen worden m.b.v. pull
+# Gebeurtenissen beschikbaar stellen via REST
 
 ## Context
 
