@@ -1,0 +1,3 @@
+
+allOf:
+  - $ref: "./beoordeel_uitbetaling_verzoek.yml"

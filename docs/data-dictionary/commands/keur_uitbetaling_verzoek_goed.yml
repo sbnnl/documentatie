@@ -1,0 +1,11 @@
+allOf:
+  - $ref: "types/command.yml"
+  - type: object
+    title: goedkeuren
+    properties:
+      actie:
+        allOf:
+          - example: goedkeuren
+          - $ref: "../types/actie.yml"
+    required:
+      - actie

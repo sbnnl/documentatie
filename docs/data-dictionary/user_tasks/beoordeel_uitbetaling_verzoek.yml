@@ -1,0 +1,9 @@
+type: object
+properties:
+  taak_id:
+    $ref: "../types/taak_id.yml"
+  borgstelling_id:
+    $ref: "../types/borgstelling_id.yml"    
+required:
+  - taak_id
+  - borgstelling_id

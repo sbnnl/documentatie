@@ -1,0 +1,11 @@
+allOf:
+  - $ref: "types/command.yml"
+  - type: object
+    title: geef aanvullende uitbetaling informatie
+    properties:
+      actie:
+        allOf:
+          - example: geef_informatie
+          - $ref: "../types/actie.yml"
+    required:
+      - actie
