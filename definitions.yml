@@ -53,11 +53,11 @@
 - name: Schuldenknooppunt
   text: |
     Via het Schuldenknooppunt wisselen schuldhulpverleners en schuldeisers standaard berichten uit.
-- name: takenlijst
+- name: Takenlijst
   text: |
     Vanuit producten ontstaan er taken die door mensen uitgevoerd moeten worden. De takenlijst stelt deze taken op een centrale plek beschikbaar op basis van decentrale taak bronnen.
   link: producten/takenlijst/index.html
-- name: gebeurtenissen
+- name: Gebeurtenissen
   text: |
     Vanuit producten ontstaan er gebeurtenissen. Dit product stelt deze gebeurtenissen centraal beschikbaar zodat die door andere producten, decentraal, verder verwerkt kunnen worden.
   link: producten/gebeurtenissen/index.html
