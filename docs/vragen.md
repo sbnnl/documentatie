@@ -1,7 +1,9 @@
 # Vragen
 
+* [ ] Is de DNS instelling voor waarborgfonds.sbn.nl al doorgevoerd?
 * [ ] [Hoe ziet het contract eruit? Graag in Word of PDF formaat aanleveren in of zelf toevoegen.](https://github.com/sbnnl/documentatie/blob/feature/aanvraag-borgstelling/docs/100_producten/010_aanvraag-borgstelling/contract.message.md) --> FD: dan bedoel je denk ik de bevestiging van de borgstelling van een lening? Deze moet nog gemaakt worden.
-* [ ] Wat is de huisstijl van Wsk? Graag een logo in vector formaat en een document die de huisstijl beschrijf (kleurgebruik, lettertypes, spatiëring, etc.) --> FD: Ik ga navragen of wij een logo in vector formaat kunnen ontvangen. Wij beschikken nog niet over een geformuleerde huisstijl.
+* [ ] Wat is de huisstijl van Wsk? Graag een logo in vector formaat en een document die de huisstijl beschrijf (kleurgebruik, lettertypes, spatiëring, etc.) --> FD: Ik ga navragen of wij een logo in vector formaat kunnen ontvangen. Wij beschikken nog niet over een geformuleerde huisstijl. Ik zal even per mail sturen! We hebben wel een logo.
+* [ ] 
 * [ ] Welke dashboards moeten er beschikbaar gesteld worden (zijn aparte dashboards voor SBN en SBF noodzakelijk)? --> FD: ik denk dat een dashboard genoeg is.
 * [ ] Geef per dashboard aan wat de informatiebehoefte is, graag in Excel een versie met dummy informatie aanleveren. --> FD: Ga ik mee aan de slag.
 * [x] [Hoeveel (absoluut of percentage) mag de bruto kredietsom afwijken van een geaccepteerde pro forma aanvraag om ook geaccepteerd te worden?](https://github.com/sbnnl/documentatie/blob/feature/aanvraag-borgstelling/docs/100_producten/010_aanvraag-borgstelling/index.md#beoordeel-aanvraag) --> FD: zet de afwijking eerst maar op 5%.
