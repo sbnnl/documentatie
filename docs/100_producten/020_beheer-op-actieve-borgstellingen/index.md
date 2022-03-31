@@ -2,11 +2,7 @@
 
 ## Context
 
-@Frank, graag hier het doel van het product beschrijven:
-
-* Vertaling van algemene missie, visie, doelen en randvoorwaarden naar product specifieke doelen en doelstellingen.
-* Wat moet het product kunnen?
-* Waar moet het aan voldoen om succesvol te zijn?
+Het doel is om met behulp van actuele saneringskrediet informatie inzicht te krijgen in de groei, omvang en risico's van het waarborgfonds.
 
 <!-- einde -->
 
