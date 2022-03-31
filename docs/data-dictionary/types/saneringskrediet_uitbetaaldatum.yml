@@ -1,0 +1,5 @@
+
+type: string
+format: date
+title: uitbetaaldatum
+description: De datum waarop het saneringskrediet is uitbetaald.
