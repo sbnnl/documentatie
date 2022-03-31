@@ -1,0 +1,81 @@
+openapi: 3.0.3
+
+info:
+  version: 0.0.1
+  title: Waarborgfonds saneringskredieten
+  description: |
+
+paths:
+
+  /api/mijn-beantwoord-aanvullende-vragen-taken:
+    get:
+      tags:
+        - beantwoord aanvullende vragen taken
+      summary: Geeft een persoonlijke lijst van beantwoord aanvullende vragen taken.
+      description: |
+        Geeft een lijst van geclaimde taken. Wanneer de gebruiker geen taken heeft geclaimed dan worden de niet geclaimde taken met de hoogste prioriteit waarvoor de gebruiker geautoriseerd is getoond.
+      operationId: GeefMijnBeantwoordAanvullendeVragenTakenV1
+      parameters:
+        - $ref: "../../../data-dictionary/parameters/limit.yml"
+        - $ref: "../../../data-dictionary/parameters/offset.yml"
+      responses:
+        200:          
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "../../../data-dictionary/responses/mijn_taken.yml"
+        401:
+          $ref: "../../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../../data-dictionary/responses/types/403.yml"
+
+  /api/beantwoord-aanvullende-vragen/{taak_id}:    
+    parameters:        
+      - $ref: "../../../data-dictionary/parameters/taak_id.yml"
+    get:
+      tags:
+        - beantwoord aanvullende vragen taken
+      summary: Geeft een beantwoord aanvullende vragen taak.
+      operationId: GeefBeantwoordAanvullendeVragenTaakV1
+      responses:
+        200:          
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "../../../data-dictionary/responses/beantwoord_aanvullende_vragen_taak.yml"
+        400:
+          $ref: "../../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../../data-dictionary/responses/types/403.yml"
+        404:
+          $ref: "../../../data-dictionary/responses/types/404.yml"
+
+  /api/beantwoord-aanvullende-vragen/{taak_id}/beantwoorden:
+    parameters:        
+      - $ref: "../../../data-dictionary/parameters/taak_id.yml"
+    put:
+      tags:
+        - beantwoord aanvullende vragen taken
+      summary: Voltooit de beantwoord aanvullende vragen taak met beantwoorden.
+      operationId: VoltooiBeantwoordAanvullendeVragenTaakMetBeantwoordenV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "../../../data-dictionary/commands/beantwoord_aanvullende_vragen.yml"
+      responses:
+        202:
+          $ref: "../../../data-dictionary/responses/types/202.yml"
+        400:
+          $ref: "../../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../../data-dictionary/responses/types/403.yml"
+        404:
+          $ref: "../../../data-dictionary/responses/types/404.yml"

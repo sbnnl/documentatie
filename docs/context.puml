@@ -1,0 +1,25 @@
+@startuml
+
+
+interface Uitvoeringsorgansatie
+class SBN
+
+interface Uitvoerder
+class SBF
+
+interface Contractant
+class Kredietbank
+
+interface Handelsmerk
+class Wsk
+
+ Uitvoerder <|.. SBF : "is de uitvoerder"
+SBF --> Kredietbank : "Verstrekt borgstellingen aan"
+SBF --> Wsk : "Communiceert vanuit"
+SBF --> SBN : "Heeft uitvoering uitbesteed aan"
+
+Kredietbank ..|> Contractant  : "is een contractant"
+Wsk ..|> Handelsmerk : "is het handelsmerk"
+SBN ..|> Uitvoeringsorgansatie : "is de uitvoeringsorganisatie"
+
+@enduml

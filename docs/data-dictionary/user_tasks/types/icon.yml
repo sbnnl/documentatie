@@ -1,0 +1,4 @@
+type: string
+format: fontawesome
+description: Een fontawesome.com icoon.
+example: asterix

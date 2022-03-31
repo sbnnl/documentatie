@@ -1,0 +1,8 @@
+allOf:
+  - title: mijn taken
+  - $ref: "types/response.yml"
+  - properties:
+     taken:
+        type: array
+        items:
+          $ref: "../models/taak.yml"

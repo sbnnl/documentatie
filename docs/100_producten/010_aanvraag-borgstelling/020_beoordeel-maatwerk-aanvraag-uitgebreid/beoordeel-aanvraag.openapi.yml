@@ -1,0 +1,133 @@
+openapi: 3.0.3
+
+info:
+  version: 0.0.1
+  title: Waarborgfonds saneringskredieten
+  description: |
+
+paths:
+
+  /api/mijn-beoordeel-aanvraag-taken:
+    get:
+      tags:
+        - beoordeel aanvraag taken
+      summary: Geeft een persoonlijke lijst van beoordeel aanvraag taken.
+      description: |
+        Geeft een lijst van geclaimde taken. Wanneer de gebruiker geen taken heeft geclaimed dan worden de niet geclaimde taken met de hoogste prioriteit waarvoor de gebruiker geautoriseerd is getoond.
+      operationId: GeefMijnBeoordeelAanvraagTakenV1
+      parameters:
+        - $ref: "../../../data-dictionary/parameters/limit.yml"
+        - $ref: "../../../data-dictionary/parameters/offset.yml"
+      responses:
+        200:          
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "../../../data-dictionary/responses/mijn_taken.yml"
+        401:
+          $ref: "../../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../../data-dictionary/responses/types/403.yml"
+
+  /api/beoordeel-aanvraag-taken/{taak_id}:    
+    parameters:        
+      - $ref: "../../../data-dictionary/parameters/taak_id.yml"
+    get:
+      tags:
+        - beoordeel aanvraag taken
+      summary: Geeft een beoordeel aanvraag taak.
+      operationId: GeefBeoordeelAanvraagTaakV1
+      responses:
+        200:          
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "../../../data-dictionary/responses/beoordeel_aanvraag_taak.yml"
+        400:
+          $ref: "../../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../../data-dictionary/responses/types/403.yml"
+        404:
+          $ref: "../../../data-dictionary/responses/types/404.yml"
+
+  /api/beoordeel-aanvraag-taken/{taak_id}/goedkeuren:
+    parameters:        
+      - $ref: "../../../data-dictionary/parameters/taak_id.yml"
+    put:
+      tags:
+        - beoordeel aanvraag taken
+      summary: Voltooit de beoordeel aanvraag taak met goedkeuren.
+      operationId: VoltooiBeoordeelAanvraagTaakMetGoedkeurenV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "../../../data-dictionary/commands/keur_aanvraag_goed.yml"
+      responses:
+        202:
+          $ref: "../../../data-dictionary/responses/types/202.yml"
+        400:
+          $ref: "../../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../../data-dictionary/responses/types/403.yml"
+        404:
+          $ref: "../../../data-dictionary/responses/types/404.yml"
+
+  /api/beoordeel-aanvraag-taken/{taak_id}/afwijzen:
+    parameters:        
+      - $ref: "../../../data-dictionary/parameters/taak_id.yml"
+    put:
+      tags:
+        - beoordeel aanvraag taken
+      summary: Voltooit de beoordeel aanvraag taak met afwijzen.
+      operationId: VoltooiBeoordeelAanvraagTaakMetAfwijzenV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "../../../data-dictionary/commands/wijs_aanvraag_af.yml"
+      responses:
+        202:
+          $ref: "../../../data-dictionary/responses/types/202.yml"
+        400:
+          $ref: "../../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../../data-dictionary/responses/types/403.yml"
+        404:
+          $ref: "../../../data-dictionary/responses/types/404.yml"
+
+  /api/beoordeel-aanvraag-taken/{taak_id}/vragen-stellen:
+    parameters:        
+      - $ref: "../../../data-dictionary/parameters/taak_id.yml"
+    put:
+      tags:
+        - beoordeel aanvraag taken
+      summary: Voltooit de beoordeel aanvraag taak met vragen stellen.
+      operationId: VoltooiBeoordeelAanvraagTaakMetVragenStellenV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "../../../data-dictionary/commands/stel_aanvullende_vragen.yml"
+      responses:
+        202:
+          $ref: "../../../data-dictionary/responses/types/202.yml"
+        400:
+          $ref: "../../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../../data-dictionary/responses/types/403.yml"
+        404:
+          $ref: "../../../data-dictionary/responses/types/404.yml"

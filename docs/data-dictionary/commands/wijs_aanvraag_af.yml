@@ -1,0 +1,14 @@
+allOf:
+  - $ref: "types/command.yml"
+  - type: object
+    title: afwijzen
+    properties:
+      actie:
+        allOf:
+          - example: afwijzen
+          - $ref: "../types/actie.yml"
+      reden:
+        $ref: "../types/afwijs_reden.yml"
+    required:
+      - actie
+      - reden

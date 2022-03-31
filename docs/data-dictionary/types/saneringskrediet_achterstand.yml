@@ -1,0 +1,6 @@
+type: number
+minimum: 0
+title: achterstand
+description: |
+  {{Achterstand}}
+example: 42.67

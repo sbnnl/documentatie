@@ -1,0 +1,7 @@
+type: string
+format: markdown
+title: reden
+description: De reden waarom het Wsk heeft besloten om de borgstelling in te trekken.
+example: |
+  @Frank?
+  

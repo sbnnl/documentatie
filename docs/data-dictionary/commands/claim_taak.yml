@@ -1,0 +1,12 @@
+allOf:
+  - $ref: "types/command.yml"
+  - type: object
+    title: claim
+    properties:
+      actie:
+        allOf:
+          - example: claim
+          - $ref: "../types/actie.yml"
+    required:
+      - actie
+  

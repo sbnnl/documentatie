@@ -1,0 +1,7 @@
+type: string
+title: reden beëindiging
+enum:
+  - afgelost
+  - afgeboekt
+  - onbekend
+example: afgelost
