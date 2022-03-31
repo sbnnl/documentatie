@@ -1,0 +1,9 @@
+type: array
+title: ining acties
+description: Welke acties zijn ondernomen om het krediet te innen?
+items:
+  oneOf:
+    - $ref: "inning_actie.yml"
+    - $ref: "inning_actie_anders.yml"
+minItems: 1
+uniqueItems: true

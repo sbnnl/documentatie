@@ -1,0 +1,5 @@
+
+allOf:
+  - title: fiatteer uitbetaling taak
+  - $ref: "types/response.yml"
+  - $ref: "../user_tasks/fiatteer_uitbetaling.yml"

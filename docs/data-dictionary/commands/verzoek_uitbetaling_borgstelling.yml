@@ -1,0 +1,3 @@
+allOf:
+  - $ref: "types/command.yml"
+  - title: verzoek uitbetaling

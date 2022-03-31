@@ -1,0 +1,37 @@
+type: object
+properties:
+  taak_id:
+    $ref: "../types/taak_id.yml"
+  borgstelling_id:
+    $ref: "../types/borgstelling_id.yml"
+  kredietsom:
+    $ref: "../models/kredietsom.yml"
+  uitbetaaldatum:
+    $ref: "../types/saneringskrediet_uitbetaaldatum.yml"
+  theoretisch_saldo:
+    $ref: "../types/saneringskrediet_theoretisch_saldo.yml"
+  uitstaand_saldo:
+    $ref: "../types/saneringskrediet_uitstaand_saldo.yml"
+  stand:
+    $ref: "../types/saneringskrediet_stand.yml"
+  kredietvergoeding:
+    $ref: "../types/saneringskrediet_kredietvergoeding.yml"
+  laatste_aflosdatum:
+    $ref: "../types/saneringskrediet_laatste_aflosdatum.yml"
+  redenen_oninbaar:
+    $ref: "../types/saneringskrediet_redenen_oninbaar.yml"
+  inning_acties:
+    $ref: "../types/saneringskrediet_inning_acties.yml"
+required:
+  - taak_id
+  - borgstelling_id
+  - kredietsom  
+  - uitbetaaldatum
+  - theoretisch_saldo
+  - uitstaand_saldo
+  - stand
+  - achterstand
+  - kredietvergoeding
+  - laatste_aflosdatum
+  - redenen_oninbaar
+  - inning_acties

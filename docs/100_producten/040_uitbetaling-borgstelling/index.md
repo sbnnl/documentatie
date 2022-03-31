@@ -1,12 +1,81 @@
-# Aanvraag borgstelling
+# Uitbetalen borgstelling
 
 ## Context
 
-@Frank, graag hier het doel van het product beschrijven:
+Het doel van uitbetalen borgstelling is om tot een beoordeling te komen of de borgstelling van een saneringskrediet uitbetaald mag worden.
 
-* Vertaling van algemene missie, visie, doelen en randvoorwaarden naar product specifieke doelen en doelstellingen.
-* Wat moet het product kunnen?
-* Waar moet het aan voldoen om succesvol te zijn?
+<!-- einde -->
+
+* [API](product.openapi.yml)
+
+## Proces
+
+* [Proces](proces.bpmn)
+* [Acceptatie criteria](proces.feature)
+
+## Use-cases
+
+### Uitbetalen borgstelling
+
+Start het proces uitbetalen borgstelling.
+
+* [Acceptatie criteria](uitbetalen-borgstelling.feature)
+
+### Geef aanvullende informatie
+
+Vraagt de aanvragende kredietbank om aanvullende informatie aan te leveren.
+
+* [Formulier](geef-aanvullende-informatie.user-task.yml)
+* [API](geef-aanvullende-informatie.openapi.yml)
+* [Acceptatie criteria](geef-aanvullende-informatie.feature)
+
+### Beoordeel uitbetaling verzoek
+
+Beoordeelt het verzoek tot uitbetaling van de borgstelling en stelt het uit te betalen bedrag vast.
+
+* [Formulier](beoordeel-uitbetaling-verzoek.user-task.yml)
+* [API](beoordeel-uitbetaling-verzoek.openapi.yml)
+* [Acceptatie criteria](beoordeel-uitbetaling-verzoek.feature)
+
+### Fiatteer uitbetaling
+
+Elk geaccepteerd verzoek tot uitbetaling van de borgstelling moet gefiatteerd worden door SBF als invulling van het vier-ogen-principe.
+
+* [Formulier](fiatteer-uitbetaling.user-task.yml)
+* [API](fiatteer-uitbetaling.openapi.yml)
+* [Acceptatie criteria](fiatteer-uitbetaling.feature)
+
+### Archiveer uitbetaling
+
+Slaat alle relevante informatie op in een document. Het document wordt in Exact online gearchiveerd als bron van waarheid voor de borgstelling.
+
+* [Document](uitbetaling.message.md)
+* [Acceptatie criteria](archiveer.feature)
+
+### Consolideer
+
+Relevante (@Frank, welke informatie?) borgstelling informatie wordt toegevoegd aan een geconsolideerde verzameling zodat het gebruikt kan worden voor:
+
+* @Frank?
+
+<!-- einde -->
+
+* [Acceptatie criteria](consolideer.feature)
+
+### Betaal uit
+
+* [Acceptatie criteria](betaal.uit)
+
+### Archiveer afwijzing
+
+* [Document](afwijzing.message.md)
+* [Acceptatie criteria](archiveer.feature)
+
+### Wijs uitbetaling af
+
+* [Acceptatie criteria](wijs-uitbetaling-af.feature)
+
+
 
 ## Business requirements
 

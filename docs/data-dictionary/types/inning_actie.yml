@@ -1,0 +1,16 @@
+type: string
+description: Welke acties zijn ondernomen om het krediet te innen?
+enum:
+  - herinnering gestuurd
+  - aanmaning gestuurd
+  - in gebreke stelling gestuurd
+  - opeising saneringskrediet gestuurd
+  - informatie ingewonnen bij gemeente
+  - informatie ingewonnen bij schuldhulpverlenende instelling
+  - contact gezocht via telefoon
+  - contact gezocht via bezoek
+  - contact gezocht via brief
+  - contact gezocht via email
+  - deurwaarder
+  - huisbezoek
+  - betalingsregeling

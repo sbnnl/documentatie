@@ -1,0 +1,5 @@
+type: string
+format: markdown
+description: Aanvullende opmerkingen die relevant zijn voor het uitbetaling verzoek.
+example: |
+  @Frank
