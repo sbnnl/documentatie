@@ -2,7 +2,7 @@
 
 ## Context
 
-Een gebeurtenis ontstaat wanneer er een opdracht is verwerkt in de systemen van het Wbf. Deze gebeurtenissen worden beschikbaar gesteld aan afnemers (o.a. Kredietbanken), zodat die de gebeurtenissen verder kunnen verwerken in de eigen systemen (o.a. Allegro en Stratech).
+Een gebeurtenis ontstaat wanneer er een opdracht is verwerkt in de systemen van het Wsk. Deze gebeurtenissen worden beschikbaar gesteld aan afnemers (o.a. Kredietbanken), zodat die de gebeurtenissen verder kunnen verwerken in de eigen systemen (o.a. Allegro en Stratech).
 
 Deze gebeurtenissen kunnen op verschillende manieren beschikbaar gesteld worden:
 
@@ -11,10 +11,9 @@ Deze gebeurtenissen kunnen op verschillende manieren beschikbaar gesteld worden:
 1. Stateless vs. stateful;
 1. Centraal vs. decentraal;
 
-
 ### PUSH vs. PULL
 
-Gebeurtenissen kunnen naar de afnemer gestuurd worden zodra ze ontstaan (PUSH) of de afnemer haalt zelf de gebeurtenissen op (PULL). 
+Gebeurtenissen kunnen naar de afnemer gestuurd worden zodra ze ontstaan (PUSH) of de afnemer haalt zelf de gebeurtenissen op (PULL).
 
 ### Rijke vs. arme gebeurtenissen
 
@@ -27,7 +26,6 @@ De aanbieder van gebeurtenissen kan per afnemer bijhouden welke gebeurtenissen c
 ### Centraal vs. decentraal
 
 Gebeurtenissen kunnen op een centrale plek opgeslagen en beschikbaar gesteld worden (centraal) of gebeurtenissen worden bij de bron opgeslagen en via aggregatie op een centrale aangeboden worden (decentraal).
-
 
 ## Besluit
 
