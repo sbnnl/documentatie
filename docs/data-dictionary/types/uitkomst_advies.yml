@@ -1,0 +1,6 @@
+type: string
+enum:
+  - positief
+  - negatief
+title: uitkomst
+example: positief

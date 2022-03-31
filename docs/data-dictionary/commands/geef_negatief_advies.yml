@@ -1,0 +1,14 @@
+allOf:
+  - $ref: "types/command.yml"
+  - type: object
+    title: negatief adviseren
+    properties:
+      actie:
+        allOf:
+          - example: adviseer_negatief
+          - $ref: "../types/actie.yml"
+      toelichting:
+        $ref: "../types/toelichting_advies.yml"
+    required:
+      - actie
+      - toelichting

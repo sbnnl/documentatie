@@ -2,7 +2,7 @@
 
 ## Context
 
-Vanuit andere producten ontstaan er gebeurtenissen. Dit product stelt deze gebeurtenissen centraal beschikbaar zodat die door andere producten, decentraal, verder verwerkt kunnen worden.
+Vanuit producten ontstaan er gebeurtenissen. Dit product stelt deze gebeurtenissen centraal beschikbaar zodat die door andere producten, decentraal, verder verwerkt kunnen worden.
 
 ## Business requirements
 

@@ -1,0 +1,29 @@
+user-task:
+  name: Geef aanvullende informatie
+  schema:
+    $ref: "../../../data-dictionary/user_tasks/geef_advies.yml"
+  ui:
+    hidden:
+      - taak_id
+      - borgstelling_id
+actions:
+  negatief:
+    name: Negatief advies
+    schema: 
+      $ref: "../../../data-dictionary/commands/geef_negatief_advies.yml"
+    ui:
+      hidden:
+        - command_id
+        - correlation_id
+        - causation_id
+        - actie
+  positief:
+    name: Positief advies
+    schema: 
+      $ref: "../../../data-dictionary/commands/geef_positief_advies.yml"
+    ui:
+      hidden:
+        - command_id
+        - correlation_id
+        - causation_id
+        - actie

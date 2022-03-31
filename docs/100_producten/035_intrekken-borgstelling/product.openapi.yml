@@ -1,0 +1,35 @@
+openapi: 3.0.3
+
+info:
+  version: 0.0.1
+  title: Waarborgfonds saneringskredieten
+  description: |
+paths:
+  
+  /api/borgstellingen/{borgstelling_id}/intrekken:
+    parameters:        
+      - $ref: "../../data-dictionary/parameters/borgstelling_id.yml"
+    put:
+      tags:
+        - borgstelling
+      summary: Trekt de borgstelling in.
+      description: |
+        Op basis van een audit kan het Wsk besluiten om een borgstelling in te trekken.
+      operationId: TrekBorgstellingInV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "../../data-dictionary/commands/trek_borgstelling_in.yml"
+      responses:
+        202:
+          $ref: "../../data-dictionary/responses/types/202.yml"
+        400:
+          $ref: "../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../data-dictionary/responses/types/403.yml"
+        404:
+          $ref: "../../data-dictionary/responses/types/404.yml"

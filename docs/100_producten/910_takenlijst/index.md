@@ -2,7 +2,7 @@
 
 ## Context
 
-Vanuit andere producten ontstaan er taken die door mensen uitgevoerd moeten worden. De takenlijst stelt deze taken op een centrale plek beschikbaar op basis van decentrale taak bronnen.
+Vanuit producten ontstaan er taken die door mensen uitgevoerd moeten worden. De takenlijst stelt deze taken op een centrale plek beschikbaar op basis van decentrale taak bronnen.
 
 ## Business requirements
 

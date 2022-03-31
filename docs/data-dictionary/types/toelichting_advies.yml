@@ -1,0 +1,6 @@
+type: string
+format: markdown
+title: toelichting
+description: Toelichting op het positieve of negatieve advies van de adviserende kredietbank.
+example: |
+  @Frank?

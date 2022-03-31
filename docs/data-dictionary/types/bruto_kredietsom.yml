@@ -1,0 +1,6 @@
+type: number
+minimum: 0
+title: bruto kredietsom
+description: |
+  {{Bruto kredietsom}}
+example: 535.45
