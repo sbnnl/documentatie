@@ -25,17 +25,15 @@ Het doel van de aanvraag borgstelling is om tot een beoordeling te komen of er v
 
 ### Aanvragen borgstelling
 
-Aanvragen borgstelling wordt vanuit de REST adapter aangeroepen. De use-case is verantwoordelijk voor:
-
-* autorisatie controle:
-    * de gebruiker moet beschikken over **"REGISTREER_AANVRAAG"** permissie;
-    * de gebruiker moet beschikken over een **kredietbank claim** die overeenkomt met de kredietbank uit de aanvraag;
-* registratie van de aanvraag;
-* starten van het proces, een voorbeoordeling die eventueel in een eerder stadium met hetzelfde kenmerk is uitgevoerd moet aan de procesinformatie toegevoegd worden.
+Start het proces aanvragen borgstelling.
 
 <!-- einde -->
 
 * [Acceptatie criteria](aanvragen-borgstelling.feature)
+
+### Bepaal voorbeoordeling
+
+Zoekt o.b.v. het kenmerk van de klant naar een bestaande voorbeoordeling. Wanneer gevonden wordt deze toegevoegd aan het proces.
 
 ### Beoordeel aanvraag
 
