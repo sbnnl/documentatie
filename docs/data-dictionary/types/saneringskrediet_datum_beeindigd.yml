@@ -1,0 +1,4 @@
+type: string
+format: date
+title: datum beëindiging
+description: De datum waarop het saneringskrediet beëindigd is.

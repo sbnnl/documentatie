@@ -1,0 +1,10 @@
+allOf:
+  - $ref: "types/command.yml"
+  - title: trek borgstelling in
+    properties:
+      reden:
+        $ref: "../types/reden_intrekken.yml"
+    required:
+      - reden
+
+    

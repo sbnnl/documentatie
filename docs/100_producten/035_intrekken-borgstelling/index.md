@@ -1,8 +1,12 @@
-# Beëindiging borgstelling
+# Intrekken borgstelling
 
 ## Context
 
-Het doel van een beëindiging van de borgstelling is het bestand met borgstellingen actueel te houden.
+@Frank, graag hier het doel van het product beschrijven:
+
+* Vertaling van algemene missie, visie, doelen en randvoorwaarden naar product specifieke doelen en doelstellingen.
+* Wat moet het product kunnen?
+* Waar moet het aan voldoen om succesvol te zijn?
 
 <!-- einde -->
 
@@ -15,18 +19,18 @@ Het doel van een beëindiging van de borgstelling is het bestand met borgstellin
 
 ## Use-case
 
-### Beëindigen borgstelling
+### Intrekken borgstelling
 
-Start het proces beëindigen borgstelling.
+Start het proces intrekken borgstelling.
 
-* [Acceptatie criteria](beeindigen-borgstelling.feature)
+* [Acceptatie criteria](intrekken-borgstelling.feature)
 
 ### Archiveer
 
 Slaat alle relevante informatie op in een document. Het document wordt in Exact online gearchiveerd als bron van waarheid voor de borgstelling.
 
 * [Document](bevestging.message.md)
-* [Acceptatie criteria](archiveer.feature)
+* [Acceptatie criteria](../beeindiging-borgstelling/archiveer.feature)
 
 ### Consolideer
 
@@ -36,13 +40,13 @@ Relevante (@Frank, welke informatie?) borgstelling informatie wordt toegevoegd a
 
 <!-- einde -->
 
-* [Acceptatie criteria](consolideer.feature)
+* [Acceptatie criteria](../beeindiging-borgstelling/consolideer.feature)
 
-### Beëindig
+### Trek in
 
-Beëindigt de borgstelling door alle proces informatie te verwijderen en de status te wijzigen in beëindigd.
+Beëindigt de borgstelling door alle proces informatie te verwijderen en de status te wijzigen in ingetrokken.
 
-* [Acceptatie criteria](beeindig.feature)
+* [Acceptatie criteria](trek-in.feature)
 
 ## Business requirements
 
