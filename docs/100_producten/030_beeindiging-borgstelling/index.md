@@ -1,6 +1,6 @@
 # Beëindiging borgstelling
 
-## Context
+## Product
 
 Het doel van een beëindiging van de borgstelling is het bestand met borgstellingen actueel te houden.
 

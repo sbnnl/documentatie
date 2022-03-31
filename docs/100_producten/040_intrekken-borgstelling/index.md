@@ -1,6 +1,6 @@
 # Intrekken borgstelling
 
-## Context
+## Product
 
 @Frank, graag hier het doel van het product beschrijven:
 

@@ -1,6 +1,6 @@
 # Beheer op actieve borgstellingen
 
-## Context
+## Product
 
 Het doel is om met behulp van actuele saneringskrediet informatie inzicht te krijgen in de groei, omvang en risico's van het waarborgfonds.
 

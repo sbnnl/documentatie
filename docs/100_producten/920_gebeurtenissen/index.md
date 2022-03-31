@@ -1,10 +1,10 @@
 # Gebeurtenissen
 
-## Context
+## Product
 
 Vanuit producten ontstaan er gebeurtenissen. Dit product stelt deze gebeurtenissen centraal beschikbaar zodat die door andere producten, decentraal, verder verwerkt kunnen worden.
 
-Gebeurtenissen beschrijven welke opdrachten in de systemen van het Wbf correct zijn verwerkt. Deze gebeurtenissen worden, in volgorde van registratie, centraal beschikbaar gesteld aan afnemers van deze gebeurtenissen zodat die de gebeurtenissen verder kunnen verwerken.
+Gebeurtenissen beschrijven welke opdrachten in de systemen van het Wsk correct zijn verwerkt. Deze gebeurtenissen worden, in volgorde van registratie, centraal beschikbaar gesteld aan afnemers van deze gebeurtenissen zodat die de gebeurtenissen verder kunnen verwerken.
 
 De afnemer moet zelf registeren welke gebeurtenissen correct verwerkt zijn door het kenmerk op te slaan. Het kenmerk mag als idempotency sleutel gebruikt worden.
 

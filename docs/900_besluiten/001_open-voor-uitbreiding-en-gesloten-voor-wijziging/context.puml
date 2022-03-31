@@ -30,12 +30,12 @@ cloud "Kredietbank D" {
 }
 
 cloud "Sociale Banken Nederland" {
-    [Waarborgfonds] as WBF
+    [Waarborgfonds] as Wsk
     () "API" as API
     [Schuldenknooppunt]    
     [Adapter] as SchuldenknooppuntAdapter
 
-    API --> WBF
+    API --> Wsk
     API <-- SchuldenknooppuntAdapter
     SchuldenknooppuntAdapter <--> Schuldenknooppunt
 }
