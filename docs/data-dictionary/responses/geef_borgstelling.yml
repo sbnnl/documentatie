@@ -1,0 +1,4 @@
+allOf:
+  - title: geef borgstelling
+  - $ref: "types/response.yml"
+  - $ref: "../models/borgstelling.yml"

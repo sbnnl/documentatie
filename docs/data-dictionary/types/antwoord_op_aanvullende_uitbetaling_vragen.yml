@@ -1,0 +1,6 @@
+type: string
+format: markdown
+title: antwoord
+description: Het antwoord / antwoorden van de kredietbank op vragen van de beoordelaar van het uitbetalingverzoek.
+example: |
+  @Frank?

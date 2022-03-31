@@ -7,7 +7,7 @@ user-task:
       - taak_id
       - borgstelling_id
 actions:
-  fiatteren:
+  goedkeuren:
     name: Goedkeuren
     schema: 
       $ref: "../../data-dictionary/commands/keur_uitbetaling_verzoek_goed.yml"

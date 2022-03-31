@@ -1,0 +1,4 @@
+allOf:
+  - title: beantwoord aanvullende uitbetaling vragen taak
+  - $ref: "types/response.yml"
+  - $ref: "../user_tasks/beantwoord_aanvullende_uitbetaling_vragen.yml"

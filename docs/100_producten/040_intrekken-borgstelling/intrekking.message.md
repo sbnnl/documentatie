@@ -1,4 +1,4 @@
-@Frank, hier de tekst invoeren.
+@Frank, hier tekst toevoegen.
 
 <address>
     Kredietbank X<br>

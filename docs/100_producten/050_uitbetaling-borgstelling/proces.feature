@@ -1,6 +1,11 @@
 #language: nl
 Functionaliteit: Uitebataling borgstelling proces
 
+  Scenario: Aanvullende vragen route is actief
+    Gegeven proces informatie "{ beoordeling: 'aanvullende_vragen' }"
+    Wanneer poort "poort-beoordeling" is uitgevoerd
+    Dan is route "route-aanvullende-vragen" actief
+
   Scenario: Uitbetaling geaccepteerd route is actief
     Gegeven proces informatie "{ beoordeling: 'geaccepteerd' }"
     Wanneer poort "poort-beoordeling" is uitgevoerd
@@ -17,6 +22,6 @@ Functionaliteit: Uitebataling borgstelling proces
     Dan is route "route-gefiatteerd" actief
 
   Scenario: Uitbetaling niet gefiatteerd route is actief
-    Gegeven proces informatie "{ gefiatteerd: 'niet' }"
+    Gegeven proces informatie "{ gefiatteerd: 'nee' }"
     Wanneer poort "poort-gefiatteerd" is uitgevoerd
     Dan is route "route-niet-gefiatteerd" actief

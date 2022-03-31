@@ -4,10 +4,7 @@ allOf:
     properties:
       datum:
         $ref: "../types/saneringskrediet_datum_beeindigd.yml"
-      reden:
-        $ref: "../types/saneringskrediet_reden_beeindigd.yml"
     required:
       - datum_beeindigd
-      - reden_beeindigd
 
     

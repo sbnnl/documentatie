@@ -1,9 +1,9 @@
 @Frank, hier de tekst toevoegen.
 
 <address>
-    Kredietbank Nederland<br>
-    Gardeniersweg 10<br>
-    8933 AA Leeuwarden
+    Kredietbank X<br>
+    Langestraat 10<br>
+    1234 AA Een plaats
 </address>
 
 <time>2022-01-01</time>

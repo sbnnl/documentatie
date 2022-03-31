@@ -13,8 +13,8 @@ Het doel van de aanvraag borgstelling is om tot een beoordeling te komen of er v
 
 * [Formulier](product.user-task.yml)
 * [API](product.openapi.yml)
-* [Acceptatie criteria](product.feature)
-* [Dashboard](product.dashboard.yml)
+<!-- * [Acceptatie criteria](product.feature)
+* [Dashboard](product.dashboard.yml) -->
 
 ## Proces
 
@@ -25,7 +25,7 @@ Het doel van de aanvraag borgstelling is om tot een beoordeling te komen of er v
 
 ### Aanvragen borgstelling
 
-Start het proces aanvragen borgstelling.
+Registreert de aanvraag borgstelling met de status **aangevraagd** en start het aanvragen borgstelling proces.
 
 <!-- einde -->
 
@@ -39,11 +39,9 @@ Zoekt o.b.v. het kenmerk van de klant naar een bestaande voorbeoordeling. Wannee
 
 De informatie van de aanvraag wordt automatisch beoordeeld op basis van regels in het beslissingsmodel. Het beslissingsmodel kent de volgende uitkomsten:
 
-* goedgekeurd
+* geaccepteerd
 * afgewezen
 * maatwerk
-
-Een voorbeoordeling met hetzelfde kenmerk die in een eerder stadium is uitgevoerd maakt ook deel uit van de informatie.
 
 <!-- einde -->
 
@@ -58,17 +56,17 @@ Voor de invulling van beoordeel maatwerk aanvraag bestaan twee opties:
 
 ### Archiveer contract
 
-Nadat de aanvraag is goedgekeurd wordt er een borgstelling contract aangemaakt en opgeslagen in het archief van Exact online. De wettelijke bewaartermijn voor dit soort documenten is 7 jaar.
+Nadat de aanvraag is goedgekeurd wordt er een borgstelling contract aangemaakt en opgeslagen in het archief. De wettelijke bewaartermijn voor dit soort documenten is 7 jaar.
 
 <!-- einde -->
 
 * [Document](contract.message.md)
-* [Pseudo code](ArchiveerContractUseCase.java)
-* [Acceptatie criteria](archiveer-contract.feature)
+<!-- * [Pseudo code](ArchiveerContractUseCase.java) -->
+* [Acceptatie criteria](../archiveer.feature)
 
 ### Activeer borgstelling
 
-Verander de status van de borgstelling aanvraag in actief.
+Verander de status van de borgstelling in actief.
 
 <!-- einde -->
 
@@ -76,7 +74,7 @@ Verander de status van de borgstelling aanvraag in actief.
 
 ### Registreer verkoop
 
-Wsf maakt gebruik van Exact online. Voor **1% van de bruto kredietsom** van de geaccepteerde borgstelling aanvraag moet er automatisch een factuurregel aangemaakt worden via de [API van Exact online](https://start.exactonline.nl/docs/HlpRestAPIResourcesDetails.aspx?name=SalesInvoiceSalesInvoiceLines).
+Sbf maakt gebruik van Exact online. Voor **1% van de bruto kredietsom** van de geaccepteerde borgstelling aanvraag moet er automatisch een factuurregel aangemaakt worden via de [API van Exact online](https://start.exactonline.nl/docs/HlpRestAPIResourcesDetails.aspx?name=SalesInvoiceSalesInvoiceLines).
 
 <!-- einde -->
 
@@ -85,21 +83,30 @@ Wsf maakt gebruik van Exact online. Voor **1% van de bruto kredietsom** van de g
 
 Zie [exact knowledge base](https://support.exactonline.com/community/s/knowledge-base#All-All-DNO-Content-restapibusinessexamplesalesorder) voor meer informatie.
 
+### Aanvraag geaccepteerd
+
+De aanvraag geaccepteerd gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wordt wijzigt in **actief**.
+
+<!-- einde -->
+
+* [Acceptatie criteria](aanvraag-geaccepteerd.feature)
+
+### Archiveer afwijzing
+
+Nadat de aanvraag is afgewezen wordt er een afwijzing aangemaakt en opgeslagen in het archief. De wettelijke bewaartermijn voor dit soort documenten is 7 jaar.
+
+<!-- einde -->
+
+* [Document](afwijzing.message.md)
+* [Acceptatie criteria](../archiveer.feature)
+
 ### Aanvraag afgewezen
 
-De aanvraag afgewezen gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden.
+De aanvraag afgewezen gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wordt wijzigt in **afgewezen**.
 
 <!-- einde -->
 
 * [Acceptatie criteria](aanvraag-afgewezen.feature)
-
-### Aanvraag goedgekeurd
-
-De aanvraag goedgekeurd gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden.
-
-<!-- einde -->
-
-* [Acceptatie criteria](aanvraag-goedgekeurd.feature)
 
 ## Business requirements
 

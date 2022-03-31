@@ -8,8 +8,8 @@ allOf:
       links:
         type: object
         properties:
-          api:
-             $ref: "../types/gebeurteniss_api_link.yml"
+          informatie:
+             $ref: "../types/gebeurtenis_informatie_link.yml"
         required:
           - api
     required:

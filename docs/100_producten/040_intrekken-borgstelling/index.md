@@ -25,28 +25,18 @@ Start het proces intrekken borgstelling.
 
 * [Acceptatie criteria](intrekken-borgstelling.feature)
 
-### Archiveer
+### Archiveer intrekking
 
-Slaat alle relevante informatie op in een document. Het document wordt in Exact online gearchiveerd als bron van waarheid voor de borgstelling.
+Nadat de borgstelling is ingetrokken wordt er een document aangemaakt en opgeslagen in het archief. De wettelijke bewaartermijn voor dit soort documenten is 7 jaar.
 
-* [Document](bevestging.message.md)
-* [Acceptatie criteria](../beeindiging-borgstelling/archiveer.feature)
+* [Document](intrekking.message.md)
+* [Acceptatie criteria](../archiveer.feature)
 
-### Consolideer
+### Borgstelling ingetrokken
 
-Relevante (@Frank, welke informatie?) borgstelling informatie wordt toegevoegd aan een geconsolideerde verzameling zodat het gebruikt kan worden voor:
+De borgstelling ingetrokken gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wordt wijzigt in **ingetrokken**.
 
-* @Frank?
-
-<!-- einde -->
-
-* [Acceptatie criteria](../beeindiging-borgstelling/consolideer.feature)
-
-### Trek in
-
-Beëindigt de borgstelling door alle proces informatie te verwijderen en de status te wijzigen in ingetrokken.
-
-* [Acceptatie criteria](trek-in.feature)
+* [Acceptatie criteria](borgstelling-ingetrokken.feature)
 
 ## Business requirements
 

@@ -3,7 +3,7 @@ Functionaliteit: Archiveer contract use-case
   
   Abstract Scenario: Use-case permissie is juist
     Gegeven een gebruiker met de rollen "<rollen>"
-    Dan heeft de gebruiker "<wel-niet>" de permissie "ARCHIVEER_CONTRACT"
+    Dan heeft de gebruiker "<wel-niet>" de permissie "ARCHIVEER"
 
     Voorbeelden:
     | rollen      | wel-niet |
@@ -14,7 +14,7 @@ Functionaliteit: Archiveer contract use-case
 
   Abstract Scenario: Use-case heeft de juiste autorisaties
     Gegeven een gebruiker met de rollen "<rollen>"
-    Wanneer use-case "registreer aanvraag" wordt uitgevoerd
+    Wanneer use-case "archiveer" wordt uitgevoerd
     Dan is de gebruiker "<wel-niet>" geautoriseerd
 
     Voorbeelden:

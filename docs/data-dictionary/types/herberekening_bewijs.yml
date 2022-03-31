@@ -9,6 +9,7 @@ properties:
     format: byte
     description: base64 encoded string van een bestand.
     writeOnly: true
+    example: YQ==
   links:
     type: object
     properties:
@@ -17,8 +18,13 @@ properties:
         format: uri
         description: Link naar het bestand.
         readOnly: true
+        example: https://archief.wsk.nl/f242f4e7-4ddc-4dbb-a3c1-9ab1a1dea74e/?autorisatie=aca62a5c-ddea-4992-8e92-bdbcda5b1ee9
+    required:
+      - bestand
 required:
   - mime_type
+  - data
+      
 
 
     

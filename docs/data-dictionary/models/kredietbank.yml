@@ -1,0 +1,10 @@
+type: object
+title: kredietbank
+properties:
+  kredietbank_id:
+    $ref: "../types/kredietbank_id.yml"
+  naam:
+    $ref: "../types/kredietbank_naam.yml"
+required:
+  - kredietbank_id
+  - naam

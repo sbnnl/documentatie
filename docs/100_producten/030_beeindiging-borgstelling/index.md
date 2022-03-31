@@ -21,28 +21,18 @@ Start het proces beëindigen borgstelling.
 
 * [Acceptatie criteria](beeindigen-borgstelling.feature)
 
-### Archiveer
+### Archiveer beëindiging
 
-Slaat alle relevante informatie op in een document. Het document wordt in Exact online gearchiveerd als bron van waarheid voor de borgstelling.
+Nadat de borgstelling beëindigd wordt er een document aangemaakt en opgeslagen in het archief. De wettelijke bewaartermijn voor dit soort documenten is 7 jaar.
 
-* [Document](bevestging.message.md)
-* [Acceptatie criteria](archiveer.feature)
+* [Document](beeindiging.message.md)
+* [Acceptatie criteria](../archiveer.feature)
 
-### Consolideer
+### Borgstelling beëindigd
 
-Relevante (@Frank, welke informatie?) borgstelling informatie wordt toegevoegd aan een geconsolideerde verzameling zodat het gebruikt kan worden voor:
+De borgstelling beëindigd gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wordt wijzigt in **beëindigd**.
 
-* @Frank?
-
-<!-- einde -->
-
-* [Acceptatie criteria](consolideer.feature)
-
-### Beëindig
-
-Beëindigt de borgstelling door alle proces informatie te verwijderen en de status te wijzigen in beëindigd.
-
-* [Acceptatie criteria](beeindig.feature)
+* [Acceptatie criteria](borgstelling-beeindigd.feature)
 
 ## Business requirements
 

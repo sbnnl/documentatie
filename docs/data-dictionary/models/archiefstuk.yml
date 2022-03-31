@@ -1,0 +1,24 @@
+type: object
+properties:
+  mime_type:
+    type: string
+    example: application/pdf
+  gearchiveerd_op:
+    type: string
+    format: date-time
+    title: gearchiveerd op
+    description: Tijdstip waarop het archiefstuk is aangemaakt.
+  naam:
+    type: string
+    title: naam
+    description: Naam van het archiefstuk.
+    example: Borgstelling contract
+  links:
+    type: object
+    properties:
+      bestand:
+        type: string
+        format: uri
+        description: Tijdelijke geautoriseerde link naar het bestand.
+        readOnly: true
+        example: https://archief.wsk.nl/f242f4e7-4ddc-4dbb-a3c1-9ab1a1dea74e/?autorisatie=aca62a5c-ddea-4992-8e92-bdbcda5b1ee9

@@ -1,0 +1,30 @@
+type: object
+properties:
+  borgstelling_id:
+    $ref: "../types/borgstelling_id.yml"
+  kredietbank:
+    $ref: "./kredietbank.yml"
+  kenmerk:
+    $ref: "../types/kenmerk_kredietbank.yml"
+  status:
+    $ref: "../types/borgstelling_status.yml"
+  gebeurtenissen:
+    type: array
+    items:
+      allOf:
+        - properties:
+            veroorzaakt_door:
+              $ref: "../types/gebruiker_naam.yml"
+          required:
+            - veroorzaakt_door
+        -  $ref: "../events/gebeurtenis.yml"
+  archiefstukken:
+    type: array
+    items:
+      $ref: "./archiefstuk.yml"
+required:
+  - borgstelling_id
+  - kredietbank
+  - kenmerk
+  - status
+  - gebeurtenissen

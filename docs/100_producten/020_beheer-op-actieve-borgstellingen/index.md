@@ -22,9 +22,15 @@ Geeft een lijst met borgstellingen. Deze use-case kan gebruikt worden om kenmerk
 
 * [Acceptatie criteria](geef-borgstellingen.feature)
 
+### Geef borgstelling
+
+Geeft een borgstelling van een kredietbank. Deze use-case wordt gebruikt door het Wsk om inzicht te krijgen in de status van een borgstelling. De gebruiker moet de kredietbank waar de borgstelling deel van uitmaakt als claim hebben.
+
+* [Acceptatie criteria](geef-borgstelling.feature)
+
 ### Vul borgstelling aan
 
-Vult de borgstelling aan met actuele informatie van het saneringskrediet waarvoor de borgstelling is afgegeven. Elke mutatie wordt op datum opgeslagen zodat het gebruikt kan worden om het verloop inzichtelijk te maken.
+Vult de borgstelling aan met actuele informatie van het saneringskrediet waarvoor de borgstelling is afgegeven. Elke mutatie wordt op datum opgeslagen zodat het gebruikt kan worden om het verloop inzichtelijk te maken. De gebruiker moet de kredietbank waar de borgstelling deel van uitmaakt als claim hebben.
 
 * [Acceptatie criteria](vul-borgstelling-aan.feature)
 
