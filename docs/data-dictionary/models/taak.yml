@@ -1,0 +1,33 @@
+type: object
+title: taak
+description: Een meta beschijving van een taak.
+properties:
+  taak_id:
+    $ref: "../types/taak_id.yml"
+  naam:
+    $ref: "../types/taak_naam.yml"
+  omschrijving:
+    $ref: "../types/taak_omschrijving.yml"
+  icoon:
+    $ref: "../types/taak_icoon.yml"
+  badge:
+    $ref: "../types/taak_badge.yml"
+  opleveringsdatum:
+    $ref: "../types/taak_opleveringsdatum.yml"
+  geclaimed_op:
+    $ref: "../types/taak_geclaimed_op.yml"
+  links:
+    type: object
+    properties:
+      pagina:
+        $ref: "../types/taak_pagina_link.yml"
+      api:
+        $ref: "../types/taak_api_link.yml"
+    required:
+      - pagina
+      - api
+required:
+  - taak_id
+  - naam
+  - opleveringsdatum
+  - links
