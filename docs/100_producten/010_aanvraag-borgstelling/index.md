@@ -7,11 +7,7 @@ Een aanvraag van een borgstelling door een kredietbank voor een saneringskrediet
 * aanvraag borgstelling;
 * aanvraag vanuit een portefeuille overname;
 
-<!-- einde -->
-
-* Vertaling van algemene missie, visie, doelen en randvoorwaarden naar product specifieke doelen en doelstellingen.
-* Wat moet het product kunnen?
-* Waar moet het aan voldoen om succesvol te zijn?
+Het doel van de aanvraag borgstelling is om tot een beoordeling te komen of er voor een saneringskrediet een borgstelling kan worden afgegeven.
 
 <!-- einde -->
 
