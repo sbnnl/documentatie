@@ -8,7 +8,7 @@ Wanneer de gebruiker een taak opent dan wordt er eerst een claim verzoek verstuu
 
 <!-- einde -->
 
-* [Context](../../besluiten/taken-plugin-architectuur/context.puml)
+* [Context](../../900_besluiten/002_taken-plugin-architectuur/context.puml)
 * [API](product.openapi.yml)
 * [Sequence diagram](sequence-diagram.puml)
 
