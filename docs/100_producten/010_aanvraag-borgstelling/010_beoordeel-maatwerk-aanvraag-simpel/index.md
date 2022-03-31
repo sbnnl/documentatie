@@ -2,11 +2,7 @@
 
 ## Product
 
-@Frank, graag hier het doel van het product beschrijven:
-
-* Vertaling van algemene missie, visie, doelen en randvoorwaarden naar product specifieke doelen en doelstellingen.
-* Wat moet het product kunnen?
-* Waar moet het aan voldoen om succesvol te zijn?
+Het doel van het product is om te komen tot een weloverwogen keuze of borgstelling mogelijk is. Deze keuze wordt gemaakt door de medewerker van SBN en gefiatteerd door een medewerker van SBF.
 
 <!-- einde -->
 
@@ -45,8 +41,7 @@ Elke maatwerk aanvraag moet gefiatteerd worden door SBF als invulling van het vi
 
 ## Business requirements
 
-Wat zijn de (non)functionele requirements? Denk hierbij aan zaken als doorlooptijd, vierogenprincipe, etc.
-
-| Nummer | Omschrijving                         | Eigenaar                  |
-| -------| ------------------------------------ | ------------------------- |
-| 1      | Omschrijving                         | Frank Dijkstra            |
+| Nummer | Omschrijving                                                         | Eigenaar                  |
+| -------| -------------------------------------------------------------------- | ------------------------- |
+| 1      | Doorlooptijd: Een maatwerk beoordeling moet binnen 5 werkdagen beoordeeld zijn.    | Frank Dijkstra |
+| 2      | Vier ogen: Een positief oordeel van een medewerker van SBN moet gefiatteerd worden deen medewerker van SBF. | Frank Dijkstra |
