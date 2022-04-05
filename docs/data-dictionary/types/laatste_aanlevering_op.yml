@@ -1,0 +1,4 @@
+type: string
+format: date-time
+title: laatste aanlevering
+description: Het tijdstip waarom de laatste aanlevering van saneringskrediet informatie is verwerkt.

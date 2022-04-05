@@ -8,6 +8,16 @@ properties:
     $ref: "../types/kenmerk_kredietbank.yml"
   status:
     $ref: "../types/borgstelling_status.yml"
+  saneringskrediet:
+    allOf:
+      - description: |
+          De saneringskrediet informatie zoals die als laatste, via een automatische aanlevering is, geregistreerd.
+        properties:
+          laatste_aanlevering: 
+            $ref: "../types/laatste_aanlevering_op.yml"
+        required:
+          - laatste_aanlevering
+      - $ref: "../models/saneringskrediet.yml"
   gebeurtenissen:
     type: array
     items:
@@ -27,4 +37,5 @@ required:
   - kredietbank
   - kenmerk
   - status
+  - saneringskrediet
   - gebeurtenissen
