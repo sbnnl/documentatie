@@ -1,0 +1,23 @@
+allOf:
+  - $ref: "types/command.yml"
+  - type: object
+    title: verwerk saneringskredieten informatie
+    properties:
+      actie:        
+        allOf:
+          - example: verwerk_saneringskredieten_informatie
+          - $ref: "../types/actie.yml"
+      saneringskredieten:
+        type: array
+        items:
+          allOf:
+            - properties:   
+                borgstelling_id:
+                  $ref: "../types/borgstelling_id.yml"
+              required:
+                - borgstelling_id
+            - $ref: "../models/saneringskrediet.yml"
+        minItems: 1
+    required:
+      - actie
+      - saneringskredieten

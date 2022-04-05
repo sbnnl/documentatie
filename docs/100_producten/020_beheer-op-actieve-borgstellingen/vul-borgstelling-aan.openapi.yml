@@ -6,12 +6,39 @@ info:
   description: |
 paths:
   
+  /api/borgstellingen:
+    patch:
+      tags:
+        - borgstelling aanvullen
+      summary: Actieve borgstellingen aanvullen met informatie.
+      operationId: VulBorgstellingenAanV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              oneOf:
+                - $ref: "../../data-dictionary/commands/verwerk_saneringskredieten_informatie.yml"
+              discriminator:
+                propertyName: actie
+                mapping:
+                  verwerk_saneringskredieten_informatie: "../../data-dictionary/commands/verwerk_saneringskredieten_informatie.yml"
+      responses:
+        202:
+          $ref: "../../data-dictionary/responses/types/202.yml"
+        400:
+          $ref: "../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../data-dictionary/responses/types/403.yml"
+  
   /api/borgstellingen/{borgstelling_id}:
     parameters:        
       - $ref: "../../data-dictionary/parameters/borgstelling_id.yml"
     patch:
       tags:
-        - borgstelling
+        - borgstelling aanvullen
       summary: Actieve borgstelling aanvullen met informatie.
       operationId: VulBorgstellingAanV1
       requestBody:

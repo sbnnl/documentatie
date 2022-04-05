@@ -24,6 +24,10 @@ Geeft een lijst met borgstellingen. Deze use-case kan gebruikt worden om kenmerk
 * [API](geef-borgstellingen.openapi.yml)
 * [Acceptatie criteria](geef-borgstellingen.feature)
 
+### Geef verantwoording ministerie
+
+Geeft de informatie die nodig is om verantwoording af te leggen aan het ministerie van sociale zaken.
+
 ### Geef borgstelling
 
 Geeft een borgstelling van een kredietbank. Deze use-case wordt gebruikt door het Wsk om inzicht te krijgen in de status van een borgstelling. De gebruiker moet de kredietbank waar de borgstelling deel van uitmaakt als claim hebben.
@@ -33,9 +37,11 @@ Geeft een borgstelling van een kredietbank. Deze use-case wordt gebruikt door he
 * [API](geef-borgstelling.openapi.yml)
 * [Acceptatie criteria](geef-borgstelling.feature)
 
-### Vul borgstelling aan
+### Vul borgstelling(en) aan
 
-Vult de borgstelling aan met actuele informatie van het saneringskrediet waarvoor de borgstelling is afgegeven. Elke mutatie wordt op datum opgeslagen zodat het gebruikt kan worden om het verloop inzichtelijk te maken. De gebruiker moet de kredietbank waar de borgstelling deel van uitmaakt als claim hebben.
+Vult de borgstelling aan met actuele informatie van het saneringskrediet waarvoor de borgstelling is afgegeven. Elke mutatie wordt op datum opgeslagen zodat het gebruikt kan worden om het verloop inzichtelijk te maken. De gebruiker moet de kredietbank waar de borgstelling deel van uitmaakt als claim hebben. 
+
+Deze use-case kan in enkelvoud aangeroepen worden of in meervoud voor batch verwerking.
 
 <!-- einde -->
 

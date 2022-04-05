@@ -1,0 +1,6 @@
+type: number
+minimum: 0
+title: depot
+description: |
+  {depot}
+example: 10.78

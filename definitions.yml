@@ -14,6 +14,8 @@
   text: De vergoeding die een kredietbank ontvangt voor de verstrekking en inning van een saneringskrediet.
 - name: Te vorderen kredietvergoeding
   text: Kredietvergoeding over de reeds vervallen termijnen van het saneringskrediet.
+- name: Depot
+  text: Nog niet vervallen vordering.
 - name: Stichting Bemiddeling en Fondsbeheer (SBF)
   alias:
     - Stichting Bemiddeling en Fondsbeheer
@@ -68,3 +70,9 @@
     Een voorbeoordeling wordt geaccepteerd of afgewezen. Ingeval van acceptatie wordt de borgstelling niet geactiveerd en dus ook niet in rekening gebracht De kredietbank kan wel rechten ontlenen aan de voorbeoordeling en onvangt ook een contract te bevestiging van de geaccepteerde voorbeoordeling.
     
     Op het moment dat de kredietbank de borgstelling wil gebruiken moet het een nieuwe aanvraag in dienen met definitieve gegevens. De voorbeoordeling maakt onderdeel uit van deze nieuwe aanvraag en wordt gebruikt om de definitieve aanvraag te beoordelen.
+- name: Schuldenknooppunt
+  text: |
+    Schuldeisers, schuldhulpverleners én mensen met financiële problemen willen maar één ding: een snelle regeling van schulden. En toch duurt het vaak langer dan 3 maanden voordat schuldeisers en schuldhulpverleners tot een akkoord zijn gekomen. Dit kan en moet sneller!
+
+    Via het Schuldenknooppunt wisselen schuldhulpverleners en schuldeisers standaard berichten uit. Er zijn minder handmatige handelingen nodig. Dit maakt schuldregelen sneller en efficiënter en er is minder ruimte voor fouten. Het systeem is veilig en de AVG is geborgd. Wanneer alle schuldeisers en schuldhulpverleners aansluiten op het Schuldenknooppunt is schuldregelen binnen 3 weken mogelijk.
+  link: https://schuldenknooppunt.nl/

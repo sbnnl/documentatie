@@ -4,6 +4,17 @@ Functionaliteit: Vul borgstelling aan use-case
 
   Abstract Scenario: Use-case permissie is juist
     Gegeven een gebruiker met de rollen "<rollen>"
+    Dan heeft de gebruiker "<wel-niet>" de permissie "BORGSTELLINGEN_AANVULLEN"
+
+    Voorbeelden:
+    | rollen      | wel-niet |
+    | sbn         | niet     |
+    | sbf         | niet     |
+    | systeem     | niet     |
+    | kredietbank | wel      |
+
+  Abstract Scenario: Use-case permissie is juist
+    Gegeven een gebruiker met de rollen "<rollen>"
     Dan heeft de gebruiker "<wel-niet>" de permissie "BORGSTELLING_AANVULLEN"
 
     Voorbeelden:

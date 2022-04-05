@@ -25,7 +25,7 @@
     <bpmn:sequenceFlow id="route-maatwerk" name="Maatwerk" sourceRef="poort-beoordeel-aanvraag-uitkomst" targetRef="proces-beoordeel-maatwerk-aanvraag">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=beoordeling = 'maatwerk'</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="route-afgewezen" name="Afgewezen" sourceRef="poort-beoordeel-aanvraag-uitkomst" targetRef="gebeurtenis-aanvraag-afgewezen">
+    <bpmn:sequenceFlow id="route-afgewezen" name="Afgewezen" sourceRef="poort-beoordeel-aanvraag-uitkomst" targetRef="taak-archiveer-afwijzing">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=beoordeling = 'afgewezen'</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="route-geaccepteerd" name="Geaccepteerd" sourceRef="poort-beoordeel-aanvraag-uitkomst" targetRef="Gateway_1ftt2mc">
@@ -49,7 +49,6 @@
       <bpmn:extensionElements>
         <zeebe:taskDefinition type="VERSTUUR_AANVRAAG_AFGEWEZEN_v1" />
       </bpmn:extensionElements>
-      <bpmn:incoming>route-afgewezen</bpmn:incoming>
       <bpmn:incoming>Flow_0qwcmi5</bpmn:incoming>
       <bpmn:messageEventDefinition id="MessageEventDefinition_01rn94p" />
     </bpmn:endEvent>
@@ -121,10 +120,6 @@
       <bpmn:incoming>Flow_01anmt0</bpmn:incoming>
       <bpmn:outgoing>Flow_0gcj2vg</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:boundaryEvent id="gebeurtenis-maatwerk-aanvraag-afgewezen" name="Afgewezen" attachedToRef="proces-beoordeel-maatwerk-aanvraag">
-      <bpmn:outgoing>Flow_1esw0ad</bpmn:outgoing>
-      <bpmn:errorEventDefinition id="ErrorEventDefinition_0jckn3e" errorRef="Error_1jh6r5b" />
-    </bpmn:boundaryEvent>
     <bpmn:serviceTask id="taak-bepaal-voorbeoordeling" name="Bepaal voorbeoordeling">
       <bpmn:incoming>Flow_0np85uy</bpmn:incoming>
       <bpmn:outgoing>Flow_0ml3pz0</bpmn:outgoing>
@@ -135,8 +130,13 @@
     <bpmn:sequenceFlow id="Flow_0qwcmi5" sourceRef="taak-archiveer-afwijzing" targetRef="gebeurtenis-aanvraag-afgewezen" />
     <bpmn:serviceTask id="taak-archiveer-afwijzing" name="Archiveer afwijzing">
       <bpmn:incoming>Flow_1esw0ad</bpmn:incoming>
+      <bpmn:incoming>route-afgewezen</bpmn:incoming>
       <bpmn:outgoing>Flow_0qwcmi5</bpmn:outgoing>
     </bpmn:serviceTask>
+    <bpmn:boundaryEvent id="gebeurtenis-maatwerk-aanvraag-afgewezen" name="Afgewezen" attachedToRef="proces-beoordeel-maatwerk-aanvraag">
+      <bpmn:outgoing>Flow_1esw0ad</bpmn:outgoing>
+      <bpmn:errorEventDefinition id="ErrorEventDefinition_0jckn3e" errorRef="Error_1jh6r5b" />
+    </bpmn:boundaryEvent>
   </bpmn:process>
   <bpmn:message id="Message_1qdh60g" name="AanvraagOntvangenV1" />
   <bpmn:error id="Error_1jh6r5b" name="MAATWERK_AANVRAAG_AFGEWEZEN" />
@@ -147,6 +147,19 @@
       <bpmndi:BPMNShape id="Participant_07uypnn_di" bpmnElement="Participant_07uypnn" isHorizontal="true">
         <dc:Bounds x="159" y="160" width="2035" height="470" />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0qwcmi5_di" bpmnElement="Flow_0qwcmi5">
+        <di:waypoint x="1180" y="503" />
+        <di:waypoint x="2082" y="503" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0brryo6_di" bpmnElement="route-voorbeoordeling">
+        <di:waypoint x="1400" y="335" />
+        <di:waypoint x="1400" y="210" />
+        <di:waypoint x="1960" y="210" />
+        <di:waypoint x="1960" y="335" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1462" y="186" width="13" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0ml3pz0_di" bpmnElement="Flow_0ml3pz0">
         <di:waypoint x="470" y="360" />
         <di:waypoint x="550" y="360" />
@@ -181,11 +194,10 @@
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0w3n18z_di" bpmnElement="route-afgewezen">
         <di:waypoint x="750" y="385" />
-        <di:waypoint x="750" y="570" />
-        <di:waypoint x="2100" y="570" />
-        <di:waypoint x="2100" y="521" />
+        <di:waypoint x="750" y="503" />
+        <di:waypoint x="1080" y="503" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="782" y="543" width="55" height="14" />
+          <dc:Bounds x="762" y="483" width="55" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1f5nmdg_di" bpmnElement="route-maatwerk">
@@ -238,19 +250,6 @@
       <bpmndi:BPMNEdge id="Flow_031hk4l_di" bpmnElement="Flow_031hk4l">
         <di:waypoint x="1985" y="360" />
         <di:waypoint x="2036" y="360" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0brryo6_di" bpmnElement="route-voorbeoordeling">
-        <di:waypoint x="1400" y="335" />
-        <di:waypoint x="1400" y="210" />
-        <di:waypoint x="1960" y="210" />
-        <di:waypoint x="1960" y="335" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="1462" y="186" width="13" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0qwcmi5_di" bpmnElement="Flow_0qwcmi5">
-        <di:waypoint x="1180" y="503" />
-        <di:waypoint x="2082" y="503" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Event_0cwobnn_di" bpmnElement="gebeurtenis-aanvraag-ontvangen">
         <dc:Bounds x="259" y="342" width="36" height="36" />
@@ -318,7 +317,7 @@
       <bpmndi:BPMNShape id="Event_1etalqd_di" bpmnElement="gebeurtenis-maatwerk-aanvraag-afgewezen">
         <dc:Bounds x="872" y="382" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="933" y="483" width="55" height="14" />
+          <dc:Bounds x="902" y="483" width="55" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Participant_00435zs_di" bpmnElement="rol-aanvrager" isHorizontal="true">

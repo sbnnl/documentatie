@@ -1,36 +1,5 @@
 allOf:
-  - $ref: "types/command.yml"
   - type: object
     title: verwerk saneringskrediet informatie
-    properties:
-      uitbetaaldatum:
-        $ref: "../types/saneringskrediet_uitbetaaldatum.yml"
-      theoretisch_saldo:
-        $ref: "../types/saneringskrediet_theoretisch_saldo.yml"
-      uitstaand_saldo:
-        $ref: "../types/saneringskrediet_uitstaand_saldo.yml"
-      stand:
-        $ref: "../types/saneringskrediet_stand.yml"
-      kredietvergoeding:
-        $ref: "../types/saneringskrediet_kredietvergoeding.yml"
-      laatste_aflosdatum:
-        $ref: "../types/saneringskrediet_laatste_aflosdatum.yml"
-      betalingsregeling:
-        $ref: "../types/saneringskrediet_betalingsregeling.yml"
-      dubieus:
-        $ref: "../types/saneringskrediet_dubieus.yml"
-      actie:        
-        allOf:
-          - example: verwerk_saneringskrediet_informatie
-          - $ref: "../types/actie.yml"
-    required:
-      - uitbetaaldatum
-      - theoretisch_saldo
-      - uitstaand_saldo
-      - voorstand
-      - achterstand
-      - kredietvergoeding
-      - laatste_aflosdatum
-      - betalingsregeling
-      - dubieus
-      - actie
+  - $ref: "types/command.yml"
+  - $ref: "../models/saneringskrediet.yml"

@@ -1,0 +1,13 @@
+title: vorderingen
+description: Wat zijn de totale vorderingen op de client?
+properties:
+  afossing:
+    $ref: "../types/saneringskrediet_aflossing.yml"
+  kredietvergoeding:
+    $ref: "../types/saneringskrediet_kredietvergoeding.yml"
+  vertragingsrente:
+    $ref: "../types/saneringskrediet_vertragingsrente.yml"
+required:
+  - aflossing
+  - kredietvergoeding
+  - vertragingsrente
