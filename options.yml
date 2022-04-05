@@ -1,22 +1,22 @@
 locale: nl
 hosting:
   type: azure-static-web-app
-  privateAccess:
-    roles:
-      - beheerder
-      - sbn
-      - kredietbank
-    providers:
-      - github
+#   privateAccess:
+#     roles:
+#       - beheerder
+#       - sbn
+#       - kredietbank
+#     providers:
+#       - github
 
-  routes:
-    logout: 
-      text: afmelden
-      route: /afmelden
+#   routes:
+#     logout: 
+#       text: afmelden
+#       route: /afmelden
 
-  responseOverrides:
-    401: /aanmelden
-    403: /aangemeld
+#   responseOverrides:
+#     401: /aanmelden
+#     403: /aangemeld
 message:
   footer: |
     <address>
