@@ -1,0 +1,29 @@
+openapi: 3.0.3
+
+info:
+  version: 0.0.1
+  title: Waarborgfonds saneringskredieten
+  description: |
+paths:
+  
+  /api/borgstellingen-dashboard:
+    get:      
+      tags:
+        - borgstellingen dashboard
+      summary: Geeft het borgstellingen dashboard
+      operationId: GeefBorgstellingenDashboardV1
+      parameters:        
+        - $ref: "../../data-dictionary/parameters/kredietbanken.yml"
+      responses:
+        200:          
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "../../data-dictionary/responses/geef_borgstellingen_dashboard.yml"
+        400:
+          $ref: "../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../data-dictionary/responses/types/403.yml"
