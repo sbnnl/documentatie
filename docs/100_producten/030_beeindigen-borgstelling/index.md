@@ -1,4 +1,4 @@
-# Beëindiging borgstelling
+# Beëindigen borgstelling
 
 ## Product
 

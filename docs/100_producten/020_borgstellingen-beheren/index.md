@@ -1,4 +1,4 @@
-# Beheer op actieve borgstellingen
+# Borgstellingen beheren
 
 ## Product
 

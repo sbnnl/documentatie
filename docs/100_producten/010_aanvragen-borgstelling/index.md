@@ -1,4 +1,4 @@
-# Aanvraag borgstelling
+# Aanvragen borgstelling
 
 ## Product
 
@@ -51,8 +51,8 @@ De informatie van de aanvraag wordt automatisch beoordeeld op basis van regels i
 
 Voor de invulling van beoordeel maatwerk aanvraag bestaan twee opties:
 
-* [optie 1 (simpel)](beoordeel-maatwerk-aanvraag-simpel/index.md)
-* [optie 2 (uitgebreid)](beoordeel-maatwerk-aanvraag-uitgebreid/index.md)
+* [optie 1 (simpel)](beoordelen-maatwerk-aanvraag-simpel/index.md)
+* [optie 2 (uitgebreid)](beoordelen-maatwerk-aanvraag-uitgebreid/index.md)
 
 ### Archiveer contract
 
@@ -107,6 +107,23 @@ De aanvraag afgewezen gebeurtenis wordt toegevoegd aan de gebeurtenissen verzame
 <!-- einde -->
 
 * [Acceptatie criteria](aanvraag-afgewezen.feature)
+
+### Archiveer beëindiging
+
+Nadat de aanvraag is beëindigd wordt er een beëindiging aangemaakt en opgeslagen in het archief. De wettelijke bewaartermijn voor dit soort documenten is 7 jaar.
+
+<!-- einde -->
+
+* [Document](beeindiging.message.md)
+* [Acceptatie criteria](../archiveer.feature)
+
+### Aanvraag beëindigd
+
+De aanvraag beëindigd gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wordt wijzigt in **beëindigd**.
+
+<!-- einde -->
+
+* [Acceptatie criteria](aanvraag-beeindigd.feature)
 
 ## Business requirements
 
