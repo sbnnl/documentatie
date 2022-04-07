@@ -2,11 +2,7 @@
 
 ## Product
 
-@Frank, graag hier het doel van het product beschrijven:
-
-* Vertaling van algemene missie, visie, doelen en randvoorwaarden naar product specifieke doelen en doelstellingen.
-* Wat moet het product kunnen?
-* Waar moet het aan voldoen om succesvol te zijn?
+Het doel van de intrekking borgstelling is om in geval van oninbaarheid van een saneringskrediet geen uitbetalingsverplichting te hebben. Dit kan voorkomen wanneer na een positieve beoordeling voor het afgeven van een borgstelling er nieuwe feiten naar voren komen die bij de beoordeling bekend waren en in strijd zijn met het fondsbeleid.
 
 <!-- einde -->
 
