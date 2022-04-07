@@ -2,5 +2,5 @@ type: string
 format: markdown
 title: reden van afwijzing
 description: De reden waarom de aanvraag is afgewezen door de beoordelaar.
-example: Een reden voor afwijzing van de aanvraag kan bijvoorbeeld zijn een combinatie van risico factoren als een onzeker inkomen gecombineerd met een onduidelijke schuldpositie?  van de klant
-  @Frank?
+example: Een reden voor afwijzing van de aanvraag kan bijvoorbeeld zijn een combinatie van risico factoren als een onzeker inkomen gecombineerd met een onduidelijke schuldpositie van de klant
+  
