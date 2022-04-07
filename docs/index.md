@@ -2,15 +2,15 @@
 
 ## Context
 
-Iemand met problematische schulden kan bij zijn of haar gemeente terecht voor schuldhulpverlening.
-Een gemeente kan proberen een schuldbemiddelingstraject op te starten, waarbij de persoon met schulden in drie jaar tijd maandelijks aan diverse schuldeisers een gedeelte aflost óf de gemeente kan een saneringskrediet aanbieden.
-Gemeenten maken in de regel afspraken met een kredietbank om de financiële afhandeling van dit proces te organiseren.
+Gemeenten in Nederland zijn verantwoordelijk voor de uitvoering van de Wet gemeentelijke schuldhulpverlening (Wgs). Binnen de schuldhulpverlening zien we dat er nu drie hoofdroutes zijn om problematische schulden aan te pakken. Hier is de inzet van saneringskredieten er één van. Het saneringskrediet is daarnaast één van de procesversnellers uit het arrangement van de branchevereniging voor schuldhulp en financiële dienstverlening, de NVVK. Dit arrangement heeft als doel het schuldhulpverleningstraject te verkorten. 
 
-Er zijn 23 kredietbanken in Nederland op dit moment, die zijn verschillend georganiseerd.
-Uit onderzoek blijkt dat een deel (75%) van de gemeenten nog aarzelt over de inzet van saneringskredieten.
-Een reden hiervoor is tweedelig, aan de ene kant komt dit door onbekendheid en aan de andere kant bestaat er zorg over de mogelijke risico’s van het niet of slechts deels terugbetalen van het saneringskrediet aan de kredietbank.
-Omdat kredietbanken soms aan gemeenten vragen borg te staan voor dit risico, komt het risico op saneringskredieten bij gemeenten te liggen.
-Naar aanleiding van een petitie uit 2019 van de NVVK een Waarborgfonds voor saneringskredieten (hierna: Wsk) opgericht. Het Wsk biedt in feite een (aantrekkelijke) extra mogelijkheid om saneringskredieten te borgen.
+Ruim een kwart van de Nederlandse gemeenten benut momenteel de mogelijkheid van inzet van saneringskredieten. Hiervoor werken zij samen met kredietbanken. De belangstelling voor saneringskredieten is snel gegroeid, zowel aan de kant van gemeenten, als bij schuldeisers. Het geeft mensen met financiële problemen rust: in plaats van een veelheid van schuldeisers resteert er slechts één schuldeiser (de kredietbank) en één schuld (het saneringskrediet). Het geeft duidelijkheid aan de voorkant van het hulpverleningsproces aan zowel de persoon met financiële problemen als aan schuldeisers. Schuldeisers schrijven een deel van de (oninbare) vordering af en besparen op debiteurenbeheer.
+
+Uit onderzoek blijkt dat een deel van de gemeenten nog aarzelt over de inzet van saneringskredieten. Een eerste reden is onbekendheid met het instrument. Er is inmiddels, met succes, geinvesteerd in voorlichting. Een tweede reden is de zorg over de mogelijke risico's van het niet of slechts deels terugbetalen van het saneringskrediet bij de kredietbank. Dit risico komt dan immers bij de gemeente te liggen. Door de oprichting van het Waarborgfonds Saneringskredieten (Wsk) wordt dit risico voor gemeenten afgedekt. 
+
+Er zijn in Nederland 23 kredietbanken die voor gemeenten saneringskredieten kunnen verstrekken. Zij kunnen door zich aan te melden bij het Wsk de saneringskredieten die zij voor gemeenten verstrekken laten borgen bij het Wsk. Hiervoor betalen de gemeenten via de kredietbank een premie. 
+
+Het Wsk is met steun van het Ministerie van Sociale Zaken en Werkgelegenheid opgericht en werkt vanuit twee stichtngen op non-profit basis. Na de opstart periode zal er toegegroeid worden naar een revolverend fonds. 
 
 ## Missie
 
@@ -37,7 +37,7 @@ De Stichting SBF sluit overeenkomsten met de kredietbanken om garant te staan vo
 
 ## Randvoorwaarden
 
-* De meeste kredietbanken maken gebruik van Allegro en enkele van Stratech, het ontwerp dient hierbij aan te sluiten.
+* De meeste kredietbanken maken gebruik van Allegro en een enkele van Stratech, het ontwerp dient hierbij aan te sluiten.
 * Idealiter wordt voor gegevensuitwisseling gebruik gemaakt van het Schuldenknooppunt. Indien er gegronde redenen zijn hiervan af te wijken, is dat wel mogelijk.
 * Het ontwerp moet tot minimale extra werklast aan de kant van de kredietbanken leiden
 * Uitwisseling van gegevens dient in lijn met de AVG-wetgeving te gebeuren
