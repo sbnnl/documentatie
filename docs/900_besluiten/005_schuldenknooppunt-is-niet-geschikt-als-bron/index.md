@@ -6,6 +6,8 @@ Het schuldenknooppunt is een initiatief van de NVVK. Schuldhulpverleners wissele
 
 ## Besluit
 
+Ik vind dit besluit nog wat prematuur omdat we het schuldenknooppunt nog niet hebben gesproken, Zou je willen aangeven dat we de mogelijkheden van het schuldenknooppunt nog aan het onderzoeken zijn.
+
 Het schuldenknooppunt is niet geschikt als informatiebron voor het Wsk omdat het geen informatie bevat over saneringskredieten. Het bevat alleen informatie gerelateerd aan schulden en schuldeisers vastgelegd vanuit de context van een schuldhulpverlening dossier.
 
 |   |   |
