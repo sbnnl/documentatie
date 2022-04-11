@@ -15,13 +15,13 @@ Het doel van het product is om te komen tot een weloverwogen keuze of borgstelli
 
 ### Beoordeel aanvraag
 
-De maatwerk aanvraag wordt beoordeeld door een medewerker van het Wsk (beoordelaar). De medewerker gebruikt email om:
+De maatwerk aanvraag wordt beoordeeld door een medewerker van het Wsk (beoordelaar). De medewerker gebruikt email en telefoon om:
 
 * extra informatie op te vragen bij de aanvragende kredietbank;
 * aanvullende vragen te stellen aan de aanvragende kredietbank;
 * advies in te winnen bij een adviserende kredietbank;
 
-De beoordelaar is verantwoordelijk om de reacties op de email berichten in het systeem vast te leggen.
+De beoordelaar is verantwoordelijk om de reacties in het systeem vast te leggen.
 
 <!-- einde -->
 

@@ -21,31 +21,12 @@ Start het proces uitbetalen borgstelling.
 
 * [Acceptatie criteria](uitbetalen-borgstelling.feature)
 
-### Geef aanvullende informatie
+### Beoordelen uitbetalingsverzoek
 
-Vraagt de kredietbank om aanvullende informatie aan te leveren.
+Voor de invulling van beoordelen uitbetalingsverzoek bestaan twee opties:
 
-* [Formulier](geef-aanvullende-informatie.user-task.yml)
-* [API](geef-aanvullende-informatie.openapi.yml)
-* [Acceptatie criteria](geef-aanvullende-informatie.feature)
-
-### Beoordeel uitbetalingverzoek
-
-Beoordeelt het verzoek tot uitbetaling van de borgstelling en stelt het uit te betalen bedrag vast.
-
-* [Formulier](beoordeel-uitbetaling-verzoek.user-task.yml)
-* [API](beoordeel-uitbetaling-verzoek.openapi.yml)
-* [Acceptatie criteria](beoordeel-uitbetaling-verzoek.feature)
-
-### Beantwoord aanvullende vragen
-
-Er ontstaat automatisch een taak in de takenlijst van de kredietbank wanneer de beoordelaar om aanvullende informatie heeft gevraagd.
-
-<!-- einde -->
-
-* [Formulier](beantwoord-aanvullende-vragen.user-task.yml)
-* [API](beantwoord-aanvullende-vragen.openapi.yml)
-* [Acceptatie criteria](beantwoord-aanvullende-vragen.feature)
+* [optie 1 (simpel)](beoordelen-uitbetalingsverzoek-simpel/index.md)
+* [optie 2 (uitgebreid)](beoordelen-uitbetalingsverzoek-uitgebreid/index.md)
 
 ### Fiatteer uitbetaling
 
@@ -72,7 +53,7 @@ Nadat de borgstelling is uitbetaald wordt er een document aangemaakt en opgeslag
 
 De borgstelling uitbetaald gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wordt wijzigt in **uitbetaald**.
 
-* [Acceptatie criteria](borgstelling-uitbetaald.feature)
+* [Acceptatie criteria](../verstuur-gebeurtenis.feature)
 
 ### Archiveer afwijzing
 
@@ -81,11 +62,11 @@ Nadat het verzoek is afgewezen wordt er een document aangemaakt en opgeslagen in
 * [Document](afwijzing.message.md)
 * [Acceptatie criteria](../archiveer.feature)
 
-### Uitbetaling afgewezen
+### Uitbetalingsverzoek afgewezen
 
-De uitbetaalverzoek afgewezen gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wordt wijzigt in **uitbetaling afgewezen**.
+De Uitbetalingsverzoek afgewezen gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wordt wijzigt in **uitbetalingsverzoek afgewezen**.
 
-* [Acceptatie criteria](uitbetaling-afgewezen.feature)
+* [Acceptatie criteria](../verstuur-gebeurtenis.feature)
 
 ## Business requirements
 

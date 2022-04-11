@@ -47,9 +47,9 @@ De informatie van de aanvraag wordt automatisch beoordeeld op basis van regels i
 
 * [Acceptatie criteria](beoordeel-aanvraag.feature)
 
-### Beoordeel maatwerk aanvraag
+### Beoordelen maatwerk aanvraag
 
-Voor de invulling van beoordeel maatwerk aanvraag bestaan twee opties:
+Voor de invulling van beoordelen maatwerk aanvraag bestaan twee opties:
 
 * [optie 1 (simpel)](beoordelen-maatwerk-aanvraag-simpel/index.md)
 * [optie 2 (uitgebreid)](beoordelen-maatwerk-aanvraag-uitgebreid/index.md)

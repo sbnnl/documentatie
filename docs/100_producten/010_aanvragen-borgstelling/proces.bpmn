@@ -94,7 +94,7 @@
       <bpmn:incoming>Flow_1lz98cc</bpmn:incoming>
       <bpmn:outgoing>Flow_1jj97uc</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:callActivity id="proces-beoordeel-maatwerk-aanvraag" name="Beoordeel maatwerk aanvraag">
+    <bpmn:callActivity id="proces-beoordeel-maatwerk-aanvraag" name="Beoordelen maatwerk aanvraag">
       <bpmn:extensionElements>
         <zeebe:calledElement processId="proces-beoordelen-maatwerk-aanvraag-v1" propagateAllChildVariables="false" />
       </bpmn:extensionElements>
@@ -270,6 +270,32 @@
         <di:waypoint x="1985" y="520" />
         <di:waypoint x="2036" y="520" />
       </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Activity_0j7oy9e_di" bpmnElement="Activity_1oogr4h" isExpanded="true">
+        <dc:Bounds x="330" y="190" width="350" height="190" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_16yhn57_di" bpmnElement="Flow_16yhn57">
+        <di:waypoint x="560" y="280" />
+        <di:waypoint x="622" y="280" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0jkeha5_di" bpmnElement="Flow_0jkeha5">
+        <di:waypoint x="406" y="280" />
+        <di:waypoint x="460" y="280" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_1e7n1g0_di" bpmnElement="Event_1u6hc8c">
+        <dc:Bounds x="370" y="262" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="365" y="305" width="46" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_194n95l_di" bpmnElement="Event_1ovzexu">
+        <dc:Bounds x="622" y="262" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="616" y="305" width="48" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0tapsvn_di" bpmnElement="Activity_17hulrb">
+        <dc:Bounds x="460" y="240" width="100" height="80" />
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_0cwobnn_di" bpmnElement="gebeurtenis-aanvraag-ontvangen">
         <dc:Bounds x="259" y="502" width="36" height="36" />
         <bpmndi:BPMNLabel>
@@ -332,32 +358,6 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_1g7ew8g_di" bpmnElement="taak-archiveer-afwijzing">
         <dc:Bounds x="1080" y="623" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0j7oy9e_di" bpmnElement="Activity_1oogr4h" isExpanded="true">
-        <dc:Bounds x="330" y="190" width="350" height="190" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="Flow_0jkeha5_di" bpmnElement="Flow_0jkeha5">
-        <di:waypoint x="406" y="280" />
-        <di:waypoint x="460" y="280" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_16yhn57_di" bpmnElement="Flow_16yhn57">
-        <di:waypoint x="560" y="280" />
-        <di:waypoint x="622" y="280" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="Event_1e7n1g0_di" bpmnElement="Event_1u6hc8c">
-        <dc:Bounds x="370" y="262" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="365" y="305" width="46" height="27" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_194n95l_di" bpmnElement="Event_1ovzexu">
-        <dc:Bounds x="622" y="262" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="616" y="305" width="48" height="27" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0tapsvn_di" bpmnElement="Activity_17hulrb">
-        <dc:Bounds x="460" y="240" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_1etalqd_di" bpmnElement="gebeurtenis-maatwerk-aanvraag-afgewezen">
         <dc:Bounds x="872" y="542" width="36" height="36" />

@@ -1,0 +1,14 @@
+allOf:
+  - $ref: "types/command.yml"
+  - type: object
+    title: stel aanvullende vragen
+    properties:
+      actie:
+        allOf:
+          - example: stel_vragen
+          - $ref: "../types/actie.yml"
+      vragen:
+        $ref: "../types/aanvullende_uitbetaling_vragen.yml"
+    required:
+      - actie
+      - vragen
