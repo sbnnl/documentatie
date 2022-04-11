@@ -24,10 +24,6 @@ Geeft een lijst met borgstellingen. Deze use-case kan gebruikt worden om kenmerk
 * [API](geef-borgstellingen.openapi.yml)
 * [Acceptatie criteria](geef-borgstellingen.feature)
 
-### Geef verantwoording ministerie
-
-Geeft de informatie die nodig is om verantwoording af te leggen aan het ministerie van sociale zaken.
-
 ### Geef borgstelling
 
 Geeft een borgstelling van een kredietbank. Deze use-case wordt gebruikt door het Wsk om inzicht te krijgen in de status van een borgstelling. De gebruiker moet de kredietbank waar de borgstelling deel van uitmaakt als claim hebben.
