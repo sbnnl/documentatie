@@ -33,11 +33,11 @@ Geeft een borgstelling van een kredietbank. Deze use-case wordt gebruikt door he
 * [API](geef-borgstelling.openapi.yml)
 * [Acceptatie criteria](geef-borgstelling.feature)
 
-### Vul borgstelling(en) aan
+### Vul borgstelling aan
 
 Vult de borgstelling aan met actuele informatie van het saneringskrediet waarvoor de borgstelling is afgegeven. Elke mutatie wordt op datum opgeslagen zodat het gebruikt kan worden om het verloop inzichtelijk te maken. De gebruiker moet de kredietbank waar de borgstelling deel van uitmaakt als claim hebben. 
 
-Deze use-case kan in enkelvoud aangeroepen worden of in meervoud voor batch verwerking.
+Deze use-case kan in enkelvoud aangeroepen worden of in meervoud om batch verwerking mogelijk te maken.
 
 <!-- einde -->
 

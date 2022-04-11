@@ -1,3 +1,15 @@
 :root {
-    --text-color-heading: var(--sbn-color-purple);
+    /* Colors */
+    --wsk-color-green: #74cb56;
+    --wsk-color-blue: #252e48;
+
+    /* Theming */
+    --color-brand-base: var(--wsk-color-green);
+    --color-brand-light: var(--wsk-color-green);
+    --text-color-heading: var(--wsk-color-blue);
+}
+
+
+header .logo img {
+    height: 72pt
 }
