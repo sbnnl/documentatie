@@ -27,7 +27,7 @@ Het Waarborgfonds Saneringskredieten (Wsk) heeft met u een overeenkomst voor de 
 
 Wij hebben van u een aanvraag ontvangen voor de borgstelling van saneringskrediet met kenmerk < naw klant en volgnummer >. Wij hebben dit verzoek beoordeeld.
 
-Om de volgende reden wijzen wij uw aanvraag tot borgstelling af:
+Om de volgende reden wijzen wij uw aanvraag voor borgstelling af:
 
 < ……. >
 
