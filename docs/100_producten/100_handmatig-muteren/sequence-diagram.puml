@@ -1,0 +1,45 @@
+@startuml
+autonumber
+
+actor Kredietbank as user
+participant "Adapter" as adapter
+participant "Wsk api" as api
+
+user -> adapter : bestand
+
+activate adapter
+
+adapter --> adapter : conversie naar saneringskredieten
+
+loop borgstellingen
+    adapter -> api : GET borgstellingen
+    api -> adapter : borgstellingen
+end
+
+
+loop borgstellingen
+    adapter --> adapter : bereken delta met saneringskredieten
+end
+
+loop saneringskredieren
+    adapter --> adapter : bereken delta met borgstellingen
+end
+
+adapter -> user : opdrachten
+
+deactivate adapter
+
+user -> adapter : verstuur oprdrachten
+
+activate adapter
+
+loop opdrachten
+    adapter -> api : POST opdracht
+    api -> adapter : Geaccepteerd
+end
+
+adapter -> user : opdrachten verstuurd
+
+deactivate adapter
+
+@enduml

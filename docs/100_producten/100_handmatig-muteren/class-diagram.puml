@@ -1,0 +1,21 @@
+@startuml
+
+interface Saneringskrediet
+
+interface Saneringskredieten
+
+class AllegroAdapter
+class AllegroSaldilijst
+
+class StratechAdapter
+class StractechSaldilijst
+
+Saneringskrediet --* Saneringskredieten : bevat 1 of meer
+
+Saneringskredieten <|.. AllegroAdapter : implementeert
+AllegroAdapter --> AllegroSaldilijst : op basis van
+
+Saneringskredieten <|.. StratechAdapter : implementeert
+StratechAdapter --> StractechSaldilijst : op basis van
+
+@enduml

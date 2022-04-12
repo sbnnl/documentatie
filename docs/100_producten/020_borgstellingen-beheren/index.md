@@ -30,6 +30,7 @@ Geeft een borgstelling van een kredietbank. Deze use-case wordt gebruikt door he
 
 <!-- einde -->
 
+* [Scherm](geef-borgstelling.drawio)
 * [API](geef-borgstelling.openapi.yml)
 * [Acceptatie criteria](geef-borgstelling.feature)
 
