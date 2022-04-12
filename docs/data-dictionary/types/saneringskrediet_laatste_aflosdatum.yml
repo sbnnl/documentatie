@@ -2,3 +2,4 @@ type: string
 format: date
 title: laatste aflosdatum
 description: De datum van de laatste aflossing op het saneringskrediet.
+example: 2022-01-01
