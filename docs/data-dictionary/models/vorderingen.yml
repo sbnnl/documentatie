@@ -1,3 +1,4 @@
+type: object
 title: vorderingen
 description: Wat zijn de totale vorderingen op de client?
 properties:
