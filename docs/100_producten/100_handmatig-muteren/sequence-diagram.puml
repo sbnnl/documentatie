@@ -2,44 +2,44 @@
 autonumber
 
 actor Kredietbank as user
-participant "Adapter" as adapter
+participant "Browser" as browser
 participant "Wsk api" as api
 
-user -> adapter : bestand
+user -> browser : bestand
 
-activate adapter
+activate browser
 
-adapter --> adapter : conversie naar saneringskredieten
+browser --> browser : conversie naar saneringskredieten
 
 loop borgstellingen
-    adapter -> api : GET borgstellingen
-    api -> adapter : borgstellingen
+    browser -> api : GET borgstellingen
+    api -> browser : borgstellingen
 end
 
 
 loop borgstellingen
-    adapter --> adapter : bereken delta met saneringskredieten
+    browser --> browser : bereken delta met saneringskredieten
 end
 
 loop saneringskredieren
-    adapter --> adapter : bereken delta met borgstellingen
+    browser --> browser : bereken delta met borgstellingen
 end
 
-adapter -> user : opdrachten
+browser -> user : opdrachten
 
-deactivate adapter
+deactivate browser
 
-user -> adapter : verstuur oprdrachten
+user -> browser : verstuur oprdrachten
 
-activate adapter
+activate browser
 
 loop opdrachten
-    adapter -> api : POST opdracht
-    api -> adapter : Geaccepteerd
+    browser -> api : POST opdracht
+    api -> browser : Geaccepteerd
 end
 
-adapter -> user : opdrachten verstuurd
+browser -> user : opdrachten verstuurd
 
-deactivate adapter
+deactivate browser
 
 @enduml
