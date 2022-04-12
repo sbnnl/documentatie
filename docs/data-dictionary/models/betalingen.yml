@@ -1,3 +1,4 @@
+type: object
 title: betalingen
 description: Hoeveel heeft de client betaald?
 properties:
