@@ -1,3 +1,4 @@
+type: object
 properties:
   uitbetaaldatum:
     $ref: "../types/saneringskrediet_uitbetaaldatum.yml"
