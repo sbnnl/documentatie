@@ -1,3 +1,4 @@
 type: boolean
 title: betalingsregeling
-description: Is er een betalingsregeling actief voor de achterstand op het saneringskrediet?
+description: Is er een betalingsregeling actief voor de achterstand op het saneringskrediet
+example: true
