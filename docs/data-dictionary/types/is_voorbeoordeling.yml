@@ -1,3 +1,4 @@
 type: boolean
 title: voorbeoordeling
 description: Is de aanvraag een voorbeoordeling?
+example: false
