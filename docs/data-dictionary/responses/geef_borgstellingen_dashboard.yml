@@ -1,10 +1,179 @@
 allOf:
   - title: geef borgstellingen dashboard
+    required:
+      - jaren
     properties:
-      items:
+      jaren:
         type: array
+        minItems: 1
         items:
           type: object
-          description: |
-            @Frank, welke informatie wil je zien in het dashboard?            
-  - $ref: "types/offset_response.yml" 
+          required:
+            - jaar
+          properties:
+            jaar:
+              type: integer
+              minimum: 2022
+              example: 2022            
+            maanden:
+              type: array
+              minItems: 1
+              items:
+                type: object
+                required:
+                  - maand
+                  - afgegeven
+                  - afgelost
+                  - uitgekeerd
+                  - actief
+                  - achterstanden
+                  - dubieus
+                  - premiebetalingen
+                  - kredietbanken
+                  - gemeenten
+                properties:
+                  maand:
+                    type: integer
+                    example: 1
+                    enum:
+                      - 1
+                      - 2
+                      - 3
+                      - 4
+                      - 5
+                      - 6
+                      - 7
+                      - 8
+                      - 9
+                      - 10
+                      - 11
+                      - 12
+                  afgegeven:
+                    type: object
+                    required:
+                      - aantal
+                      - bedrag
+                    description: Nieuwe borgstellingen in absolute aantallen en in euro's.
+                    properties:
+                      aantal:
+                        type: integer
+                        example: 15
+                      bedrag:
+                        type: integer
+                        example: 17564
+                        description: Frank, welk bedrag is dit?
+                  afgelost:
+                    type: object
+                    required:
+                      - aantal
+                      - bedrag
+                    description: Aflossingen in absolute aantallen en in euro's.
+                    properties:
+                      aantal:
+                        type: integer
+                        example: 12
+                      bedrag:
+                        type: integer
+                        example: 145678
+                        description: Frank, welk bedrag is dit?
+                  uitgekeerd:
+                    type: object
+                    required:
+                      - aantal
+                      - bedrag
+                    description: Uitkeringen in absolute aantallen en in euro's.
+                    properties:
+                      aantal:
+                        type: integer
+                        example: 3
+                      bedrag:
+                        type: integer
+                        example: 546
+                        description: Frank, welk bedrag is dit?
+                  actief:
+                    type: object
+                    required:
+                      - aantal
+                      - bedrag
+                    description: Actieve borgstellingen in absolute aantallen en in euro's.
+                    properties:
+                      aantal:
+                        type: integer
+                        example: 546
+                      bedrag:
+                        type: integer
+                        example: 640253
+                        description: Frank, welk bedrag is dit?
+                  achterstanden:
+                    type: object
+                    required:
+                      - aantal
+                      - bedrag
+                    description: Borgstellingen met achterstanden in absolute aantallen en in euro's.
+                    properties:
+                      aantal:
+                        type: integer
+                        example: 12
+                      bedrag:
+                        type: integer
+                        example: 489
+                        description: Frank, welk bedrag is dit?
+                  dubieus:
+                    type: object
+                    required:
+                      - aantal
+                      - bedrag
+                    description: Borgstellingen die als dubieus zijn aangemerkt in absolute aantallen en in euro's.
+                    properties:
+                      aantal:
+                        type: integer
+                        example: 5
+                      bedrag:
+                        type: integer
+                        example: 278
+                        description: Frank, welk bedrag is dit?
+                  premiebetalingen:
+                    type: object
+                    required:
+                      - aantal
+                      - bedrag
+                    description: Premiebetalingen in absolute aantallen en in euro's.
+                    properties:
+                      aantal:
+                        type: integer
+                        example: 15
+                      bedrag:
+                        type: integer
+                        example: 176
+                        description: Frank, welk bedrag is dit?
+                  kredietbanken:
+                    type: object
+                    required:
+                      - aantal
+                      - deelnemers
+                    description: Aantal kredietbanken.
+                    properties:
+                      aantal:
+                        type: integer
+                        example: 23
+                        description: Totaal aantal kredietbanken.
+                      deelnemers:
+                        type: integer
+                        example: 9
+                        description: Aantal deelnemende kredietbanken.
+                  gemeenten:
+                    type: object
+                    required:
+                      - aantal
+                      - deelnemers
+                    description: Aantal gemeenten.
+                    properties:
+                      aantal:
+                        type: integer
+                        example: 450
+                        description: Totaal aantal gemeenten.
+                      deelnemers:
+                        type: integer
+                        example: 40
+                        description: Aantal deelnemende gemeenten.            
+  - $ref: "types/response.yml" 
