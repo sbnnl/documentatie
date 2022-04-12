@@ -1,4 +1,3 @@
-@Frank, hier de tekst invoeren.
 
 <address>
     Kredietbank X<br>
