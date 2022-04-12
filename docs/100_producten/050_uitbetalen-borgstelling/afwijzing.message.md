@@ -15,7 +15,8 @@
 [Plaats], [datum dagtekening]
 
 
-Onderwerp: Uitbetaling borgstelling
+Onderwerp: Afwijzing uitbetaling borgstelling
+
 Gemeente: < naam gemeente >
 
 
