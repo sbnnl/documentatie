@@ -1,4 +1,4 @@
 type: string
 format: uri
 description: De link naar pagina waar de taak door de gebruiker afgerond kan worden.
-example: https://www.wsk.nl/beoordeel-aanvraag/f242f4e7-4ddc-4dbb-a3c1-9ab1a1dea74e
+example: https://waarborgfonds.sbn.nl/beoordeel-aanvraag/f242f4e7-4ddc-4dbb-a3c1-9ab1a1dea74e
