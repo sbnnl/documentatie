@@ -26,6 +26,14 @@ De beoordelaar is verantwoordelijk om de reacties in het systeem vast te leggen.
 * [API](beoordeel-uitbetaling-verzoek.openapi.yml)
 * [Acceptatie criteria](beoordeel-uitbetaling-verzoek.feature)
 
+### Fiatteer uitbetaling
+
+Elk geaccepteerd verzoek tot uitbetaling van de borgstelling moet gefiatteerd worden door SBF als invulling van het vier-ogen-principe.
+
+* [Formulier](../020_beoordelen-uitbetalingsverzoek-uitgebreid/fiatteer-uitbetaling.user-task.yml)
+* [API](../020_beoordelen-uitbetalingsverzoek-uitgebreid/fiatteer-uitbetaling.openapi.yml)
+* [Acceptatie criteria](../020_beoordelen-uitbetalingsverzoek-uitgebreid/fiatteer-uitbetaling.feature)
+
 ## Business requirements
 
 Wat zijn de (non)functionele requirements? Denk hierbij aan zaken als doorlooptijd, vierogenprincipe, etc.

@@ -1,0 +1,12 @@
+in: query    
+name: gemeenten
+description: Een lijst van minimaal 1 en maximaal 100 gemeenten.
+type: array
+items:
+  $ref: "../types/gemeente.yml"
+minItems: 1
+maxItems: 100
+example:
+  - 1940
+  - 815
+  - 756

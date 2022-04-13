@@ -27,6 +27,8 @@ Het doel van de aanvraag borgstelling is om tot een beoordeling te komen of er v
 
 Registreert de aanvraag borgstelling met de status **aangevraagd** en start het aanvragen borgstelling proces.
 
+Aan de hand van het postcode gebied wordt de gemeente code vastgesteld. Het postcode gebied wordt niet opgeslagen, de gemeente code wel.
+
 <!-- einde -->
 
 * [Acceptatie criteria](aanvragen-borgstelling.feature)
@@ -89,7 +91,7 @@ De aanvraag geaccepteerd gebeurtenis wordt toegevoegd aan de gebeurtenissen verz
 
 <!-- einde -->
 
-* [Acceptatie criteria](aanvraag-geaccepteerd.feature)
+* [Acceptatie criteria](../verstuur-gebeurtenis.feature)
 
 ### Archiveer afwijzing
 
@@ -106,7 +108,7 @@ De aanvraag afgewezen gebeurtenis wordt toegevoegd aan de gebeurtenissen verzame
 
 <!-- einde -->
 
-* [Acceptatie criteria](aanvraag-afgewezen.feature)
+* [Acceptatie criteria](../verstuur-gebeurtenis.feature)
 
 ### Archiveer beëindiging
 
@@ -123,7 +125,7 @@ De aanvraag beëindigd gebeurtenis wordt toegevoegd aan de gebeurtenissen verzam
 
 <!-- einde -->
 
-* [Acceptatie criteria](aanvraag-beeindigd.feature)
+* [Acceptatie criteria](../verstuur-gebeurtenis.feature)
 
 ## Business requirements
 

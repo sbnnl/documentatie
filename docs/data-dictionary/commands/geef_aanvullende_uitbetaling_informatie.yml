@@ -8,7 +8,15 @@ allOf:
           - example: geef_informatie
           - $ref: "../types/actie.yml"
       saneringskrediet:
-        $ref: "../models/saneringskrediet.yml"
+        type: object
+        properties:
+          vorderingen:
+            $ref: "../models/vorderingen.yml"
+          betalingen:
+            $ref: "../models/betalingen.yml"
+        required:
+          - vorderingen
+          - betalingen
       redenen_oninbaar:
         $ref: "../types/saneringskrediet_redenen_oninbaar.yml"
       inning_acties:

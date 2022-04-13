@@ -32,7 +32,7 @@ Nadat de borgstelling is ingetrokken wordt er een document aangemaakt en opgesla
 
 De borgstelling ingetrokken gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wordt wijzigt in **ingetrokken**.
 
-* [Acceptatie criteria](borgstelling-ingetrokken.feature)
+* [Acceptatie criteria](../verstuur-gebeurtenis.feature)
 
 ## Business requirements
 

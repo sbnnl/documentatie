@@ -27,10 +27,20 @@ actions:
         - correlation_id
         - causation_id
         - actie
-  vragen:
+  vraag_stellen:
     name: Vraag stellen
     schema: 
       $ref: "../../../data-dictionary/commands/stel_aanvullende_vragen.yml"
+    ui:
+      hidden:
+        - command_id
+        - correlation_id
+        - causation_id
+        - actie
+  advies_vragen:
+    name: Advies vragen
+    schema: 
+      $ref: "../../../data-dictionary/commands/vraag_advies.yml"
     ui:
       hidden:
         - command_id

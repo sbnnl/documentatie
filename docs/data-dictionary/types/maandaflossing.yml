@@ -1,7 +1,7 @@
 type: number
 format: float 
 minimum: 0
-title: maandaflossing
+title: afloscapaciteit per maand
 description: |
-  Het bedrag waarmee het saneringskrediet maandelijks mee afgelost gaat worden.
+  {{Afloscapaciteit}}
 example: 60.46

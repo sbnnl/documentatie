@@ -2,5 +2,5 @@ type: number
 minimum: 0
 title: netto kredietsom
 description: |
-  {{{{Netto kredietsom}}}}
+  {{Netto kredietsom}}
 example: 1550.77

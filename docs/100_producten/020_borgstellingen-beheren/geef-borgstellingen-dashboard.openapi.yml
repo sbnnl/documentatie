@@ -12,8 +12,10 @@ paths:
         - borgstellingen dashboard
       summary: Geeft het borgstellingen dashboard
       operationId: GeefBorgstellingenDashboardV1
-      parameters:        
+      parameters:
         - $ref: "../../data-dictionary/parameters/kredietbanken.yml"
+        - $ref: "../../data-dictionary/parameters/gemeenten.yml"
+        - $ref: "../../data-dictionary/parameters/afgifte_jaar.yml"
       responses:
         200:          
           description: OK

@@ -23,8 +23,7 @@ De aanvullende informatie gevraagd gebeurtenis wordt toegevoegd aan de gebeurten
 
 Vraagt de kredietbank om aanvullende informatie aan te leveren.
 
-<!-- * [Formulier](geef-aanvullende-informatie.user-task.yml) -->
-* [Formulier](geef-aanvullende-informatie.drawio)
+* [Formulier](geef-aanvullende-informatie.user-task.yml)
 * [API](geef-aanvullende-informatie.openapi.yml)
 * [Acceptatie criteria](geef-aanvullende-informatie.feature)
 
@@ -46,11 +45,17 @@ De aanvullende vragen gesteld gebeurtenis wordt toegevoegd aan de gebeurtenissen
 
 Er ontstaat automatisch een taak in de takenlijst van de kredietbank wanneer de beoordelaar om aanvullende informatie heeft gevraagd.
 
-<!-- einde -->
-
 * [Formulier](beantwoord-aanvullende-vragen.user-task.yml)
 * [API](beantwoord-aanvullende-vragen.openapi.yml)
 * [Acceptatie criteria](beantwoord-aanvullende-vragen.feature)
+
+### Fiatteer uitbetaling
+
+Elk geaccepteerd verzoek tot uitbetaling van de borgstelling moet gefiatteerd worden door SBF als invulling van het vier-ogen-principe.
+
+* [Formulier](fiatteer-uitbetaling.user-task.yml)
+* [API](fiatteer-uitbetaling.openapi.yml)
+* [Acceptatie criteria](fiatteer-uitbetaling.feature)
 
 ## Business requirements
 

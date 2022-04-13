@@ -28,14 +28,6 @@ Voor de invulling van beoordelen uitbetalingsverzoek bestaan twee opties:
 * [optie 1 (simpel)](beoordelen-uitbetalingsverzoek-simpel/index.md)
 * [optie 2 (uitgebreid)](beoordelen-uitbetalingsverzoek-uitgebreid/index.md)
 
-### Fiatteer uitbetaling
-
-Elk geaccepteerd verzoek tot uitbetaling van de borgstelling moet gefiatteerd worden door SBF als invulling van het vier-ogen-principe.
-
-* [Formulier](fiatteer-uitbetaling.user-task.yml)
-* [API](fiatteer-uitbetaling.openapi.yml)
-* [Acceptatie criteria](fiatteer-uitbetaling.feature)
-
 ### Betaal borgstelling uit
 
 Sbf maakt gebruik van Exact online. Voor het vastgestelde borgstelling bedrag wordt er automatisch via de API van Exact online een credit factuur en een betaalopdracht aangemaakt.

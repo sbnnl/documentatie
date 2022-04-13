@@ -2,7 +2,7 @@ Beste heer, mevrouw,
 
 Het Waarborgfonds Saneringskredieten (Wsk) heeft met u een overeenkomst voor de borgstelling van saneringskredieten.
 
-Wij hebben van u een verzoek ontvangen voor de uitbetaling van de borgstelling van saneringskrediet met kenmerk 4564657-1. Wij hebben dit verzoek beoordeeld.
+Wij hebben van u een verzoek ontvangen voor de uitbetaling van de borgstelling van saneringskrediet met kenmerk *4564657-1*. Wij hebben dit verzoek beoordeeld.
 
 Het bedrag dat wij uitbetalen hebben wij vastgesteld en is als volgt opgebouwd:
 
@@ -10,8 +10,8 @@ Het bedrag dat wij uitbetalen hebben wij vastgesteld en is als volgt opgebouwd:
 | ----------------------------------------- | ----------------------------- |
 | Netto kredietsom                          | € 1.550.77                    |
 | Aflossingen                               | € -300.47                     |
-| Rente over vervallen termijnen:           | € 40,47                       |
-| <strong>Totaal uit te betalen:<strong>    | <strong>€ 1.290,77</strong>   |
+| Rente over vervallen termijnen            | € 40,47                       |
+| <strong>Totaal uit te betalen<strong>     | <strong>€ 1.290,77</strong>   |
 
 Het bedrag wordt uitbetaald op rekeningnummer NL37INGB0674629892 t.n.v. Kredietbank Zwolle.
 

@@ -1,3 +1,6 @@
+- name: Afloscapaciteit
+  text: Het bedrag dat iemand maximaal beschikbaar kan stellen voor de aflossing van zijn schulden. De afloscapaciteit wordt vastgesteld door het inkomen te verminderen met het Vrij Te Laten Bedrag (VTLB).
+
 - name: Theoretisch saldo
   text: Op dag 0 gelijk aan netto kredietsom, daarna theoretische omvang van wat cliënt nog moet terugbetalen als betaalschema volledig volgens plan verloopt. Het theoretisch saldo is dus exclusief kredietvergoeding.
 
@@ -105,4 +108,8 @@
     Met dit krediet worden alle schuldeisers afgekocht (voor een gedeelte van schuld) zodat de client nog maar één schuldeiser overhoudt. 
     
     Een  kredietbank heeft een borgsteller nodig om het risico op niet volledig aflossen van het krediet te borgen.
+
+- name: Gemeente code
+  text: CBS code voor gemeenten. 
+  link: https://www.cbs.nl/nl-nl/dossier/nederland-regionaal/gemeente/gemeenten-en-regionale-indelingen/codering-gebieden
     

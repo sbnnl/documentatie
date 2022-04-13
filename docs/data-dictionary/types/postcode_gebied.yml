@@ -1,0 +1,5 @@
+type: string
+pattern: '^[0-9]{4}$'
+title: postcode gebied
+description: Nederlandse postcode zonder letter toevoeging.
+example: 9854

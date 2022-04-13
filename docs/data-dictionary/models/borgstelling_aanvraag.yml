@@ -7,8 +7,8 @@ properties:
     $ref: "../types/kredietbank_id.yml"
   kenmerk:
     $ref: "../types/kenmerk_kredietbank.yml"  
-  gemeente:
-    $ref: "../types/gemeente.yml"
+  postcode:
+    $ref: "../types/postcode_gebied.yml"
   kredietsom:
     type: object
     title: Kredietsom

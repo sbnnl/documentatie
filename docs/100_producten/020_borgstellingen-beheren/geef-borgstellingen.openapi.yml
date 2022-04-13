@@ -4,6 +4,7 @@ info:
   version: 0.0.1
   title: Waarborgfonds saneringskredieten
   description: |
+    
 paths:
 
   /api/borgstellingen:

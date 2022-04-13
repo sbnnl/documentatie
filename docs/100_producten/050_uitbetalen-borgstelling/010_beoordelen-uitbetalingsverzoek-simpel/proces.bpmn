@@ -4,15 +4,17 @@
     <bpmn:participant id="Participant_0fmyfu8" name="Beoordelen uitbetal;insgverzoek" processRef="Process_1kj01nt" />
     <bpmn:participant id="Participant_1uo4ada" name="Uitbetalen borgstelling" />
     <bpmn:participant id="Participant_1g2zvfa" name="Beeordelaar (SBN)" />
+    <bpmn:participant id="Participant_0idqou0" name="Fiatteerder (SBF)" />
     <bpmn:messageFlow id="Flow_1lc1t45" sourceRef="Participant_1uo4ada" targetRef="gebeurtenis-uitbetaling-verzoek-ontvangen" />
     <bpmn:messageFlow id="Flow_00ujff8" sourceRef="Activity_1o4kln4" targetRef="Participant_1g2zvfa" />
     <bpmn:messageFlow id="Flow_0blbi2n" sourceRef="Event_1wx8w2i" targetRef="Participant_1uo4ada" />
+    <bpmn:messageFlow id="Flow_0bk3q0t" sourceRef="Activity_1x70jqn" targetRef="Participant_0idqou0" />
   </bpmn:collaboration>
   <bpmn:process id="Process_1kj01nt" isExecutable="true">
     <bpmn:sequenceFlow id="route-afgewezen" name="Afgewezen" sourceRef="poort-beoordeling" targetRef="Event_1x4yci6">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=beoordeling = 'afgewezen'</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="route-geaccepteerd" name="Geaccepteerd" sourceRef="poort-beoordeling" targetRef="Event_1wx8w2i">
+    <bpmn:sequenceFlow id="route-geaccepteerd" name="Geaccepteerd" sourceRef="poort-beoordeling" targetRef="Activity_1x70jqn">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=beoordeling = 'geaccepteerd'</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_0im4rfv" sourceRef="Activity_1o4kln4" targetRef="poort-beoordeling" />
@@ -20,6 +22,13 @@
     <bpmn:startEvent id="gebeurtenis-uitbetaling-verzoek-ontvangen" name="Uitbetaling verzoek ontvangen">
       <bpmn:outgoing>Flow_0wnapbg</bpmn:outgoing>
     </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_1rh9gbl" sourceRef="Activity_1x70jqn" targetRef="Gateway_1seb6sq" />
+    <bpmn:sequenceFlow id="route-gefiatteerd" name="Gefiatteerd" sourceRef="Gateway_1seb6sq" targetRef="Event_1wx8w2i">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=gefiatteerd = 'ja'</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="route-niet-gefiatteerd" name="Afgwezen" sourceRef="Gateway_1seb6sq" targetRef="Event_1x4yci6">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=gefiatteerd = 'nee'</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
     <bpmn:userTask id="Activity_1o4kln4" name="Beoordeel uitbetaling verzoek">
       <bpmn:incoming>Flow_0wnapbg</bpmn:incoming>
       <bpmn:outgoing>Flow_0im4rfv</bpmn:outgoing>
@@ -29,42 +38,71 @@
       <bpmn:outgoing>route-geaccepteerd</bpmn:outgoing>
       <bpmn:outgoing>route-afgewezen</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:endEvent id="Event_1wx8w2i" name="Uitbetalings verzoek geacceptteerd">
+    <bpmn:userTask id="Activity_1x70jqn" name="Fiatteer uitbetaling">
       <bpmn:incoming>route-geaccepteerd</bpmn:incoming>
+      <bpmn:outgoing>Flow_1rh9gbl</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="Event_1wx8w2i" name="Uitbetalings verzoek geacceptteerd">
+      <bpmn:incoming>route-gefiatteerd</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:endEvent id="Event_1x4yci6" name="Uitbetalings verzoek afgewezen">
       <bpmn:incoming>route-afgewezen</bpmn:incoming>
+      <bpmn:incoming>route-niet-gefiatteerd</bpmn:incoming>
       <bpmn:errorEventDefinition id="ErrorEventDefinition_087b5ki" />
     </bpmn:endEvent>
+    <bpmn:exclusiveGateway id="Gateway_1seb6sq" name="Gefiatteerd?">
+      <bpmn:incoming>Flow_1rh9gbl</bpmn:incoming>
+      <bpmn:outgoing>route-gefiatteerd</bpmn:outgoing>
+      <bpmn:outgoing>route-niet-gefiatteerd</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
   </bpmn:process>
   <bpmn:message id="Message_19mvjbm" name="UitbetalingVerzochtV1" />
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1qbgt8p">
       <bpmndi:BPMNShape id="Participant_0fmyfu8_di" bpmnElement="Participant_0fmyfu8" isHorizontal="true">
-        <dc:Bounds x="160" y="160" width="840" height="360" />
+        <dc:Bounds x="160" y="160" width="1080" height="360" />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0wnapbg_di" bpmnElement="Flow_0wnapbg">
+        <di:waypoint x="295" y="295" />
+        <di:waypoint x="380" y="295" />
+      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0im4rfv_di" bpmnElement="Flow_0im4rfv">
-        <di:waypoint x="530" y="295" />
-        <di:waypoint x="665" y="295" />
+        <di:waypoint x="480" y="295" />
+        <di:waypoint x="565" y="295" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1hido0i_di" bpmnElement="route-geaccepteerd">
-        <di:waypoint x="715" y="295" />
-        <di:waypoint x="872" y="295" />
+        <di:waypoint x="615" y="295" />
+        <di:waypoint x="730" y="295" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="727" y="273" width="70" height="14" />
+          <dc:Bounds x="613" y="273" width="70" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_19e1ewa_di" bpmnElement="route-afgewezen">
-        <di:waypoint x="690" y="320" />
-        <di:waypoint x="690" y="460" />
-        <di:waypoint x="872" y="460" />
+        <di:waypoint x="590" y="320" />
+        <di:waypoint x="590" y="460" />
+        <di:waypoint x="1112" y="460" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="734" y="434" width="55" height="14" />
+          <dc:Bounds x="634" y="434" width="55" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0wnapbg_di" bpmnElement="Flow_0wnapbg">
-        <di:waypoint x="295" y="295" />
-        <di:waypoint x="430" y="295" />
+      <bpmndi:BPMNEdge id="Flow_1rh9gbl_di" bpmnElement="Flow_1rh9gbl">
+        <di:waypoint x="830" y="295" />
+        <di:waypoint x="915" y="295" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_08owrbp_di" bpmnElement="route-gefiatteerd">
+        <di:waypoint x="965" y="295" />
+        <di:waypoint x="1112" y="295" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1011" y="277" width="55" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0yye9ce_di" bpmnElement="route-niet-gefiatteerd">
+        <di:waypoint x="940" y="320" />
+        <di:waypoint x="940" y="460" />
+        <di:waypoint x="1112" y="460" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="955" y="433" width="49" height="14" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Event_10zfqm9_di" bpmnElement="gebeurtenis-uitbetaling-verzoek-ontvangen">
         <dc:Bounds x="259" y="277" width="36" height="36" />
@@ -73,43 +111,59 @@
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0wt6mid_di" bpmnElement="Activity_1o4kln4">
-        <dc:Bounds x="430" y="255" width="100" height="80" />
+        <dc:Bounds x="380" y="255" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_0o6vroe_di" bpmnElement="poort-beoordeling" isMarkerVisible="true">
-        <dc:Bounds x="665" y="270" width="50" height="50" />
+        <dc:Bounds x="565" y="270" width="50" height="50" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="625" y="253" width="49" height="14" />
+          <dc:Bounds x="575" y="253" width="49" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1x70jqn_di" bpmnElement="Activity_1x70jqn">
+        <dc:Bounds x="730" y="255" width="100" height="80" />
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_1k3tgk2_di" bpmnElement="Event_1wx8w2i">
-        <dc:Bounds x="872" y="277" width="36" height="36" />
+        <dc:Bounds x="1112" y="277" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="856" y="320" width="70" height="40" />
+          <dc:Bounds x="1096" y="320" width="70" height="40" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_10vlyhe_di" bpmnElement="Event_1x4yci6">
-        <dc:Bounds x="872" y="442" width="36" height="36" />
+        <dc:Bounds x="1112" y="442" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="861" y="392" width="58" height="40" />
+          <dc:Bounds x="1101" y="392" width="58" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1seb6sq_di" bpmnElement="Gateway_1seb6sq" isMarkerVisible="true">
+        <dc:Bounds x="915" y="270" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="939" y="246" width="61" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Participant_0avqix7_di" bpmnElement="Participant_1uo4ada" isHorizontal="true">
-        <dc:Bounds x="160" y="80" width="840" height="60" />
+        <dc:Bounds x="160" y="80" width="1080" height="60" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Participant_1g2zvfa_di" bpmnElement="Participant_1g2zvfa" isHorizontal="true">
-        <dc:Bounds x="330" y="540" width="300" height="60" />
+        <dc:Bounds x="280" y="540" width="300" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_0idqou0_di" bpmnElement="Participant_0idqou0" isHorizontal="true">
+        <dc:Bounds x="620" y="540" width="300" height="60" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_1lc1t45_di" bpmnElement="Flow_1lc1t45">
         <di:waypoint x="277" y="140" />
         <di:waypoint x="277" y="277" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_00ujff8_di" bpmnElement="Flow_00ujff8">
-        <di:waypoint x="480" y="335" />
-        <di:waypoint x="480" y="540" />
+        <di:waypoint x="430" y="335" />
+        <di:waypoint x="430" y="540" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0blbi2n_di" bpmnElement="Flow_0blbi2n">
-        <di:waypoint x="890" y="277" />
-        <di:waypoint x="890" y="140" />
+        <di:waypoint x="1130" y="277" />
+        <di:waypoint x="1130" y="140" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0bk3q0t_di" bpmnElement="Flow_0bk3q0t">
+        <di:waypoint x="780" y="335" />
+        <di:waypoint x="780" y="540" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

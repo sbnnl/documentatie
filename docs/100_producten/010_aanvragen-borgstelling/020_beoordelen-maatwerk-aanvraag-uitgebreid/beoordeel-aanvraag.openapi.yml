@@ -106,20 +106,46 @@ paths:
         404:
           $ref: "../../../data-dictionary/responses/types/404.yml"
 
-  /api/beoordeel-aanvraag-taken/{taak_id}/vragen-stellen:
+  /api/beoordeel-aanvraag-taken/{taak_id}/vraag-stellen:
     parameters:        
       - $ref: "../../../data-dictionary/parameters/taak_id.yml"
     put:
       tags:
         - beoordeel aanvraag taken
-      summary: Voltooit de beoordeel aanvraag taak met vragen stellen.
-      operationId: VoltooiBeoordeelAanvraagTaakMetVragenStellenV1
+      summary: Voltooit de beoordeel aanvraag taak met vraag stellen.
+      operationId: VoltooiBeoordeelAanvraagTaakMetVraagStellenV1
       requestBody:
         required: true
         content:
           application/json:
             schema:
               $ref: "../../../data-dictionary/commands/stel_aanvullende_vragen.yml"
+      responses:
+        202:
+          $ref: "../../../data-dictionary/responses/types/202.yml"
+        400:
+          $ref: "../../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../../data-dictionary/responses/types/403.yml"
+        404:
+          $ref: "../../../data-dictionary/responses/types/404.yml"
+
+  /api/beoordeel-aanvraag-taken/{taak_id}/advies-vragen:
+    parameters:        
+      - $ref: "../../../data-dictionary/parameters/taak_id.yml"
+    put:
+      tags:
+        - beoordeel aanvraag taken
+      summary: Voltooit de beoordeel aanvraag taak met advies vragen.
+      operationId: VoltooiBeoordeelAanvraagTaakMetAdviesVragenV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "../../../data-dictionary/commands/vraag_advies.yml"
       responses:
         202:
           $ref: "../../../data-dictionary/responses/types/202.yml"

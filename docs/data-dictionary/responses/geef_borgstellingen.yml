@@ -4,11 +4,29 @@ allOf:
       items:
         type: array
         items:
+          type: object
+          required:
+            - borgstelling_id
+            - kredietbank
+            - kenmerk
+            - status
+            - links
           properties:
             borgstelling_id:
               $ref: "../types/borgstelling_id.yml"
-            kredietbank_id:
-              $ref: "../types/kredietbank_id.yml"
+            kredietbank:
+              $ref: "../models/kredietbank.yml"
             kenmerk:
               $ref: "../types/kenmerk_kredietbank.yml"
+            status:
+              $ref: "../types/borgstelling_status.yml"
+            links:
+              type: object
+              required:
+                - details
+              properties:
+                details:
+                  $ref: "../types/borgstelling_link.yml"
+    required:
+      - items
   - $ref: "types/offset_response.yml" 
