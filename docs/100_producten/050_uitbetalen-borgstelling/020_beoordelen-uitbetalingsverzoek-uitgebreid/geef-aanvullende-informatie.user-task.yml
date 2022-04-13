@@ -17,3 +17,10 @@ actions:
         - correlation_id
         - causation_id
         - actie
+        - redenen_oninbaar.oneOf.type
+        - redenen_oninbaar.oneOf.mime_type
+        - redenen_oninbaar.oneOf.links
+        - inning_acties.oneOf.type
+      editors:
+        redenen_oninbaar.oneOf.reden: EnumCheckbox
+        inning_acties.oneOf.actie: EnumCheckbox

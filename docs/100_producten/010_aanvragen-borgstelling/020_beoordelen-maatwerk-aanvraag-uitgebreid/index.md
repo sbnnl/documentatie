@@ -31,8 +31,8 @@ Deze taak kent de volgende uitkomsten:
 
 * Aanvraag goedgekeurd
 * Aanvraag afgewezen
-* Aanvraag onvolledig
-* Vraag om advies
+* Vraag gesteld
+* Advies gevraagd
 
 <!-- einde -->
 

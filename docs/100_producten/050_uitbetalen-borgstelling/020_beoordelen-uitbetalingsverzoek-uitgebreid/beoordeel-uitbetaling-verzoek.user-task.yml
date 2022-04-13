@@ -27,8 +27,8 @@ actions:
         - correlation_id
         - causation_id
         - actie
-  onvolledig:
-    name: Onvolledig
+  vragen:
+    name: Vraag stellen
     schema: 
       $ref: "../../../data-dictionary/commands/stel_aanvullende_uitbetaling_vragen.yml"
     ui:

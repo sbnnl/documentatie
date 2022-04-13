@@ -4,4 +4,6 @@ enum:
   - overleden
   - verhuisd naar onbekend adres
   - nieuwe schulden gemaakt
+  - herberekening
+  - anders
 example: overleden
