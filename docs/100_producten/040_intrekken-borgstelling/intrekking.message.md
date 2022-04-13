@@ -1,28 +1,10 @@
-
-<address>
-    Kredietbank X<br>
-    Langestraat 10<br>
-    1234 AA Een plaats
-</address>
-
-<time>2022-01-01</time>
-<dossier klant plus volgnummer>
-
-[Plaats], [datum dagtekening]
-
-
-Onderwerp: Intrekking borgstelling
-    
-Gemeente: < naam gemeente >
-
-
 Beste heer, mevrouw,
 
-Het Waarborgfonds Saneringskredieten (Wsk) heeft met u een overeenkomst voor de borgstelling van saneringskredieten. 
+Het Waarborgfonds Saneringskredieten (Wsk) heeft met u een overeenkomst voor de borgstelling van saneringskredieten.
 
-Voor het saneringskrediet met kenmerk < naw klant plus volgnummer > hebben wij op < datum > een borgstelling afgegeven. Wij zijn genoodzaakt om deze borgstelling in te trekken. De reden hiervoor is de volgende:
+Voor het saneringskrediet met kenmerk 4564657-1 hebben wij op 2 januari 2021 een borgstelling afgegeven. Wij zijn genoodzaakt om deze borgstelling in te trekken. De reden hiervoor is de volgende:
 
-<………                         >
+{{ reden }}
 
 Heeft u nog vragen over deze brief, dan kunt u contact met ons opnemen.
 
@@ -34,11 +16,21 @@ Waarborgfonds Saneringskredieten,
 namens deze,
  
 
-    
-    
 
 
 Wouter Vos
     
 Bestuurder Stichting Bemiddeling en Fondsbeheer
 
+<address>
+    Kredietbank Zwolle<br>
+    t.a.v. afdeling kredietverlening
+    Postbus 100070<br>
+    8000 GA Zwolle
+</address>
+<time>Utrecht, 2022-01-01</time>
+<reference>
+    <strong>Onderwerp:</strong> Intrekking borgstelling<br>
+    <strong>Uw referentie:</strong> 4564657-1<br>
+    <strong>Gemeente:</strong> Gemeente Zwolle
+</reference>
