@@ -4,4 +4,4 @@ format: markdown
 title: reden van afwijzing
 description: De reden waarom de aanvraag is afgewezen door de beoordelaar.
 example: |
-  @Frank?
+  De risico's zijn te groot.
