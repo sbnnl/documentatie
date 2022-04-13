@@ -2,4 +2,4 @@ type: string
 format: markdown
 description: Aanvullende opmerkingen die relevant zijn voor het uitbetaling verzoek.
 example: |
-  @Frank
+  Alle informatie is ontvangen en verwerkt. Wij gaan tot uitbetaling over. 
