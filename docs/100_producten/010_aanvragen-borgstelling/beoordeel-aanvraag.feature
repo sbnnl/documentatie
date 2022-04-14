@@ -1,18 +1,35 @@
 #language: nl
 Functionaliteit: Beoordeel aanvraag use-case
 
-  Scenario: Borgstelling aanvraag beneden 5000 euro wordt geaccepteerd
-    Gegeven aanvraag
-    En bruto kredietsom is "4999"
+  Abstract Scenario: Beoordeel aanvraag zonder voorbeoordeling: "<reden>"
+    Gegeven aanvraag met kredietsom <kredietsom>, afloscapaciteit <afloscapaciteit> per maand, looptijd <looptijd> maanden
     Wanneer beoordeeld
-    Dan is de beoordeling "geaccepteerd"
+    Dan is de uitkomst "<uitkomst>"
 
-  Scenario: Borgstelling aanvraag vanaf 5000 euro vraagt om maatwerk
-    Gegeven aanvraag
-    En bruto kredietsom is "5000"
-    Wanneer beoordeeld
-    Dan is de beoordeling "maatwerk"
+    Voorbeelden:
+    | kredietsom | afloscapaciteit | looptijd | uitkomst     | reden                                                                      |
+    | 4968       | 138             | 36       | geaccepteerd | Totale afloscapaciteit (>= kredietsom en < 5000) en looptijd <= 36 maanden |
+    | 4969       | 138             | 36       | maatwerk     | Totale afloscapaciteit < kredietsom                                        |
+    | 5004       | 139             | 36       | maatwerk     | Totale afloscapaciteit > 5000                                              |
+    | 4969       | 138             | 37       | maatwerk     | Looptijd is > 36 maanden                                                   |
 
+  Abstract Scenario: Beoordeel aanvraag met voorbeoordeling: "<reden>"
+    Gegeven voorbeoordeling met kredietsom <voorbeoordeling_kredietsom>, afloscapaciteit <voorbeoordeling_afloscapaciteit> per maand, looptijd <voorbeoordeling_looptijd> maanden en uitkomst "<voorbeoordeling_uitkomst>"
+    En aanvraag met kredietsom <kredietsom>, afloscapaciteit <afloscapaciteit> per maand, looptijd <looptijd> maanden
+    Dan is de uitkomst "<uitkomst>"
+
+    Voorbeelden:
+    | voorbeoordeling_kredietsom | voorbeoordeling_afloscapaciteit | voorbeoordeling_looptijd | voorbeoordeling_uitkomst | kredietsom | afloscapaciteit | looptijd | uitkomst     | reden                                                         |
+    | 5000                       | 139                             | 36                       | geaccepteerd             | 5000       | 139             | 36       | geaccepteerd | Aanvraag is gelijk aan voorbeoordeling                        |
+    | 5000                       | 139                             | 36                       | afgewezen                | 4999       | 138             | 36       | geaccepteerd | Standaard aanvraag                                            |
+    | 5000                       | 138                             | 36                       | geaccepteerd             | 5249       | 145             | 36       | geaccepteerd | Kredietsom wijkt minder dan 5% af van de voorbeoordeling      |
+    | 5000                       | 145                             | 36                       | geaccepteerd             | 5000       | 138             | 36       | geaccepteerd | Afloscapaciteit wijkt minder dan 5% af van de voorbeoordeling |
+    | 5000                       | 138                             | 36                       | afgewezen                | 5249       | 145             | 36       | afgewezen    | Kredietsom wijkt minder dan 5% af van de voorbeoordeling      |
+    | 5000                       | 145                             | 36                       | afgewezen                | 5000       | 138             | 36       | afgewezen    | Afloscapaciteit wijkt minder dan 5% af van de voorbeoordeling |
+    | 5000                       | 138                             | 36                       | geaccepteerd             | 5250       | 145             | 36       | maatwerk     | Kredietsom wijkt meer dan 5% af van de voorbeoordeling        |
+    | 5000                       | 145                             | 36                       | geaccepteerd             | 5000       | 137             | 36       | maatwerk     | Afloscapaciteit wijkt meer dan 5% af van de voorbeoordeling   |
+    | 5000                       | 145                             | 36                       | geaccepteerd             | 5000       | 137             | 37       | maatwerk     | Looptijd wijkt af en > 36                                     |
+  
   Scenario: Borgstelling aanvraag vanuit een portefeuille overname waarbij het saneringskrediet korter dan 36 maanden heeft gelopen wordt geaccepteerd
     Gegeven overname
     En bruto kredietsom is "5000"
@@ -26,22 +43,6 @@ Functionaliteit: Beoordeel aanvraag use-case
     En maanden actief is "36"
     Wanneer beoordeeld
     Dan is de beoordeling "afgewezen"
-
-  Abstract Scenario: Borgstelling aanvraag met een voorbeoordeling: <opmerking>
-
-    Gegeven aanvraag
-    En bruto kredietsom is "<bruto_kredietsom>"
-    En bruto kredietsom van de voorbeoordeling "<voorbeoordeling_bruto_kredietsom>"
-    En de beoordeling was "<voorbeoordeling_beoordeling>"
-    Wanneer beoordeeld
-    Dan is de beoordeling "<beoordeling>"
-
-    Voorbeelden:
-    | voorbeoordeling_bruto_kredietsom | voorbeoordeling_beoordeling | bruto_kredietsom | beoordeling  | opmerking                                       |
-    | 5000                             | geaccepteerd                | 5000             | geaccepteerd | pro-voorbeoordeling is identiek aan de aanvraag. |
-    | 5000                             | afgewezen                   | 4999             | geaccepteerd | kredietsom valt onder maatwerk grens. |
-    | 5000                             | geaccepteerd                | 5249             | geaccepteerd | kredietsom wijkt minder dan 5% af van de voorbeoordeling. |
-    | 5000                             | geaccepteerd                | 5250             | maatwerk     | kredietsom wijkt 5% of meer af van de voorbeoordeling. |
 
   Abstract Scenario: Use-case permissie is juist
     Gegeven een gebruiker met de rollen "<rollen>"
