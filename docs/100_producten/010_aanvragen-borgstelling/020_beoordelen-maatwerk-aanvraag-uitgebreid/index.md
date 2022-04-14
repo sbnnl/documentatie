@@ -75,4 +75,4 @@ Elke maatwerk aanvraag moet gefiatteerd worden door SBF als invulling van het vi
 | Nummer | Omschrijving                                                         | Eigenaar                  |
 | -------| -------------------------------------------------------------------- | ------------------------- |
 | 1      | Doorlooptijd: Een maatwerk beoordeling moet binnen 5 werkdagen beoordeeld zijn.    | Frank Dijkstra |
-| 2      | Vier ogen: Een positief oordeel van een medewerker van SBN moet gefiatteerd worden deen medewerker van SBF. | Frank Dijkstra |
+| 2      | Vier ogen: Een positief oordeel van een medewerker van SBN moet gefiatteerd worden door een medewerker van SBF. | Frank Dijkstra |

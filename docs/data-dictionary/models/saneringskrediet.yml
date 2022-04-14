@@ -1,5 +1,7 @@
 type: object
 properties:
+  kenmerk:
+    $ref: "../types/kenmerk_sk_kredietbank.yml"
   uitbetaaldatum:
     $ref: "../types/saneringskrediet_uitbetaaldatum.yml"
   kredietsom:
@@ -15,6 +17,7 @@ properties:
   dubieus:
     $ref: "../types/saneringskrediet_dubieus.yml"
 required:
+  - kenmerk
   - uitbetaaldatum
   - kredietsom
   - vorderingen

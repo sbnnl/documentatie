@@ -6,7 +6,7 @@ properties:
   kredietbank_id:    
     $ref: "../types/kredietbank_id.yml"
   kenmerk:
-    $ref: "../types/kenmerk_kredietbank.yml"  
+    $ref: "./kenmerk.yml"
   postcode:
     $ref: "../types/postcode_gebied.yml"
   kredietsom:
@@ -28,7 +28,7 @@ required:
   - soort_aanvraag
   - kredietbank_id
   - kenmerk
-  - gemeente
+  - postcode
   - kredietsom
   - aflossing
   - looptijd

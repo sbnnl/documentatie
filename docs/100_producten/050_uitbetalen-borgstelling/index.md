@@ -43,7 +43,7 @@ Nadat de borgstelling is uitbetaald wordt er een document aangemaakt en opgeslag
 
 ### Borgstelling uitbetaald
 
-De borgstelling uitbetaald gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wordt wijzigt in **uitbetaald**.
+De borgstelling uitbetaald gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wijzigt in **uitbetaald**.
 
 * [Acceptatie criteria](../verstuur-gebeurtenis.feature)
 
@@ -56,14 +56,11 @@ Nadat het verzoek is afgewezen wordt er een document aangemaakt en opgeslagen in
 
 ### Uitbetalingsverzoek afgewezen
 
-De Uitbetalingsverzoek afgewezen gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wordt wijzigt in **uitbetalingsverzoek afgewezen**.
+De Uitbetalingsverzoek afgewezen gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wijzigt in **uitbetalingsverzoek afgewezen**.
 
 * [Acceptatie criteria](../verstuur-gebeurtenis.feature)
 
 ## Business requirements
 
-Wat zijn de (non)functionele requirements? Denk hierbij aan zaken als doorlooptijd, vierogenprincipe, etc.
-
 | Nummer | Omschrijving                         | Eigenaar                  |
 | -------| ------------------------------------ | ------------------------- |
-| 1      | Omschrijving                         | Frank Dijkstra            |

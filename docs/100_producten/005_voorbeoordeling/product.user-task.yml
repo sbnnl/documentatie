@@ -1,0 +1,10 @@
+actions:
+  aanvraag:
+    name: Voorbeoordeling
+    schema: 
+      $ref: "../../data-dictionary/commands/registreer_voorbeoordeling.yml"
+    ui:
+      hidden:
+        - command_id
+        - correlation_id
+        - causation_id

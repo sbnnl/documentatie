@@ -1,5 +1,5 @@
 in: query
-name: afgifte_jaar
+name: afgifte-jaar
 description: Het jaar waarin de borgstelling is afgegeven.
 schema:
   type: integer

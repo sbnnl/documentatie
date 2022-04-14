@@ -36,8 +36,5 @@ De borgstelling beëindigd gebeurtenis wordt toegevoegd aan de gebeurtenissen ve
 
 ## Business requirements
 
-Wat zijn de (non)functionele requirements? Denk hierbij aan zaken als doorlooptijd, vierogenprincipe, etc.
-
 | Nummer | Omschrijving                         | Eigenaar                  |
 | -------| ------------------------------------ | ------------------------- |
-| 1      | Omschrijving                         | Frank Dijkstra            |

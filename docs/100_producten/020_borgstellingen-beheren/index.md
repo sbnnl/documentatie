@@ -36,7 +36,7 @@ Geeft een borgstelling van een kredietbank. Deze use-case wordt gebruikt door he
 
 ### Vul borgstelling aan
 
-Vult de borgstelling aan met actuele informatie van het saneringskrediet waarvoor de borgstelling is afgegeven. Elke mutatie wordt op datum opgeslagen zodat het gebruikt kan worden om het verloop inzichtelijk te maken. De gebruiker moet de kredietbank waar de borgstelling deel van uitmaakt als claim hebben. 
+Vult de borgstelling aan met actuele informatie van het saneringskrediet waarvoor de borgstelling is afgegeven. Elke mutatie wordt op datum opgeslagen zodat het gebruikt kan worden om het verloop inzichtelijk te maken. De gebruiker moet de kredietbank waar de borgstelling deel van uitmaakt als claim hebben.
 
 Deze use-case kan in enkelvoud aangeroepen worden of in meervoud om batch verwerking mogelijk te maken.
 
@@ -47,8 +47,5 @@ Deze use-case kan in enkelvoud aangeroepen worden of in meervoud om batch verwer
 
 ## Business requirements
 
-Wat zijn de (non)functionele requirements? Denk hierbij aan zaken als doorlooptijd, vierogenprincipe, etc.
-
 | Nummer | Omschrijving                         | Eigenaar                  |
 | -------| ------------------------------------ | ------------------------- |
-| 1      | Omschrijving                         | Frank Dijkstra            |

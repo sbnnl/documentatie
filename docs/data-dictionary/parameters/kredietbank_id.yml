@@ -1,5 +1,5 @@
 allOf:
   - in: query    
-    name: kredietbank_id
+    name: kredietbank-id
     required: true
   - $ref: "../types/kredietbank_id.yml"

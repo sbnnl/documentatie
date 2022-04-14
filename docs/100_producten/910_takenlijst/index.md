@@ -14,8 +14,5 @@ Wanneer de gebruiker een taak opent dan wordt er eerst een claim verzoek verstuu
 
 ## Business requirements
 
-Wat zijn de (non)functionele requirements? Denk hierbij aan zaken als doorlooptijd, vierogenprincipe, etc.
-
 | Nummer | Omschrijving                         | Eigenaar                  |
 | -------| ------------------------------------ | ------------------------- |
-| 1      | Omschrijving                         | Frank Dijkstra            |

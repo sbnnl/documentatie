@@ -1,5 +1,5 @@
 allOf:
   - in: path    
-    name: taak_id
+    name: taak-id
     required: true
   - $ref: "../types/taak_id.yml"

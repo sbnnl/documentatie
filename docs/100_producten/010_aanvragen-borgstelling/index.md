@@ -33,9 +33,11 @@ Aan de hand van het postcode gebied wordt de gemeente code vastgesteld. Het post
 
 * [Acceptatie criteria](aanvragen-borgstelling.feature)
 
-### Bepaal voorbeoordeling
+### Bepaal laatste voorbeoordeling
 
-Zoekt o.b.v. het kenmerk van de klant naar een bestaande voorbeoordeling. Wanneer gevonden wordt deze toegevoegd aan het proces.
+Zoekt o.b.v. het kenmerk van de klant naar een optionele laatste voorbeoordeling. De gevonden voorbeoordeling wordt toegevoegd aan het proces.
+
+* [Acceptatie criteria](bepaal-laatste-voorbeoordeling.feature)
 
 ### Beoordeel aanvraag
 
@@ -63,16 +65,7 @@ Nadat de aanvraag is goedgekeurd wordt er een borgstelling contract aangemaakt e
 <!-- einde -->
 
 * [Document](contract.message.md)
-<!-- * [Pseudo code](ArchiveerContractUseCase.java) -->
 * [Acceptatie criteria](../archiveer.feature)
-
-### Activeer borgstelling
-
-Verander de status van de borgstelling in actief.
-
-<!-- einde -->
-
-* [Acceptatie criteria](activeer-borgstelling.feature)
 
 ### Registreer verkoop
 
@@ -85,9 +78,9 @@ Sbf maakt gebruik van Exact online. Voor **1% van de bruto kredietsom** van de g
 
 Zie [exact knowledge base](https://support.exactonline.com/community/s/knowledge-base#All-All-DNO-Content-restapibusinessexamplesalesorder) voor meer informatie.
 
-### Aanvraag geaccepteerd
+### Borgstelling afgegeven
 
-De aanvraag geaccepteerd gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wordt wijzigt in **actief**.
+De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wijzigt in **afgegeven**.
 
 <!-- einde -->
 
@@ -102,9 +95,9 @@ Nadat de aanvraag is afgewezen wordt er een afwijzing aangemaakt en opgeslagen i
 * [Document](afwijzing.message.md)
 * [Acceptatie criteria](../archiveer.feature)
 
-### Aanvraag afgewezen
+### Borgstelling aanvraag afgewezen
 
-De aanvraag afgewezen gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wordt wijzigt in **afgewezen**.
+De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wijzigt in **afgewezen**.
 
 <!-- einde -->
 
@@ -119,9 +112,9 @@ Nadat de aanvraag is beëindigd wordt er een beëindiging aangemaakt en opgeslag
 * [Document](beeindiging.message.md)
 * [Acceptatie criteria](../archiveer.feature)
 
-### Aanvraag beëindigd
+### Borgstelling aanvraag beëindigd
 
-De aanvraag beëindigd gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wordt wijzigt in **beëindigd**.
+De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wijzigt in **beëindigd**.
 
 <!-- einde -->
 
@@ -129,8 +122,15 @@ De aanvraag beëindigd gebeurtenis wordt toegevoegd aan de gebeurtenissen verzam
 
 ## Business requirements
 
-Wat zijn de (non)functionele requirements? Denk hierbij aan zaken als doorlooptijd, vierogenprincipe, etc.
-
-| Nummer | Omschrijving                         | Eigenaar                  |
-| -------| ------------------------------------ | ------------------------- |
-| 1      | Omschrijving                         | Frank Dijkstra            |
+| Nummer | Omschrijving                                                                                                                         | Eigenaar                  |
+| -------| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------- |
+| 1      | Financiële mutaties moeten in Exact online vastgeld worden.                                                                          | Frank Dijkstra |
+| 2      | Er moet ruimte zijn voor maatwerk in de beoordeling.                                                                                 | Frank Dijkstra |
+| 3      | Een afgegeven borgstelling moet automatisch in rekening gebracht worden.                                                             | Frank Dijkstra |
+| 4      | Aanvragen tot € 5.000,- en een looptijd t/m 36 maanden moeten automatisch geaccepteerd worden.                                       | Frank Dijkstra |
+| 5      | Aanvragen vanaf € 5.000,- of met een looptijd langer dan 36 maanden moeten handmatig beoordeeld worden.                              | Frank Dijkstra |
+| 6      | Aanvragen vanaf € 5.000,- die minder dan 5% hoger zijn dan een geaccepteerde voorbeoordeling moeten automatisch geaccepteerd worden. | Frank Dijkstra |
+| 7      | Handmatige beoordelingen moeten gefiatteerd worden door het Sbf.                                                                     | Frank Dijkstra |
+| 8      | Het moet eenvoudig mogelijk zijn om verschillende soorten aanvragen met verschillende informatie modellen te introduceren.           | Frank Dijkstra |
+| 9      | Beslisregegels moeten configureerbaar zijn zodat die eenvoudig kunnen wijzigen.                                                      | Frank Dijkstra |
+| 10     | Facturatie percentage moet configureer zijn zodat die eenvoudig kan wijzigen.                                                        | Frank Dijkstra |

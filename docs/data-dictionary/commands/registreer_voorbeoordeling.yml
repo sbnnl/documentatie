@@ -1,0 +1,29 @@
+allOf:  
+  - $ref: "types/command.yml"
+  - title: registreer voorbeoordeling
+    properties:
+      kredietbank_id:    
+        $ref: "../types/kredietbank_id.yml"
+      kenmerk:
+        $ref: "../types/kenmerk_client_kredietbank.yml"  
+      kredietsom:
+        type: object
+        title: Kredietsom
+        properties:
+          bruto:
+            $ref: "../types/bruto_kredietsom.yml"
+          netto:
+            $ref: "../types/netto_kredietsom.yml"
+        required:
+          - bruto
+          - netto    
+      aflossing:
+        $ref: "../types/maandaflossing.yml"
+      looptijd:
+        $ref: "../types/looptijd_in_maanden.yml"
+    required:
+      - kredietbank_id
+      - kenmerk
+      - kredietsom
+      - aflossing
+      - looptijd

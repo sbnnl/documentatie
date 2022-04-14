@@ -1,0 +1,5 @@
+allOf:
+  - in: query    
+    name: kenmerk-sk
+    required: false
+  - $ref: "../types/kenmerk_sk_kredietbank.yml"

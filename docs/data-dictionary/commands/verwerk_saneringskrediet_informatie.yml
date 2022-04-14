@@ -1,5 +1,10 @@
 allOf:
+  - $ref: "types/command.yml"
   - type: object
     title: verwerk saneringskrediet informatie
-  - $ref: "types/command.yml"
+    properties:     
+      actie:        
+        allOf:
+          - example: verwerk_saneringskrediet_informatie
+          - $ref: "../types/actie.yml"
   - $ref: "../models/saneringskrediet.yml"

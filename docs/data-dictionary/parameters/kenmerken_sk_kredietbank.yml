@@ -1,10 +1,10 @@
 in: query    
-name: kenmerken
+name: kenmerken-sk
 description: Een lijst van minimaal 1 en maximaal 500 saneringskrediet kenmerken van een kredietbank.
 required: false
 type: array
 items:
-  $ref: "../types/kenmerk_kredietbank.yml"
+  $ref: "../types/kenmerk_sk_kredietbank.yml"
 minItems: 1
 maxItems: 500
 example:

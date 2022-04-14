@@ -37,12 +37,17 @@ De Stichting SBF sluit overeenkomsten met de kredietbanken om garant te staan vo
 
 [Context](context.puml)
 
+## Proces
+
+[e2e proces](proces.bpmn)
+
 ## Randvoorwaarden
 
 * De meeste kredietbanken maken gebruik van Allegro en een enkele van Stratech, het ontwerp dient hierbij aan te sluiten.
 * Idealiter wordt voor gegevensuitwisseling gebruik gemaakt van het Schuldenknooppunt. Indien er gegronde redenen zijn hiervan af te wijken, is dat wel mogelijk.
-* Het ontwerp moet tot minimale extra werklast aan de kant van de kredietbanken leiden
-* Uitwisseling van gegevens dient in lijn met de AVG-wetgeving te gebeuren
+* Het ontwerp moet tot minimale extra werklast aan de kant van de kredietbanken leiden.
+* Uitwisseling van gegevens dient in lijn met de AVG-wetgeving te gebeuren.
+* Handmatig aanleveren en ontsluiten van kredietbank gegevens moet mogelijk zijn.
 * **Handelingen zijn herleidbaar:** Elke handeling moet herleidbaar zijn naar een persoon of systeem.
 * **Vierogenprincipe:** Het vierogenprincipe stelt dat voor bepaalde handelingen altijd 2 mensen nodig zijn. Zodat zij elkaar kunnen controleren. Dit om fraude of andere misstanden te voorkomen.
 * **Minimalisatie van operationele werkzaamheden:** Werkzaamheden dienen zoveel mogelijk geautomatiseerd en volgens vaste processen plaats te vinden. Output dient uniform te zijn.

@@ -1,0 +1,9 @@
+type: object
+properties:
+  client:
+    $ref: "../types/kenmerk_client_kredietbank.yml"  
+  sk:
+    $ref: "../types/kenmerk_sk_kredietbank.yml"
+required:
+  - client
+  - sk

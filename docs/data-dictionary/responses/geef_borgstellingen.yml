@@ -17,7 +17,7 @@ allOf:
             kredietbank:
               $ref: "../models/kredietbank.yml"
             kenmerk:
-              $ref: "../types/kenmerk_kredietbank.yml"
+              $ref: "../models/kenmerk.yml"
             status:
               $ref: "../types/borgstelling_status.yml"
             links:

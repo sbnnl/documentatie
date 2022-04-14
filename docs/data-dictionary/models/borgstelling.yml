@@ -5,7 +5,7 @@ properties:
   kredietbank:
     $ref: "./kredietbank.yml"
   kenmerk:
-    $ref: "../types/kenmerk_kredietbank.yml"
+    $ref: "./kenmerk.yml"
   status:
     $ref: "../types/borgstelling_status.yml"
   saneringskrediet:

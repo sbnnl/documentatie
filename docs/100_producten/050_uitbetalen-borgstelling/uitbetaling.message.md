@@ -13,7 +13,7 @@ Het bedrag dat wij uitbetalen hebben wij vastgesteld en is als volgt opgebouwd:
 | Rente over vervallen termijnen            | € 40,47                       |
 | <strong>Totaal uit te betalen<strong>     | <strong>€ 1.290,77</strong>   |
 
-Het bedrag wordt uitbetaald op rekeningnummer NL37INGB0674629892 t.n.v. Kredietbank Zwolle.
+Het bedrag wordt uitbetaald op rekeningnummer *NL37INGB0674629892* t.n.v. *Kredietbank Zwolle*.
 
 Heeft u nog vragen over deze brief, dan kunt u contact met ons opnemen.
 
