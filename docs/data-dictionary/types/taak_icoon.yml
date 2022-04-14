@@ -1,3 +1,4 @@
 type: string
-description: Naam van de taak.
-example: Beoordeel aanvraag
+format: material icon
+description: Een icoon die past bij de context van de taak.
+example: Today
