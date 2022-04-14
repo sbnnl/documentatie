@@ -1,4 +1,4 @@
 type: string
 format: uri
 description: De link naar de api resource van deze taak.
-example: https://waarborgfonds.sbn.nl/beoordeel-aanvraag-taken/f242f4e7-4ddc-4dbb-a3c1-9ab1a1dea74e
+example: https://waarborgfonds.sbn.nl/api/beoordeel-aanvraag-taken/f242f4e7-4ddc-4dbb-a3c1-9ab1a1dea74e
