@@ -3,9 +3,8 @@ title: status
 description: Status van de borgstelling.
 enum:
   - aangevraagd
-  - voorbeoordeeld
-  - actief
+  - afgegeven
   - beeindigd
   - ingetrokken
   - uibetaald
-example: actief
+example: afgegeven

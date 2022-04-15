@@ -7,31 +7,9 @@ info:
 
 paths:
 
-  /api/mijn-geef-aanvullende-informatie-taken:
-    get:
-      tags:
-        - geef aanvullende informatie taken
-      summary: Geeft een persoonlijke lijst van geef aanvullende informatie taken.
-      description: |
-        Geeft een lijst van geclaimde taken. Wanneer de gebruiker geen taken heeft geclaimed dan worden de niet geclaimde taken met de hoogste prioriteit waarvoor de gebruiker geautoriseerd is getoond.
-      operationId: GeefMijnAanvullendeInformatieTakenV1
-      parameters:
-        - $ref: "../../../data-dictionary/parameters/limit.yml"
-        - $ref: "../../../data-dictionary/parameters/offset.yml"
-      responses:
-        200:          
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: "../../../data-dictionary/responses/mijn_taken.yml"
-        401:
-          $ref: "../../../data-dictionary/responses/types/401.yml"
-        403:
-          $ref: "../../../data-dictionary/responses/types/403.yml"
-
-  /api/geef-aanvullende-informatie-taken/{taak_id}:
-    parameters:        
+  /api/kredietbanken/{kredietbank_id}/geef-aanvullende-informatie-taken/{taak_id}:
+    parameters:
+      - $ref: "../../../data-dictionary/parameters/kredietbank_id.yml"
       - $ref: "../../../data-dictionary/parameters/taak_id.yml"
     get:
       tags:
@@ -54,8 +32,9 @@ paths:
         404:
           $ref: "../../../data-dictionary/responses/types/404.yml"
 
-  /api/geef-aanvullende-informatie-taken/{taak_id}/informeren:
-    parameters:        
+  /api/kredietbanken/{kredietbank_id}/geef-aanvullende-informatie-taken/{taak_id}/informeren:
+    parameters: 
+      - $ref: "../../../data-dictionary/parameters/kredietbank_id.yml"
       - $ref: "../../../data-dictionary/parameters/taak_id.yml"
     put:
       tags:

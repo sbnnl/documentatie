@@ -6,31 +6,9 @@ info:
   description: |
 paths:
 
-  /api/mijn-fiatteer-uitbetaling-taken:
-    get:
-      tags:
-        - fiatteer uitbetaling taken
-      summary: Geeft een persoonlijke lijst van fiatteer uitbetaling taken.
-      description: |
-        Geeft een lijst van geclaimde taken. Wanneer de gebruiker geen taken heeft geclaimed dan worden de niet geclaimde taken met de hoogste prioriteit waarvoor de gebruiker geautoriseerd is getoond.
-      operationId: GeefMijnFiatteerUitbetalingTakenV1
-      parameters:
-        - $ref: "../../../data-dictionary/parameters/limit.yml"
-        - $ref: "../../../data-dictionary/parameters/offset.yml"
-      responses:
-        200:          
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: "../../../data-dictionary/responses/mijn_taken.yml"
-        401:
-          $ref: "../../../data-dictionary/responses/types/401.yml"
-        403:
-          $ref: "../../../data-dictionary/responses/types/403.yml"
-
-  /api/fiatteer-uitbetaling-taken/{taak_id}:
-    parameters:        
+  /api/kredietbanken/{kredietbank_id}/fiatteer-uitbetaling-taken/{taak_id}:
+    parameters:
+      - $ref: "../../../data-dictionary/parameters/kredietbank_id.yml"
       - $ref: "../../../data-dictionary/parameters/taak_id.yml"
     get:
       tags:
@@ -53,8 +31,9 @@ paths:
         404:
           $ref: "../../../data-dictionary/responses/types/404.yml"  
 
-  /api/fiatteer-uitbetaling-taken/{taak_id}/fiatteren:
-    parameters:        
+  /api/kredietbanken/{kredietbank_id}/fiatteer-uitbetaling-taken/{taak_id}/fiatteren:
+    parameters:
+      - $ref: "../../../data-dictionary/parameters/kredietbank_id.yml"
       - $ref: "../../../data-dictionary/parameters/taak_id.yml"
     put:
       tags:
@@ -79,8 +58,9 @@ paths:
         404:
           $ref: "../../../data-dictionary/responses/types/404.yml"
 
-  /api/fiatteer-uitbetaling-taken/{taak_id}/afwijzen:
-    parameters:        
+  /api/kredietbanken/{kredietbank_id}/fiatteer-uitbetaling-taken/{taak_id}/afwijzen:
+    parameters:
+      - $ref: "../../../data-dictionary/parameters/kredietbank_id.yml"
       - $ref: "../../../data-dictionary/parameters/taak_id.yml"
     put:
       tags:

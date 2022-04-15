@@ -6,8 +6,9 @@ info:
   description: |
 paths:
 
-  /api/borgstellingen/{borgstelling_id}/beeindigen:
-    parameters:        
+  /api/kredietbanken/{kredietbank_id}/borgstellingen/{borgstelling_id}/beeindigen:
+    parameters:
+      - $ref: "../../data-dictionary/parameters/kredietbank_id.yml"
       - $ref: "../../data-dictionary/parameters/borgstelling_id.yml"
     put:
       tags:

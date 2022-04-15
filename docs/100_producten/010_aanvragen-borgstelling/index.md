@@ -133,4 +133,4 @@ De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de krediet
 | 7      | Handmatige beoordelingen moeten gefiatteerd worden door het Sbf.                                                                     | Frank Dijkstra |
 | 8      | Het moet eenvoudig mogelijk zijn om verschillende soorten aanvragen met verschillende informatie modellen te introduceren.           | Frank Dijkstra |
 | 9      | Beslisregegels moeten configureerbaar zijn zodat die eenvoudig kunnen wijzigen.                                                      | Frank Dijkstra |
-| 10     | Facturatie percentage moet configureer zijn zodat die eenvoudig kan wijzigen.                                                        | Frank Dijkstra |
+| 10     | Facturatie percentage moet configureerbaar zijn zodat die eenvoudig kan wijzigen.                                                    | Frank Dijkstra |

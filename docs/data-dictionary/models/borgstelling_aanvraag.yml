@@ -3,8 +3,6 @@ title: borgstelling aanvraag
 properties:
   soort_aanvraag:
     $ref: "../types/soort_aanvraag.yml"
-  kredietbank_id:    
-    $ref: "../types/kredietbank_id.yml"
   kenmerk:
     $ref: "./kenmerk.yml"
   postcode:
@@ -26,7 +24,6 @@ properties:
     $ref: "../types/looptijd_in_maanden.yml"
 required:
   - soort_aanvraag
-  - kredietbank_id
   - kenmerk
   - postcode
   - kredietsom

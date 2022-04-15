@@ -7,14 +7,16 @@ info:
     
 paths:
 
-  /api/borgstellingen:
+  /api/kredietbanken/{kredietbank_id}/borgstellingen:
+    parameters:
+      - $ref: "../../data-dictionary/parameters/kredietbank_id.yml"
     get:      
       tags:
         - borgstellingen
       summary: Geeft een lijst met borgstellingen
       operationId: GeefBorgstellingenV1
-      parameters:        
-        - $ref: "../../data-dictionary/parameters/kredietbanken.yml"
+      parameters:
+        - $ref: "../../data-dictionary/parameters/kenmerken_client_kredietbank.yml"
         - $ref: "../../data-dictionary/parameters/kenmerken_sk_kredietbank.yml"
         - $ref: "../../data-dictionary/parameters/limit.yml"
         - $ref: "../../data-dictionary/parameters/offset.yml"

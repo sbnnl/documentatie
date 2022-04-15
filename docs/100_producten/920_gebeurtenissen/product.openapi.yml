@@ -7,9 +7,9 @@ info:
   description: |
 paths:
 
-  /api/gebeurtenissen:
-    parameters:        
-      - $ref: "../../data-dictionary/parameters/kredietbanken.yml"
+  /api/kredietbanken/{kredietbank_id}/gebeurtenissen:
+    parameters:
+      - $ref: "../../data-dictionary/parameters/kredietbank_id.yml"
       - $ref: "../../data-dictionary/parameters/offset.yml"
       - $ref: "../../data-dictionary/parameters/limit.yml"
     get:

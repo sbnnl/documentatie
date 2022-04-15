@@ -7,7 +7,9 @@ info:
 
 paths:
 
-  /api/borgstellingen:
+  /api/kredietbanken/{kredietbank_id}/borgstellingen:
+    parameters:
+      - $ref: "../../data-dictionary/parameters/kredietbank_id.yml"
     post:
       tags:
         - borgstellingen

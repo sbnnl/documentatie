@@ -7,7 +7,9 @@ info:
 
 paths:
 
-  /api/voorbeoordelingen:
+  /api/kredietbanken/{kredietbank_id}/voorbeoordelingen:
+    parameters:
+      - $ref: "../../data-dictionary/parameters/kredietbank_id.yml"
     post:
       tags:
         - voorbeoordelingen
@@ -22,6 +24,26 @@ paths:
       responses:
         201:
           $ref: "../../data-dictionary/responses/types/201.yml"
+        400:
+          $ref: "../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../data-dictionary/responses/types/403.yml"
+    get:
+      tags:
+        - voorbeoordelingen
+      summary: Geeft een lijst met voorbeoordelingen
+      operationId: GeefVoorbeoordelingenV1
+      parameters:
+        - $ref: "../../data-dictionary/parameters/kenmerken_sk_kredietbank.yml"
+      responses:
+        200:          
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "../../data-dictionary/responses/geef_voorbeoordelingen.yml"
         400:
           $ref: "../../data-dictionary/responses/types/400.yml"
         401:

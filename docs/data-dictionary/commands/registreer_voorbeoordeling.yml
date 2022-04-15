@@ -2,8 +2,6 @@ allOf:
   - $ref: "types/command.yml"
   - title: registreer voorbeoordeling
     properties:
-      kredietbank_id:    
-        $ref: "../types/kredietbank_id.yml"
       kenmerk:
         $ref: "../types/kenmerk_client_kredietbank.yml"  
       kredietsom:

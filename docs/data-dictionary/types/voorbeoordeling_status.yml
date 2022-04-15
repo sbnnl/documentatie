@@ -1,0 +1,8 @@
+type: string
+title: status
+description: Status van de voorbeoordeling.
+enum:
+  - aangevraagd
+  - afgewezen
+  - goedgekeurd
+example: goedgekeurd

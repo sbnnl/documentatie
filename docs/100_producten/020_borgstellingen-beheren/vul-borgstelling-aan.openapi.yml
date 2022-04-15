@@ -6,7 +6,9 @@ info:
   description: |
 paths:
   
-  /api/borgstellingen:
+  /api/kredietbanken/{kredietbank_id}/borgstellingen:
+    parameters:
+      - $ref: "../../data-dictionary/parameters/kredietbank_id.yml"
     patch:
       tags:
         - borgstelling aanvullen
@@ -33,8 +35,9 @@ paths:
         403:
           $ref: "../../data-dictionary/responses/types/403.yml"
   
-  /api/borgstellingen/{borgstelling_id}:
-    parameters:        
+  /api/kredietbanken/{kredietbank_id}/borgstellingen/{borgstelling_id}:
+    parameters:
+      - $ref: "../../data-dictionary/parameters/kredietbank_id.yml"
       - $ref: "../../data-dictionary/parameters/borgstelling_id.yml"
     patch:
       tags:

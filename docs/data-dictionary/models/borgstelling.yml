@@ -2,8 +2,6 @@ type: object
 properties:
   borgstelling_id:
     $ref: "../types/borgstelling_id.yml"
-  kredietbank:
-    $ref: "./kredietbank.yml"
   kenmerk:
     $ref: "./kenmerk.yml"
   status:
@@ -34,7 +32,6 @@ properties:
       $ref: "./archiefstuk.yml"
 required:
   - borgstelling_id
-  - kredietbank
   - kenmerk
   - status
   - saneringskrediet
