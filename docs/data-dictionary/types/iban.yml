@@ -1,0 +1,5 @@
+type: string
+pattern: '^[A-Z]{2}\d{2} (?:\d{4} ){3}\d{4}(?: \d\d?)?$'
+title: IBAN
+description: Een International Bank Account Number (IBAN) wordt gebruikt om internationale transacties tussen rekeningen en banken gelegen in verschillende landen vlotter te laten verlopen. 
+example: NL37INGB0674629892

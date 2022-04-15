@@ -1,0 +1,5 @@
+allOf:
+  - $ref: "types/command.yml"
+  - type: object
+    title: maak kredietbank
+  - $ref: "../models/kredietbank.yml"

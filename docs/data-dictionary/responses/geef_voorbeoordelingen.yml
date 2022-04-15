@@ -6,15 +6,12 @@ allOf:
         items:
           type: object
           required:
-            - kredietbank
             - kenmerk
             - kredietsom
             - aflossing
             - looptijd
             - status
           properties:
-            kredietbank:
-              $ref: "../models/kredietbank.yml"
             kenmerk:
               $ref: "../types/kenmerk_client_kredietbank.yml"  
             kredietsom:

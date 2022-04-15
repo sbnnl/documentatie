@@ -26,7 +26,7 @@ Functionaliteit: Voorboordelen use-case
     | kredietbank_a | kredietbank                                               | niet     |
     | kredietbank_a | kredietbank_a                                             | niet     |
     | kredietbank_a | kredietbank, kredietbank_b                                | niet     |
-    | kredietbank_b | kredietbankkredietbank_a, kredietbank_c, kredietbank_d    | niet     |    
+    | kredietbank_b | kredietbankkredietbank_a, kredietbank_c, kredietbank_d    | niet     |
     | kredietbank_a | kredietbank, kredietbank_a                                | wel      |
     | kredietbank_a | kredietbank, kredietbank_a, kredietbank_b, kredietbank_c  | wel      |
     

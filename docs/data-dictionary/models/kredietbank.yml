@@ -2,9 +2,20 @@ type: object
 title: kredietbank
 properties:
   kredietbank_id:
-    $ref: "../types/kredietbank_id.yml"
+    allOf:
+      - $ref: "../types/kredietbank_id.yml"
+      - readOnly: true
   naam:
     $ref: "../types/kredietbank_naam.yml"
+  iban:
+    $ref: "../types/iban.yml"
+  gemeenten:
+    type: array
+    description: Een verzameling gemeenten voor wie de kredietbank saneringskredieten verstrekt.
+    items:
+      $ref: "../types/gemeente.yml"
 required:
   - kredietbank_id
   - naam
+  - iban
+  - gemeenten
