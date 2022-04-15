@@ -1,3 +1,19 @@
 
 allOf:
   - $ref: "./beoordeel_uitbetaling_verzoek.yml"
+  - properties:
+      uitbetaling:
+        type: object
+        properties:
+          netto_kredietsom:
+            $ref: "../types/netto_kredietsom.yml"
+          aflossing:
+            $ref: "../types/saneringskrediet_aflossing.yml"
+          kredietvergoeding:
+            $ref: "../types/saneringskrediet_kredietvergoeding.yml"
+        required:
+          - netto_kredietsom
+          - aflossing
+          - kredietvergoeding
+    required:
+     - uitbetaling

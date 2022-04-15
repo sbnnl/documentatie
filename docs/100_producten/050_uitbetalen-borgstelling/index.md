@@ -67,3 +67,4 @@ De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de krediet
 | 1      | Financiële mutaties moeten in Exact online vastgelegd worden.                                                                        | Frank Dijkstra |
 | 2      | Er moet ruimte zijn voor maatwerk in de beoordeling.                                                                                 | Frank Dijkstra |
 | 3      | Goedgekeurde uitbetalingen moeten gefiatteerd worden door het Sbf.                                                                   | Frank Dijkstra |
+| 4      | Vertragingsrente wordt niet vergoedt.                                                                                                | Frank Dijkstra |

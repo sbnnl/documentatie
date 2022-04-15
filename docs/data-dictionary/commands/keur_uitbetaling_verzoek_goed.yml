@@ -7,8 +7,19 @@ allOf:
         allOf:
           - example: goedkeuren
           - $ref: "../types/actie.yml"
-      bedrag:
-        $ref: "../types/uitbetaling_bedrag.yml"
+      uitbetaling:
+        type: object
+        properties:
+          netto_kredietsom:
+            $ref: "../types/netto_kredietsom.yml"
+          aflossing:
+            $ref: "../types/saneringskrediet_aflossing.yml"
+          kredietvergoeding:
+            $ref: "../types/saneringskrediet_kredietvergoeding.yml"
+        required:
+          - netto_kredietsom
+          - aflossing
+          - kredietvergoeding
     required:
       - actie
-      - bedrag
+      - uitbetaling
