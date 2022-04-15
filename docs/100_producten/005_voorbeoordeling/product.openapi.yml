@@ -36,7 +36,7 @@ paths:
       summary: Geeft een lijst met voorbeoordelingen
       operationId: GeefVoorbeoordelingenV1
       parameters:
-        - $ref: "../../data-dictionary/parameters/kenmerken_client_kredietbank.yml"
+        - $ref: "../../data-dictionary/parameters/kenmerk_client_kredietbank.yml"
       responses:
         200:          
           description: OK
