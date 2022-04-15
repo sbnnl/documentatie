@@ -8,7 +8,7 @@ Gebeurtenissen beschrijven welke opdrachten in de systemen van het Wsk correct z
 
 De afnemer moet zelf registeren welke gebeurtenissen correct verwerkt zijn door het kenmerk op te slaan. Het kenmerk mag als idempotency sleutel gebruikt worden.
 
-Het laatste opgeslagen kenmerk moet meegeven worden als offset om alleen niet verwekte gebeurtenissen te ontvangen.
+Het laatste opgeslagen kenmerk moet meegeven worden als offset om alleen niet verwerkte gebeurtenissen te ontvangen.
 
 * [API](product.openapi.yml)
 
