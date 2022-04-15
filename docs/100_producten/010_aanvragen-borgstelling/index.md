@@ -124,7 +124,7 @@ De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de krediet
 
 | Nummer | Omschrijving                                                                                                                         | Eigenaar                  |
 | -------| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------- |
-| 1      | Financiële mutaties moeten in Exact online vastgeld worden.                                                                          | Frank Dijkstra |
+| 1      | Financiële mutaties moeten in Exact online vastgelegd worden.                                                                        | Frank Dijkstra |
 | 2      | Er moet ruimte zijn voor maatwerk in de beoordeling.                                                                                 | Frank Dijkstra |
 | 3      | Een afgegeven borgstelling moet automatisch in rekening gebracht worden.                                                             | Frank Dijkstra |
 | 4      | Aanvragen tot € 5.000,- en een looptijd t/m 36 maanden moeten automatisch geaccepteerd worden.                                       | Frank Dijkstra |

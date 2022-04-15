@@ -62,5 +62,8 @@ De Uitbetalingsverzoek afgewezen gebeurtenis wordt toegevoegd aan de gebeurtenis
 
 ## Business requirements
 
-| Nummer | Omschrijving                         | Eigenaar                  |
-| -------| ------------------------------------ | ------------------------- |
+| Nummer | Omschrijving                                                                                                                         | Eigenaar                  |
+| -------| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------- |
+| 1      | Financiële mutaties moeten in Exact online vastgelegd worden.                                                                        | Frank Dijkstra |
+| 2      | Er moet ruimte zijn voor maatwerk in de beoordeling.                                                                                 | Frank Dijkstra |
+| 3      | Goedgekeurde uitbetalingen moeten gefiatteerd worden door het Sbf.                                                                   | Frank Dijkstra |
