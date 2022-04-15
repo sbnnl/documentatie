@@ -15,7 +15,7 @@ Het doel van beoordelen uitbetalingsverzoek is om vast te stellen of een uitbeta
 
 ### Aanvullende informatie gevraagd
 
-De aanvullende informatie gevraagd gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden.
+De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden.
 
 * [Acceptatie criteria](../../verstuur-gebeurtenis.feature)
 
@@ -37,7 +37,7 @@ Beoordeelt het verzoek tot uitbetaling van de borgstelling en stelt het uit te b
 
 ### Aanvullende vragen gesteld
 
-De aanvullende vragen gesteld gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden.
+De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden.
 
 * [Acceptatie criteria](../../verstuur-gebeurtenis.feature)
 

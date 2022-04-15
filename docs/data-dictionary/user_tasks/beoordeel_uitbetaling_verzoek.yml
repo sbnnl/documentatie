@@ -29,6 +29,19 @@ properties:
     $ref: "../types/saneringskrediet_redenen_oninbaar.yml"
   inning_acties:
     $ref: "../types/saneringskrediet_inning_acties.yml"
+  aanvullende_vragen:
+    type: array
+    title: aanvullende vragen
+    items:
+      type: object
+      properties:
+        vraag:
+          $ref: "../types/aanvullende_uitbetaling_vragen.yml"
+        antwoord:
+          $ref: "../types/antwoord_op_aanvullende_uitbetaling_vragen.yml"
+      required:
+        - vraag
+        - antwoord
 required:
   - taak_id
   - borgstelling_id

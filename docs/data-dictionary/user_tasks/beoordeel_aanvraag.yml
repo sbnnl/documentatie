@@ -87,3 +87,4 @@ required:
   - taak_id
   - borgstelling_id
   - aanvraag
+  - aanvullende_informatie

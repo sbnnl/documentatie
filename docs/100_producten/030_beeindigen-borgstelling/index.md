@@ -30,7 +30,7 @@ Nadat de borgstelling beëindigd wordt er een document aangemaakt en opgeslagen 
 
 ### Borgstelling beëindigd
 
-De borgstelling beëindigd gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wordt gewijzigd in **beëindigd**.
+De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wordt gewijzigd in **beëindigd**.
 
 * [Acceptatie criteria](../verstuur-gebeurtenis.feature)
 

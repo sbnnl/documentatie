@@ -13,6 +13,12 @@ Het doel van het product is om te komen tot een weloverwogen keuze of borgstelli
 
 ## Use-cases
 
+### Aanvullende informatie gevraagd
+
+De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden.
+
+* [Acceptatie criteria](../../verstuur-gebeurtenis.feature)
+
 ### Geef aanvullende informatie
 
 De kredietbank moet aanvullende informatie aanleveren wanneer [bepaal status](#bepaal-status) heeft geleid tot de status **maatwerk**. Er ontstaat automatisch een taak in de takenlijst van de kredietbank.
@@ -40,15 +46,11 @@ Deze taak kent de volgende uitkomsten:
 * [API](beoordeel-aanvraag.openapi.yml)
 * [Acceptatie criteria](beoordeel-aanvraag.feature)
 
-### Geef advies
+### Aanvullende vragen gesteld
 
-Aangesloten kredietbanken kunnen door het Wsk gevraagd worden om een advies uit te brengen over een maatwerk borgstelling aanvraag. Deze "geef advies taken" moeten evenredig over de kredietbanken verdeeld worden. Er ontstaat automatisch een taak in de takenlijst van de adviserende kredietbank.
+De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden.
 
-<!-- einde -->
-
-* [Formulier](geef-advies.user-task.yml)
-* [API](geef-advies.openapi.yml)
-* [Acceptatie criteria](geef-advies.feature)
+* [Acceptatie criteria](../../verstuur-gebeurtenis.feature)
 
 ### Beantwoord aanvullende vragen
 
@@ -59,6 +61,23 @@ Er ontstaat automatisch een taak in de takenlijst van de kredietbank wanneer de 
 * [Formulier](beantwoord-aanvullende-vragen.user-task.yml)
 * [API](beantwoord-aanvullende-vragen.openapi.yml)
 * [Acceptatie criteria](beantwoord-aanvullende-vragen.feature)
+
+### Advies gevraagd
+
+De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de adviserende kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. 
+De advies vragen moeten evenredig verdeeld worden over de deelnemende kredietbanken.
+
+* [Acceptatie criteria](../../verstuur-gebeurtenis.feature)
+
+### Geef advies
+
+Aangesloten kredietbanken kunnen door het Wsk gevraagd worden om een advies uit te brengen over een maatwerk borgstelling aanvraag. Deze "geef advies taken" moeten evenredig over de kredietbanken verdeeld worden. Er ontstaat automatisch een taak in de takenlijst van de adviserende kredietbank.
+
+<!-- einde -->
+
+* [Formulier](geef-advies.user-task.yml)
+* [API](geef-advies.openapi.yml)
+* [Acceptatie criteria](geef-advies.feature)
 
 ### Fiatteer aanvraag
 
@@ -74,5 +93,6 @@ Elke maatwerk aanvraag moet gefiatteerd worden door SBF als invulling van het vi
 
 | Nummer | Omschrijving                                                         | Eigenaar                  |
 | -------| -------------------------------------------------------------------- | ------------------------- |
-| 1      | Doorlooptijd: Een maatwerk beoordeling moet binnen 5 werkdagen beoordeeld zijn.    | Frank Dijkstra |
-| 2      | Vier ogen: Een positief oordeel van een medewerker van SBN moet gefiatteerd worden door een medewerker van SBF. | Frank Dijkstra |
+| 1      | Een maatwerk beoordeling moet binnen 5 werkdagen beoordeeld zijn.    | Frank Dijkstra |
+| 2      | Een positief oordeel van een medewerker van SBN moet gefiatteerd worden door een medewerker van SBF. | Frank Dijkstra |
+| 3      | Advies vragen moeten evenredig verdeeld worden over de deelnemende kredietbanken. | Frank Dijkstra |
