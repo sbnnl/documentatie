@@ -9,7 +9,26 @@
     --text-color-heading: var(--wsk-color-blue);
 }
 
+header .logo {
+    left: auto;
+}
 
 header .logo img {
-    height: 72pt
+    height: 60pt;
+}
+
+footer .contact {
+    color: var(--wsk-color-blue);
+}
+
+@media print {
+    @page :first {
+        @top-left-corner {
+            content: '';
+        }
+
+        @top-right {
+            content: element(firstPageHeader);
+        }
+    }
 }

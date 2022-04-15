@@ -32,7 +32,10 @@ Bestuurder Stichting Bemiddeling en Fondsbeheer
 </address>
 <time>Utrecht, 2022-01-01</time>
 <reference>
-    <strong>Onderwerp:</strong> Afwijzing uitbetaling borgstelling<br>
-    <strong>Uw referentie:</strong> 4564657-1<br>
-    <strong>Gemeente:</strong> Gemeente Zwolle
+    <dt>Onderwerp</dt>
+    <dd>Afwijzing uitbetaling borgstelling</dd>
+    <dt>Uw referentie</dt>
+    <dd>4564657-1</dd>
+    <dt>Gemeente</dt>
+    <dd>Gemeente Zwolle</dd>
 </reference>
