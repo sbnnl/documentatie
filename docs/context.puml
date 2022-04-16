@@ -7,19 +7,23 @@ class SBN
 interface Uitvoerder
 class SBF
 
-interface "Krediet verstrekker" as Contractant
+interface Kredietverstrekker
 class Kredietbank
 
 interface Handelsmerk
 class Wsk
 
- Uitvoerder <|.. SBF : "is de uitvoerder"
-SBF --> Kredietbank : "Verstrekt borgstellingen aan"
-SBF --> Wsk : "Communiceert vanuit"
-SBF --> SBN : "Heeft uitvoering uitbesteed aan"
+interface Gemeente
 
-Kredietbank ..|> Contractant  : "is een contractant"
-Wsk ..|> Handelsmerk : "is het handelsmerk"
-SBN ..|> Uitvoeringsorgansatie : "is de uitvoeringsorganisatie"
+SBF ..|> Uitvoerder : "is de"
+Uitvoerder --> Kredietverstrekker : "Verstrekt borgstellingen aan"
+Uitvoerder --> Handelsmerk : "Communiceert vanuit"
+Uitvoerder --> Uitvoeringsorgansatie : "Heeft uitvoering uitbesteed aan"
+
+Kredietverstrekker <|.. Kredietbank : "is een"
+Handelsmerk <|.. Wsk : "is het"
+Uitvoeringsorgansatie <|.. SBN : "is de"
+
+Kredietbank "1" *-- "N" Gemeente : "in opdracht van"
 
 @enduml
