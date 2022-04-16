@@ -7,7 +7,7 @@ class SBN
 interface Uitvoerder
 class SBF
 
-interface Contractant
+interface "Krediet verstrekker" as Contractant
 class Kredietbank
 
 interface Handelsmerk
