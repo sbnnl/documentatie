@@ -14,6 +14,7 @@ interface Handelsmerk
 class Wsk
 
 interface Gemeente
+interface Client
 
 SBF ..|> Uitvoerder : "is de"
 Uitvoerder --> Kredietverstrekker : "Verstrekt borgstellingen aan"
@@ -24,6 +25,7 @@ Kredietverstrekker <|.. Kredietbank : "is een"
 Handelsmerk <|.. Wsk : "is het"
 Uitvoeringsorgansatie <|.. SBN : "is de"
 
-Kredietbank "1" *-- "N" Gemeente : "in opdracht van"
+Kredietbank *--> Client : "verstrekt krediet aan"
+Kredietbank *--> Gemeente : "werkt in opdracht van"
 
 @enduml
