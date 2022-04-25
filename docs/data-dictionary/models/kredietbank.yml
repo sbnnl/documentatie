@@ -9,6 +9,8 @@ properties:
     $ref: "../types/kredietbank_naam.yml"
   iban:
     $ref: "../types/iban.yml"
+  contact:
+    $ref: "../types/email.yml"
   gemeenten:
     type: array
     description: Een verzameling gemeenten voor wie de kredietbank saneringskredieten verstrekt.
