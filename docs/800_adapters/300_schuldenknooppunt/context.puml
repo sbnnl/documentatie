@@ -1,0 +1,13 @@
+@startuml
+
+cloud Schuldenknooppunt {
+
+}
+
+cloud Waarborgfonds {
+    interface HTTPS
+    HTTPS -- [Waarborgfonds]
+}
+
+
+@enduml
