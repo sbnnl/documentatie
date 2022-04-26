@@ -1,5 +1,5 @@
 type: string
 format: uri
-description: Tijdelijke geautoriseerde link naar het document.
+description: Link naar het document.
 readOnly: true
-example: https://waarborgfonds.sbn.nl/kredietbanken/88b33783-0a04-4d94-afae-a6d117d63ad8/documenten/f242f4e7-4ddc-4dbb-a3c1-9ab1a1dea74e.pdf?autorisatie=aca62a5c-ddea-4992-8e92-bdbcda5b1ee9
+example: https://waarborgfonds.sbn.nl/kredietbanken/88b33783-0a04-4d94-afae-a6d117d63ad8/documenten/f242f4e7-4ddc-4dbb-a3c1-9ab1a1dea74e.pdf
