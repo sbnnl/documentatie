@@ -18,6 +18,24 @@ hosting:
 #     401: /aanmelden
 #     403: /aangemeld
 message:
+  email:
+    from: afa0f657-ba5b-4f6f-bc4e-6ac8dd63d76b@wsk.sbn.nl
+    to: p.de.vries@zwolle.nl
+    subject: Extra informatie saneringskrediet 4564657-1 
+  letter:
+    time: Utrecht, 2022-01-01
+    address: |
+      Kredietbank Zwolle
+      t.a.v. afdeling kredietverlening
+      Postbus 100070
+      8000 GA Zwolle
+    reference: |
+      <dt>Onderwerp:</dt>
+      <dd>Beëindiging aanvraag borgstelling</dd>
+      <dt>Uw referentie:</dt>
+      <dd>4564657-1</dd>
+      <dt>Gemeente:</dt>
+      <dd>Gemeente Zwolle</dd>
   footer: |
     <address>
         Waarborgfonds Saneringskredieten<br>
