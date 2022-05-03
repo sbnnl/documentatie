@@ -1,7 +1,7 @@
 user-task:
   name: Beoordel uitbetaling verzoek
   schema:
-    $ref: "../../../data-dictionary/user_tasks/beoordeel_uitbetaling_verzoek.yml"
+    $ref: "../../../data-dictionary/user_tasks/beoordeel_uitbetaling_verzoek_uitgebreid.yml"
   ui:
     hidden:
       - taak_id

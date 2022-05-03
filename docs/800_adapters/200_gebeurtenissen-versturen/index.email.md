@@ -10,7 +10,7 @@ Met vriendelijke groet,
 
 Waarborgfonds Saneringskredieten
 
-<from>fondsbeheerder@wsk.sbn.nl</from>
+<from>fondsbeheerder@waarborgfonds.sbn.nl</from>
 <to>kredietverlening@zwolle.nl</to>
 <subject>Borgstelling aanvraag voor saneringskrediet met kenmerk 5461135-1</subject>
 

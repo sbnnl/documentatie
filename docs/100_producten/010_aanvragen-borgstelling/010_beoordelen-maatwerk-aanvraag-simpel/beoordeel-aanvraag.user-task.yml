@@ -7,46 +7,6 @@ user-task:
       - taak_id
       - borgstelling_id
 actions:
-  geef_informatie:
-    name: Geef informatie
-    schema: 
-      $ref: "../../../data-dictionary/commands/geef_aanvullende_informatie.yml"
-    ui:
-      hidden:
-        - command_id
-        - correlation_id
-        - causation_id
-        - actie
-  beantwoorden:
-    name: Beantwoorden
-    schema: 
-      $ref: "../../../data-dictionary/commands/beantwoord_aanvullende_vragen.yml"
-    ui:
-      hidden:
-        - command_id
-        - correlation_id
-        - causation_id
-        - actie
-  positief_adviseren:
-    name: Positief adviseren
-    schema: 
-      $ref: "../../../data-dictionary/commands/geef_positief_advies.yml"
-    ui:
-      hidden:
-        - command_id
-        - correlation_id
-        - causation_id
-        - actie  
-  negatief_adviseren:
-    name: Negatief adviseren
-    schema: 
-      $ref: "../../../data-dictionary/commands/geef_negatief_advies.yml"
-    ui:
-      hidden:
-        - command_id
-        - correlation_id
-        - causation_id
-        - actie  
   goedkeuren:
     name: Goedkeuren
     schema: 
@@ -61,6 +21,26 @@ actions:
     name: Afwijzen
     schema: 
       $ref: "../../../data-dictionary/commands/wijs_aanvraag_af.yml"
+    ui:
+      hidden:
+        - command_id
+        - correlation_id
+        - causation_id
+        - actie
+  vraag_stellen:
+    name: Vraag stellen
+    schema: 
+      $ref: "../../../data-dictionary/commands/stel_aanvullende_vragen.yml"
+    ui:
+      hidden:
+        - command_id
+        - correlation_id
+        - causation_id
+        - actie
+  advies_vragen:
+    name: Advies vragen
+    schema: 
+      $ref: "../../../data-dictionary/commands/vraag_advies.yml"
     ui:
       hidden:
         - command_id

@@ -24,14 +24,27 @@ properties:
           - $ref: "../models/saneringskrediet.yml"
     required:
       - geregistreerd
-      - opgegeven  
-  berichten:
+      - opgegeven
+  redenen_oninbaar:
+    $ref: "../types/saneringskrediet_redenen_oninbaar.yml"
+  inning_acties:
+    $ref: "../types/saneringskrediet_inning_acties.yml"
+  aanvullende_vragen:
     type: array
-    minItems: 1
+    title: aanvullende vragen
     items:
-      $ref: '../models/email.yml'
+      type: object
+      properties:
+        vraag:
+          $ref: "../types/aanvullende_uitbetaling_vragen.yml"
+        antwoord:
+          $ref: "../types/antwoord_op_aanvullende_uitbetaling_vragen.yml"
+      required:
+        - vraag
+        - antwoord
 required:
   - taak_id
   - borgstelling_id
   - saneringskrediet
-  - berichten
+  - redenen_oninbaar
+  - inning_acties

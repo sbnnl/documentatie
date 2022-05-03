@@ -19,7 +19,7 @@ hosting:
 #     403: /aangemeld
 message:
   email:
-    from: afa0f657-ba5b-4f6f-bc4e-6ac8dd63d76b@wsk.sbn.nl
+    from: afa0f657-ba5b-4f6f-bc4e-6ac8dd63d76b@waarborgfonds.sbn.nl
     to: p.de.vries@zwolle.nl
     subject: Extra informatie saneringskrediet 4564657-1 
   letter:
