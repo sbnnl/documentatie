@@ -18,22 +18,6 @@ Het doel van het product is om te komen tot een weloverwogen keuze of borgstelli
 * [Email](geef-aanvullende-informatie.email.md)
 * [Acceptatie criteria](../../verstuur-email.feature)
 
-### Beoordeel aanvraag
-
-De maatwerk aanvraag wordt beoordeeld door een medewerker van het Wsk (beoordelaar). De medewerker gebruikt email en telefoon om:
-
-* extra informatie op te vragen bij de aanvragende kredietbank;
-* aanvullende vragen te stellen aan de aanvragende kredietbank;
-* advies in te winnen bij een adviserende kredietbank;
-
-De beoordelaar is verantwoordelijk om de reacties in het systeem vast te leggen.
-
-<!-- einde -->
-
-* [Formulier](beoordeel-aanvraag.user-task.yml)
-* [API](beoordeel-aanvraag.openapi.yml)
-* [Acceptatie criteria](beoordeel-aanvraag.feature)
-
 ### Beantwoord aanvullende vragen
 
 * [Email](beantwoord-aanvullende-vragen.email.md)
@@ -43,8 +27,25 @@ De beoordelaar is verantwoordelijk om de reacties in het systeem vast te leggen.
 
 Aangesloten kredietbanken kunnen door het Wsk gevraagd worden om een advies uit te brengen over een maatwerk borgstelling aanvraag. Deze "geef advies berichten" moeten evenredig over de kredietbanken verdeeld worden.
 
-* [Formulier](geef-advies.email.md)
+* [Email](geef-advies.email.md)
 * [Acceptatie criteria](../../verstuur-email.feature)
+
+### Beoordeel aanvraag
+
+Een maatwerk aanvraag met de aanvullende informatie, eventuele antwoorden op vragen en een eventueel advies van een andere kredietbank wordt beoordeeld door het Wsk.
+
+Deze taak kent de volgende uitkomsten:
+
+* Aanvraag goedgekeurd
+* Aanvraag afgewezen
+* Vraag gesteld
+* Advies gevraagd
+
+<!-- einde -->
+
+* [Formulier](beoordeel-aanvraag.user-task.yml)
+* [API](beoordeel-aanvraag.openapi.yml)
+* [Acceptatie criteria](beoordeel-aanvraag.feature)
 
 ### Fiatteer aanvraag
 

@@ -6,27 +6,11 @@ user-task:
     hidden:
       - taak_id
       - borgstelling_id
+      - redenen_oninbaar.oneOf.type
+      - redenen_oninbaar.oneOf.mime_type
+      - redenen_oninbaar.oneOf.data
+      - inning_acties.oneOf.type
 actions:
-  geef_informatie:
-    name: Geef informatie
-    schema: 
-      $ref: "../../../data-dictionary/commands/geef_aanvullende_uitbetaling_informatie.yml"
-    ui:
-      hidden:
-        - command_id
-        - correlation_id
-        - causation_id
-        - actie
-  beantwoorden:
-    name: Beantwoorden
-    schema: 
-      $ref: "../../../data-dictionary/commands/beantwoord_aanvullende_uitbetaling_vragen.yml"
-    ui:
-      hidden:
-        - command_id
-        - correlation_id
-        - causation_id
-        - actie
   goedkeuren:
     name: Goedkeuren
     schema: 
@@ -41,6 +25,16 @@ actions:
     name: Afwijzen
     schema: 
       $ref: "../../../data-dictionary/commands/wijs_uitbetaling_verzoek_af.yml"
+    ui:
+      hidden:
+        - command_id
+        - correlation_id
+        - causation_id
+        - actie
+  vragen:
+    name: Vraag stellen
+    schema: 
+      $ref: "../../../data-dictionary/commands/stel_aanvullende_uitbetaling_vragen.yml"
     ui:
       hidden:
         - command_id
