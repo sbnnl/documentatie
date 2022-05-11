@@ -1,4 +1,4 @@
-Beste heer, mevrouw,
+Beste lezer,
 
 Waarom is het uitbetalingsverzoek later dan gebruikelijk ingediend?
  
