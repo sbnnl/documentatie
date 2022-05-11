@@ -1,0 +1,16 @@
+@startuml
+
+cloud "Sociale Banken Nederland" {
+    package "Waarborgfonds" {
+        [Waarborgfonds] as Wsk
+        [Adapter] as SchuldenknooppuntAdapter
+
+        Wsk <-- SchuldenknooppuntAdapter
+    }
+
+    [Schuldenknooppunt]
+    
+    SchuldenknooppuntAdapter --> Schuldenknooppunt
+}
+
+@enduml
