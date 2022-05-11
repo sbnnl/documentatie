@@ -8,10 +8,7 @@ De schuldenknooppunt adapter zorgt ervoor dat het schuldenknooppunt gekoppeld wo
 1. Gebeurtenissen die bij het Wsk hebben plaatsgevonden moeten verwerkt worden in het schuldenknooppunt;
 1. Periodiek aanlevering van actieve saneringskredieten en saneringskredieten die actief zijn geweest in de periode sinds de laatste aanlevering;
 
-De adapter kan binnen of buiten het waarborgfonds gerealiseerd worden. Wanneer de adapter buiten het waarborgfonds wordt gerealiseerd spreken we over een externe adapter waarbij de communicatie met waarborgfonds via een REST API verloopt.
-
-* [Interne adapter](context-intern.puml)
-* [Externe adapter](context-extern.puml)
+* [Context](context.puml)
 
 ## Opdrachten versturen
 
