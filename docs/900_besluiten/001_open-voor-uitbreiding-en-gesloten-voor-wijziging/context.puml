@@ -2,47 +2,38 @@
 
 cloud "Kredietbank A" {
     [Stratech V1] as KbaStratech
-    [Adapter] as KbaAdapter
-
-    KbaStratech <--> KbaAdapter
 }
 
 cloud "Kredietbank B" {
     [Stratech V2] as KbfStratech
-    [Adapter] as KbfAdapter
-
-    KbfStratech <--> KbfAdapter
 }
 
 
 cloud "Kredietbank C" {
     [Allegro V1] as KbbAllegro
-    [Adapter] as KbbAdapter
-
-    KbbAllegro <--> KbbAdapter
 }
 
 cloud "Kredietbank D" {
     [Allegro V2] as KbcAllegro
-    [Adapter] as KbcAdapter
-
-    KbcAllegro <--> KbcAdapter
 }
 
 cloud "Sociale Banken Nederland" {
-    [Waarborgfonds] as Wsk
-    () "API" as API
+    package "Waarborgfonds" {
+        [Waarborgfonds] as Wsk
+        () "API" as API
+    }
+
     [Schuldenknooppunt]    
     [Adapter] as SchuldenknooppuntAdapter
 
-    API --> Wsk
+    Wsk <-- API
     API <-- SchuldenknooppuntAdapter
-    SchuldenknooppuntAdapter <--> Schuldenknooppunt
+    SchuldenknooppuntAdapter --> Schuldenknooppunt
 }
 
-KbfAdapter --> API
-KbaAdapter --> API
-KbbAdapter --> API
-KbcAdapter --> API
+Schuldenknooppunt <-- KbaStratech
+Schuldenknooppunt <-- KbfStratech
+Schuldenknooppunt <-- KbbAllegro
+Schuldenknooppunt <-- KbcAllegro
 
 @enduml
