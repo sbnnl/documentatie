@@ -1,11 +1,11 @@
 Beste heer, mevrouw,
 
 Wij hebben het verzoek gekregen om de borgstelling voor het saneringskrediet met kenmerk *5461135-1* uit te betalen.
-Voordat wij over kunnen gaan tot uitbetalen hebben wij nog aan aanvullende informatie van u nodig.
+Voordat wij over kunnen gaan tot uitbetalen hebben wij nog aanvullende informatie van u nodig.
 
 ## Actuele gegevens
 
-Dit zijn de gegevens zoals die bij ons bekent zijn. Deze gegevens worden gebruikt om het uit te betalen bedrag vast te stellen.
+Dit zijn de gegevens zoals die bij ons bekend zijn. Deze gegevens worden gebruikt om het uit te betalen bedrag vast te stellen.
 Controleer daarom of deze gegevens juist zijn.
 
 |   |   |
@@ -18,7 +18,7 @@ Controleer daarom of deze gegevens juist zijn.
 
 ## Vragen
 
-* Zijn de gegevens actueel?
+* Zijn de gegevens, zoals die hierboven vermeld staan, juist?
 * Om welke reden is het saneringskrediet oninbaar gebleken? (meerdere antwoorden mogelijk)
     * [ ] Overleden
     * [ ] Verhuis naar een onbekend adres
