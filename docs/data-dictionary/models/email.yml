@@ -21,7 +21,7 @@ properties:
       email:
         type: string
         format: email
-        example: afa0f657-ba5b-4f6f-bc4e-6ac8dd63d76b@dossier-waarborgfonds.sbn.nl
+        example: afa0f657-ba5b-4f6f-bc4e-6ac8dd63d76b@waarborgfonds.sbn.nl
   aan:
     type: object
     required:

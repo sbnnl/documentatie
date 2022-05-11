@@ -1,4 +1,4 @@
-Beste heer, mevrouw,
+Beste lezer,
 
 Zijn er omstandigheden die de terugbetaling in gevaar kunnen brengen zoals hoge kosten voor de reparatie van een auto of iets dergelijks?
 
