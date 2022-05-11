@@ -24,6 +24,8 @@ allOf:
           - bedrag
           - zekerheid
           - uitleg
+      ontstaansreden:
+        $ref: "../types/ontstaansreden.yml"
       bijzondere_omstandigheden:
         $ref: "../types/bijzondere_omstandigheden.yml"
       aanvullende_opmerkingen:

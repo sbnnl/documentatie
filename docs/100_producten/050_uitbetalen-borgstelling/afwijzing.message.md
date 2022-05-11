@@ -26,7 +26,7 @@ Bestuurder Stichting Bemiddeling en Fondsbeheer
 
 <address>
     Kredietbank Zwolle<br>
-    t.a.v. afdeling kredietverlening
+    t.a.v. afdeling kredietverlening<br>
     Postbus 100070<br>
     8000 GA Zwolle
 </address>

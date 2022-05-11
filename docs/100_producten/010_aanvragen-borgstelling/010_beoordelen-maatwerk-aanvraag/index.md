@@ -1,4 +1,4 @@
-# Beoordeel maatwerk aanvraag (simpel)
+# Beoordeel maatwerk aanvraag
 
 ## Product
 
@@ -13,15 +13,33 @@ Het doel van het product is om te komen tot een weloverwogen keuze of borgstelli
 
 ## Use-cases
 
+### Geef aanvullende informatie
+
+* [Email](geef-aanvullende-informatie.email.md)
+* [Acceptatie criteria](../../verstuur-email.feature)
+
+### Beantwoord aanvullende vragen
+
+* [Email](beantwoord-aanvullende-vragen.email.md)
+* [Acceptatie criteria](../../verstuur-email.feature)
+
+### Geef advies
+
+Aangesloten kredietbanken kunnen door het Wsk gevraagd worden om een advies uit te brengen over een maatwerk borgstelling aanvraag. Deze "geef advies berichten" moeten evenredig over de kredietbanken verdeeld worden.
+
+* [Email](geef-advies.email.md)
+* [Acceptatie criteria](../../verstuur-email.feature)
+
 ### Beoordeel aanvraag
 
-De maatwerk aanvraag wordt beoordeeld door een medewerker van het Wsk (beoordelaar). De medewerker gebruikt email en telefoon om:
+Een maatwerk aanvraag met de aanvullende informatie, eventuele antwoorden op vragen en een eventueel advies van een andere kredietbank wordt beoordeeld door het Wsk.
 
-* extra informatie op te vragen bij de aanvragende kredietbank;
-* aanvullende vragen te stellen aan de aanvragende kredietbank;
-* advies in te winnen bij een adviserende kredietbank;
+Deze taak kent de volgende uitkomsten:
 
-De beoordelaar is verantwoordelijk om de reacties in het systeem vast te leggen.
+* Aanvraag goedgekeurd
+* Aanvraag afgewezen
+* Vraag gesteld
+* Advies gevraagd
 
 <!-- einde -->
 

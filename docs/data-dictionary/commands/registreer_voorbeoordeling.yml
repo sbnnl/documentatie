@@ -3,7 +3,9 @@ allOf:
   - title: registreer voorbeoordeling
     properties:
       kenmerk:
-        $ref: "../types/kenmerk_client_kredietbank.yml"  
+        $ref: "../types/kenmerk_client_kredietbank.yml"
+      contact:
+        $ref: "../types/email.yml"
       kredietsom:
         type: object
         title: Kredietsom
@@ -20,8 +22,8 @@ allOf:
       looptijd:
         $ref: "../types/looptijd_in_maanden.yml"
     required:
-      - kredietbank_id
       - kenmerk
+      - email
       - kredietsom
       - aflossing
       - looptijd

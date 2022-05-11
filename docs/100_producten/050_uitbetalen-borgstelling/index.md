@@ -23,10 +23,7 @@ Start het proces uitbetalen borgstelling.
 
 ### Beoordelen uitbetalingsverzoek
 
-Voor de invulling van beoordelen uitbetalingsverzoek bestaan twee opties:
-
-* [optie 1 (simpel)](beoordelen-uitbetalingsverzoek-simpel/index.md)
-* [optie 2 (uitgebreid)](beoordelen-uitbetalingsverzoek-uitgebreid/index.md)
+[Zie het beoordelen uitbetalingsverzoek product voor meer informatie.](beoordelen-uitbetalingsverzoek/index.md)
 
 ### Betaal borgstelling uit
 

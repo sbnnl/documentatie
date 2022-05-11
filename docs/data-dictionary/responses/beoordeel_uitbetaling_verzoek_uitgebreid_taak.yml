@@ -1,0 +1,5 @@
+
+allOf:
+  - title: beoordeel uitbetaling verzoek
+  - $ref: "types/response.yml"
+  - $ref: "../user_tasks/beoordeel_uitbetaling_verzoek_uitgebreid.yml"

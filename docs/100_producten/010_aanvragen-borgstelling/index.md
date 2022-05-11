@@ -53,10 +53,7 @@ De informatie van de aanvraag wordt automatisch beoordeeld op basis van regels i
 
 ### Beoordelen maatwerk aanvraag
 
-Voor de invulling van beoordelen maatwerk aanvraag bestaan twee opties:
-
-* [optie 1 (simpel)](beoordelen-maatwerk-aanvraag-simpel/index.md)
-* [optie 2 (uitgebreid)](beoordelen-maatwerk-aanvraag-uitgebreid/index.md)
+[Zie het beoordelen maatwerk aanvraag product voor meer informatie.](beoordelen-maatwerk-aanvraag/index.md)
 
 ### Archiveer contract
 

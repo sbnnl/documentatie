@@ -5,6 +5,8 @@ properties:
     $ref: "../types/soort_aanvraag.yml"
   kenmerk:
     $ref: "./kenmerk.yml"
+  contact:
+    $ref: "../types/email.yml"
   postcode:
     $ref: "../types/postcode_gebied.yml"
   kredietsom:
@@ -25,6 +27,7 @@ properties:
 required:
   - soort_aanvraag
   - kenmerk
+  - email
   - postcode
   - kredietsom
   - aflossing

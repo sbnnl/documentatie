@@ -4,23 +4,25 @@ info:
   version: 0.0.1
   title: Waarborgfonds saneringskredieten
   description: |
+
 paths:
 
-  /api/kredietbanken/{kredietbank_id}/beoordeel-uitbetaling-verzoek-taken/{taak_id}:    
-    parameters:        
+  /api/kredietbanken/{kredietbank_id}/beoordeel-aanvraag-taken/{taak_id}:
+    parameters:
+      - $ref: "../../../data-dictionary/parameters/kredietbank_id.yml"
       - $ref: "../../../data-dictionary/parameters/taak_id.yml"
     get:
       tags:
-        - beoordeel uitbetalingsverzoek taken
-      summary: Geeft een beoordeel uitbetalingsverzoek taak.
-      operationId: GeefBeoordeelUitbetalingVerzoekTaakV1
+        - beoordeel aanvraag taken
+      summary: Geeft een beoordeel aanvraag taak.
+      operationId: GeefBeoordeelAanvraagTaakV1
       responses:
         200:          
           description: OK
           content:
             application/json:
               schema:
-                $ref: "../../../data-dictionary/responses/beoordeel_uitbetaling_verzoek_taak.yml"
+                $ref: "../../../data-dictionary/responses/beoordeel_aanvraag_taak.yml"
         400:
           $ref: "../../../data-dictionary/responses/types/400.yml"
         401:
@@ -29,24 +31,22 @@ paths:
           $ref: "../../../data-dictionary/responses/types/403.yml"
         404:
           $ref: "../../../data-dictionary/responses/types/404.yml"
-    patch:      
+
+  /api/kredietbanken/{kredietbank_id}/beoordeel-aanvraag-taken/{taak_id}/goedkeuren:
+    parameters:
+      - $ref: "../../../data-dictionary/parameters/kredietbank_id.yml"        
+      - $ref: "../../../data-dictionary/parameters/taak_id.yml"
+    put:
       tags:
-        - beoordeel uitbetalingsverzoek taken
-      summary: Vult het uitbetalingsverzoek aan met extra informatie.
-      operationId: VulUitbetalingsVerzoekAanvraagAanV1
+        - beoordeel aanvraag taken
+      summary: Keurt de aanvraag borgstelling goed.
+      operationId: VoltooiBeoordeelAanvraagTaakMetGoedkeurenV1
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              oneOf:
-                - $ref: "../../../data-dictionary/commands/geef_aanvullende_uitbetaling_informatie.yml"
-                - $ref: "../../../data-dictionary/commands/beantwoord_aanvullende_uitbetaling_vragen.yml"
-              discriminator:
-                propertyName: actie
-                mapping:
-                  geef_informatie: "../../../data-dictionary/commands/geef_aanvullende_uitbetaling_informatie.yml"
-                  beantwoord_vragen: "../../../data-dictionary/commands/beantwoord_aanvullende_uitbetaling_vragen.yml"
+              $ref: "../../../data-dictionary/commands/keur_aanvraag_goed.yml"
       responses:
         202:
           $ref: "../../../data-dictionary/responses/types/202.yml"
@@ -59,21 +59,21 @@ paths:
         404:
           $ref: "../../../data-dictionary/responses/types/404.yml"
 
-  /api/kredietbanken/{kredietbank_id}/beoordeel-uitbetaling-verzoek-taken/{taak_id}/goedkeuren:
+  /api/kredietbanken/{kredietbank_id}/beoordeel-aanvraag-taken/{taak_id}/afwijzen:
     parameters:
       - $ref: "../../../data-dictionary/parameters/kredietbank_id.yml"
       - $ref: "../../../data-dictionary/parameters/taak_id.yml"
     put:
       tags:
-        - beoordeel uitbetalingsverzoek taken
-      summary: Keurt het uitbetalingsverzoek van de borgstelling goed.
-      operationId: VoltooiBeoordeelUitbetalingVerzoekTaakMetGoedkeurenV1
+        - beoordeel aanvraag taken
+      summary: Wijst de aanvraag borgstelling af.
+      operationId: VoltooiBeoordeelAanvraagTaakMetAfwijzenV1
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: "../../../data-dictionary/commands/keur_uitbetaling_verzoek_goed.yml"
+              $ref: "../../../data-dictionary/commands/wijs_aanvraag_af.yml"
       responses:
         202:
           $ref: "../../../data-dictionary/responses/types/202.yml"
@@ -86,21 +86,48 @@ paths:
         404:
           $ref: "../../../data-dictionary/responses/types/404.yml"
 
-  /api/kredietbanken/{kredietbank_id}/beoordeel-uitbetaling-verzoek-taken/{taak_id}/afwijzen:
+  /api/kredietbanken/{kredietbank_id}/beoordeel-aanvraag-taken/{taak_id}/vraag-stellen:
     parameters:
       - $ref: "../../../data-dictionary/parameters/kredietbank_id.yml"
       - $ref: "../../../data-dictionary/parameters/taak_id.yml"
     put:
       tags:
-        - beoordeel uitbetalingsverzoek taken
-      summary: Wijst het uitbetalingsverzoek van de borgstelling af.
-      operationId: VoltooiBeoordeelUitbetalingVerzoekMetAfwijzenV1
+        - beoordeel aanvraag taken
+      summary: Voltooit de beoordeel aanvraag taak met vraag stellen.
+      operationId: VoltooiBeoordeelAanvraagTaakMetVraagStellenV1
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: "../../../data-dictionary/commands/wijs_uitbetaling_verzoek_af.yml"
+              $ref: "../../../data-dictionary/commands/stel_aanvullende_vragen.yml"
+      responses:
+        202:
+          $ref: "../../../data-dictionary/responses/types/202.yml"
+        400:
+          $ref: "../../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../../data-dictionary/responses/types/403.yml"
+        404:
+          $ref: "../../../data-dictionary/responses/types/404.yml"
+
+  /api/kredietbanken/{kredietbank_id}/beoordeel-aanvraag-taken/{taak_id}/advies-vragen:
+    parameters:
+      - $ref: "../../../data-dictionary/parameters/kredietbank_id.yml"
+      - $ref: "../../../data-dictionary/parameters/taak_id.yml"
+    put:
+      tags:
+        - beoordeel aanvraag taken
+      summary: Voltooit de beoordeel aanvraag taak met advies vragen.
+      operationId: VoltooiBeoordeelAanvraagTaakMetAdviesVragenV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "../../../data-dictionary/commands/vraag_advies.yml"
       responses:
         202:
           $ref: "../../../data-dictionary/responses/types/202.yml"

@@ -1,0 +1,4 @@
+type: string
+format: email
+description: Email adres
+example: kredietverlening@zwolle.nl

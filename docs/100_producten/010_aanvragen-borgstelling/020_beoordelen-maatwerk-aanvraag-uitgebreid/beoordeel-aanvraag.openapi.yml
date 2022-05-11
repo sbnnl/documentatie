@@ -22,7 +22,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "../../../data-dictionary/responses/beoordeel_aanvraag_taak.yml"
+                $ref: "../../../data-dictionary/responses/beoordeel_aanvraag_uitgebreid_taak.yml"
         400:
           $ref: "../../../data-dictionary/responses/types/400.yml"
         401:

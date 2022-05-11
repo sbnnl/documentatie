@@ -13,14 +13,19 @@ Het doel van beoordelen uitbetalingsverzoek is om vast te stellen of een uitbeta
 
 ## Use-cases
 
+### Geef aanvullende informatie
+
+* [Email](geef-aanvullende-informatie.email.md)
+* [Acceptatie criteria](../../verstuur-email.feature)
+
+### Beantwoord aanvullende vragen
+
+* [Email](beantwoord-aanvullende-vragen.email.md)
+* [Acceptatie criteria](../../verstuur-email.feature)
+
 ### Beoordeel uitbetalingsverzoek
 
-Het uitbetalingsverzoek wordt beoordeeld door een medewerker van het Wsk (beoordelaar). De medewerker gebruikt email en telefoon om:
-
-* extra informatie op te vragen bij de aanvragende kredietbank;
-* aanvullende vragen te stellen aan de aanvragende kredietbank;
-
-De beoordelaar is verantwoordelijk om de reacties in het systeem vast te leggen.
+Beoordeelt het verzoek tot uitbetaling van de borgstelling en stelt het uit te betalen bedrag vast.
 
 * [Formulier](beoordeel-uitbetaling-verzoek.user-task.yml)
 * [API](beoordeel-uitbetaling-verzoek.openapi.yml)
