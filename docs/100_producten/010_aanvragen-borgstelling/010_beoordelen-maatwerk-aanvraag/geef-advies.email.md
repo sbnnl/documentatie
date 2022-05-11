@@ -1,4 +1,4 @@
-Beste heer, mevrouw,
+Beste lezer,
 
 Graag jullie advies in deze casus. Hoe beoordelen jullie de mate van zekerheid van het inkomen?
  
