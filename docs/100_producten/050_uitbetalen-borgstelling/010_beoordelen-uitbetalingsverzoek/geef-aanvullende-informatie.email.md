@@ -1,7 +1,8 @@
-Beste heer, mevrouw,
+Beste lezer,
 
-Wij hebben het verzoek gekregen om de borgstelling voor het saneringskrediet met kenmerk *5461135-1* uit te betalen.
-Voordat wij over kunnen gaan tot uitbetalen hebben wij nog aanvullende informatie van u nodig.
+Wij hebben een verzoek gekregen om de borgstelling voor het saneringskrediet met kenmerk *5461135-1* uit te betalen. Om te beoordelen of wij tot uitbetaling over kunnen gaan willen wij je graag nog een paar vragen stellen. Deze vragen helpen ons om vast te stellen welke acties er zijn ondernomen om het saneringskrediet te kunnen innen en of er is voldaan aan het fondsbeleid. 
+
+De volgende vragen willen wij je graag stellen:
 
 ## Actuele gegevens
 
@@ -41,7 +42,11 @@ Controleer daarom of deze gegevens juist zijn.
         * [ ] Huisbezoek
         * [ ] Betalingsregeling
         * [ ] Anders, namelijk...
+* Is aan het incassobeleid van de kredietbank volledig voldaan?
+
 * Zijn er nog opmerkingen die relevant kunnen zijn voor het Waarborgfonds?
+
+Is er iets niet duidelijk of heb je zelf nog een vraag, neem dan contact op via het volgende mail adres: waarborgfonds@sbn.nl
 
 Met vriendelijke groet,
 
