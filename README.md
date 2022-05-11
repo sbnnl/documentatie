@@ -1,6 +1,6 @@
 # Documentatie
 
-Product documentatie van het waarborgfonds Saneringskredieten. Zie https://waarborgfonds.sbn.nl.
+Product documentatie van het waarborgfonds Saneringskredieten. Zie https://wsk.sbn.nl.
 
 ## Bouwen
 
