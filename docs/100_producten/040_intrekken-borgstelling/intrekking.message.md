@@ -1,4 +1,4 @@
-Beste heer, mevrouw,
+Beste lezer,
 
 Het Waarborgfonds Saneringskredieten (Wsk) heeft met u een overeenkomst voor de borgstelling van saneringskredieten.
 
