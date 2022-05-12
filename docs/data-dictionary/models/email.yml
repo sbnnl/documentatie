@@ -17,7 +17,7 @@ properties:
     properties:
       naam:
         type: string
-        example: Fondsbeheerder Wsk
+        example: Piet de Vries
       email:
         type: string
         format: email
