@@ -1,11 +1,16 @@
-allOf:  
-  - $ref: "types/command.yml"
-  - title: registreer voorbeoordeling
+allOf:
+  - title: geef voorbeoordeling
+  - $ref: "types/response.yml"
+  - type: object
+    required:
+      - kenmerk
+      - kredietsom
+      - aflossing
+      - looptijd
+      - status
     properties:
       kenmerk:
-        $ref: "../types/kenmerk_aanvrager.yml"
-      contact:
-        $ref: "../types/email.yml"
+        $ref: "../types/kenmerk_aanvrager.yml"  
       kredietsom:
         type: object
         title: Kredietsom
@@ -21,9 +26,5 @@ allOf:
         $ref: "../types/maandaflossing.yml"
       looptijd:
         $ref: "../types/looptijd_in_maanden.yml"
-    required:
-      - kenmerk
-      - email
-      - kredietsom
-      - aflossing
-      - looptijd
+      status:
+        $ref: "../types/voorbeoordeling_status.yml"

@@ -1,0 +1,5 @@
+type: string
+format: uuid 
+title: voorbeoordeling
+description: Uniek identificerend kenmerk van de voorbeoordeling.
+example: fc480280-918a-44bf-be2a-3e3f8a36619d

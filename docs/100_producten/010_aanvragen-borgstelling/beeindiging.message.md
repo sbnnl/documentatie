@@ -28,10 +28,10 @@ Bestuurder Stichting Bemiddeling en Fondsbeheer
 </address>
 <time>Utrecht, 2022-01-01</time>
 <reference>
-    <dt>Onderwerp:</dt>
+    <dt>Onderwerp</dt>
     <dd>Beëindiging aanvraag borgstelling</dd>
-    <dt>Uw referentie:</dt>
+    <dt>Uw referentie</dt>
     <dd>4564657-1</dd>
-    <dt>Gemeente:</dt>
+    <dt>Gemeente</dt>
     <dd>Gemeente Zwolle</dd>
 </reference>

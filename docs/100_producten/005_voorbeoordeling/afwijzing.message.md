@@ -2,7 +2,7 @@ Beste heer, mevrouw,
 
 Het Waarborgfonds Saneringskredieten (Wsk) heeft met u een overeenkomst voor de borgstelling van saneringskredieten.
 
-Wij hebben van u een voorbeoordeling aanvraag ontvangen voor een borgstelling van de afloscapaciteit van client met kenmerk *4564657*. De aanvraag hebben wij beoordeeld.
+Wij hebben van u een voorbeoordeling aanvraag ontvangen voor een borgstelling van de afloscapaciteit van een casus met kenmerk *4564657*. De aanvraag hebben wij beoordeeld.
 
 Om de volgende reden wijzen wij uw aanvraag voor borgstelling af:
 
@@ -33,10 +33,12 @@ Bestuurder Stichting Bemiddeling en Fondsbeheer
 </address>
 <time>Utrecht, 2022-01-01</time>
 <reference>
-    <dt>Onderwerp:</dt>
+    <dt>Onderwerp</dt>
     <dd>Negatieve voorbeoordeling</dd>
-    <dt>Uw referentie:</dt>
-    <dd>4564657-1</dd>
-    <dt>Gemeente:</dt>
+    <dt>Onze referentie</dt>
+    <dd>fc480280-918a-44bf-be2a-3e3f8a36619d</dd>
+    <dt>Uw referentie</dt>
+    <dd>4564657</dd>
+    <dt>Gemeente</dt>
     <dd>Gemeente Zwolle</dd>
 </reference>

@@ -6,7 +6,7 @@ allOf:
       naam:
         $ref: "../types/gebeurtenis_naam.yml"
       kenmerk:
-        $ref: "../models/kenmerk.yml"
+        $ref: "../types/kenmerk_aanvrager.yml"
       links:
         type: object
         properties:

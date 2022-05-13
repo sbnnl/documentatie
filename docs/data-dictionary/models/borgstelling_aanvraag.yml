@@ -3,8 +3,10 @@ title: borgstelling aanvraag
 properties:
   soort_aanvraag:
     $ref: "../types/soort_aanvraag.yml"
+  voorbeoordeling:
+    $ref: "../types/voorbeoordeling_id.yml"
   kenmerk:
-    $ref: "./kenmerk.yml"
+    $ref: "../types/kenmerk_aanvrager.yml"
   contact:
     $ref: "../types/email.yml"
   postcode:

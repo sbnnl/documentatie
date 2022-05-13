@@ -33,11 +33,11 @@ Aan de hand van het postcode gebied wordt de gemeente code vastgesteld. Het post
 
 * [Acceptatie criteria](aanvragen-borgstelling.feature)
 
-### Bepaal laatste voorbeoordeling
+### Bepaal voorbeoordeling
 
-Zoekt o.b.v. het kenmerk van de klant naar een optionele laatste voorbeoordeling. De gevonden voorbeoordeling wordt toegevoegd aan het proces.
+Zoekt o.b.v. het voorbeoordeling id de voorbeoordeling op. De gevonden voorbeoordeling informatie wordt toegevoegd aan het proces.
 
-* [Acceptatie criteria](bepaal-laatste-voorbeoordeling.feature)
+* [Acceptatie criteria](bepaal-voorbeoordeling.feature)
 
 ### Beoordeel aanvraag
 

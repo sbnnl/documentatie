@@ -37,7 +37,7 @@ Bestuurder Stichting Bemiddeling en Fondsbeheer
 </address>
 <time>Utrecht, 2022-01-01</time>
 <reference>
-    <dt>Onderwerp:</dt>
+    <dt>Onderwerp</dt>
     <dd>Borgstellingsovereenkomst</dd>
     <dt>Uw referentie:</dd>
     <dd>4564657-1</dd>
