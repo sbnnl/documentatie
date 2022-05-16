@@ -16,7 +16,6 @@ properties:
   statistieken:
     oneOf:
       - $ref: "../models/allegro_statistieken.yml"
-
 required:
   - soort_aanvraag
   - kenmerk
