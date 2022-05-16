@@ -6,17 +6,6 @@ allOf:
         $ref: "../types/kenmerk_aanvrager.yml"
       contact:
         $ref: "../types/email.yml"
-      kredietsom:
-        type: object
-        title: Kredietsom
-        properties:
-          bruto:
-            $ref: "../types/bruto_kredietsom.yml"
-          netto:
-            $ref: "../types/netto_kredietsom.yml"
-        required:
-          - bruto
-          - netto    
       aflossing:
         $ref: "../types/maandaflossing.yml"
       looptijd:

@@ -9,8 +9,6 @@ properties:
     type: object
     title: aanvraag
     properties:
-      kredietsom:
-        $ref: "../models/kredietsom.yml"
       aflossing:
         $ref: "../types/maandaflossing.yml"
       looptijd:

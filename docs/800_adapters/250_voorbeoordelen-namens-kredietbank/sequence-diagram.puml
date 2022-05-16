@@ -1,0 +1,31 @@
+@startuml
+autonumber
+
+actor Schuldhulpverlener as user
+participant "Kredietbank" as kredietbank
+participant "Wsk" as wsk
+
+user -> kredietbank : email verzoek
+
+kredietbank -> wsk : email ontvangen
+
+activate wsk
+
+wsk --> wsk : controleer afzender
+wsk --> wsk : maak voorbeoordeling link
+wsk -> user : email voorbeoordeling link
+
+deactivate wsk
+
+user -> wsk : open voorbeoordeling link
+wsk --> wsk : autoriseer
+wsk -> user : toon formulier
+user -> wsk : verstuur formulier
+wsk --> wsk : autoriseer
+wsk --> wsk : verwerk aanvraag
+wsk -> user : email aanvullende vragen
+user -> wsk : beantwoord aanvullende vragen
+wsk --> wsk : accepteer voorbeoordeling
+wsk -> user : email geacepteerde voorbeoordeling
+
+@enduml

@@ -2,7 +2,7 @@ type: array
 name: allegro statistieken
 description: Een verzameling statistieken vanuit Allegro.
 uniqueItems: true
-minItems: 14
-maxItems: 14
+minItems: 4
+maxItems: 4
 items:
   $ref: "./allegro_statistiek.yml"

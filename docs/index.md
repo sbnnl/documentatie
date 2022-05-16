@@ -20,6 +20,8 @@ Het Wsk verwezenlijkt deze doelstelling door:
 
 [e2e proces](proces.bpmn)
 
+Uit onderzoek is gebleken dat 92% van de kredietaanvragen binnen de voorwaarden passen waarbij de aanvraag automatisch geaccepteerd wordt. In deze gevallen is een voorbeoordeling niet nodig. Het proces is dan een STP proces en dit proces wordt normaal gesproken binnen een paar seconden voltooid.
+
 ## Organisatie
 
 Het werk van het Wsk is belegd bij twee stichtingen:

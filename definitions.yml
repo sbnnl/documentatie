@@ -85,6 +85,9 @@
   link: producten/gebeurtenissen/index.html
 
 - name: Voorbeoordeling
+  alias: 
+    - voorbeoordelen
+  link: producten/voorbeoordeling/index.html
   text: |
     Kredietbanken moeten al in een vroeg stadium weten of een saneringskrediet ingezet kan worden. Via een voorbeoordeling kan de kredietbank een borgstelling aanvragen op basis van de informatie die op dat moment bekent is. 
   
@@ -112,4 +115,7 @@
 - name: Gemeente code
   text: CBS code voor gemeenten. 
   link: https://www.cbs.nl/nl-nl/dossier/nederland-regionaal/gemeente/gemeenten-en-regionale-indelingen/codering-gebieden
+
+- name: STP
+  text: Straight Through Processing, een proces waarbij geen mensen betrokken zijn waardoor het volledig en automatisch doorlopen wordt.
     

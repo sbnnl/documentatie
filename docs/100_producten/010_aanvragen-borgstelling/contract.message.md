@@ -8,8 +8,8 @@ Het Wsk geeft voor dit saneringskrediet een borgstelling af.
 
 |                           |               |
 | ------------------------- | ------------- |
-| Bruto saneringskrediet    | € 5.485,67    |
-| Looptijd                  | 36 maanden    |
+| Verzekerd bedrag          | *€ 5.485,67*  |
+| Looptijd                  | *36 maanden*  |
 
 De voorwaarden voor de borgstelling zijn opgenomen in het Fondsbeleid “Groeien en Leren”, versie 2.0.
 
