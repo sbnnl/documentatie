@@ -31,6 +31,8 @@ paths:
         403:
           $ref: "../../data-dictionary/responses/types/403.yml"
 
+# TODO: voorbeoordelingen toevoegen op basis van kenmerken.
+
   /api/kredietbanken/{kredietbank_id}/voorbeoordelingen/{voorbeoordeling_id}:
     get:
       tags:

@@ -26,6 +26,10 @@ properties:
     $ref: "../types/maandaflossing.yml"
   looptijd:
     $ref: "../types/looptijd_in_maanden.yml"
+  statistieken:
+    oneOf:
+      - $ref: "../models/allegro_statistieken.yml"
+
 required:
   - soort_aanvraag
   - kenmerk
@@ -34,3 +38,4 @@ required:
   - kredietsom
   - aflossing
   - looptijd
+  - statistieken
