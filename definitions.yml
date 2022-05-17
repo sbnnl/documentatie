@@ -118,4 +118,7 @@
 
 - name: STP
   text: Straight Through Processing, een proces waarbij geen mensen betrokken zijn waardoor het volledig en automatisch doorlopen wordt.
+
+- name: MVP
+  text: Een minimum viable product (MVP) ofwel minimum levensvatbaar product is een product met genoeg functionaliteit om voldoende waarde te hebben om vroeg aansluitende klanten aan te trekken en om terugkoppeling te krijgen voor de verdere productontwikkeling.
     

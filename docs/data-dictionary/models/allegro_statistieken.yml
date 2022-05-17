@@ -1,5 +1,5 @@
 type: array
-name: allegro statistieken
+title: allegro statistieken
 description: Een verzameling statistieken vanuit Allegro.
 uniqueItems: true
 minItems: 4

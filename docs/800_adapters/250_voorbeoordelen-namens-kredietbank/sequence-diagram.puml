@@ -18,14 +18,32 @@ wsk -> user : email voorbeoordeling link
 deactivate wsk
 
 user -> wsk : open voorbeoordeling link
+
+
+activate wsk
+
 wsk --> wsk : autoriseer
 wsk -> user : toon formulier
+
+deactivate wsk
+
 user -> wsk : verstuur formulier
+
+activate wsk
+
 wsk --> wsk : autoriseer
 wsk --> wsk : verwerk aanvraag
 wsk -> user : email aanvullende vragen
+
+deactivate wsk
+
 user -> wsk : beantwoord aanvullende vragen
+
+activate wsk
+
 wsk --> wsk : accepteer voorbeoordeling
 wsk -> user : email geacepteerde voorbeoordeling
+
+deactivate wsk
 
 @enduml
