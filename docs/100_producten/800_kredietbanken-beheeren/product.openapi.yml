@@ -12,7 +12,7 @@ paths:
       tags:
         - kredietbanken
       summary: Maakt een kredietbank
-      operationId: WijzigKredietbankV1
+      operationId: MaakKredietbankV1
       requestBody:
         required: true
         content:
