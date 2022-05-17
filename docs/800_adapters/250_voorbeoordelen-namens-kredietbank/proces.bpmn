@@ -17,7 +17,7 @@
       <bpmn:outgoing>Flow_02x48up</bpmn:outgoing>
       <bpmn:outgoing>Flow_1y3695d</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:sendTask id="Activity_1llpsig" name="Verstuur voorbeoordelennamens">
+    <bpmn:sendTask id="Activity_1llpsig" name="Verstuur voorbeoordelen namens">
       <bpmn:incoming>Flow_02x48up</bpmn:incoming>
       <bpmn:outgoing>Flow_0ztqcr9</bpmn:outgoing>
     </bpmn:sendTask>
