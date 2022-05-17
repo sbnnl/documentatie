@@ -9,11 +9,12 @@ Het doel van deze roadmap is om inzicht te geven in de volgordelijkheid en afhan
 ## MVP
 
 Uit onderzoek is gebleken dat 92% van de aanvragen standaardaanvragen zijn. Deze aanvragen worden via een STP proces automatisch verwerkt.
-Voor standaardaanvragen is geen voorbeoordeling nodig.
-Aangezien de kans klein is dat borgstellingen in de eerste maanden al uitbetaald moeten worden wordt het uitbetalen borgstelling product later gerealiseerd.
-Het functioneel beheer op kredietbanken wordt door de leverancier gedaan.
-Het operationeel monitoren van het waarborgfonds wordt door de leverancier gedaan.
-De maatwerkaanvragen worden via het tijdelijke, handmatige, proces afgehandeld maar blijven openstaan in het systeem.
+
+* Voor standaardaanvragen is geen voorbeoordeling nodig.
+* Aangezien de kans klein is dat borgstellingen in de eerste maanden al uitbetaald moeten worden wordt het uitbetalen borgstelling product later gerealiseerd.
+* Het functioneel beheer op kredietbanken wordt door de leverancier gedaan.
+* Het operationeel monitoren van het waarborgfonds wordt door de leverancier gedaan.
+* De maatwerkaanvragen worden via het tijdelijke, handmatige, proces afgehandeld maar blijven openstaan in het systeem.
 
 **Scope:**
 
@@ -44,8 +45,10 @@ In deze feature krijgt het waarborgfonds inzage in de processen zodat het operat
 ## Maatwerk aanvragen borgstelling
 
 Het waarborgfonds kan m.b.v. deze feature maatwerk aanvragen via het systeem afhandelen.
-De voorbeoordeling kan alleen door de kredietbank aangevraagd worden.
-De email interactie met de kredietbank vanuit het systeem valt buiten de scope van deze feature.
+
+* De voorbeoordeling kan alleen door de kredietbank aangevraagd worden.
+* De email interactie met de kredietbank vanuit het systeem valt buiten de scope van deze feature.
+* De documenten van openstaande maatwerk aanvragen borgstelling moet geconverteerd / ingelezen worden zodat er nog maar één bron van waarheid is.
 
 **Scope:**
 
