@@ -7,24 +7,12 @@ properties:
   aanvraag:
     type: object
     title: aanvraag
-    properties:
-      kredietsom:
-        type: object
-        title: kredietsom
-        properties:
-          bruto:
-            $ref: "../types/bruto_kredietsom.yml"
-          netto:
-            $ref: "../types/netto_kredietsom.yml"
-        required:
-          - bruto
-          - netto
+    properties:      
       aflossing:
         $ref: "../types/maandaflossing.yml"
       looptijd:
         $ref: "../types/looptijd_in_maanden.yml"
     required:
-      - kredietsom
       - aflossing
       - looptijd
   aanvullende_informatie:

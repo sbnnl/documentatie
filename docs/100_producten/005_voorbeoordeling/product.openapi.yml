@@ -30,23 +30,29 @@ paths:
           $ref: "../../data-dictionary/responses/types/401.yml"
         403:
           $ref: "../../data-dictionary/responses/types/403.yml"
+
+# TODO: voorbeoordelingen toevoegen op basis van kenmerken.
+
+  /api/kredietbanken/{kredietbank_id}/voorbeoordelingen/{voorbeoordeling_id}:
     get:
       tags:
         - voorbeoordelingen
-      summary: Geeft een lijst met voorbeoordelingen
-      operationId: GeefVoorbeoordelingenV1
+      summary: Geeft een lijst met voorbeoordeling
+      operationId: GeefVoorbeoordelingV1
       parameters:
-        - $ref: "../../data-dictionary/parameters/kenmerk_client_kredietbank.yml"
+        - $ref: "../../data-dictionary/parameters/voorbeoordeling_id.yml"
       responses:
         200:          
           description: OK
           content:
             application/json:
               schema:
-                $ref: "../../data-dictionary/responses/geef_voorbeoordelingen.yml"
+                $ref: "../../data-dictionary/responses/geef_voorbeoordeling.yml"
         400:
           $ref: "../../data-dictionary/responses/types/400.yml"
         401:
           $ref: "../../data-dictionary/responses/types/401.yml"
         403:
           $ref: "../../data-dictionary/responses/types/403.yml"
+        424:
+          $ref: "../../data-dictionary/responses/types/404.yml"

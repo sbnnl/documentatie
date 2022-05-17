@@ -2,9 +2,9 @@
 
 ## Product
 
-Voordat er een saneringskrediet aanvraag gestart kan worden door de kredietbank moet de kredietbank weten of een mogelijke aanvraag geborgd gaat worden door het Wsk. 
+Voordat er een saneringskrediet aanvraag gestart kan worden door de kredietbank moet de kredietbank weten of een mogelijke aanvraag geborgd gaat worden door het Wsk. Een voorbeoordeling is alleen relevant voor maatwerk-aanvragen. Onderzoek heeft uitgewezen dat dit ongeveer 8% van de aanvragen zijn.
 
-Via een voorbeoordeling kan de kredietbank laten toetsen of het Wsk de afloscapaciteit van de client wil borgen.
+Via een voorbeoordeling kan de kredietbank laten toetsen of het Wsk de afloscapaciteit van de client wil borgen. De voorbeoordeling maakt onderdeel uit van het voortraject van de schuldhulpverlening en dit traject kan door de kredietbank of door de schuldhulpverlener uitgevoerd worden. Wanneer de schuldhulpverlener zelf het voortraject uitvoert dan kan het via de [voorbeoordelen namens kredietbank](../../adapters/voorbeoordelen-namens-kredietbank/index.md) adapter een voorbeoordeling aanvragen.
 
 <!-- einde -->
 

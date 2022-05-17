@@ -1,0 +1,5 @@
+allOf:
+  - in: path    
+    name: voorbeoordeling_id
+    required: true
+  - $ref: "../types/voorbeoordeling_id.yml"

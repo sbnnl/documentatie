@@ -9,6 +9,10 @@ Een aanvraag van een borgstelling door een kredietbank voor een saneringskrediet
 
 Het doel van de aanvraag borgstelling is om tot een beoordeling te komen of er voor een saneringskrediet een borgstelling kan worden afgegeven.
 
+Uit onderzoek is gebleken dat 92% van de aanvragen standaard aanvragen zijn. Deze aanvragen worden via een STP proces automatisch verwerkt waardoor er binnen enkele seconden een resultaat naar de aanvrager verstuurd wordt.
+
+Voor een maatwerk aanvraag borgstelling kan optioneel een verwijzing naar een voorbeoordeling opgegeven worden. Wanneer deze verwijzing bestaat dan mag die eenmalig meewegen in de definitieve beoordeling van de aanvraag.
+
 <!-- einde -->
 
 * [Formulier](product.user-task.yml)
@@ -33,11 +37,11 @@ Aan de hand van het postcode gebied wordt de gemeente code vastgesteld. Het post
 
 * [Acceptatie criteria](aanvragen-borgstelling.feature)
 
-### Bepaal laatste voorbeoordeling
+### Bepaal voorbeoordeling
 
-Zoekt o.b.v. het kenmerk van de klant naar een optionele laatste voorbeoordeling. De gevonden voorbeoordeling wordt toegevoegd aan het proces.
+Zoekt o.b.v. het voorbeoordeling id de voorbeoordeling op. De gevonden voorbeoordeling informatie wordt toegevoegd aan het proces.
 
-* [Acceptatie criteria](bepaal-laatste-voorbeoordeling.feature)
+* [Acceptatie criteria](bepaal-voorbeoordeling.feature)
 
 ### Beoordeel aanvraag
 
@@ -131,3 +135,4 @@ De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de krediet
 | 8      | Het moet eenvoudig mogelijk zijn om verschillende soorten aanvragen met verschillende informatie modellen te introduceren.           | Frank Dijkstra |
 | 9      | Beslisregegels moeten configureerbaar zijn zodat die eenvoudig kunnen wijzigen.                                                      | Frank Dijkstra |
 | 10     | Facturatie percentage moet configureerbaar zijn zodat die eenvoudig kan wijzigen.                                                    | Frank Dijkstra |
+| 11     | Een voorbeoordeling mag maar 1 keer gebruikt worden in een aanvraag.                                                                 | Frank Dijkstra |

@@ -1,0 +1,9 @@
+type: string
+description: De statistiek codes vanuit Allegro.
+example: Leeftijdsgroep
+enum:
+  - Betalende instantie
+  - Leeftijdsgroep
+  - Bevolkingsgroep
+  - Kredietdoel
+  

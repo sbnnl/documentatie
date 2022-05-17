@@ -4,26 +4,18 @@ properties:
   soort_aanvraag:
     $ref: "../types/soort_aanvraag.yml"
   kenmerk:
-    $ref: "./kenmerk.yml"
+    $ref: "../types/kenmerk_aanvrager.yml"
   contact:
     $ref: "../types/email.yml"
   postcode:
     $ref: "../types/postcode_gebied.yml"
-  kredietsom:
-    type: object
-    title: Kredietsom
-    properties:
-      bruto:
-        $ref: "../types/bruto_kredietsom.yml"
-      netto:
-        $ref: "../types/netto_kredietsom.yml"
-    required:
-      - bruto
-      - netto    
   aflossing:
     $ref: "../types/maandaflossing.yml"
   looptijd:
     $ref: "../types/looptijd_in_maanden.yml"
+  statistieken:
+    oneOf:
+      - $ref: "../models/allegro_statistieken.yml"
 required:
   - soort_aanvraag
   - kenmerk
@@ -32,3 +24,4 @@ required:
   - kredietsom
   - aflossing
   - looptijd
+  - statistieken

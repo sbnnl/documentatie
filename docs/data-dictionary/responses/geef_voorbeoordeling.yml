@@ -1,0 +1,18 @@
+allOf:
+  - title: geef voorbeoordeling
+  - $ref: "types/response.yml"
+  - type: object
+    required:
+      - kenmerk
+      - aflossing
+      - looptijd
+      - status
+    properties:
+      kenmerk:
+        $ref: "../types/kenmerk_aanvrager.yml"  
+      aflossing:
+        $ref: "../types/maandaflossing.yml"
+      looptijd:
+        $ref: "../types/looptijd_in_maanden.yml"
+      status:
+        $ref: "../types/voorbeoordeling_status.yml"

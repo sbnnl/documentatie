@@ -16,8 +16,20 @@ properties:
     description: Een verzameling gemeenten voor wie de kredietbank saneringskredieten verstrekt.
     items:
       $ref: "../types/gemeente.yml"
+  toegestane_voorbeoordelaars:
+    type: array
+    description: Een verzameling gemeenten voor wie de kredietbank saneringskredieten verstrekt.
+    items:
+      oneOf:
+        - type: string
+          pattern: '\b((?=[a-z0-9-]{1,63}\.)(xn--)?[a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]{2,63}\b'
+          description: Een email domein zoals die na de @ eruit ziet.
+          title: email domain
+          example: zwolle.nl
+        - $ref: "../types/email.yml"            
 required:
   - kredietbank_id
   - naam
   - iban
   - gemeenten
+  - toegestane_voorbeoordelaars

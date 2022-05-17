@@ -2,16 +2,14 @@
 
 ## Product
 
-Het doel van het product is om te komen tot een weloverwogen keuze of borgstelling mogelijk is. Deze keuze wordt gemaakt door de medewerker van SBN en gefiatteerd door een medewerker van SBF.
+Het doel van het product is om te komen tot een weloverwogen keuze of borgstelling mogelijk is. Deze keuze wordt gemaakt door de medewerker van SBN en gefiatteerd door een medewerker van SBF. Onderzoek wijst uit dat voor 8% van de aanvragen een maatwerk beoordeling noodzakelijk is.
 
 <!-- einde -->
 
 ## Proces
 
 * [Proces](proces.bpmn)
-* [Acceptatie criteria](proces.feature)
-
-## Use-cases
+* [Acceptatie criteria](proces.feature)in
 
 ### Geef aanvullende informatie
 

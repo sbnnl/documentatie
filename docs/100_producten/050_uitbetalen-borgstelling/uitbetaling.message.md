@@ -8,10 +8,10 @@ Het bedrag dat wij uitbetalen hebben wij vastgesteld en is als volgt opgebouwd:
 
 |                                           |                               |
 | ----------------------------------------- | ----------------------------- |
-| Netto kredietsom                          | € 1.550.77                    |
-| Aflossingen                               | € -300.47                     |
-| Rente over vervallen termijnen            | € 40,47                       |
-| <strong>Totaal uit te betalen<strong>     | <strong>€ 1.290,77</strong>   |
+| Netto kredietsom                          | *€ 1.550.77*                  |
+| Aflossingen                               | *€ -300.47*                   |
+| Rente over vervallen termijnen            | *€ 40,47*                     |
+| __Totaal uit te betalen__                 | __*€ 1.290,77*__              |
 
 Het bedrag wordt uitbetaald op rekeningnummer *NL37INGB0674629892* t.n.v. *Kredietbank Zwolle*.
 

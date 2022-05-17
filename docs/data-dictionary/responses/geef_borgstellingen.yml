@@ -14,7 +14,7 @@ allOf:
             borgstelling_id:
               $ref: "../types/borgstelling_id.yml"
             kenmerk:
-              $ref: "../models/kenmerk.yml"
+              $ref: "../types/kenmerk_aanvrager.yml"
             status:
               $ref: "../types/borgstelling_status.yml"
             links:

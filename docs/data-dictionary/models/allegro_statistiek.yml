@@ -1,0 +1,10 @@
+type: object
+description: Een statistiek waarde vanuit Allegro.
+properties:
+  code:
+    $ref: "../types/allegro_statistiek_code.yml"
+  waarde:
+    $ref: "../types/statistiek_waarde.yml"
+required:
+  - code
+  - waarde
