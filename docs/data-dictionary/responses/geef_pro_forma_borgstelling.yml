@@ -1,5 +1,5 @@
 allOf:
-  - title: geef voorbeoordeling
+  - title: geef pro-forma borgstelling
   - $ref: "types/response.yml"
   - type: object
     required:
@@ -15,4 +15,4 @@ allOf:
       looptijd:
         $ref: "../types/looptijd_in_maanden.yml"
       status:
-        $ref: "../types/voorbeoordeling_status.yml"
+        $ref: "../types/pro_forma_aanvraag_status.yml"

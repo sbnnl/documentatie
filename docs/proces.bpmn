@@ -3,7 +3,7 @@
   <bpmn:collaboration id="Collaboration_1oww7qn">
     <bpmn:participant id="Participant_0wlvfhl" name="e2e proces" processRef="Process_1cn8zgn" />
     <bpmn:participant id="Participant_0qwoflj" name="Fondsbeheerder (SBN)" />
-    <bpmn:participant id="Participant_0m5e9or" name="Kredietbank" />
+    <bpmn:participant id="Participant_0m5e9or" name="Kredietverstrekker (Kredietbank)" />
     <bpmn:messageFlow id="Flow_0fx8cee" sourceRef="Participant_0m5e9or" targetRef="Event_0c43wmy" />
     <bpmn:messageFlow id="Flow_1fo04s3" sourceRef="Event_0yea0ah" targetRef="Participant_0m5e9or" />
     <bpmn:messageFlow id="Flow_0dqn4np" sourceRef="Participant_0m5e9or" targetRef="Event_1dats0v" />
@@ -38,7 +38,7 @@
       <bpmn:outgoing>Flow_0zdw4k9</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_1fehnv3" />
     </bpmn:intermediateCatchEvent>
-    <bpmn:intermediateThrowEvent id="Event_0yea0ah" name="Voorbeoordeling goedgekeurd">
+    <bpmn:intermediateThrowEvent id="Event_0yea0ah" name="Pro-forma borgstelling afgegeven">
       <bpmn:incoming>Flow_06t9tqu</bpmn:incoming>
       <bpmn:outgoing>Flow_1t2f5yc</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_0xwjzpp" />
@@ -98,7 +98,7 @@
         <bpmn:outgoing>Flow_0d6ymay</bpmn:outgoing>
       </bpmn:callActivity>
     </bpmn:subProcess>
-    <bpmn:callActivity id="Activity_1q9inh1" name="Voorbeoordelen">
+    <bpmn:callActivity id="Activity_1q9inh1" name="Pro-forma aanvragen borgstelling">
       <bpmn:incoming>Flow_18u1owt</bpmn:incoming>
       <bpmn:outgoing>Flow_06t9tqu</bpmn:outgoing>
     </bpmn:callActivity>
@@ -186,7 +186,7 @@
       <bpmndi:BPMNShape id="Event_1hi6qzu_di" bpmnElement="Event_0yea0ah">
         <dc:Bounds x="522" y="292" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="500" y="335" width="81" height="27" />
+          <dc:Bounds x="512" y="335" width="57" height="40" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_1uvssv4_di" bpmnElement="Event_0c43wmy">

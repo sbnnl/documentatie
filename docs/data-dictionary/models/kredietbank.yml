@@ -16,9 +16,9 @@ properties:
     description: Een verzameling gemeenten voor wie de kredietbank saneringskredieten verstrekt.
     items:
       $ref: "../types/gemeente.yml"
-  toegestane_voorbeoordelaars:
+  schuldhulpverleners:
     type: array
-    description: Een verzameling gemeenten voor wie de kredietbank saneringskredieten verstrekt.
+    description: Een verzameling email adressen van schuldhulpverleners die gemachtigd zijn om een pro-forma borgstelling aan te vragen namens de kredietbank.
     items:
       oneOf:
         - type: string
@@ -32,4 +32,4 @@ required:
   - naam
   - iban
   - gemeenten
-  - toegestane_voorbeoordelaars
+  - schuldhulpverleners

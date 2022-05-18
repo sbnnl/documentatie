@@ -1,11 +1,9 @@
 #language: nl
-Functionaliteit: Bepaal voorbeeordeling use-case
+Functionaliteit: Geef pro-forma borgstelling use-case
 
   Abstract Scenario: Use-case permissie is juist
     Gegeven een gebruiker met de rollen "<rollen>"
-    Dan heeft de gebruiker "<wel-niet>" de permissie "BEPAAL_LAATSTE_VOORBEOORDELING"
-
-    Voorbeelden:
+    Dan heeft de gebruiker "<wel-niet>" de permissie "GEEF_PRO_FORMA_BORGSTELLING
     | rollen      | wel-niet |
     | sbn         | niet     |
     | sbf         | niet     |
@@ -16,7 +14,7 @@ Functionaliteit: Bepaal voorbeeordeling use-case
   Abstract Scenario: Use-case heeft de juiste autorisaties
     Gegeven een aanvraag van "<kredietbank>"
     En een gebruiker met de rollen "<rollen>"
-    Wanneer use-case "bepaal laatste voorbeoordeling" wordt uitgevoerd
+    Wanneer use-case "geef pro-forma borgstelling" wordt uitgevoerd
     Dan is de gebruiker "<wel-niet>" geautoriseerd
 
     Voorbeelden:

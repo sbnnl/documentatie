@@ -1,6 +1,6 @@
 allOf:  
   - $ref: "types/command.yml"
-  - title: registreer voorbeoordeling
+  - title: registreer pro-forma aanvraag
     properties:
       kenmerk:
         $ref: "../types/kenmerk_aanvrager.yml"

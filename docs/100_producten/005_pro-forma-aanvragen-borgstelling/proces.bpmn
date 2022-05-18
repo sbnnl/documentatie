@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_15cggpc" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.12.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="1.1.0">
   <bpmn:collaboration id="Collaboration_14sgm9f">
-    <bpmn:participant id="Participant_07uypnn" name="Voorbeoordelen" processRef="proces-aanvragen-borgstelling-v1" />
-    <bpmn:participant id="rol-aanvrager" name="Aanvrager (Kredietbank)" />
+    <bpmn:participant id="Participant_07uypnn" name="Pro-forma aanvragen borgstelling" processRef="proces-aanvragen-borgstelling-v1" />
+    <bpmn:participant id="rol-aanvrager" name="Schuldhulpverlener (Kredietbank of namens Kredietbank)" />
     <bpmn:participant id="rol-archief" name="Archief" />
     <bpmn:messageFlow id="Flow_1t5g2jt" sourceRef="rol-aanvrager" targetRef="gebeurtenis-aanvraag-ontvangen" />
     <bpmn:messageFlow id="Flow_1mhrg3z" sourceRef="gebeurtenis-aanvraag-afgewezen" targetRef="rol-aanvrager" />
@@ -23,20 +23,20 @@
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_1esw0ad" sourceRef="gebeurtenis-maatwerk-aanvraag-afgewezen" targetRef="taak-archiveer-afwijzing" />
     <bpmn:sequenceFlow id="Flow_0m5ecw9" sourceRef="taak-archiveer-contract" targetRef="gebeurtenis-aanvraag-geaccepteerd" />
-    <bpmn:startEvent id="gebeurtenis-aanvraag-ontvangen" name="Voorbeoordeling aanvraag ontvangen">
+    <bpmn:startEvent id="gebeurtenis-aanvraag-ontvangen" name="Pro-forma aanvraag ontvangen">
       <bpmn:outgoing>Flow_0np85uy</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_03ulslj" messageRef="Message_1qdh60g" />
     </bpmn:startEvent>
-    <bpmn:serviceTask id="taak-archiveer-contract" name="Archiveer voorbeoordeling">
+    <bpmn:serviceTask id="taak-archiveer-contract" name="Archiveer pro-forma contract">
       <bpmn:extensionElements>
         <zeebe:taskDefinition type="ARCHIVEER_CONTRACT_V1" />
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_1lz98cc</bpmn:incoming>
       <bpmn:outgoing>Flow_0m5ecw9</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:callActivity id="proces-beoordeel-maatwerk-aanvraag" name="Beoordelen maatwerk aanvraag">
+    <bpmn:callActivity id="proces-beoordeel-maatwerk-aanvraag" name="Accepteren maatwerk aanvraag">
       <bpmn:extensionElements>
-        <zeebe:calledElement processId="proces-beoordelen-maatwerk-aanvraag-v1" propagateAllChildVariables="false" />
+        <zeebe:calledElement processId="proces-accepteren-maatwerk-aanvraag-v1" propagateAllChildVariables="false" />
       </bpmn:extensionElements>
       <bpmn:incoming>route-maatwerk</bpmn:incoming>
       <bpmn:outgoing>Flow_05yprmk</bpmn:outgoing>
@@ -51,21 +51,21 @@
       <bpmn:outgoing>route-maatwerk</bpmn:outgoing>
       <bpmn:outgoing>route-geaccepteerd</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:businessRuleTask id="taak-beeordeel-aanvraag" name="Beoordeel aanvraag">
+    <bpmn:businessRuleTask id="taak-beeordeel-aanvraag" name="Accepteer automatisch">
       <bpmn:extensionElements>
         <zeebe:taskDefinition type="BEEORDEEL_AANVRAAG_V1" />
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_0np85uy</bpmn:incoming>
       <bpmn:outgoing>Flow_0ty6cd1</bpmn:outgoing>
     </bpmn:businessRuleTask>
-    <bpmn:endEvent id="gebeurtenis-aanvraag-afgewezen" name="Voorbeoordeling afgewezen">
+    <bpmn:endEvent id="gebeurtenis-aanvraag-afgewezen" name="Pro-forma aanvraag afgewezen">
       <bpmn:extensionElements>
         <zeebe:taskDefinition type="VERSTUUR_AANVRAAG_AFGEWEZEN_v1" />
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_0pc1qbm</bpmn:incoming>
       <bpmn:messageEventDefinition id="MessageEventDefinition_01rn94p" />
     </bpmn:endEvent>
-    <bpmn:endEvent id="gebeurtenis-aanvraag-geaccepteerd" name="Voorbeoordeling goedgekeurd">
+    <bpmn:endEvent id="gebeurtenis-aanvraag-geaccepteerd" name="Pro-forma borgstelling afgegeven">
       <bpmn:extensionElements>
         <zeebe:taskDefinition type="VERSTUUR_AANVRAAG_GEACCEPTEERD_v1" />
       </bpmn:extensionElements>
@@ -91,6 +91,19 @@
       <bpmndi:BPMNShape id="Participant_07uypnn_di" bpmnElement="Participant_07uypnn" isHorizontal="true">
         <dc:Bounds x="159" y="160" width="1295" height="420" />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0pc1qbm_di" bpmnElement="Flow_0pc1qbm">
+        <di:waypoint x="1010" y="493" />
+        <di:waypoint x="1302" y="493" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0m5ecw9_di" bpmnElement="Flow_0m5ecw9">
+        <di:waypoint x="1120" y="350" />
+        <di:waypoint x="1256" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1esw0ad_di" bpmnElement="Flow_1esw0ad">
+        <di:waypoint x="720" y="408" />
+        <di:waypoint x="720" y="493" />
+        <di:waypoint x="910" y="493" />
+      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0jgv7c0_di" bpmnElement="route-geaccepteerd">
         <di:waypoint x="580" y="325" />
         <di:waypoint x="580" y="260" />
@@ -126,23 +139,10 @@
           <dc:Bounds x="818" y="332" width="70" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1esw0ad_di" bpmnElement="Flow_1esw0ad">
-        <di:waypoint x="720" y="408" />
-        <di:waypoint x="720" y="493" />
-        <di:waypoint x="910" y="493" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0m5ecw9_di" bpmnElement="Flow_0m5ecw9">
-        <di:waypoint x="1120" y="350" />
-        <di:waypoint x="1256" y="350" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0pc1qbm_di" bpmnElement="Flow_0pc1qbm">
-        <di:waypoint x="1010" y="493" />
-        <di:waypoint x="1302" y="493" />
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Event_0cwobnn_di" bpmnElement="gebeurtenis-aanvraag-ontvangen">
         <dc:Bounds x="259" y="332" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="237" y="378" width="81" height="40" />
+          <dc:Bounds x="252" y="378" width="52" height="40" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_07k091l_di" bpmnElement="taak-archiveer-contract">
@@ -166,13 +166,13 @@
       <bpmndi:BPMNShape id="Event_081fwi4_di" bpmnElement="gebeurtenis-aanvraag-afgewezen">
         <dc:Bounds x="1302" y="475" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1349" y="479" width="81" height="27" />
+          <dc:Bounds x="1293" y="520" width="54" height="40" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_1pjesc8_di" bpmnElement="gebeurtenis-aanvraag-geaccepteerd">
         <dc:Bounds x="1256" y="332" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1233" y="378" width="81" height="27" />
+          <dc:Bounds x="1245" y="378" width="57" height="40" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="taak-archiveer-afwijzing_di" bpmnElement="taak-archiveer-afwijzing">

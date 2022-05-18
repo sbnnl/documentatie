@@ -1,6 +1,6 @@
 type: string
 title: status
-description: Status van de voorbeoordeling.
+description: Status van de pro-forma aanvraag.
 enum:
   - aangevraagd
   - afgewezen

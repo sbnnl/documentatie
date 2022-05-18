@@ -1,4 +1,4 @@
-# Beoordeel maatwerk aanvraag
+# Accepteren maatwerk aanvraag
 
 ## Product
 

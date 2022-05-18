@@ -4,7 +4,7 @@
     <bpmn:participant id="Participant_1xctonu" name="Intrekken borgstelling" processRef="Process_0zhsu1g" />
     <bpmn:participant id="Participant_1kt4b9r" name="Fonds beheerder (SBN)" />
     <bpmn:participant id="Participant_1rkw0wz" name="Archief" />
-    <bpmn:participant id="Participant_0d2iia2" name="Kredietbank" />
+    <bpmn:participant id="Participant_0d2iia2" name="Kredietverstrekker (Kredietbank)" />
     <bpmn:messageFlow id="Flow_1xtk9pj" sourceRef="Participant_1kt4b9r" targetRef="StartEvent_1" />
     <bpmn:messageFlow id="Flow_1fea9gl" sourceRef="Activity_1xef5oj" targetRef="Participant_1rkw0wz" />
     <bpmn:messageFlow id="Flow_17886d0" sourceRef="Event_01uwuyq" targetRef="Participant_0d2iia2" />
@@ -30,13 +30,13 @@
       <bpmndi:BPMNShape id="Participant_1xctonu_di" bpmnElement="Participant_1xctonu" isHorizontal="true">
         <dc:Bounds x="150" y="160" width="540" height="250" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="Flow_0lfxy0b_di" bpmnElement="Flow_0lfxy0b">
-        <di:waypoint x="295" y="285" />
-        <di:waypoint x="390" y="285" />
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0e3d3pt_di" bpmnElement="Flow_0e3d3pt">
         <di:waypoint x="490" y="285" />
         <di:waypoint x="592" y="285" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0lfxy0b_di" bpmnElement="Flow_0lfxy0b">
+        <di:waypoint x="295" y="285" />
+        <di:waypoint x="390" y="285" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Event_0g2ydep_di" bpmnElement="StartEvent_1">
         <dc:Bounds x="259" y="267" width="36" height="36" />
@@ -56,11 +56,11 @@
       <bpmndi:BPMNShape id="Participant_069mkhv_di" bpmnElement="Participant_1kt4b9r" isHorizontal="true">
         <dc:Bounds x="127" y="80" width="300" height="60" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Participant_0d2iia2_di" bpmnElement="Participant_0d2iia2" isHorizontal="true">
-        <dc:Bounds x="470" y="80" width="300" height="60" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Participant_1rkw0wz_di" bpmnElement="Participant_1rkw0wz" isHorizontal="true">
         <dc:Bounds x="290" y="440" width="300" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_0d2iia2_di" bpmnElement="Participant_0d2iia2" isHorizontal="true">
+        <dc:Bounds x="470" y="80" width="300" height="60" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_1xtk9pj_di" bpmnElement="Flow_1xtk9pj">
         <di:waypoint x="277" y="140" />
