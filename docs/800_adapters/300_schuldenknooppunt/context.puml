@@ -12,9 +12,12 @@ cloud "Sociale Banken Nederland" {
         interface HTTP
         [Schuldenknooppunt]
     }
-    
+
     SchuldenknooppuntAdapter --> HTTP : SOAP, X.509
     HTTP <--> Schuldenknooppunt
 }
+    
+collections Kredietbanken
+Kredietbanken -> HTTP
 
 @enduml
