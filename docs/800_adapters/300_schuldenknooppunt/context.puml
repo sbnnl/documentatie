@@ -8,9 +8,13 @@ cloud "Sociale Banken Nederland" {
         Wsk <-- SchuldenknooppuntAdapter
     }
 
-    [Schuldenknooppunt]
+    package "Schuldenknooppunt" as S  {
+        interface HTTP
+        [Schuldenknooppunt]
+    }
     
-    SchuldenknooppuntAdapter --> Schuldenknooppunt
+    SchuldenknooppuntAdapter --> HTTP : SOAP, X.509
+    HTTP <--> Schuldenknooppunt
 }
 
 @enduml

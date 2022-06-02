@@ -4,81 +4,120 @@
 
 De schuldenknooppunt adapter zorgt ervoor dat het schuldenknooppunt gekoppeld wordt aan het waarborgfonds. Deze koppeling bestaat uit de volgende onderdelen:
 
-1. Op basis van statuswijzigingen in het schuldenknooppunt moeten er opdrachten verstuurd worden naar het Wsk;
-1. Gebeurtenissen die bij het Wsk hebben plaatsgevonden moeten verwerkt worden in het schuldenknooppunt;
-1. Periodiek aanlevering van actieve saneringskredieten en saneringskredieten die actief zijn geweest in de periode sinds de laatste aanlevering;
+1. Berichten die door het schuldenknooppunt beschikbaar worden gesteld moeten omgezet worden in opdrachten voor het waarborgfonds;
+1. Gebeurtenissen van het waarborgfonds moeten omgezet worden in berichten en verstuurd worden naar het schuldenknooppunt;
+1. Periodiek moet er een bericht verstuurd worden naar het schuldenknooppunt waarmee alle actieve saneringskredieten mee worden opgevraagd;
 
 * [Context](context.puml)
 
-## Opdrachten versturen
+Http over SSL wordt gebruikt als transport mechanisme. Authenticatie en autorisatie verloopt via een X.509 certificaat die door het schuldenknooppunt beschikbaar wordt gesteld. Omdat de informatiestromen per kredietbank logisch gescheiden zijn is er een certificaat nodig voor elke aangesloten kredietbank.
 
-Opdrachten moeten op basis van status wijzigingen in het schuldenknooppunt naar het Wsk verstuurd worden. Alle opdrachten worden idempotent door het Wsk verwerkt, maar niet als het anders staat aangegeven. In dat geval wordt beschreven welke aanvullende maatregelen getroffen moeten worden om de opdracht verwerking idempotent te maken.
+Functionele uitval, berichten die syntactisch niet juist zijn of die inhoudelijk niet juist zijn, worden afgehandeld door de functioneel beheerder van de kredietbank via het schuldenknooppunt. Dit proces wordt gestart door het foutieve bericht als verwerkt te markeren en [een foutmelding bericht](https://innovadis.atlassian.net/wiki/spaces/NVVK/pages/3321888769/Waarborgfonds+Foutbericht) naar het schuldenknooppunt te sturen.
 
-### Registreer voorbeoordeling
+[Zie de documentatie van het schuldenknooppunt voor meer informatie.](https://innovadis.atlassian.net/wiki/spaces/NVVK/pages/3315695621/Waarborgfonds)
 
-Zie de documentatie van het product [voorbeoordeling] voor meer informatie.
+## Berichten verwerken
+
+Berichten worden in context van een kredietbank door het schuldenknooppunt beschikbaar gesteld. Voor elk bericht stelt het schuldenknooppunt een XML schema beschikbaar die gebruikt kan worden voor het valideren van de berichten. De berichten moeten omgezet worden in opdrachten voor waarborgfonds zoals ze hieronder staan beschreven.
+
+### Registreer pro-forma aanvraag
+
+[Schuldenknooppunt bericht](https://innovadis.atlassian.net/wiki/spaces/NVVK/pages/3316645913/Registreer+voorbeoordeling) omzetten naar Wsk opdracht en use-case uitvoeren.
+
+Zie de documentatie van het product [pro-forma aanvragen borgstelling] voor meer informatie.
 
 ### Registreer aanvraag
+
+[Schuldenknooppunt bericht](https://innovadis.atlassian.net/wiki/spaces/NVVK/pages/3322740737/Aanvraag+borgstelling) omzetten naar Wsk opdracht en use-case uitvoeren.
 
 Zie de documentatie van het product [aanvragen borgstelling] voor meer informatie.
 
 ### Registreer overname
 
+[Schuldenknooppunt bericht](https://innovadis.atlassian.net/wiki/spaces/NVVK/pages/3322740754/Aanvraag+overname) omzetten naar Wsk opdracht en use-case uitvoeren.
+
 Zie de documentatie van het product [aanvragen borgstelling] voor meer informatie.
 
 ### Beëindig borgstelling
+
+[Schuldenknooppunt bericht](https://innovadis.atlassian.net/wiki/spaces/NVVK/pages/3322806288) omzetten naar Wsk opdracht en use-case uitvoeren.
 
 Zie de documentatie van het product [beëindigen borgstelling] voor meer informatie.
 
 ### Verzoek uitbetaling
 
+[Schuldenknooppunt bericht](https://innovadis.atlassian.net/wiki/spaces/NVVK/pages/3322806304/Borgstelling+uitbetalen) omzetten naar Wsk opdracht en use-case uitvoeren.
+
 Zie de documentatie van het product [uitbetalen borgstelling] voor meer informatie.
 
-## Gebeurtenissen verwerken
+### Vul borgstelling aan
 
-Gebeurtenissen ontstaan vanuit de producten van het waarborgfonds. Deze gebeurtenissen worden, in volgorde van aanmaken, via REST beschikbaar gesteld. De adapter moet zelf bijhouden welke gebeurtenis het laatste verwerkt is zodat het uitlezen vanaf dit punt gestart kan worden. Zie [gebeurtenissen documentatie] voor meer informatie.
+[Schuldenknooppunt bericht](https://innovadis.atlassian.net/wiki/spaces/NVVK/pages/3322740770/Verwerk+saneringskredieten+informatie) omzetten naar Wsk opdracht en use-case uitvoeren.
 
-### Voorbeoordeling goedgekeurd
+Zie [vul borgstelling aan] documentatie van het product [borgstellingen beheren].
 
-Zie de documentatie van het product [voorbeoordeling] voor meer informatie.
+## Berichten versturen
 
-### Voorbeoordeling afgewezen
+Gebeurtenissen ontstaan vanuit de producten van het waarborgfonds. Deze gebeurtenissen worden, in context van een kredietbank en in volgorde van aanmaken, beschikbaar gesteld. De adapter is verantwoordelijk voor de conversie van gebeurtenissen naar berichten en het versturen van de berichten naar het schuldenknooppunt. Voor elk bericht stelt het schuldenknooppunt een XML schema beschikbaar die gebruikt kan worden voor het valideren van de berichten. De adapter moet zelf bijhouden welke gebeurtenis het laatste verwerkt is zodat het uitlezen vanaf dit punt gestart kan worden. Zie [gebeurtenissen documentatie] voor meer informatie.
 
-Zie de documentatie van het product [voorbeoordeling] voor meer informatie.
+### Pro-forma borgstelling afgegeven
+
+Wsk gebeurtenis omzetten naar een [schuldenknooppunt bericht](https://innovadis.atlassian.net/wiki/spaces/NVVK/pages/3317006433/Gebeurtenis) en versturen.
+
+Zie de documentatie van het product [pro-forma aanvragen borgstelling] voor meer informatie.
+
+### Pro-forma aanvraag afgewezen
+Wsk gebeurtenis omzetten naar een [schuldenknooppunt bericht](https://innovadis.atlassian.net/wiki/spaces/NVVK/pages/3317006433/Gebeurtenis) en versturen.
+
+Zie de documentatie van het product [pro-forma aanvragen borgstelling] voor meer informatie.
 
 ### Borgstelling afgegeven
+
+Wsk gebeurtenis omzetten naar een [schuldenknooppunt bericht](https://innovadis.atlassian.net/wiki/spaces/NVVK/pages/3317006433/Gebeurtenis) en versturen.
 
 Zie de documentatie van het product [aanvragen borgstelling] voor meer informatie.
 
 ### Borgstelling aanvraag afgewezen
 
+Wsk gebeurtenis omzetten naar een [schuldenknooppunt bericht](https://innovadis.atlassian.net/wiki/spaces/NVVK/pages/3317006433/Gebeurtenis) en versturen.
+
 Zie de documentatie van het product [aanvragen borgstelling] voor meer informatie.
 
 ### Borgstelling aanvraag beëindigd
+
+Wsk gebeurtenis omzetten naar een [schuldenknooppunt bericht](https://innovadis.atlassian.net/wiki/spaces/NVVK/pages/3317006433/Gebeurtenis) en versturen.
 
 Zie de documentatie van het product [aanvragen borgstelling] voor meer informatie.
 
 ### Borgstelling beëindigd
 
+Wsk gebeurtenis omzetten naar een [schuldenknooppunt bericht](https://innovadis.atlassian.net/wiki/spaces/NVVK/pages/3317006433/Gebeurtenis) en versturen.
+
 Zie de documentatie van het product [beëindigen borgstelling] voor meer informatie.
 
 ### Borgstelling ingetrokken
+
+Wsk gebeurtenis omzetten naar een [schuldenknooppunt bericht](https://innovadis.atlassian.net/wiki/spaces/NVVK/pages/3317006433/Gebeurtenis) en versturen.
 
 Zie de documentatie van het product [intrekken borgstelling] voor meer informatie.
 
 ### Borgstelling uitbetaald
 
+Wsk gebeurtenis omzetten naar een [schuldenknooppunt bericht](https://innovadis.atlassian.net/wiki/spaces/NVVK/pages/3317006433/Gebeurtenis) en versturen.
+
 Zie de documentatie van het product [uitbetalen borgstelling] voor meer informatie.
 
 ### Uitbetaalverzoek afgewezen
 
+Wsk gebeurtenis omzetten naar een [schuldenknooppunt bericht](https://innovadis.atlassian.net/wiki/spaces/NVVK/pages/3317006433/Gebeurtenis) en versturen.
+
 Zie de documentatie van het product [uitbetalen borgstelling] voor meer informatie.
 
-## Periodieke aanlevering
+## Periodiek berichten versturen
 
-Periodiek moeten er gegevens aangeleverd van saneringskredieten die sinds de laatste aanlevering actief zijn geweest. Zie [vul borgstelling aan] documentatie van het product [borgstellingen beheren].
+Periodiek moeten er gegevens aangeleverd van saneringskredieten die sinds de laatste aanlevering actief zijn geweest. Dit proces wordt gestart door de adapter die periodiek een bericht verstuurd naar elke aangesloten kredietbank waarmee de kredietbank gevraagd wordt om te antwoorden met alle saneringskredieten die sinds de laatste aanlevering actief zijn geweest. Zie [bericht vul borgstelling aan](#vul-borgstelling-aan) voor meer informatie.
 
-[voorbeoordeling]: ../../producten/voorbeoordeling/index.md
+[pro-forma aanvragen borgstelling]: ../../producten/pro-forma-aanvragen-borgstelling/index.md
 [aanvragen borgstelling]: ../../producten/aanvragen-borgstelling/index.md
 [beëindigen borgstelling]: ../../producten/beeindigen-borgstelling/index.md
 [intrekken borgstelling]: ../../producten/intrekken-borgstelling/index.md
