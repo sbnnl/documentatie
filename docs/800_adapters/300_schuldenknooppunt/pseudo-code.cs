@@ -23,15 +23,3 @@ static string SendSOAPMessage(string url, string action, string envelope, X509Ce
         }
     }
 }
-
-var url = "https://schuldenknooppunt-example.net/WaarborgfondsService/v1";
-var action = "SendMessage";
-var envelope = @"
-<?xml version=""1.0"" encoding=""utf-8""?>
-<soap:Envelope xmlns:soap=""http://schemas.xmlsoap.org/soap/envelope/"">
-    <soap:Body>
-    </soap:Body>
-</soap:Envelope>";
-X509Certificate2 certificate; //.cert bestand, wordt door het schuldenknooppunt beschikbaar gesteld.
-
-SendSOAPMessage(url, action, envelope, certificate);
