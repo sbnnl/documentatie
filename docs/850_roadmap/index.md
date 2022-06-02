@@ -166,7 +166,7 @@ Met deze epic wordt er een invulling gegeven aan het dashboard. Deze epic bestaa
 [kredietbanken beheren]: ../producten/kredietbanken-beheeren/index.md
 [takenlijst]: ../producten/takenlijst/index.md
 
-[schuldenknooppunt adapter]: ../adapters/schuldenknooppunt-adapter/index.md
+[schuldenknooppunt adapter]: ../adapters/schuldenknooppunt/index.md
 [Pro-forma aanvraag adapter]: ../adapters/pro-forma-aanvraag-adapter/index.md
 
 [Epic operationeel beheer]: #operationeel-beheer
