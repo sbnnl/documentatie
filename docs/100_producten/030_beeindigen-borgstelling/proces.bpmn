@@ -2,7 +2,7 @@
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_05sqje2" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.12.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="1.1.0">
   <bpmn:collaboration id="Collaboration_1e4tu7v">
     <bpmn:participant id="Participant_1xctonu" name="Beëindigen borgstelling" processRef="Process_0zhsu1g" />
-    <bpmn:participant id="Participant_1kt4b9r" name="Kredietbank" />
+    <bpmn:participant id="Participant_1kt4b9r" name="Kredietverstrekker (Kredietbank)" />
     <bpmn:participant id="rol-archief" name="Archief" />
     <bpmn:messageFlow id="Flow_1xtk9pj" sourceRef="Participant_1kt4b9r" targetRef="StartEvent_1" />
     <bpmn:messageFlow id="Flow_0o583qk" sourceRef="Event_01uwuyq" targetRef="Participant_1kt4b9r" />
@@ -29,13 +29,13 @@
       <bpmndi:BPMNShape id="Participant_1xctonu_di" bpmnElement="Participant_1xctonu" isHorizontal="true">
         <dc:Bounds x="160" y="190" width="560" height="222" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="Flow_0lfxy0b_di" bpmnElement="Flow_0lfxy0b">
-        <di:waypoint x="305" y="287" />
-        <di:waypoint x="400" y="287" />
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1mgcqog_di" bpmnElement="Flow_1mgcqog">
         <di:waypoint x="500" y="287" />
         <di:waypoint x="612" y="287" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0lfxy0b_di" bpmnElement="Flow_0lfxy0b">
+        <di:waypoint x="305" y="287" />
+        <di:waypoint x="400" y="287" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Event_0g2ydep_di" bpmnElement="StartEvent_1">
         <dc:Bounds x="269" y="269" width="36" height="36" />

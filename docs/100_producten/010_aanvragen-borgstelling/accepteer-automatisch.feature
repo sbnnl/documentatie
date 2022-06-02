@@ -1,7 +1,7 @@
 #language: nl
-Functionaliteit: Beoordeel aanvraag use-case
+Functionaliteit: Accepteer automatisch use-case
 
-  Abstract Scenario: Beoordeel aanvraag zonder voorbeoordeling: "<reden>"
+  Abstract Scenario: Beoordeel aanvraag zonder pro-forma aanvraag: "<reden>"
     Gegeven aanvraag met kredietsom <kredietsom>, afloscapaciteit <afloscapaciteit> per maand, looptijd <looptijd> maanden
     Wanneer beoordeeld
     Dan is de uitkomst "<uitkomst>"
@@ -13,21 +13,21 @@ Functionaliteit: Beoordeel aanvraag use-case
     | 5004       | 139             | 36       | maatwerk     | Totale afloscapaciteit > 5000                                              |
     | 4969       | 138             | 37       | maatwerk     | Looptijd is > 36 maanden                                                   |
 
-  Abstract Scenario: Beoordeel aanvraag met voorbeoordeling: "<reden>"
-    Gegeven voorbeoordeling met kredietsom <voorbeoordeling_kredietsom>, afloscapaciteit <voorbeoordeling_afloscapaciteit> per maand, looptijd <voorbeoordeling_looptijd> maanden en uitkomst "<voorbeoordeling_uitkomst>"
+  Abstract Scenario: Beoordeel aanvraag met pro-forma aanvraag: "<reden>"
+    Gegeven pro-forma aanvraag met kredietsom <pro-forma aanvraag_kredietsom>, afloscapaciteit <pro-forma aanvraag_afloscapaciteit> per maand, looptijd <pro-forma aanvraag_looptijd> maanden en uitkomst "<pro-forma aanvraag_uitkomst>"
     En aanvraag met kredietsom <kredietsom>, afloscapaciteit <afloscapaciteit> per maand, looptijd <looptijd> maanden
     Dan is de uitkomst "<uitkomst>"
 
     Voorbeelden:
-    | voorbeoordeling_kredietsom | voorbeoordeling_afloscapaciteit | voorbeoordeling_looptijd | voorbeoordeling_uitkomst | kredietsom | afloscapaciteit | looptijd | uitkomst     | reden                                                         |
-    | 5000                       | 139                             | 36                       | geaccepteerd             | 5000       | 139             | 36       | geaccepteerd | Aanvraag is gelijk aan voorbeoordeling                        |
+    | pro-forma aanvraag_kredietsom | pro-forma aanvraag_afloscapaciteit | pro-forma aanvraag_looptijd | pro-forma aanvraag_uitkomst | kredietsom | afloscapaciteit | looptijd | uitkomst     | reden                                                         |
+    | 5000                       | 139                             | 36                       | geaccepteerd             | 5000       | 139             | 36       | geaccepteerd | Aanvraag is gelijk aan pro-forma aanvraag                        |
     | 5000                       | 139                             | 36                       | afgewezen                | 4999       | 138             | 36       | geaccepteerd | Standaard aanvraag                                            |
-    | 5000                       | 138                             | 36                       | geaccepteerd             | 5249       | 145             | 36       | geaccepteerd | Kredietsom wijkt minder dan 5% af van de voorbeoordeling      |
-    | 5000                       | 145                             | 36                       | geaccepteerd             | 5000       | 138             | 36       | geaccepteerd | Afloscapaciteit wijkt minder dan 5% af van de voorbeoordeling |
-    | 5000                       | 138                             | 36                       | afgewezen                | 5249       | 145             | 36       | afgewezen    | Kredietsom wijkt minder dan 5% af van de voorbeoordeling      |
-    | 5000                       | 145                             | 36                       | afgewezen                | 5000       | 138             | 36       | afgewezen    | Afloscapaciteit wijkt minder dan 5% af van de voorbeoordeling |
-    | 5000                       | 138                             | 36                       | geaccepteerd             | 5250       | 145             | 36       | maatwerk     | Kredietsom wijkt meer dan 5% af van de voorbeoordeling        |
-    | 5000                       | 145                             | 36                       | geaccepteerd             | 5000       | 137             | 36       | maatwerk     | Afloscapaciteit wijkt meer dan 5% af van de voorbeoordeling   |
+    | 5000                       | 138                             | 36                       | geaccepteerd             | 5249       | 145             | 36       | geaccepteerd | Kredietsom wijkt minder dan 5% af van de pro-forma aanvraag      |
+    | 5000                       | 145                             | 36                       | geaccepteerd             | 5000       | 138             | 36       | geaccepteerd | Afloscapaciteit wijkt minder dan 5% af van de pro-forma aanvraag |
+    | 5000                       | 138                             | 36                       | afgewezen                | 5249       | 145             | 36       | afgewezen    | Kredietsom wijkt minder dan 5% af van de pro-forma aanvraag      |
+    | 5000                       | 145                             | 36                       | afgewezen                | 5000       | 138             | 36       | afgewezen    | Afloscapaciteit wijkt minder dan 5% af van de pro-forma aanvraag |
+    | 5000                       | 138                             | 36                       | geaccepteerd             | 5250       | 145             | 36       | maatwerk     | Kredietsom wijkt meer dan 5% af van de pro-forma aanvraag        |
+    | 5000                       | 145                             | 36                       | geaccepteerd             | 5000       | 137             | 36       | maatwerk     | Afloscapaciteit wijkt meer dan 5% af van de pro-forma aanvraag   |
     | 5000                       | 145                             | 36                       | geaccepteerd             | 5000       | 137             | 37       | maatwerk     | Looptijd wijkt af en > 36                                     |
   
   Scenario: Borgstelling aanvraag vanuit een portefeuille overname waarbij het saneringskrediet korter dan 36 maanden heeft gelopen wordt geaccepteerd

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0f2gmk1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.12.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="1.1.0">
   <bpmn:collaboration id="Collaboration_12l10y8">
-    <bpmn:participant id="Participant_1q20ohz" name="Verstuur voorbeoordeling link" processRef="Process_0vvf0le" />
-    <bpmn:participant id="Participant_0uwsgb9" name="Schuldhulpverlener" />
+    <bpmn:participant id="Participant_1q20ohz" name="Verstuur pro-forma aanvraag link" processRef="Process_0vvf0le" />
+    <bpmn:participant id="Participant_0uwsgb9" name="Schuldhulpverlener (Gemeente of schuldhulpverlenende organisatie)" />
     <bpmn:messageFlow id="Flow_0ob0bvv" sourceRef="Participant_0uwsgb9" targetRef="StartEvent_1" />
     <bpmn:messageFlow id="Flow_03mbzbn" sourceRef="Activity_1llpsig" targetRef="Participant_0uwsgb9" />
     <bpmn:messageFlow id="Flow_1ragtvw" sourceRef="Activity_1nbuu2f" targetRef="Participant_0uwsgb9" />
@@ -17,7 +17,7 @@
       <bpmn:outgoing>Flow_02x48up</bpmn:outgoing>
       <bpmn:outgoing>Flow_1y3695d</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:sendTask id="Activity_1llpsig" name="Verstuur voorbeoordelen namens">
+    <bpmn:sendTask id="Activity_1llpsig" name="Verstuur autorisatie">
       <bpmn:incoming>Flow_02x48up</bpmn:incoming>
       <bpmn:outgoing>Flow_0ztqcr9</bpmn:outgoing>
     </bpmn:sendTask>

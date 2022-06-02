@@ -17,11 +17,11 @@ Functionaliteit: Aanvraag borgstelling proces
     Dan is route "route-afgewezen" actief
 
   Scenario: Voorbeoordeling route is actief
-    Gegeven proces informatie "{ voorbeoordeling: 'ja' }"
-    Wanneer poort "poort-voorbeoordeling" is uitgevoerd
-    Dan is route "route-voorbeoordeling" actief
+    Gegeven proces informatie "{ pro-forma aanvraag: 'ja' }"
+    Wanneer poort "poort-pro-forma aanvraag" is uitgevoerd
+    Dan is route "route-pro-forma aanvraag" actief
 
-  Scenario: Geen voorbeoordeling route is actief
-    Gegeven proces informatie "{ voorbeoordeling: 'nee' }"
-    Wanneer poort "poort-voorbeoordeling" is uitgevoerd
-    Dan is route "route-geen-voorbeoordeling" actief
+  Scenario: Geen pro-forma aanvraag route is actief
+    Gegeven proces informatie "{ pro-forma aanvraag: 'nee' }"
+    Wanneer poort "poort-pro-forma aanvraag" is uitgevoerd
+    Dan is route "route-geen-pro-forma aanvraag" actief

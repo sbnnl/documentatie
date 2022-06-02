@@ -9,9 +9,9 @@ Een aanvraag van een borgstelling door een kredietbank voor een saneringskrediet
 
 Het doel van de aanvraag borgstelling is om tot een beoordeling te komen of er voor een saneringskrediet een borgstelling kan worden afgegeven.
 
-Uit onderzoek is gebleken dat 92% van de aanvragen standaard aanvragen zijn. Deze aanvragen worden via een STP proces automatisch verwerkt waardoor er binnen enkele seconden een resultaat naar de aanvrager verstuurd wordt.
+Uit onderzoek is gebleken dat 92% van de aanvragen standaard aanvragen zijn. Deze aanvragen worden via een STP proces automatisch verwerkt waardoor er binnen enkele seconden een resultaat naar de kredietverstrekker verstuurd wordt.
 
-Voor een maatwerk aanvraag borgstelling kan optioneel een verwijzing naar een voorbeoordeling opgegeven worden. Wanneer deze verwijzing bestaat dan mag die eenmalig meewegen in de definitieve beoordeling van de aanvraag.
+Voor een maatwerk aanvraag borgstelling kan optioneel een verwijzing naar een pro-forma aanvraag opgegeven worden. Wanneer deze verwijzing bestaat dan mag die eenmalig meewegen in de acceptatie van de aanvraag.
 
 <!-- einde -->
 
@@ -37,15 +37,15 @@ Aan de hand van het postcode gebied wordt de gemeente code vastgesteld. Het post
 
 * [Acceptatie criteria](aanvragen-borgstelling.feature)
 
-### Bepaal voorbeoordeling
+### Bepaal pro-forma borgstelling
 
-Zoekt o.b.v. het voorbeoordeling id de voorbeoordeling op. De gevonden voorbeoordeling informatie wordt toegevoegd aan het proces.
+Zoekt o.b.v. het "pro-forma borgstelling kenmerk" de pro-forma borgstelling op. De gevonden pro-forma borgstelling wordt toegevoegd aan het proces zodat het mee kan meewegen in de acceptatie van de aanvraag.
 
-* [Acceptatie criteria](bepaal-voorbeoordeling.feature)
+* [Acceptatie criteria](bepaal-pro-forma_borgstelling.feature)
 
-### Beoordeel aanvraag
+### Accepteer automatisch
 
-De informatie van de aanvraag wordt automatisch beoordeeld op basis van regels in het beslissingsmodel. Het beslissingsmodel kent de volgende uitkomsten:
+De informatie van de aanvraag wordt automatisch geaccepteerd op basis van regels in het beslissingsmodel. Het beslissingsmodel kent de volgende uitkomsten:
 
 * geaccepteerd
 * afgewezen
@@ -53,11 +53,11 @@ De informatie van de aanvraag wordt automatisch beoordeeld op basis van regels i
 
 <!-- einde -->
 
-* [Acceptatie criteria](beoordeel-aanvraag.feature)
+* [Acceptatie criteria](accepteer-automatisch.feature)
 
-### Beoordelen maatwerk aanvraag
+### Accepteren maatwerk aanvraag
 
-[Zie het beoordelen maatwerk aanvraag product voor meer informatie.](beoordelen-maatwerk-aanvraag/index.md)
+[Zie het accepteren maatwerk aanvraag product voor meer informatie.](accepteren-maatwerk-aanvraag/index.md)
 
 ### Archiveer contract
 
@@ -130,9 +130,9 @@ De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de krediet
 | 3      | Een afgegeven borgstelling moet automatisch in rekening gebracht worden.                                                             | Frank Dijkstra |
 | 4      | Aanvragen tot € 5.000,- en een looptijd t/m 36 maanden moeten automatisch geaccepteerd worden.                                       | Frank Dijkstra |
 | 5      | Aanvragen vanaf € 5.000,- of met een looptijd langer dan 36 maanden moeten handmatig beoordeeld worden.                              | Frank Dijkstra |
-| 6      | Aanvragen vanaf € 5.000,- die minder dan 5% hoger zijn dan een geaccepteerde voorbeoordeling moeten automatisch geaccepteerd worden. | Frank Dijkstra |
+| 6      | Aanvragen vanaf € 5.000,- die minder dan 5% hoger zijn dan een afgegeven pro-forma botgstelling moeten automatisch geaccepteerd worden. | Frank Dijkstra |
 | 7      | Handmatige beoordelingen moeten gefiatteerd worden door het Sbf.                                                                     | Frank Dijkstra |
 | 8      | Het moet eenvoudig mogelijk zijn om verschillende soorten aanvragen met verschillende informatie modellen te introduceren.           | Frank Dijkstra |
 | 9      | Beslisregegels moeten configureerbaar zijn zodat die eenvoudig kunnen wijzigen.                                                      | Frank Dijkstra |
 | 10     | Facturatie percentage moet configureerbaar zijn zodat die eenvoudig kan wijzigen.                                                    | Frank Dijkstra |
-| 11     | Een voorbeoordeling mag maar 1 keer gebruikt worden in een aanvraag.                                                                 | Frank Dijkstra |
+| 11     | Een pro-forma borgstelling mag maar 1 keer gebruikt worden in een aanvraag.                                                                 | Frank Dijkstra |

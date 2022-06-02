@@ -2,7 +2,7 @@
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_15cggpc" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.12.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="1.1.0">
   <bpmn:collaboration id="Collaboration_14sgm9f">
     <bpmn:participant id="rol-aanvragen-borgstelling" name="Kredietbank" />
-    <bpmn:participant id="Participant_19xq51s" name="Beoordelen maatwerk aanvraag" processRef="proces-beoordelen-maatwerk-aanvraag-v1" />
+    <bpmn:participant id="Participant_19xq51s" name="Beoordelen maatwerk aanvraag" processRef="proces-accepteren-maatwerk-aanvraag-v1" />
     <bpmn:participant id="rol-adviseur" name="Adviseur (Kredietbank)" />
     <bpmn:participant id="rol-beoordelaar" name="Beoordelaar (SBN)" />
     <bpmn:participant id="rol-fiatteerder" name="Fiatteerder (SBF)" />
@@ -22,7 +22,7 @@
   <bpmn:message id="Message_1j4p0e9" name="MaatwerkAanvraagGeaccepteerd" />
   <bpmn:message id="Message_11rm5qd" name="MaatwerkAanvraagAfgewezen" />
   <bpmn:error id="Error_1jh6r5b" name="MAATWERK_AANVRAAG_AFGEWEZEN" />
-  <bpmn:process id="proces-beoordelen-maatwerk-aanvraag-v1" isExecutable="true">
+  <bpmn:process id="proces-accepteren-maatwerk-aanvraag-v1" isExecutable="true">
     <bpmn:sequenceFlow id="Flow_10clktt" sourceRef="gebeurtenis-maatwerk-aanvraag-ontvangen" targetRef="Event_04s9a65" />
     <bpmn:sequenceFlow id="Flow_1vo9jkm" sourceRef="taak-geef-advies-v1" targetRef="taak-beoordel-aanvraag-v1" />
     <bpmn:sequenceFlow id="Flow_1gj8zqz" sourceRef="taak-geef-aanvullende-informatie-v1" targetRef="taak-beoordel-aanvraag-v1" />

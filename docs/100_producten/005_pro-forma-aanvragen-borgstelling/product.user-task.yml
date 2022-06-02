@@ -1,8 +1,8 @@
 actions:
   aanvraag:
-    name: Voorbeoordeling
+    name: Pro-forma aanvraag
     schema: 
-      $ref: "../../data-dictionary/commands/registreer_voorbeoordeling.yml"
+      $ref: "../../data-dictionary/commands/registreer_pro_forma_aanvraag.yml"
     ui:
       hidden:
         - command_id

@@ -7,20 +7,20 @@ info:
 
 paths:
 
-  /api/kredietbanken/{kredietbank_id}/voorbeoordelingen:
+  /api/kredietbanken/{kredietbank_id}/pro_forma_borgstellingen:
     parameters:
       - $ref: "../../data-dictionary/parameters/kredietbank_id.yml"
     post:
       tags:
-        - voorbeoordelingen
-      summary: Registreer voorbeoordeling
-      operationId: RegistreerVoorbeoordelingV1
+        - pro-forma borgstellingen
+      summary: Registreer pro-forma aanvraag
+      operationId: RegistreerProFormaAanvraagV1
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: "../../data-dictionary/commands/registreer_voorbeoordeling.yml"
+              $ref: "../../data-dictionary/commands/registreer_pro_forma_aanvraag.yml"
       responses:
         201:
           $ref: "../../data-dictionary/responses/types/201.yml"
@@ -31,23 +31,21 @@ paths:
         403:
           $ref: "../../data-dictionary/responses/types/403.yml"
 
-# TODO: voorbeoordelingen toevoegen op basis van kenmerken.
-
-  /api/kredietbanken/{kredietbank_id}/voorbeoordelingen/{voorbeoordeling_id}:
+  /api/kredietbanken/{kredietbank_id}/pro_forma_borgstellingen/{borgstelling_id}:
     get:
       tags:
-        - voorbeoordelingen
-      summary: Geeft een lijst met voorbeoordeling
-      operationId: GeefVoorbeoordelingV1
+        - pro-forma borgstellingen
+      summary: Geeft een pro-forma borgstelling
+      operationId: GeefProFormaBorgstellingV1
       parameters:
-        - $ref: "../../data-dictionary/parameters/voorbeoordeling_id.yml"
+        - $ref: "../../data-dictionary/parameters/pro_forma_borgstelling_id.yml"
       responses:
         200:          
           description: OK
           content:
             application/json:
               schema:
-                $ref: "../../data-dictionary/responses/geef_voorbeoordeling.yml"
+                $ref: "../../data-dictionary/responses/geef_pro_forma_borgstelling.yml"
         400:
           $ref: "../../data-dictionary/responses/types/400.yml"
         401:

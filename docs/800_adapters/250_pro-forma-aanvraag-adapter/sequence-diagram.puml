@@ -12,12 +12,12 @@ kredietbank -> wsk : email ontvangen
 activate wsk
 
 wsk --> wsk : controleer afzender
-wsk --> wsk : maak voorbeoordeling link
-wsk -> user : email voorbeoordeling link
+wsk --> wsk : maak pro-forma aanvraag link
+wsk -> user : email pro-forma aanvraag link
 
 deactivate wsk
 
-user -> wsk : open voorbeoordeling link
+user -> wsk : open pro-forma aanvraag link
 
 
 activate wsk
@@ -41,8 +41,8 @@ user -> wsk : beantwoord aanvullende vragen
 
 activate wsk
 
-wsk --> wsk : accepteer voorbeoordeling
-wsk -> user : email geacepteerde voorbeoordeling
+wsk --> wsk : accepteer pro-forma aanvraag
+wsk -> user : email geacepteerde pro-forma aanvraag
 
 deactivate wsk
 
