@@ -1,4 +1,4 @@
-static string SendSOAPMessage(string url, string action, string envelope, X509Certificate2 certificate)
+static Task<string> SendSOAPMessage(string url, string action, string envelope, X509Certificate2 certificate)
 {
     using (var httpClientHandler = new HttpClientHandler())
     {
