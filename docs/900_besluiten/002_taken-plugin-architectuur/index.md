@@ -36,7 +36,7 @@ De takenlijst is stateless: wanneer de taak niet meer bestaat in de plugin dan b
 |   |   |
 | - | - |
 | Auteur | Arjan Geertsema |
-| Status | Draft |
+| Status | Besloten |
 
 ## Bijlage
 

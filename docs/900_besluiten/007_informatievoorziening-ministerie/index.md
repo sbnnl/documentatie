@@ -11,4 +11,4 @@ Sbf gebruikt de informatie uit het dashboard om het ministerie te informeren omd
 |   |   |
 | - | - |
 | Auteur | Arjan Geertsema |
-| Status | Draft |
+| Status | Besloten |

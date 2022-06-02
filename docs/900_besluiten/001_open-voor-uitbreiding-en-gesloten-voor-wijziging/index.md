@@ -15,7 +15,7 @@ De processen van het Wsk zijn daar waar mogelijk in enkelvoud uitgevoerd en onde
 |   |   |
 | - | - |
 | Auteur | Arjan Geertsema |
-| Status | Draft |
+| Status | Besloten |
 
 ## Bijlage
 

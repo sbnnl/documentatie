@@ -21,4 +21,4 @@ Dit besluit heeft de volgende consequenties:
 |   |   |
 | - | - |
 | Auteur | Arjan Geertsema |
-| Status | Draft |
+| Status | Besloten |

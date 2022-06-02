@@ -39,4 +39,4 @@ Arme gebeurtenissen worden centraal beschikbaar opgeslagen en beschikbaar gestel
 |   |   |
 | - | - |
 | Auteur | Arjan Geertsema |
-| Status | Draft |
+| Status | Besloten |
