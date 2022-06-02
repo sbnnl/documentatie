@@ -8,13 +8,14 @@ De schuldenknooppunt adapter zorgt ervoor dat het schuldenknooppunt gekoppeld wo
 1. Gebeurtenissen van het waarborgfonds moeten omgezet worden in berichten en verstuurd worden naar het schuldenknooppunt;
 1. Periodiek moet er een bericht verstuurd worden naar het schuldenknooppunt waarmee alle actieve saneringskredieten mee worden opgevraagd;
 
-* [Context](context.puml)
-
-Http over SSL wordt gebruikt als transport mechanisme. Authenticatie en autorisatie verloopt via een X.509 certificaat die door het schuldenknooppunt beschikbaar wordt gesteld. Omdat de informatiestromen per kredietbank logisch gescheiden zijn is er een certificaat nodig voor elke aangesloten kredietbank.
+Http over SSL wordt gebruikt als transport mechanisme en SOAP is het protocol. Authenticatie en autorisatie verloopt via een X.509 certificaat die door het schuldenknooppunt beschikbaar wordt gesteld. Omdat de informatiestromen per kredietbank logisch gescheiden zijn is er een certificaat nodig voor elke aangesloten kredietbank.
 
 Functionele uitval, berichten die syntactisch niet juist zijn of die inhoudelijk niet juist zijn, worden afgehandeld door de functioneel beheerder van de kredietbank via het schuldenknooppunt. Dit proces wordt gestart door het foutieve bericht als verwerkt te markeren en [een foutmelding bericht](https://innovadis.atlassian.net/wiki/spaces/NVVK/pages/3321888769/Waarborgfonds+Foutbericht) naar het schuldenknooppunt te sturen.
 
 [Zie de documentatie van het schuldenknooppunt voor meer informatie.](https://innovadis.atlassian.net/wiki/spaces/NVVK/pages/3315695621/Waarborgfonds)
+
+* [Context](context.puml)
+* [Pseudo code](pseudo-code.cs)
 
 ## Berichten verwerken
 
