@@ -6,7 +6,11 @@ Hierbij ontvang je een link waarmee je eenmalig een pro-forma borgstelling kan a
  
 Met vriendelijke groet,
 
-*Piet de Vries*
-<from>zwolle@waarborgfonds.sbn.nl</from>
-<to>jan.jansen@schuldhulpverlener.nl</to>
+<from>
+    <name>Waarborgfonds Saneringskredieten</name>
+    <email>zwolle@waarborgfonds.sbn.nl</email>
+</from>
+<to>
+    <email>jan.jansen@schuldhulpverlener.nl</email>
+</to>
 <subject>Pro-forma borgstelling aanvragen namen de Kredietbank Zwolle</subject>

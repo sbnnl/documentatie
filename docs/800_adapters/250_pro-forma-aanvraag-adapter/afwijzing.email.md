@@ -4,7 +4,11 @@ We kunnen je geen toestemming geven voor het aanvragen van een pro-forma borgste
  
 Met vriendelijke groet,
 
-*Piet de Vries*
-<from>zwolle@waarborgfonds.sbn.nl</from>
-<to>jan.jansen@schuldhulpverlener.nl</to>
+<from>
+    <name>Waarborgfonds Saneringskredieten</name>
+    <email>zwolle@waarborgfonds.sbn.nl</email>
+</from>
+<to>
+    <email>jan.jansen@schuldhulpverlener.nl</email>
+</to>
 <subject>Geen toestemming voor het aanvragen van een pro-forma borgstelling</subject>

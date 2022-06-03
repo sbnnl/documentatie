@@ -70,10 +70,6 @@
   text: |
     Stratech is een software pakket dat ondersteuning biedt aan alle primaire processen van schuldhulpverleners.
 
-- name: Schuldenknooppunt
-  text: |
-    Via het Schuldenknooppunt wisselen schuldhulpverleners en schuldeisers standaard berichten uit.
-
 - name: Takenlijst
   text: |
     Vanuit producten ontstaan er taken die door mensen uitgevoerd moeten worden. De takenlijst stelt deze taken op een centrale plek beschikbaar op basis van decentrale taak bronnen.

@@ -8,10 +8,13 @@ Heeft u nog vragen over dit bericht, dan kunt u contact met ons opnemen.
 
 Met vriendelijke groet,
 
-Waarborgfonds Saneringskredieten
-
-<from>fondsbeheerder@waarborgfonds.sbn.nl</from>
-<to>kredietverlening@zwolle.nl</to>
+<from>
+    <name>Waarborgfonds Saneringskredieten</name>
+    <email>zwolle@waarborgfonds.sbn.nl<</email>
+</from>
+<to>
+    <email>kredietverlening@zwolle.nl</email>
+</to>
 <subject>Borgstelling aanvraag voor saneringskrediet met kenmerk 5461135-1</subject>
 
 <ul class="attachments">
