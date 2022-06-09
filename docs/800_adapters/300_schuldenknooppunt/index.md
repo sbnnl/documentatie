@@ -8,9 +8,11 @@ De schuldenknooppunt adapter zorgt ervoor dat het schuldenknooppunt gekoppeld wo
 1. Gebeurtenissen van het waarborgfonds moeten omgezet worden in berichten en verstuurd worden naar het schuldenknooppunt;
 1. Periodiek moet er een bericht verstuurd worden naar het schuldenknooppunt waarmee alle actieve saneringskredieten mee worden opgevraagd;
 
-Http over SSL wordt gebruikt als transport mechanisme en SOAP is het protocol. Authenticatie en autorisatie verloopt via een X.509 certificaat die door het schuldenknooppunt beschikbaar wordt gesteld. Omdat de informatiestromen per kredietbank logisch gescheiden zijn is er een certificaat nodig voor elke aangesloten kredietbank.
+Http over SSL wordt gebruikt als transport mechanisme en SOAP is het protocol. Authenticatie en autorisatie verloopt via een PKIoverheid certificaat (X.509) die door het waarborgfonds aangevraagd moet worden. Dit certificaat moet door het schuldenknooppunt vertrouwd worden en het waarborgfonds moet het certificaat van het schuldenknooppunt vertrouwen: two-way authentication. Voor de acceptatieomgeving worden self signed certificaten door het schuldenknooppunt beschikbaar gesteld. De informatiestromen zijn niet per kredietbank logisch gescheiden.
 
 Functionele uitval, berichten die syntactisch niet juist zijn of die inhoudelijk niet juist zijn, worden afgehandeld door de functioneel beheerder van de kredietbank via het schuldenknooppunt. Dit proces wordt gestart door het foutieve bericht als verwerkt te markeren en [een foutmelding bericht](https://innovadis.atlassian.net/wiki/spaces/NVVK/pages/3321888769/Waarborgfonds+Foutbericht) naar het schuldenknooppunt te sturen.
+
+Een WSDL wordt door de leverancier van het schuldenknooppunt beschikbaar gesteld en hiermee kan, in de taal naar keuze, service code mee gegenereerd worden.
 
 [Zie de documentatie van het schuldenknooppunt voor meer informatie.](https://innovadis.atlassian.net/wiki/spaces/NVVK/pages/3315695621/Waarborgfonds)
 
