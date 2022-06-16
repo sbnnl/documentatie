@@ -1,0 +1,13 @@
+references:
+  - name: Onderwerp
+    value: Uitbetaling borgstelling
+model:
+  kenmerk: 5461135-1
+  kredietsom:
+    netto: € 1.550.77
+  aflossingen: € -300.47
+  rente_over_vervallen_termijnen: € 40,47
+  uit_te_betalen: € 1.290,77
+  bankrekening:
+    naam: Kredietbank Zwolle
+    nummer: NL37INGB0674629892

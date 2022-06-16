@@ -1,0 +1,18 @@
+from:
+  name: Kredietbank Zwolle
+  email: kredietverlening@zwolle.nl
+to:
+  email: jan.jansen@schuldhulpverlener.nl
+subject: Pro-forma borgstelling aanvragen namen de Kredietbank Zwolle
+salutation: Beste heer, mevrouw,
+signature: |
+  Kredietbank Zwolle
+footer: |
+  <address>
+      Lübeckplein 2<br>
+      8017 JZ Zwolle
+  </address>
+model:
+  kredietbank:
+   naam: Kredietbank Zwolle
+  link: https://waarborgfonds.sbn.nl/kredietbanken/88b33783-0a04-4d94-afae-a6d117d63ad8/pro-forma-borgstellingen/aanvragen?autorisatie=96e3a45a-f3eb-40ac-a2f6-35c33def9c12

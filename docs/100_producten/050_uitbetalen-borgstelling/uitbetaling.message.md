@@ -2,47 +2,21 @@ Beste heer, mevrouw,
 
 Het Waarborgfonds Saneringskredieten (Wsk) heeft met u een overeenkomst voor de borgstelling van saneringskredieten.
 
-Wij hebben van u een verzoek ontvangen voor de uitbetaling van de borgstelling van saneringskrediet met kenmerk *4564657-1*. Wij hebben dit verzoek beoordeeld.
+Wij hebben van u een verzoek ontvangen voor de uitbetaling van de borgstelling van saneringskrediet met kenmerk *{{ model.kenmerk }}*. Wij hebben dit verzoek beoordeeld.
 
 Het bedrag dat wij uitbetalen hebben wij vastgesteld en is als volgt opgebouwd:
 
 |                                           |                               |
 | ----------------------------------------- | ----------------------------- |
-| Netto kredietsom                          | *€ 1.550.77*                  |
-| Aflossingen                               | *€ -300.47*                   |
-| Rente over vervallen termijnen            | *€ 40,47*                     |
-| __Totaal uit te betalen__                 | __*€ 1.290,77*__              |
+| Netto kredietsom                          | *{{ model.kredietsom.netto }}*                  |
+| Aflossingen                               | *{{ model.aflossingen }}*                   |
+| Rente over vervallen termijnen            | *{{ model.rente_over_vervallen_termijnen }}*                     |
+| __Totaal uit te betalen__                 | __*{{ model.uit_te_betalen }}*__              |
 
-Het bedrag wordt uitbetaald op rekeningnummer *NL37INGB0674629892* t.n.v. *Kredietbank Zwolle*.
+Het bedrag wordt uitbetaald op rekeningnummer *{{ model.bankrekening.naam }}* t.n.v. *{{ model.bankrekening.nummer }}*.
 
 Heeft u nog vragen over deze brief, dan kunt u contact met ons opnemen.
 
 Met vriendelijke groet,
- 
 
-Waarborgfonds Saneringskredieten,
-
-namens deze,
- 
-
-
-
-Wouter Vos
-
-Bestuurder Stichting Bemiddeling en Fondsbeheer
-
-<address>
-    Kredietbank Zwolle<br>
-    t.a.v. afdeling kredietverlening<br>
-    Postbus 100070<br>
-    8000 GA Zwolle
-</address>
-<time>Utrecht, 2022-01-01</time>
-<reference>
-    <dt>Onderwerp</dt>
-    <dd>Uitbetaling borgstelling</dd>
-    <dt>Uw referentie</dt>
-    <dd>4564657-1</dd>
-    <dt>Gemeente</dt>
-    <dd>Gemeente Zwolle</dd>
-</reference>
+{{ signature }}
