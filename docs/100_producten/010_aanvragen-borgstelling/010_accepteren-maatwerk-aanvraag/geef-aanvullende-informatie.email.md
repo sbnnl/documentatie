@@ -1,4 +1,4 @@
-Beste lezer,
+{{ salutation }}
 
 Bedankt voor je aanvraag voor borgstelling via het Waarborgfonds. Wij willen je graag een paar vragen stellen om meer te weten te komen over de klant en de zekerheid van terugbetaling van het saneringskrediet. Deze vragen helpen ons om het Waarborgfonds toekomstbestendig te maken en dienen als een risico-inventarisatie voorafgaand aan de borgstelling.
 
@@ -10,10 +10,10 @@ Wij willen graag dat je de volgende vragen beantwoord:
 * Wat zijn de mogelijke risico’s die de terugbetaling van het saneringskrediet in gevaar kunnen brengen?
 * Wat is de (verwachte) van het hoogte inkomen per maand van de klant?
 * Hoe schat u de zekerheid in van het inkomen voor de duur van het saneringskrediet?
-    * Zeer zeker
-    * Redelijk zeker
-    * Redelijk onzeker
-    * Zeer onzeker
+  * Zeer zeker
+  * Redelijk zeker
+  * Redelijk onzeker
+  * Zeer onzeker
 * Waarop baseert u deze inschatting?
 * Wat is de ontstaansreden van de schulden?
 * Zijn er bijzondere omstandigheden over het verstrekken van dit saneringskrediet waarover u het Waarborgfonds wilt informeren?
@@ -23,11 +23,4 @@ Is er iets onduidelijk of heb je zelf nog een vraag? Neem dan contact op met het
 
 Met vriendelijke groet,
 
-<from>
-    <name>Piet de Vries</name>
-    <email>afa0f657-ba5b-4f6f-bc4e-6ac8dd63d76b-zwolle@waarborgfonds.sbn.nl</email>
-</from>
-<to>
-    <email>kredietverlening@zwolle.nl</email>
-</to>
-<subject>Borgstelling aanvraag voor saneringskrediet met kenmerk 5461135-1</subject>
+{{ signature }}

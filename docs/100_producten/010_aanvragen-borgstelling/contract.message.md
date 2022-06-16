@@ -1,4 +1,4 @@
-Beste heer, mevrouw,
+{{ salutation }}
 
 Het Waarborgfonds Saneringskredieten (Wsk) heeft met u een overeenkomst voor de borgstelling van saneringskredieten.
 
@@ -17,30 +17,4 @@ Heeft u nog vragen over deze brief, dan kunt u contact met ons opnemen.
 
 Met vriendelijke groet,
 
-
-Waarborgfonds Saneringskredieten,
-
-namens deze,
- 
-
-
-
-Wouter Vos
-
-Bestuurder Stichting Bemiddeling en Fondsbeheer
-
-<address>
-    Kredietbank Zwolle<br>
-    t.a.v. afdeling kredietverlening<br>
-    Postbus 100070<br>
-    8000 GA Zwolle
-</address>
-<time>Utrecht, 2022-01-01</time>
-<reference>
-    <dt>Onderwerp</dt>
-    <dd>Borgstellingsovereenkomst</dd>
-    <dt>Uw referentie:</dd>
-    <dd>4564657-1</dd>
-    <dt>Gemeente:</dd>
-    <dd>Gemeente Zwolle</dd>
-</reference>
+{{ signature }}
