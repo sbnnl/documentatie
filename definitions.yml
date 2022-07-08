@@ -83,7 +83,7 @@
 - name: pro-forma aanvraag
   alias: 
     - pro-forma aanvragen
-  link: producten/pro-forma-aanvragen-borgstelling/index.html
+  link: processen/pro-forma-aanvragen-borgstelling/index.html
   text: |
     schuldhulpverleners moeten al in een vroeg stadium weten of een saneringskrediet ingezet kan worden. Via een pro-forma aanvraag kan de schuldhulpverlener een pro-forma borgstelling aanvragen op basis van de informatie die op dat moment bekent is. 
   

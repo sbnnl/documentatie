@@ -152,17 +152,18 @@ Met deze epic wordt er een invulling gegeven aan het dashboard. Deze epic bestaa
 1. Portaal
 1. IAM
 
-[pro-forma aanvragen borgstelling]: ../producten/pro-forma-aanvragen-borgstelling/index.md
-[aanvragen borgstelling]: ../producten/aanvragen-borgstelling/index.md
-[accepteren maatwerk aanvraag]: ../producten/aanvragen-borgstelling/accepteren-maatwerk-aanvraag/index.md
-[borgstellingen beheren]: ../producten/borgstellingen-beheren/index.md
-[beëindigen borgstelling]: ../producten/beeindigen-borgstelling/index.md
-[intrekken borgstelling]: ../producten/intrekken-borgstelling/index.md
-[uitbetalen borgstelling]: ../producten/uitbetalen-borgstelling/index.md
-[beoordelen uitbetalingsverzoek]: ../producten/uitbetalen-borgstelling/beoordelen-uitbetalingsverzoek/index.md
+[pro-forma aanvragen borgstelling]: ../processen/pro-forma-aanvragen-borgstelling/index.md
+[aanvragen borgstelling]: ../processen/aanvragen-borgstelling/index.md
+[accepteren maatwerk aanvraag]: ../processen/aanvragen-borgstelling/accepteren-maatwerk-aanvraag/index.md
+[borgstellingen beheren]: ../processen/borgstellingen-beheren/index.md
+[beëindigen borgstelling]: ../processen/beeindigen-borgstelling/index.md
+[intrekken borgstelling]: ../processen/intrekken-borgstelling/index.md
+[uitbetalen borgstelling]: ../processen/uitbetalen-borgstelling/index.md
+[beoordelen uitbetalingsverzoek]: ../processen/uitbetalen-borgstelling/beoordelen-uitbetalingsverzoek/index.md
+[borgstellingen beheren]: ../processen/borgstellingen-beheren/index.md
+[vul borgstelling aan]: ../processen/borgstellingen-beheren/index.md#vul-borgstelling(en)-aan
+
 [gebeurtenissen documentatie]: ../producten/gebeurtenissen/index.md
-[borgstellingen beheren]: ../producten/borgstellingen-beheren/index.md
-[vul borgstelling aan]: ../producten/borgstellingen-beheren/index.md#vul-borgstelling(en)-aan
 [kredietbanken beheren]: ../producten/kredietbanken-beheeren/index.md
 [takenlijst]: ../producten/takenlijst/index.md
 
