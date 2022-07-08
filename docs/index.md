@@ -16,6 +16,10 @@ Het Wsk verwezenlijkt deze doelstelling door:
 1. Zorgvuldig beheer van de haar toevertrouwde middelen en de eventueel te werven middelen.
 1. Het belang van saneringskredieten en de voordelen van het fonds actief onder de aandacht brengen van relevante partijen in het schuldhulpverleningsland.
 
+## Aanpak
+
+![aanpak](aanpak.png)
+
 ## Organisatie
 
 Het werk van het Wsk is belegd bij twee stichtingen:
