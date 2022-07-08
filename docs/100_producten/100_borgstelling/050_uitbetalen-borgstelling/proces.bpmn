@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_00moudr" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.12.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="1.1.0">
+  <bpmn:collaboration id="Collaboration_1qbgt8p">
+    <bpmn:participant id="Participant_0fmyfu8" name="Uitbetalen borgstelling" processRef="Process_1kj01nt" />
+    <bpmn:participant id="Participant_1uo4ada" name="Kredietverstrekker (Kredietbank)" />
+    <bpmn:participant id="Participant_0wg69up" name="Exact online (SBF)" />
+    <bpmn:participant id="rol-archief" name="Archief" />
+    <bpmn:messageFlow id="Flow_1lc1t45" sourceRef="Participant_1uo4ada" targetRef="gebeurtenis-uitbetaling-verzoek-ontvangen" />
+    <bpmn:messageFlow id="Flow_15wx6h8" sourceRef="Event_1kip4f9" targetRef="Participant_1uo4ada" />
+    <bpmn:messageFlow id="Flow_0hennqn" sourceRef="Event_1eolsjr" targetRef="Participant_1uo4ada" />
+    <bpmn:messageFlow id="Flow_018w4zq" sourceRef="Activity_0fcsy6h" targetRef="Participant_0wg69up" />
+    <bpmn:messageFlow id="Flow_1oz3158" sourceRef="Activity_173oksy" targetRef="rol-archief" />
+    <bpmn:messageFlow id="Flow_1ybqyxr" sourceRef="Activity_174c7h3" targetRef="rol-archief" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_1kj01nt" isExecutable="true">
+    <bpmn:sequenceFlow id="Flow_0yk2pct" sourceRef="Activity_173oksy" targetRef="Event_1eolsjr" />
+    <bpmn:sequenceFlow id="Flow_0a1w30w" sourceRef="Activity_0fcsy6h" targetRef="Activity_174c7h3" />
+    <bpmn:sequenceFlow id="Flow_17r2yru" sourceRef="Activity_174c7h3" targetRef="Event_1kip4f9" />
+    <bpmn:sequenceFlow id="route-afgewezen" name="Afgewezen" sourceRef="Event_0ub20q8" targetRef="Activity_173oksy" />
+    <bpmn:sequenceFlow id="Flow_0iutu4q" sourceRef="gebeurtenis-uitbetaling-verzoek-ontvangen" targetRef="Activity_0weows7" />
+    <bpmn:startEvent id="gebeurtenis-uitbetaling-verzoek-ontvangen" name="Uitbetaling verzoek ontvangen">
+      <bpmn:outgoing>Flow_0iutu4q</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_10764zv" messageRef="Message_19mvjbm" />
+    </bpmn:startEvent>
+    <bpmn:callActivity id="Activity_0weows7" name="Beoordelen uitbetalings verzoek">
+      <bpmn:extensionElements>
+        <zeebe:calledElement propagateAllChildVariables="false" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0iutu4q</bpmn:incoming>
+      <bpmn:outgoing>Flow_1rjsbhi</bpmn:outgoing>
+    </bpmn:callActivity>
+    <bpmn:boundaryEvent id="Event_0ub20q8" attachedToRef="Activity_0weows7">
+      <bpmn:outgoing>route-afgewezen</bpmn:outgoing>
+      <bpmn:errorEventDefinition id="ErrorEventDefinition_04tpx6g" />
+    </bpmn:boundaryEvent>
+    <bpmn:sequenceFlow id="Flow_1rjsbhi" name="Geaccepteerd" sourceRef="Activity_0weows7" targetRef="Activity_0fcsy6h" />
+    <bpmn:endEvent id="Event_1kip4f9" name="Borgsteling uitbetaald">
+      <bpmn:incoming>Flow_17r2yru</bpmn:incoming>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_03pd8bb" />
+    </bpmn:endEvent>
+    <bpmn:endEvent id="Event_1eolsjr" name="Uitbetaalverzoek afgewezen">
+      <bpmn:incoming>Flow_0yk2pct</bpmn:incoming>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_1mfz0wd" />
+    </bpmn:endEvent>
+    <bpmn:serviceTask id="Activity_0fcsy6h" name="Betaal borgstelling uit">
+      <bpmn:incoming>Flow_1rjsbhi</bpmn:incoming>
+      <bpmn:outgoing>Flow_0a1w30w</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Activity_174c7h3" name="Archiveer uitbetaling">
+      <bpmn:incoming>Flow_0a1w30w</bpmn:incoming>
+      <bpmn:outgoing>Flow_17r2yru</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Activity_173oksy" name="Archiveer afwijzing">
+      <bpmn:incoming>route-afgewezen</bpmn:incoming>
+      <bpmn:outgoing>Flow_0yk2pct</bpmn:outgoing>
+    </bpmn:serviceTask>
+  </bpmn:process>
+  <bpmn:message id="Message_19mvjbm" name="UitbetalingVerzochtV1" />
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1qbgt8p">
+      <bpmndi:BPMNShape id="Participant_0fmyfu8_di" bpmnElement="Participant_0fmyfu8" isHorizontal="true">
+        <dc:Bounds x="160" y="170" width="1130" height="320" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1rjsbhi_di" bpmnElement="Flow_1rjsbhi">
+        <di:waypoint x="450" y="295" />
+        <di:waypoint x="580" y="295" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="480" y="277" width="70" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0iutu4q_di" bpmnElement="Flow_0iutu4q">
+        <di:waypoint x="295" y="295" />
+        <di:waypoint x="350" y="295" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_19e1ewa_di" bpmnElement="route-afgewezen">
+        <di:waypoint x="430" y="353" />
+        <di:waypoint x="430" y="410" />
+        <di:waypoint x="840" y="410" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="452" y="383" width="55" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_17r2yru_di" bpmnElement="Flow_17r2yru">
+        <di:waypoint x="1050" y="295" />
+        <di:waypoint x="1122" y="295" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0a1w30w_di" bpmnElement="Flow_0a1w30w">
+        <di:waypoint x="680" y="295" />
+        <di:waypoint x="950" y="295" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0yk2pct_di" bpmnElement="Flow_0yk2pct">
+        <di:waypoint x="940" y="410" />
+        <di:waypoint x="1182" y="410" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_1e6cqxl_di" bpmnElement="gebeurtenis-uitbetaling-verzoek-ontvangen">
+        <dc:Bounds x="259" y="277" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="251" y="320" width="52" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1lccyse_di" bpmnElement="Activity_0weows7">
+        <dc:Bounds x="350" y="255" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_16idg3w_di" bpmnElement="Event_1kip4f9">
+        <dc:Bounds x="1122" y="277" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1113" y="320" width="56" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1p362m0_di" bpmnElement="Event_1eolsjr">
+        <dc:Bounds x="1182" y="392" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1159" y="440" width="83" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0ch2lba_di" bpmnElement="Activity_0fcsy6h">
+        <dc:Bounds x="580" y="255" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1r6e7ul_di" bpmnElement="Activity_174c7h3">
+        <dc:Bounds x="950" y="255" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1qfa4nc_di" bpmnElement="Activity_173oksy">
+        <dc:Bounds x="840" y="370" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1n201mi_di" bpmnElement="Event_0ub20q8">
+        <dc:Bounds x="412" y="317" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_0avqix7_di" bpmnElement="Participant_1uo4ada" isHorizontal="true">
+        <dc:Bounds x="160" y="90" width="1130" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_0wg69up_di" bpmnElement="Participant_0wg69up" isHorizontal="true">
+        <dc:Bounds x="480" y="520" width="300" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="rol-archief_di" bpmnElement="rol-archief" isHorizontal="true">
+        <dc:Bounds x="800" y="520" width="300" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1lc1t45_di" bpmnElement="Flow_1lc1t45">
+        <di:waypoint x="277" y="150" />
+        <di:waypoint x="277" y="277" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_15wx6h8_di" bpmnElement="Flow_15wx6h8">
+        <di:waypoint x="1140" y="277" />
+        <di:waypoint x="1140" y="150" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0hennqn_di" bpmnElement="Flow_0hennqn">
+        <di:waypoint x="1200" y="392" />
+        <di:waypoint x="1200" y="150" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_018w4zq_di" bpmnElement="Flow_018w4zq">
+        <di:waypoint x="630" y="335" />
+        <di:waypoint x="630" y="520" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1oz3158_di" bpmnElement="Flow_1oz3158">
+        <di:waypoint x="890" y="450" />
+        <di:waypoint x="890" y="520" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ybqyxr_di" bpmnElement="Flow_1ybqyxr">
+        <di:waypoint x="1000" y="335" />
+        <di:waypoint x="1000" y="520" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

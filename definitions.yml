@@ -70,10 +70,6 @@
   text: |
     Stratech is een software pakket dat ondersteuning biedt aan alle primaire processen van schuldhulpverleners.
 
-- name: Schuldenknooppunt
-  text: |
-    Via het Schuldenknooppunt wisselen schuldhulpverleners en schuldeisers standaard berichten uit.
-
 - name: Takenlijst
   text: |
     Vanuit producten ontstaan er taken die door mensen uitgevoerd moeten worden. De takenlijst stelt deze taken op een centrale plek beschikbaar op basis van decentrale taak bronnen.
@@ -87,7 +83,7 @@
 - name: pro-forma aanvraag
   alias: 
     - pro-forma aanvragen
-  link: producten/pro-forma-aanvragen-borgstelling/index.html
+  link: processen/pro-forma-aanvragen-borgstelling/index.html
   text: |
     schuldhulpverleners moeten al in een vroeg stadium weten of een saneringskrediet ingezet kan worden. Via een pro-forma aanvraag kan de schuldhulpverlener een pro-forma borgstelling aanvragen op basis van de informatie die op dat moment bekent is. 
   
@@ -122,3 +118,11 @@
 - name: MVP
   text: Een minimum viable product (MVP) ofwel minimum levensvatbaar product is een product met genoeg functionaliteit om voldoende waarde te hebben om vroeg aansluitende klanten aan te trekken en om terugkoppeling te krijgen voor de verdere productontwikkeling.
     
+- name: PKIoverheid
+  text: PKIoverheid is de public key infrastructure (PKI) van de Nederlandse overheid. Net als elke andere PKI is het een afsprakenstelsel om digitale certificaten uit te geven en te beheren. PKIoverheid wordt beheerd door Logius. 
+  link: https://nl.wikipedia.org/wiki/PKIoverheid
+
+- name: two-way authentication
+  alias:
+    - mutual authentication
+  link: https://en.wikipedia.org/wiki/Mutual_authentication

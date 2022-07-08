@@ -1,4 +1,4 @@
-# Taken worden m.b.v. een plugin architectuur beschikbaat gesteld
+# Taken worden m.b.v. een plugin architectuur beschikbaar gesteld
 
 ## Context
 

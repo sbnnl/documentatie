@@ -8,13 +8,16 @@ De schuldenknooppunt adapter zorgt ervoor dat het schuldenknooppunt gekoppeld wo
 1. Gebeurtenissen van het waarborgfonds moeten omgezet worden in berichten en verstuurd worden naar het schuldenknooppunt;
 1. Periodiek moet er een bericht verstuurd worden naar het schuldenknooppunt waarmee alle actieve saneringskredieten mee worden opgevraagd;
 
-* [Context](context.puml)
-
-Http over SSL wordt gebruikt als transport mechanisme. Authenticatie en autorisatie verloopt via een X.509 certificaat die door het schuldenknooppunt beschikbaar wordt gesteld. Omdat de informatiestromen per kredietbank logisch gescheiden zijn is er een certificaat nodig voor elke aangesloten kredietbank.
+Http over SSL wordt gebruikt als transport mechanisme en SOAP is het protocol. Authenticatie en autorisatie verloopt via een PKIoverheid certificaat (X.509) die door het waarborgfonds aangevraagd moet worden. Dit certificaat moet door het schuldenknooppunt vertrouwd worden en het waarborgfonds moet het certificaat van het schuldenknooppunt vertrouwen: two-way authentication. Voor de acceptatieomgeving worden self signed certificaten door het schuldenknooppunt beschikbaar gesteld. De informatiestromen zijn niet per kredietbank logisch gescheiden.
 
 Functionele uitval, berichten die syntactisch niet juist zijn of die inhoudelijk niet juist zijn, worden afgehandeld door de functioneel beheerder van de kredietbank via het schuldenknooppunt. Dit proces wordt gestart door het foutieve bericht als verwerkt te markeren en [een foutmelding bericht](https://innovadis.atlassian.net/wiki/spaces/NVVK/pages/3321888769/Waarborgfonds+Foutbericht) naar het schuldenknooppunt te sturen.
 
+Een WSDL wordt door de leverancier van het schuldenknooppunt beschikbaar gesteld en hiermee kan, in de taal naar keuze, service code mee gegenereerd worden.
+
 [Zie de documentatie van het schuldenknooppunt voor meer informatie.](https://innovadis.atlassian.net/wiki/spaces/NVVK/pages/3315695621/Waarborgfonds)
+
+* [Context](context.puml)
+* [Pseudo code](pseudo-code.cs)
 
 ## Berichten verwerken
 
@@ -117,11 +120,11 @@ Zie de documentatie van het product [uitbetalen borgstelling] voor meer informat
 
 Periodiek moeten er gegevens aangeleverd van saneringskredieten die sinds de laatste aanlevering actief zijn geweest. Dit proces wordt gestart door de adapter die periodiek een bericht verstuurd naar elke aangesloten kredietbank waarmee de kredietbank gevraagd wordt om te antwoorden met alle saneringskredieten die sinds de laatste aanlevering actief zijn geweest. Zie [bericht vul borgstelling aan](#vul-borgstelling-aan) voor meer informatie.
 
-[pro-forma aanvragen borgstelling]: ../../producten/pro-forma-aanvragen-borgstelling/index.md
-[aanvragen borgstelling]: ../../producten/aanvragen-borgstelling/index.md
-[beëindigen borgstelling]: ../../producten/beeindigen-borgstelling/index.md
-[intrekken borgstelling]: ../../producten/intrekken-borgstelling/index.md
-[uitbetalen borgstelling]: ../../producten/uitbetalen-borgstelling/index.md
-[gebeurtenissen documentatie]: ../../producten/gebeurtenissen/index.md
-[borgstellingen beheren]: ../../producten/borgstellingen-beheren/index.md
-[vul borgstelling aan]: ../../producten/borgstellingen-beheren/index.md#vul-borgstelling(en)-aan
+[pro-forma aanvragen borgstelling]: ../../producten/borgstelling/pro-forma-aanvragen-borgstelling/index.md
+[aanvragen borgstelling]: ../../producten/borgstelling/aanvragen-borgstelling/index.md
+[beëindigen borgstelling]: ../../producten/borgstelling/beeindigen-borgstelling/index.md
+[intrekken borgstelling]: ../../producten/borgstelling/intrekken-borgstelling/index.md
+[uitbetalen borgstelling]: ../../producten/borgstelling/uitbetalen-borgstelling/index.md
+[gebeurtenissen documentatie]: ../../proprocessenducten/gebeurtenissen/index.md
+[borgstellingen beheren]: ../../producten/borgstelling/borgstellingen-beheren/index.md
+[vul borgstelling aan]: ../../producten/borgstelling/borgstellingen-beheren/index.md#vul-borgstelling(en)-aan
