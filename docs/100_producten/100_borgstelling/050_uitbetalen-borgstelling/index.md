@@ -6,8 +6,6 @@ Het doel van uitbetalen borgstelling is om tot een beoordeling te komen of de bo
 
 <!-- einde -->
 
-* [API](product.openapi.yml)
-
 ## Proces
 
 * [Proces](proces.bpmn)

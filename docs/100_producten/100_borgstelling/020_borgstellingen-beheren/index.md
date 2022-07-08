@@ -1,6 +1,6 @@
 # Borgstellingen beheren
 
-## Product
+## Beschrijving
 
 Het doel is om het Wsk goed te kunnen beheren door inzicht te krijgen in de groei, de omvang en de risico's van het waarborgfonds. Daarnaast is een ander doel om aan de rapportage verplichtingen richting het ministerie en de toezichthouders te voldoen.
 

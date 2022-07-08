@@ -1,6 +1,6 @@
 # Pro-forma aanvragen borgstelling
 
-## Product
+## Beschrijving
 
 Voordat er een saneringskrediet aanvraag gestart kan worden door de kredietbank moet de kredietbank weten of een mogelijke aanvraag geborgd gaat worden door het Wsk.
 
@@ -10,8 +10,7 @@ Een pro-forma aanvraag is alleen relevant voor maatwerk-aanvragen. Onderzoek hee
 
 <!-- einde -->
 
-* [Formulier](product.user-task.yml)
-* [API](product.openapi.yml)
+[Formulier](product.user-task.yml)
 
 ## Proces
 

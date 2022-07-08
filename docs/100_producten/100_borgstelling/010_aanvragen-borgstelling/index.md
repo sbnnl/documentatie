@@ -1,6 +1,6 @@
 # Aanvragen borgstelling
 
-## Product
+## Beschrijving
 
 Een aanvraag van een borgstelling door een kredietbank voor een saneringskrediet waarvoor het Wsk borg staat. De volgende aanvraag borgstelling producten kunnen afgenomen worden:
 
@@ -15,10 +15,7 @@ Voor een maatwerk aanvraag borgstelling kan optioneel een verwijzing naar een pr
 
 <!-- einde -->
 
-* [Formulier](product.user-task.yml)
-* [API](product.openapi.yml)
-<!-- * [Acceptatie criteria](product.feature)
-* [Dashboard](product.dashboard.yml) -->
+[Formulier](product.user-task.yml)
 
 ## Proces
 

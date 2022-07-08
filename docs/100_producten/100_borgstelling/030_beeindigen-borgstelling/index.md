@@ -1,13 +1,12 @@
 # Beëindigen borgstelling
 
-## Product
+## Beschrijving
 
 Het doel van een beëindiging van de borgstelling is het bestand met borgstellingen actueel te houden.
 
 <!-- einde -->
 
-* [Scherm](product.user-task.yml)
-* [API](product.openapi.yml)
+[Scherm](product.user-task.yml)
 
 ## Proces
 
