@@ -1,0 +1,10 @@
+actions:
+  intrekken:
+    name: borgstelling intrekken
+    schema: 
+      $ref: "../../../data-dictionary/commands/trek_borgstelling_in.yml"
+    ui:
+      hidden:
+        - command_id
+        - correlation_id
+        - causation_id

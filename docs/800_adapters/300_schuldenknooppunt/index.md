@@ -120,11 +120,11 @@ Zie de documentatie van het product [uitbetalen borgstelling] voor meer informat
 
 Periodiek moeten er gegevens aangeleverd van saneringskredieten die sinds de laatste aanlevering actief zijn geweest. Dit proces wordt gestart door de adapter die periodiek een bericht verstuurd naar elke aangesloten kredietbank waarmee de kredietbank gevraagd wordt om te antwoorden met alle saneringskredieten die sinds de laatste aanlevering actief zijn geweest. Zie [bericht vul borgstelling aan](#vul-borgstelling-aan) voor meer informatie.
 
-[pro-forma aanvragen borgstelling]: ../../processen/pro-forma-aanvragen-borgstelling/index.md
-[aanvragen borgstelling]: ../../processen/aanvragen-borgstelling/index.md
-[beëindigen borgstelling]: ../../processen/beeindigen-borgstelling/index.md
-[intrekken borgstelling]: ../../processen/intrekken-borgstelling/index.md
-[uitbetalen borgstelling]: ../../processen/uitbetalen-borgstelling/index.md
+[pro-forma aanvragen borgstelling]: ../../producten/borgstelling/pro-forma-aanvragen-borgstelling/index.md
+[aanvragen borgstelling]: ../../producten/borgstelling/aanvragen-borgstelling/index.md
+[beëindigen borgstelling]: ../../producten/borgstelling/beeindigen-borgstelling/index.md
+[intrekken borgstelling]: ../../producten/borgstelling/intrekken-borgstelling/index.md
+[uitbetalen borgstelling]: ../../producten/borgstelling/uitbetalen-borgstelling/index.md
 [gebeurtenissen documentatie]: ../../proprocessenducten/gebeurtenissen/index.md
-[borgstellingen beheren]: ../../processen/borgstellingen-beheren/index.md
-[vul borgstelling aan]: ../../processen/borgstellingen-beheren/index.md#vul-borgstelling(en)-aan
+[borgstellingen beheren]: ../../producten/borgstelling/borgstellingen-beheren/index.md
+[vul borgstelling aan]: ../../producten/borgstelling/borgstellingen-beheren/index.md#vul-borgstelling(en)-aan

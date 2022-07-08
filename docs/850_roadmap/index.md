@@ -152,16 +152,16 @@ Met deze epic wordt er een invulling gegeven aan het dashboard. Deze epic bestaa
 1. Portaal
 1. IAM
 
-[pro-forma aanvragen borgstelling]: ../processen/pro-forma-aanvragen-borgstelling/index.md
-[aanvragen borgstelling]: ../processen/aanvragen-borgstelling/index.md
-[accepteren maatwerk aanvraag]: ../processen/aanvragen-borgstelling/accepteren-maatwerk-aanvraag/index.md
-[borgstellingen beheren]: ../processen/borgstellingen-beheren/index.md
-[beëindigen borgstelling]: ../processen/beeindigen-borgstelling/index.md
-[intrekken borgstelling]: ../processen/intrekken-borgstelling/index.md
-[uitbetalen borgstelling]: ../processen/uitbetalen-borgstelling/index.md
-[beoordelen uitbetalingsverzoek]: ../processen/uitbetalen-borgstelling/beoordelen-uitbetalingsverzoek/index.md
-[borgstellingen beheren]: ../processen/borgstellingen-beheren/index.md
-[vul borgstelling aan]: ../processen/borgstellingen-beheren/index.md#vul-borgstelling(en)-aan
+[pro-forma aanvragen borgstelling]: ../producten/borgstelling/pro-forma-aanvragen-borgstelling/index.md
+[aanvragen borgstelling]: ../producten/borgstelling/aanvragen-borgstelling/index.md
+[accepteren maatwerk aanvraag]: ../producten/borgstelling/aanvragen-borgstelling/accepteren-maatwerk-aanvraag/index.md
+[borgstellingen beheren]: ../producten/borgstelling/borgstellingen-beheren/index.md
+[beëindigen borgstelling]: ../producten/borgstelling/beeindigen-borgstelling/index.md
+[intrekken borgstelling]: ../producten/borgstelling/intrekken-borgstelling/index.md
+[uitbetalen borgstelling]: ../producten/borgstelling/uitbetalen-borgstelling/index.md
+[beoordelen uitbetalingsverzoek]: ../producten/borgstelling/uitbetalen-borgstelling/beoordelen-uitbetalingsverzoek/index.md
+[borgstellingen beheren]: ../producten/borgstelling/borgstellingen-beheren/index.md
+[vul borgstelling aan]: ../producten/borgstelling/borgstellingen-beheren/index.md#vul-borgstelling(en)-aan
 
 [gebeurtenissen documentatie]: ../producten/gebeurtenissen/index.md
 [kredietbanken beheren]: ../producten/kredietbanken-beheeren/index.md

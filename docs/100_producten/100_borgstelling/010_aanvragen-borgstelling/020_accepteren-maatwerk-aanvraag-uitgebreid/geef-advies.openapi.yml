@@ -1,0 +1,87 @@
+openapi: 3.0.3
+
+info:
+  version: 0.0.1
+  title: Waarborgfonds saneringskredieten
+  description: |
+
+paths:
+
+  /api/kredietbanken/{kredietbank_id}/geef-advies-taken/{taak_id}:
+    parameters:
+      - $ref: "../../../../data-dictionary/parameters/kredietbank_id.yml"
+      - $ref: "../../../../data-dictionary/parameters/taak_id.yml"
+    get:
+      tags:
+        - geef advies taken
+      summary: Geeft een geef advies taak.
+      operationId: GeefAdviesTaakV1
+      responses:
+        200:          
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "../../../../data-dictionary/responses/geef_advies_taak.yml"
+        400:
+          $ref: "../../../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../../../data-dictionary/responses/types/403.yml"
+        404:
+          $ref: "../../../../data-dictionary/responses/types/404.yml"
+
+  /api/kredietbanken/{kredietbank_id}/geef-advies-taken/{taak_id}/positief-adviseren:
+    parameters:
+      - $ref: "../../../../data-dictionary/parameters/kredietbank_id.yml"
+      - $ref: "../../../../data-dictionary/parameters/taak_id.yml"
+    put:
+      tags:
+        - geef advies taken
+      summary: Voltooit de geef aanvullende informatie taak met een positief advies.
+      operationId: VoltooiBeantwoordAanvullendeVragenTaakMetPositiefAdviserenV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "../../../../data-dictionary/commands/geef_positief_advies.yml"
+      responses:
+        202:
+          $ref: "../../../../data-dictionary/responses/types/202.yml"
+        400:
+          $ref: "../../../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../../../data-dictionary/responses/types/403.yml"
+        404:
+          $ref: "../../../../data-dictionary/responses/types/404.yml"
+
+  /api/kredietbanken/{kredietbank_id}/geef-advies-taken/{taak_id}/negatief-adviseren:
+    parameters:
+      - $ref: "../../../../data-dictionary/parameters/kredietbank_id.yml"
+      - $ref: "../../../../data-dictionary/parameters/taak_id.yml"
+    put:
+      tags:
+        - geef advies taken
+      summary: Voltooit de geef aanvullende informatie taak met een negatief advies.
+      operationId: VoltooiBeantwoordAanvullendeVragenTaakMetNegatiefAdviserenV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "../../../../data-dictionary/commands/geef_negatief_advies.yml"
+      responses:
+        202:
+          $ref: "../../../../data-dictionary/responses/types/202.yml"
+        400:
+          $ref: "../../../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../../../data-dictionary/responses/types/403.yml"
+        404:
+          $ref: "../../../../data-dictionary/responses/types/404.yml"

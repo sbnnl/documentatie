@@ -16,12 +16,6 @@ Het Wsk verwezenlijkt deze doelstelling door:
 1. Zorgvuldig beheer van de haar toevertrouwde middelen en de eventueel te werven middelen.
 1. Het belang van saneringskredieten en de voordelen van het fonds actief onder de aandacht brengen van relevante partijen in het schuldhulpverleningsland.
 
-## Proces
-
-[e2e proces](proces.bpmn)
-
-Uit onderzoek is gebleken dat 92% van de kredietaanvragen binnen de voorwaarden passen waarbij de aanvraag automatisch geaccepteerd wordt. In deze gevallen is een pro-forma aanvraag niet nodig. Het proces is dan een STP proces en dit proces wordt normaal gesproken binnen een paar seconden voltooid.
-
 ## Organisatie
 
 Het werk van het Wsk is belegd bij twee stichtingen:

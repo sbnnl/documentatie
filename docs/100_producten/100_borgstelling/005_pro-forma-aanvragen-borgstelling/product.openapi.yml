@@ -1,0 +1,56 @@
+openapi: 3.0.3
+
+info:
+  version: 0.0.1
+  title: Waarborgfonds saneringskredieten
+  description: |
+
+paths:
+
+  /api/kredietbanken/{kredietbank_id}/pro_forma_borgstellingen:
+    parameters:
+      - $ref: "../../../data-dictionary/parameters/kredietbank_id.yml"
+    post:
+      tags:
+        - pro-forma borgstellingen
+      summary: Registreer pro-forma aanvraag
+      operationId: RegistreerProFormaAanvraagV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "../../../data-dictionary/commands/registreer_pro_forma_aanvraag.yml"
+      responses:
+        201:
+          $ref: "../../../data-dictionary/responses/types/201.yml"
+        400:
+          $ref: "../../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../../data-dictionary/responses/types/403.yml"
+
+  /api/kredietbanken/{kredietbank_id}/pro_forma_borgstellingen/{borgstelling_id}:
+    get:
+      tags:
+        - pro-forma borgstellingen
+      summary: Geeft een pro-forma borgstelling
+      operationId: GeefProFormaBorgstellingV1
+      parameters:
+        - $ref: "../../../data-dictionary/parameters/pro_forma_borgstelling_id.yml"
+      responses:
+        200:          
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "../../../data-dictionary/responses/geef_pro_forma_borgstelling.yml"
+        400:
+          $ref: "../../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../../data-dictionary/responses/types/403.yml"
+        424:
+          $ref: "../../../data-dictionary/responses/types/404.yml"

@@ -1,0 +1,34 @@
+openapi: 3.0.3
+
+info:
+  version: 0.0.1
+  title: Waarborgfonds saneringskredieten
+  description: |
+paths:
+
+  /api/kredietbanken/{kredietbank_id}/borgstellingen/{borgstelling_id}/uitbetalen:
+    parameters:  
+      - $ref: "../../../data-dictionary/parameters/kredietbank_id.yml"
+      - $ref: "../../../data-dictionary/parameters/borgstelling_id.yml"
+    put:
+      tags:
+        - borgstelling uitbetalen
+      summary: Vezoekt uitbetaling van de borgstelling.
+      operationId: VerzoekUitbetalingBorgstellingV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "../../../data-dictionary/commands/verzoek_uitbetaling_borgstelling.yml"
+      responses:
+        202:
+          $ref: "../../../data-dictionary/responses/types/202.yml"
+        400:
+          $ref: "../../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../../data-dictionary/responses/types/403.yml"
+        404:
+          $ref: "../../../data-dictionary/responses/types/404.yml"

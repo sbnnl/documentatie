@@ -1,0 +1,11 @@
+actions:
+  aanvraag:
+    name: Aanvraag borgstelling
+    schema: 
+      $ref: "../../../data-dictionary/commands/registreer_borgstelling_aanvraag.yml"
+    ui:
+      hidden:
+        - command_id
+        - correlation_id
+        - causation_id
+        - soort_aanvraag
