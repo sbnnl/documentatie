@@ -1,0 +1,34 @@
+openapi: 3.0.3
+
+info:
+  version: 0.0.1
+  title: Waarborgfonds saneringskredieten
+  description: |
+    
+paths:
+
+  /api/kredietbanken/{kredietbank_id}/borgstellingen:
+    parameters:
+      - $ref: "../../../data-dictionary/parameters/kredietbank_id.yml"
+    get:      
+      tags:
+        - borgstellingen
+      summary: Geeft een lijst met borgstellingen
+      operationId: GeefBorgstellingenV1
+      parameters:
+        - $ref: "../../../data-dictionary/parameters/kenmerken_aanvrager.yml"
+        - $ref: "../../../data-dictionary/parameters/limit.yml"
+        - $ref: "../../../data-dictionary/parameters/offset.yml"
+      responses:
+        200:          
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "../../../data-dictionary/responses/geef_borgstellingen.yml"
+        400:
+          $ref: "../../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../../data-dictionary/responses/types/403.yml"

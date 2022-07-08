@@ -1,0 +1,10 @@
+actions:
+  aanvraag:
+    name: Pro-forma aanvraag
+    schema: 
+      $ref: "../../../data-dictionary/commands/registreer_pro_forma_aanvraag.yml"
+    ui:
+      hidden:
+        - command_id
+        - correlation_id
+        - causation_id
