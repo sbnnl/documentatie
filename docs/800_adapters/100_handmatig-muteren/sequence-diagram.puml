@@ -3,7 +3,7 @@ autonumber
 
 actor Kredietbank as user
 participant "Browser" as browser
-participant "Wsk api" as api
+participant "Schuldenknooppunt" as api
 
 user -> browser : bestand
 

@@ -4,7 +4,7 @@
 
 Met de handmatig muteren browser app is het voor kredietbanken mogelijk om handmatig aan te sluiten op het waarborgfonds.
 Kredietbanken kunnen m.b.v. de app een bestand met daarin alle saneringskredieten die actief zijn geweest sinds de laatste aanlevering aanleveren.
-De app vergelijkt het bestand met de actieve borgstellingen van het Wsk. De verschillen worden vertaald naar opdrachten die door de producten van het Wsk verwerkt kunnen worden.
+De app vergelijkt het bestand met de actieve borgstellingen van het Wsk. De verschillen worden vertaald naar schuldenknooppunt berichten. Deze berichten worden op dezelfde manier verwerk zoals beschreven bij de [schuldenknooppunt adapter](../schuldenknooppunt/index.md).
 
 De bestanden worden geëxporteerd vanuit verschillende back-office systemen zoals Allegro en Stratech. Specifieke adapters zetten dit formaat om naar een generieke verzameling van saneringskredieten. Op deze manier is de app gesloten voor wijziging en open voor uitbreiding.
 
