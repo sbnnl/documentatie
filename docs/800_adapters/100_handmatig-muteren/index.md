@@ -2,14 +2,12 @@
 
 ## Product
 
-Met de handmatig muteren browser app is het voor kredietbanken mogelijk om handmatig aan te sluiten op het waarborgfonds.
-Kredietbanken kunnen m.b.v. de app een bestand met daarin alle saneringskredieten die actief zijn geweest sinds de laatste aanlevering aanleveren.
-De app vergelijkt het bestand met de actieve borgstellingen van het Wsk. De verschillen worden vertaald naar schuldenknooppunt berichten. Deze berichten worden op dezelfde manier verwerk zoals beschreven bij de [schuldenknooppunt adapter](../schuldenknooppunt/index.md).
+Kredietbanken kunnen via het portaal van het schuldenknooppunt handmatig aan sluiten op het waarborgfonds.
+Kredietbanken kunnen daar een bestand met daarin alle saneringskredieten die actief zijn geweest sinds de laatste aanlevering uploaden.
 
-De bestanden worden geëxporteerd vanuit verschillende back-office systemen zoals Allegro en Stratech. Specifieke adapters zetten dit formaat om naar een generieke verzameling van saneringskredieten. Op deze manier is de app gesloten voor wijziging en open voor uitbreiding.
+De bestanden worden geëxporteerd vanuit verschillende back-office systemen zoals Allegro en Stratech. Specifieke adapters zetten dit formaat om naar een bericht met een generieke verzameling van saneringskredieten. Op deze manier is de app gesloten voor wijziging en open voor uitbreiding. Alle gegevens die het Wsk niet mag hebben worden er op deze manier automatisch uit gefilterd waardoor de privacy by design principes gevolgd worden.
 
-Het Wsk wordt gevrijwaard van het ontvangen van ongewenste informatie omdat de verwerking van het bestand in de browser plaats vindt, het bestand wordt dus niet naar een server van het Wsk verstuurd, het blijft bij de kredietbank.
+Het bericht wordt door het Wsk verwerkt. Het Wsk vergelijk de generieke verzameling van saneringskredieten met de actieve borgstellingen. De verschillen worden vertaald naar [opdrachten voor het Wsk](../../producten/borgstelling/index.md#interface).
 
-* [Scherm](scherm.drawio)
 * [Sequence diagram](sequence-diagram.puml)
 * [Klasse diagram](class-diagram.puml)
