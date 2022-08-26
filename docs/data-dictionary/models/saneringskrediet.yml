@@ -10,6 +10,8 @@ properties:
     $ref: "vorderingen.yml"
   betalingen:
     $ref: "betalingen.yml"
+  depot:
+    $ref: "../types/saneringskrediet_depot.yml"
   voorstand:
     $ref: "../types/saneringskrediet_voorstand.yml"
   lopende_rente:
@@ -24,6 +26,7 @@ required:
   - kredietsom
   - vorderingen
   - betalingen
+  - depot
   - voorstand
   - lopende_rente
   - betalingsregeling
