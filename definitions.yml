@@ -28,6 +28,9 @@
 - name: Depot
   text: Nog niet vervallen vordering.
 
+- name: Lopende rente
+  text: '@Frank'
+
 - name: Stichting Bemiddeling en Fondsbeheer (SBF)
   alias:
     - Stichting Bemiddeling en Fondsbeheer
@@ -72,7 +75,7 @@
 
 - name: Takenlijst
   text: |
-    Vanuit producten ontstaan er taken die door mensen uitgevoerd moeten worden. De takenlijst stelt deze taken op een centrale plek beschikbaar op basis van decentrale taak bronnen.
+    Vanuit producten ontstaan er taken die door mensen uitgevoerd mlopenoeten worden. De takenlijst stelt deze taken op een centrale plek beschikbaar op basis van decentrale taak bronnen.
   link: producten/takenlijst/index.html
 
 - name: Gebeurtenissen
@@ -82,7 +85,7 @@
 
 - name: pro-forma aanvraag
   alias: 
-    - pro-forma aanvragen
+    - pro-forma aanvragenlopen
   link: processen/pro-forma-aanvragen-borgstelling/index.html
   text: |
     schuldhulpverleners moeten al in een vroeg stadium weten of een saneringskrediet ingezet kan worden. Via een pro-forma aanvraag kan de schuldhulpverlener een pro-forma borgstelling aanvragen op basis van de informatie die op dat moment bekent is. 

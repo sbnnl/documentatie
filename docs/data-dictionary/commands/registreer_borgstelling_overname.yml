@@ -1,14 +1,19 @@
 allOf:
   - $ref: "types/command.yml"
-  - title: registreer borgstelling aanvraag
+  - title: registreer borgstelling overname
     description: |
       Een borgstelling aanvraag vanuit een portefeuille overname van actieve saneringskredieten.
     properties:
       soort_aanvraag:
         type: string
         example: overname
+      statistieken:
+        $ref: "../models/statistieken.yml"
+      required:
+        - statistieken
       datum_uitbetaald:
         $ref: "../types/saneringskrediet_uitbetaaldatum.yml"
     required:
+      - statistieken
       - datum_uitbetaald
   - $ref: "../models/borgstelling_aanvraag.yml"

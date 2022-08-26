@@ -4,14 +4,14 @@ allOf:
   - type: object
     required:
       - kenmerk
-      - aflossing
+      - bruto_kredietsom
       - looptijd
       - status
     properties:
       kenmerk:
         $ref: "../types/kenmerk_aanvrager.yml"  
-      aflossing:
-        $ref: "../types/maandaflossing.yml"
+      bruto_kredietsom:
+        $ref: "../types/bruto_kredietsom.yml"
       looptijd:
         $ref: "../types/looptijd_in_maanden.yml"
       status:

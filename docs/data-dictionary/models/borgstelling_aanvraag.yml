@@ -3,25 +3,23 @@ title: borgstelling aanvraag
 properties:
   soort_aanvraag:
     $ref: "../types/soort_aanvraag.yml"
+  soort_lening:
+    $ref: "../types/soort_lening.yml"
   kenmerk:
     $ref: "../types/kenmerk_aanvrager.yml"
   contact:
     $ref: "../types/email.yml"
-  postcode:
+  postcode_gebied:
     $ref: "../types/postcode_gebied.yml"
-  aflossing:
-    $ref: "../types/maandaflossing.yml"
+  bruto_kredietsom:
+    $ref: "../types/bruto_kredietsom.yml"
   looptijd:
     $ref: "../types/looptijd_in_maanden.yml"
-  statistieken:
-    oneOf:
-      - $ref: "../models/allegro_statistieken.yml"
 required:
   - soort_aanvraag
+  - soort_lening
   - kenmerk
   - email
-  - postcode
-  - kredietsom
-  - aflossing
+  - postcode_gebied
+  - bruto_kredietsom
   - looptijd
-  - statistieken

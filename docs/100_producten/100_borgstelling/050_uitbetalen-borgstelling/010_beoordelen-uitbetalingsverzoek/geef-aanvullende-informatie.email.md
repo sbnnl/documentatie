@@ -7,11 +7,12 @@ Controleer daarom of deze gegevens juist zijn.
 
 |   |   |
 | - | - |
-| Bruto kredietsom | *{{ model.kredietsom.bruto }}* |
-| Netto kredietsom | *{{ model.kredietsom.netto }}* |
-| Aflossing | *{{ model.aflossing }}*
-| Kredietvergoeding | *{{ model.kredietvergoeding }}* |
-| Vertragingsrente | *{{ model.vertragingsrente }}* |
+| Bruto kredietsom                          | *{{ model.kredietsom.bruto }}*                  |
+| Netto kredietsom                          | *{{ model.kredietsom.netto }}*                  |
+| Aflossingen                               | *{{ model.betalingen.aflossing }}*              |
+| Vordering kredietvergoeding               | *{{ model.vorderingen.kredietvergoeding }}*     |
+| Voorstand                                 | *{{ model.voorstand }}*                         |
+| Lopende rente                             | *{{ model.lopende_rente }}*                     |
 
 De volgende vragen willen wij je graag stellen:
 

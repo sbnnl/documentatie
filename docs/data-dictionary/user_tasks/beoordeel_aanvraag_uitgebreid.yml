@@ -8,12 +8,12 @@ properties:
     type: object
     title: aanvraag
     properties:      
-      aflossing:
-        $ref: "../types/maandaflossing.yml"
+      bruto_kredietsom:
+        $ref: "../types/bruto_kredietsom.yml"
       looptijd:
         $ref: "../types/looptijd_in_maanden.yml"
     required:
-      - aflossing
+      - bruto_kredietsom
       - looptijd
   aanvullende_informatie:
     type: object

@@ -31,30 +31,6 @@ paths:
         403:
           $ref: "../../data-dictionary/responses/types/403.yml"
 
-  /api/kredietbanken/{kredietbank_id}/pro_forma_borgstellingen/{borgstelling_id}:
-    get:
-      tags:
-        - borgstelling
-      summary: Geeft een pro-forma borgstelling
-      operationId: GeefProFormaBorgstellingV1
-      parameters:
-        - $ref: "../../data-dictionary/parameters/pro_forma_borgstelling_id.yml"
-      responses:
-        200:          
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: "../../data-dictionary/responses/geef_pro_forma_borgstelling.yml"
-        400:
-          $ref: "../../data-dictionary/responses/types/400.yml"
-        401:
-          $ref: "../../data-dictionary/responses/types/401.yml"
-        403:
-          $ref: "../../data-dictionary/responses/types/403.yml"
-        424:
-          $ref: "../../data-dictionary/responses/types/404.yml"
-
   /api/kredietbanken/{kredietbank_id}/borgstellingen:
     parameters:
       - $ref: "../../data-dictionary/parameters/kredietbank_id.yml"
@@ -85,6 +61,38 @@ paths:
           $ref: "../../data-dictionary/responses/types/401.yml"
         403:
           $ref: "../../data-dictionary/responses/types/403.yml"
+  
+  /api/kredietbanken/{kredietbank_id}/borgstellingen/{borgstelling_id}:
+    parameters:
+      - $ref: "../../data-dictionary/parameters/kredietbank_id.yml"
+      - $ref: "../../data-dictionary/parameters/borgstelling_id.yml"
+    patch:
+      tags:
+        - borgstelling
+      summary: Actieve borgstelling aanvullen met informatie.
+      operationId: VulBorgstellingAanV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              oneOf:
+                - $ref: "../../data-dictionary/commands/verwerk_saneringskrediet_informatie.yml"
+              discriminator:
+                propertyName: actie
+                mapping:
+                  verwerk_saneringskrediet_informatie: "../../data-dictionary/commands/verwerk_saneringskrediet_informatie.yml"
+      responses:
+        202:
+          $ref: "../../data-dictionary/responses/types/202.yml"
+        400:
+          $ref: "../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../data-dictionary/responses/types/403.yml"
+        404:
+          $ref: "../../data-dictionary/responses/types/404.yml"
 
   /api/kredietbanken/{kredietbank_id}/borgstellingen/{borgstelling_id}/beeindigen:
     parameters:
@@ -103,35 +111,6 @@ paths:
           application/json:
             schema:
               $ref: "../../data-dictionary/commands/beeindig_borgstelling.yml"
-      responses:
-        202:
-          $ref: "../../data-dictionary/responses/types/202.yml"
-        400:
-          $ref: "../../data-dictionary/responses/types/400.yml"
-        401:
-          $ref: "../../data-dictionary/responses/types/401.yml"
-        403:
-          $ref: "../../data-dictionary/responses/types/403.yml"
-        404:
-          $ref: "../../data-dictionary/responses/types/404.yml"
-  
-  /api/kredietbanken/{kredietbank_id}/borgstellingen/{borgstelling_id}/intrekken:
-    parameters:
-      - $ref: "../../data-dictionary/parameters/kredietbank_id.yml"
-      - $ref: "../../data-dictionary/parameters/borgstelling_id.yml"
-    put:
-      tags:
-        - borgstelling
-      summary: Trekt de borgstelling in.
-      description: |
-        Op basis van een audit kan het Wsk besluiten om een borgstelling in te trekken.
-      operationId: TrekBorgstellingInV1
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: "../../data-dictionary/commands/trek_borgstelling_in.yml"
       responses:
         202:
           $ref: "../../data-dictionary/responses/types/202.yml"

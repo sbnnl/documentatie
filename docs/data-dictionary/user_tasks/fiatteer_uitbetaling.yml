@@ -5,15 +5,36 @@ allOf:
       uitbetaling:
         type: object
         properties:
-          netto_kredietsom:
-            $ref: "../types/netto_kredietsom.yml"
-          aflossing:
-            $ref: "../types/saneringskrediet_aflossing.yml"
-          kredietvergoeding:
-            $ref: "../types/saneringskrediet_kredietvergoeding.yml"
+          kredietsom:
+            type: object
+            properties:
+              netto:
+                $ref: "../types/netto_kredietsom.yml"
+            required:
+              - netto
+          betalingen:
+            type: object
+            properties:
+              aflossing:                
+                $ref: "../types/saneringskrediet_aflossing.yml"
+            required:
+              - aflossing
+          vorderingen:
+            type: object
+            properties:
+              kredietvergoeding:
+                $ref: "../types/saneringskrediet_kredietvergoeding.yml"
+            required:
+              - kredietvergoeding
+          voorstand:
+            $ref: "../types/saneringskrediet_voorstand.yml"
+          lopende_rente:
+            $ref: "../types/saneringskrediet_lopende_rente.yml"
         required:
-          - netto_kredietsom
-          - aflossing
-          - kredietvergoeding
+          - kredietsom
+          - betalingen
+          - vorderingen
+          - voorstand
+          - lopende_rente
     required:
      - uitbetaling

@@ -4,7 +4,7 @@ Het Waarborgfonds Saneringskredieten (Wsk) heeft met u een overeenkomst voor de 
 
 Wij hebben van u een pro-forma aanvraag ontvangen voor een borgstelling van een casus met kenmerk *{{ model.kenmerk }}*. De aanvraag hebben wij beoordeeld.
 
-Het Wsk geeft voor de afloscapaciteit van deze client een borgstelling af.
+Het Wsk geeft voor deze casus een borgstelling af.
 
 |                           |                               |
 | ------------------------- | ----------------------------- |
