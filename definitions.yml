@@ -2,10 +2,10 @@
   text: Het bedrag dat iemand maximaal beschikbaar kan stellen voor de aflossing van zijn schulden. De afloscapaciteit wordt vastgesteld door het inkomen te verminderen met het Vrij Te Laten Bedrag (VTLB).
 
 - name: Theoretisch saldo
-  text: Op dag 0 gelijk aan netto kredietsom, daarna theoretische omvang van wat cliënt nog moet terugbetalen als betaalschema volledig volgens plan verloopt. Het theoretisch saldo is dus exclusief kredietvergoeding.
+  text: Op dag 0 gelijk aan netto kredietsom, daarna theoretische omvang van wat cliënt nog moet terugbetalen als betaalschema volledig volgens plan verloopt. Het theoretisch saldo wordt als volgt berekend: Netto kredietsom - Betalingen aflossing - Vorderingen aflossing.
 
 - name: Uitstaand saldo
-  text: Op dag 0 gelijk aan netto kredietsom, daarna omvang van wat hulvrager nog moet terugbetalen op basis van de werkelijke betalingen. Het uitstaand saldo is dus exclusief kredietvergoeding.
+  text: Op dag 0 gelijk aan netto kredietsom, daarna omvang van wat hulvrager nog moet terugbetalen op basis van de werkelijke betalingen. Het uitstaand saldo wordt als volgt berekend: Netto kredietsom - Betalingen aflossing + Vorderingen kredietvergoeding + Vorderingen vertragingsrente.
 
 - name: Achterstand
   text: Uitstaand saldo -/- theoretisch saldo
@@ -29,8 +29,8 @@
   text: Nog niet vervallen vordering.
 
 - name: Lopende rente
-  text: '@Frank'
-
+  text: Rente die berekend wordt vanaf de laatste vervaldag tot heden. 
+  
 - name: Stichting Bemiddeling en Fondsbeheer (SBF)
   alias:
     - Stichting Bemiddeling en Fondsbeheer
@@ -38,7 +38,7 @@
   text: |
     Stichting Bemiddeling en Fondsbeheer (SBF) beheert de middelen van het waarborgfonds, sluit formele overeenkomsten met kredietbanken en verricht alle betalingen (te innen premies en uit te keren middelen). 
     
-    De bemensing van SBF bestaat uit een fondsmanager. SBF is opdrachtgever van Stichting Sociale Banken Nederland.
+    De bemensing van SBF bestaat uit een fondsmanager en een Raad van Toezicht. SBF is opdrachtgever van Stichting Sociale Banken Nederland.
 
 - name: Stichting Sociale Banken Nederland (SBN)
   alias:
@@ -96,18 +96,16 @@
 
 - name: Schuldenknooppunt
   text: |
-    Schuldeisers, schuldhulpverleners én mensen met financiële problemen willen maar één ding: een snelle regeling van schulden. En toch duurt het vaak langer dan 3 maanden voordat schuldeisers en schuldhulpverleners tot een akkoord zijn gekomen. Dit kan en moet sneller!
-
-    Via het Schuldenknooppunt wisselen schuldhulpverleners en schuldeisers standaard berichten uit. Er zijn minder handmatige handelingen nodig. Dit maakt schuldregelen sneller en efficiënter en er is minder ruimte voor fouten. Het systeem is veilig en de AVG is geborgd. Wanneer alle schuldeisers en schuldhulpverleners aansluiten op het Schuldenknooppunt is schuldregelen binnen 3 weken mogelijk.
+    Via het Schuldenknooppunt wisselen schuldhulpverleners en schuldeisers standaard berichten uit. Er zijn minder handmatige handelingen nodig. Dit maakt schuldregelen sneller en efficiënter en er is minder ruimte voor fouten. Het systeem is veilig en de AVG is geborgd.
   link: https://schuldenknooppunt.nl/
 
 - name: Saneringskrediet
   alias:
     - saneringskredieten
   text: |
-    Een saneringskrediet is een een product dat wordt ingezet in de schuldhulpverlening (SHV). Het krediet wordt verstrekt door een Kredietbank. 
+    Een saneringskrediet is een product dat wordt ingezet in de schuldhulpverlening (SHV). Het krediet wordt verstrekt door een Kredietbank. 
     
-    Met dit krediet worden alle schuldeisers afgekocht (voor een gedeelte van schuld) zodat de client nog maar één schuldeiser overhoudt. 
+    Met dit krediet worden alle schuldeisers afgekocht tegen finale kwijting (voor een gedeelte van schuld) zodat de client nog maar één schuldeiser overhoudt. 
     
     Een  kredietbank heeft een borgsteller nodig om het risico op niet volledig aflossen van het krediet te borgen.
 
