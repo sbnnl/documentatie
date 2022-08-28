@@ -21,6 +21,11 @@ properties:
         allOf:
           - description: |
               De saneringskrediet informatie zoals die door de kredietbank is opgegeven. Deze informatie kan afwijken van wat er als laatste, via een automatische aanlevering, is geregistreerd.
+            properties:
+              lopende_rente:
+                $ref: "../types/saneringskrediet_lopende_rente.yml"
+              required:
+                - lopende_rente
           - $ref: "../models/saneringskrediet.yml"
     required:
       - geregistreerd

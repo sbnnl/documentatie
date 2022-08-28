@@ -2,10 +2,12 @@
   text: Het bedrag dat iemand maximaal beschikbaar kan stellen voor de aflossing van zijn schulden. De afloscapaciteit wordt vastgesteld door het inkomen te verminderen met het Vrij Te Laten Bedrag (VTLB).
 
 - name: Theoretisch saldo
-  text: Op dag 0 gelijk aan netto kredietsom, daarna theoretische omvang van wat cliënt nog moet terugbetalen als betaalschema volledig volgens plan verloopt. Het theoretisch saldo wordt als volgt berekend: Netto kredietsom - Betalingen aflossing - Vorderingen aflossing.
+  text: |
+    Op dag 0 gelijk aan netto kredietsom, daarna theoretische omvang van wat cliënt nog moet terugbetalen als betaalschema volledig volgens plan verloopt. Het theoretisch saldo wordt als volgt berekend: Netto kredietsom - Betalingen aflossing - Vorderingen aflossing.
 
 - name: Uitstaand saldo
-  text: Op dag 0 gelijk aan netto kredietsom, daarna omvang van wat hulvrager nog moet terugbetalen op basis van de werkelijke betalingen. Het uitstaand saldo wordt als volgt berekend: Netto kredietsom - Betalingen aflossing + Vorderingen kredietvergoeding + Vorderingen vertragingsrente.
+  text: |
+    Op dag 0 gelijk aan netto kredietsom, daarna omvang van wat hulvrager nog moet terugbetalen op basis van de werkelijke betalingen. Het uitstaand saldo wordt als volgt berekend: Netto kredietsom - Betalingen aflossing + Vorderingen kredietvergoeding + Vorderingen vertragingsrente.
 
 - name: Achterstand
   text: Uitstaand saldo -/- theoretisch saldo

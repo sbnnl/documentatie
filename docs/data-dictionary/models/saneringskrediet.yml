@@ -12,10 +12,9 @@ properties:
     $ref: "betalingen.yml"
   depot:
     $ref: "../types/saneringskrediet_depot.yml"
-  voorstand:
-    $ref: "../types/saneringskrediet_voorstand.yml"
-  lopende_rente:
-    $ref: "../types/saneringskrediet_lopende_rente.yml"
+  # Vraag staat uit bij Kredit. Voor- en achterstand is een berekening.
+  # voorstand:
+  #   $ref: "../types/saneringskrediet_voorstand.yml"
   betalingsregeling:
     $ref: "../types/saneringskrediet_betalingsregeling.yml"
   dubieus:

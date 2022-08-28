@@ -12,11 +12,11 @@ Controleer daarom of deze gegevens juist zijn.
 | Aflossingen                               | *{{ model.betalingen.aflossing }}*              |
 | Vordering kredietvergoeding               | *{{ model.vorderingen.kredietvergoeding }}*     |
 | Voorstand                                 | *{{ model.voorstand }}*                         |
-| Lopende rente                             | *{{ model.lopende_rente }}*                     |
 
 De volgende vragen willen wij je graag stellen:
 
 * Zijn de financiële gegevens, zoals die hierboven vermeld staan, juist?
+* Hoeveel bedraagt de lopende rente?
 * Om welke reden is het saneringskrediet oninbaar gebleken? (meerdere antwoorden mogelijk)
   * Overleden
   * Verhuis naar een onbekend adres

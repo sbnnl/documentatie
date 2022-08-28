@@ -1,7 +1,6 @@
 type: string
 description: Er bestaan verschillende soorten leningen die verstrekt kunnen worden. Via dit veld wordt vastgelegd voor wat voor soort lening de borgstelling wordt aangevraagd.
 enum:
-  - DK
   - PL
   - SK
   - SL
