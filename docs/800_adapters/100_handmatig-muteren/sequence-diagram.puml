@@ -20,7 +20,7 @@ skp -> user : bestand verstuurd
 deactivate skp
 
 
-wsk -> wsk : borgstellingen ophalen
+wsk --> wsk : borgstellingen ophalen
 
 loop borgstellingen
     wsk --> wsk : bereken verschil met saneringskredieten
