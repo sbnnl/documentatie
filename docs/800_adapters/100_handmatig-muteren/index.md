@@ -9,5 +9,7 @@ De bestanden worden geëxporteerd vanuit verschillende back-office systemen zoal
 
 Het bericht wordt door het Wsk verwerkt. Het Wsk vergelijk de generieke verzameling van saneringskredieten met de actieve borgstellingen. De verschillen worden vertaald naar [opdrachten voor het Wsk](../../producten/borgstelling/index.md#interface).
 
+De resultaten van de opdrachten die verwerkt zijn worden uiteindelijk weer naar het schuldenknooppunt verstuurd als onderdeel van de normale verwerking. De kredietbanken moeten deze berichten handmatig verwerken. 
+
 * [Sequence diagram](sequence-diagram.puml)
 * [Klasse diagram](class-diagram.puml)

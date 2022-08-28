@@ -31,7 +31,9 @@ loop saneringskredieren
 end
 
 loop opdrachten
-    wsk -> wsk : verwerk opdrachten
+    wsk --> wsk : verwerk opdracht
+    wsk -> skp : bericht
+    skp -> user : bericht
 end
 
 deactivate wsk
