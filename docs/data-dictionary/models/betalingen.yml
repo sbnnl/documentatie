@@ -4,7 +4,7 @@ description: Hoeveel heeft de client betaald?
 properties:
   laatste_aflosdatum:
     $ref: "../types/saneringskrediet_laatste_aflosdatum.yml"
-  afossing:
+  aflossing:
     $ref: "../types/saneringskrediet_aflossing.yml"
   kredietvergoeding:
     $ref: "../types/saneringskrediet_kredietvergoeding.yml"

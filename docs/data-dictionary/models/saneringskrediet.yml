@@ -23,8 +23,6 @@ required:
   - kenmerk
   - uitbetaaldatum
   - kredietsom
-  - vorderingen
-  - betalingen
   - depot
   - voorstand
   - lopende_rente

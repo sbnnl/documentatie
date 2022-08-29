@@ -2,7 +2,7 @@ type: object
 title: vorderingen
 description: Wat zijn de totale vorderingen op de client?
 properties:
-  afossing:
+  aflossing:
     $ref: "../types/saneringskrediet_aflossing.yml"
   kredietvergoeding:
     $ref: "../types/saneringskrediet_kredietvergoeding.yml"
