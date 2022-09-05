@@ -20,8 +20,6 @@ required:
   - kenmerk
   - uitbetaaldatum
   - kredietsom
-  - achterstanden
   - betalingen
-  - voorstand
   - betalingsregeling
   - dubieus
