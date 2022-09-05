@@ -10,7 +10,7 @@ user -> skp : bestand
 activate skp
 
 skp --> skp : conversie naar saneringskredieten
-
+skp --> skp : maak bericht
 skp -> wsk : bericht
 
 activate wsk
