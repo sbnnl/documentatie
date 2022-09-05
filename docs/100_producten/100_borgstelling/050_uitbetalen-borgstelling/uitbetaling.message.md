@@ -9,9 +9,10 @@ Het bedrag dat wij uitbetalen hebben wij vastgesteld en is als volgt opgebouwd:
 |                                           |                               |
 | ----------------------------------------- | ----------------------------- |
 | Netto kredietsom                          | *{{ model.kredietsom.netto }}*                  |
-| Aflossingen                               | *{{ model.aflossingen }}*                   |
-| Rente over vervallen termijnen            | *{{ model.rente_over_vervallen_termijnen }}*                     |
-| __Totaal uit te betalen__                 | __*{{ model.uit_te_betalen }}*__              |
+| Aflossingen                               | *{{ model.betalingen.aflossing }}*              |
+| Achterstanden kredietvergoeding           | *{{ model.achterstanden.kredietvergoeding }}*   |
+| Lopende rente                             | *{{ model.lopende_rente }}*                     |
+| __Totaal uit te betalen__                 | __*{{ model.uit_te_betalen }}*__                |
 
 Het bedrag wordt uitbetaald op rekeningnummer *{{ model.bankrekening.naam }}* t.n.v. *{{ model.bankrekening.nummer }}*.
 

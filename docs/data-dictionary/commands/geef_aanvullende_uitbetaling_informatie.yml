@@ -10,12 +10,12 @@ allOf:
       saneringskrediet:
         type: object
         properties:
-          vorderingen:
-            $ref: "../models/vorderingen.yml"
           betalingen:
             $ref: "../models/betalingen.yml"
+          achterstanden:
+            $ref: "../models/achterstanden.yml"
         required:
-          - vorderingen
+          - achterstanden
           - betalingen
       redenen_oninbaar:
         $ref: "../types/saneringskrediet_redenen_oninbaar.yml"

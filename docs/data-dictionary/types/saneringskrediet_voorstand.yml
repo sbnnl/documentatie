@@ -1,0 +1,6 @@
+type: number
+minimum: 0
+title: voorstand
+description: |
+  {{Voorstand}}
+example: 10.15

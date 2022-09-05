@@ -1,5 +1,6 @@
 type: string
-description: De statistiek codes vanuit Allegro.
+title: code
+description: De statistiek code.
 example: Leeftijdsgroep
 enum:
   - Betalende instantie

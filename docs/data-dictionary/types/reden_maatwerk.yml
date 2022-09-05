@@ -1,0 +1,6 @@
+type: string
+format: markdown
+title: reden
+description: De reden waarom het systeem heeft beoordeeld dat het om een maatwerk aanvraag gaat.
+example: |
+  De gemeente komt niet voor in de gemeentelijst van de kredietbank

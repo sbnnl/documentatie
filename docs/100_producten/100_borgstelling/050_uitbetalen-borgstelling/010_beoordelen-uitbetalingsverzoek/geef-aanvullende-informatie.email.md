@@ -7,15 +7,14 @@ Controleer daarom of deze gegevens juist zijn.
 
 |   |   |
 | - | - |
-| Bruto kredietsom | *{{ model.kredietsom.bruto }}* |
-| Netto kredietsom | *{{ model.kredietsom.netto }}* |
-| Aflossing | *{{ model.aflossing }}*
-| Kredietvergoeding | *{{ model.kredietvergoeding }}* |
-| Vertragingsrente | *{{ model.vertragingsrente }}* |
+| Netto kredietsom                          | *{{ model.kredietsom.netto }}*                  |
+| Aflossingen                               | *{{ model.betalingen.aflossing }}*              |
+| Vordering kredietvergoeding               | *{{ model.achterstanden.kredietvergoeding }}*   |
 
 De volgende vragen willen wij je graag stellen:
 
 * Zijn de financiële gegevens, zoals die hierboven vermeld staan, juist?
+* Hoeveel bedraagt de lopende rente?
 * Om welke reden is het saneringskrediet oninbaar gebleken? (meerdere antwoorden mogelijk)
   * Overleden
   * Verhuis naar een onbekend adres

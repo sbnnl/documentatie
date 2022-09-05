@@ -2,5 +2,5 @@ type: number
 minimum: 0
 title: vertragingsrente
 description: |
-  {{vertragingsrente}}
+  {{Vertragingsrente}}
 example: 4.45

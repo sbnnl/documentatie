@@ -87,3 +87,5 @@ De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de krediet
 | 6      | Aanvragen vanaf € 5.000,- of met een looptijd langer dan 36 maanden moeten handmatig beoordeeld worden.                              | Frank Dijkstra |
 | 7      | Handmatige beoordelingen moeten gefiatteerd worden door het Sbf.                                                                     | Frank Dijkstra |
 | 8      | Beslisregegels moeten configureerbaar zijn zodat die eenvoudig kunnen wijzigen.                                                      | Frank Dijkstra |
+| 9      | Gemeente moet afgeleid worden op basis van postcode gebied. Het postcode gebied mag niet worden opgeslagen.                          | Frank Dijkstra |
+| 10     | De aanvraag wordt afgewezen wanneer de afgeleide gemeente niet in de lijst van aangesloten gemeenten van de kredietbank voorkomt.   | Frank Dijkstra |

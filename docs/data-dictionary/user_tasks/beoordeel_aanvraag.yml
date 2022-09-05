@@ -7,13 +7,15 @@ properties:
   aanvraag:
     type: object
     title: aanvraag
-    properties:      
-      aflossing:
-        $ref: "../types/maandaflossing.yml"
+    properties:
+      reden_maatwerk:
+        $ref: "../types/reden_maatwerk.yml"
+      bruto_kredietsom:
+        $ref: "../types/bruto_kredietsom.yml"
       looptijd:
         $ref: "../types/looptijd_in_maanden.yml"
     required:
-      - aflossing
+      - bruto_kredietsom
       - looptijd
   berichten:
     type: array

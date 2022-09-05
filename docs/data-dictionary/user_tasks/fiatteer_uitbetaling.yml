@@ -2,18 +2,15 @@
 allOf:
   - $ref: "./beoordeel_uitbetaling_verzoek.yml"
   - properties:
-      uitbetaling:
-        type: object
-        properties:
-          netto_kredietsom:
-            $ref: "../types/netto_kredietsom.yml"
-          aflossing:
-            $ref: "../types/saneringskrediet_aflossing.yml"
-          kredietvergoeding:
-            $ref: "../types/saneringskrediet_kredietvergoeding.yml"
-        required:
-          - netto_kredietsom
-          - aflossing
-          - kredietvergoeding
+      opgegeven:
+        allOf:
+          - description: |
+              De vastgestelde saneringskrediet informatie zop basis van de uitgevraagde informatie. Deze informatie kan afwijken van wat er als laatste, via een automatische aanlevering, is geregistreerd.
+            properties:
+              lopende_rente:
+                $ref: "../types/saneringskrediet_lopende_rente.yml"
+              required:
+                - lopende_rente
+          - $ref: "../models/saneringskrediet.yml"
     required:
-     - uitbetaling
+     - opgegeven

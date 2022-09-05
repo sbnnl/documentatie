@@ -6,12 +6,12 @@ properties:
     $ref: "../types/saneringskrediet_uitbetaaldatum.yml"
   kredietsom:
     $ref: "kredietsom.yml"
-  vorderingen:
-    $ref: "vorderingen.yml"
   betalingen:
     $ref: "betalingen.yml"
-  depot:
-    $ref: "../types/saneringskrediet_depot.yml"
+  achterstanden:
+    $ref: "achterstanden.yml"
+  voorstand:
+    $ref: "../types/saneringskrediet_voorstand.yml"
   betalingsregeling:
     $ref: "../types/saneringskrediet_betalingsregeling.yml"
   dubieus:
@@ -20,8 +20,6 @@ required:
   - kenmerk
   - uitbetaaldatum
   - kredietsom
-  - vorderingen
   - betalingen
-  - depot
   - betalingsregeling
   - dubieus

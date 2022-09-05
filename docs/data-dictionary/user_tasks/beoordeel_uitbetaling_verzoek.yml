@@ -4,27 +4,16 @@ properties:
     $ref: "../types/taak_id.yml"
   borgstelling_id:
     $ref: "../types/borgstelling_id.yml"
-  saneringskrediet:
-    type: object
-    properties:
-      geregistreerd:      
-        allOf:
-          - description: |
-              De saneringskrediet informatie zoals die als laatste, via een automatische aanlevering, is geregistreerd.
-            properties:
-              laatste_aanlevering: 
-                $ref: "../types/laatste_aanlevering_op.yml"
-            required:
-              - laatste_aanlevering
-          - $ref: "../models/saneringskrediet.yml"
-      opgegeven:
-        allOf:
-          - description: |
-              De saneringskrediet informatie zoals die door de kredietbank is opgegeven. Deze informatie kan afwijken van wat er als laatste, via een automatische aanlevering, is geregistreerd.
-          - $ref: "../models/saneringskrediet.yml"
-    required:
-      - geregistreerd
-      - opgegeven  
+  saneringskrediet:   
+    allOf:
+      - description: |
+          De saneringskrediet informatie zoals die als laatste, via een automatische aanlevering, is geregistreerd.
+        properties:
+          laatste_aanlevering: 
+            $ref: "../types/laatste_aanlevering_op.yml"
+        required:
+          - laatste_aanlevering
+      - $ref: "../models/saneringskrediet.yml"
   berichten:
     type: array
     minItems: 1

@@ -7,4 +7,6 @@ allOf:
         allOf:
           - example: verwerk_saneringskrediet_informatie
           - $ref: "../types/actie.yml"
+    required:
+      - actie
   - $ref: "../models/saneringskrediet.yml"

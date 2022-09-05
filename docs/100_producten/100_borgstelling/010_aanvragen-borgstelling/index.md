@@ -7,7 +7,7 @@ Een aanvraag van een borgstelling door een kredietbank voor een saneringskrediet
 * aanvraag borgstelling;
 * aanvraag vanuit een portefeuille overname;
 
-Het doel van de aanvraag borgstelling is om tot een beoordeling te komen of er voor een saneringskrediet een borgstelling kan worden afgegeven.
+Het doel van de aanvraag borgstelling is om tot een beoordeling te komen of er voor een saneringskrediet een borgstelling kan worden afgegeven en om het verzekerd bedrag vast te stellen.
 
 Uit onderzoek is gebleken dat 92% van de aanvragen standaard aanvragen zijn. Deze aanvragen worden via een STP proces automatisch verwerkt waardoor er binnen enkele seconden een resultaat naar de kredietverstrekker verstuurd wordt.
 
@@ -133,3 +133,5 @@ De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de krediet
 | 9      | Beslisregegels moeten configureerbaar zijn zodat die eenvoudig kunnen wijzigen.                                                      | Frank Dijkstra |
 | 10     | Facturatie percentage moet configureerbaar zijn zodat die eenvoudig kan wijzigen.                                                    | Frank Dijkstra |
 | 11     | Een pro-forma borgstelling mag maar 1 keer gebruikt worden in een aanvraag.                                                                 | Frank Dijkstra |
+| 12      | Gemeente moet afgeleid worden op basis van postcode gebied. Het postcode gebied mag niet worden opgeslagen.                          | Frank Dijkstra |
+| 13     | De aanvraag wordt een maatwerk aanvraag wanneer de afgeleide gemeente niet in de lijst van aangesloten gemeenten van de kredietbank voorkomt.   | Frank Dijkstra |
