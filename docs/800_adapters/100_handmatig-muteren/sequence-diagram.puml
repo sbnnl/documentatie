@@ -2,44 +2,40 @@
 autonumber
 
 actor Kredietbank as user
-participant "Browser" as browser
-participant "Wsk api" as api
+participant "Schuldenknooppunt" as skp
+participant "Waarborgfonds" as wsk
 
-user -> browser : bestand
+user -> skp : bestand
 
-activate browser
+activate skp
 
-browser --> browser : conversie naar saneringskredieten
+skp --> skp : conversie naar saneringskredieten
+skp --> skp : maak bericht
+skp -> wsk : bericht
+
+activate wsk
+
+skp -> user : bestand verstuurd
+
+deactivate skp
+
+
+wsk --> wsk : borgstellingen ophalen
 
 loop borgstellingen
-    browser -> api : GET borgstellingen
-    api -> browser : borgstellingen
-end
-
-
-loop borgstellingen
-    browser --> browser : bereken delta met saneringskredieten
+    wsk --> wsk : bereken verschil met saneringskredieten
 end
 
 loop saneringskredieren
-    browser --> browser : bereken delta met borgstellingen
+    wsk --> wsk : bereken verschil met borgstellingen
 end
-
-browser -> user : opdrachten
-
-deactivate browser
-
-user -> browser : verstuur oprdrachten
-
-activate browser
 
 loop opdrachten
-    browser -> api : POST opdracht
-    api -> browser : Geaccepteerd
+    wsk --> wsk : verwerk opdracht
+    wsk -> skp : bericht
+    skp -> user : bericht
 end
 
-browser -> user : opdrachten verstuurd
-
-deactivate browser
+deactivate wsk
 
 @enduml
