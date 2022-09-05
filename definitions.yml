@@ -1,19 +1,25 @@
 - name: Afloscapaciteit
-  text: Het bedrag dat iemand maximaal beschikbaar kan stellen voor de aflossing van zijn schulden. De afloscapaciteit wordt vastgesteld door het inkomen te verminderen met het Vrij Te Laten Bedrag (VTLB).
+  text: |
+    Het bedrag dat iemand maximaal beschikbaar kan stellen voor de aflossing van zijn schulden.  
+    De afloscapaciteit wordt vastgesteld door het inkomen te verminderen met het Vrij Te Laten Bedrag (VTLB).
 
 - name: Theoretisch saldo
   text: |
-    Op dag 0 gelijk aan netto kredietsom, daarna theoretische omvang van wat cliënt nog moet terugbetalen als betaalschema volledig volgens plan verloopt. Het theoretisch saldo wordt als volgt berekend: Netto kredietsom - Betalingen aflossing - Vorderingen aflossing.
+    Op dag 0 gelijk aan netto kredietsom, daarna theoretische omvang van wat cliënt nog moet terugbetalen als betaalschema volledig volgens plan verloopt. 
+    
+    Het theoretisch saldo wordt als volgt berekend: Netto kredietsom - Betalingen aflossing - Achterstanden aflossing.
 
 - name: Uitstaand saldo
   text: |
-    Op dag 0 gelijk aan netto kredietsom, daarna omvang van wat hulvrager nog moet terugbetalen op basis van de werkelijke betalingen. Het uitstaand saldo wordt als volgt berekend: Netto kredietsom - Betalingen aflossing + Vorderingen kredietvergoeding + Vorderingen vertragingsrente.
+    Op dag 0 gelijk aan netto kredietsom, daarna omvang van wat cliënt nog moet terugbetalen op basis van de werkelijke betalingen. 
+    
+    Het uitstaand saldo wordt als volgt berekend: Netto kredietsom - Betalingen aflossing + Achterstanden kredietvergoeding + Achterstanden vertragingsrente.
 
 - name: Achterstand
-  text: Uitstaand saldo -/- theoretisch saldo
+  text: Er is sprake van een achterstand wanneer het uitstaand saldo groter is dan het theoretisch saldo.
 
 - name: Voorstand
-  text: Theoretisch saldo -/- uitstaand saldo
+  text: Er is sprake van een voorstand wanneer het uitstaand saldo kleiner is dan het theoretisch saldo.
 
 - name: Bruto kredietsom
   text: Bedrag uitbetaald aan schuldeisers plus een kredietvergoeding uitgaande van maandaflossing maal de looptijd bij aanvang krediet.
@@ -24,14 +30,20 @@
 - name: Kredietvergoeding
   text: De vergoeding die een kredietbank ontvangt voor de verstrekking en inning van een saneringskrediet.
 
+- name: Vertragingsrente
+  text: '@Frank?'
+  
+- name: Boete rente
+  text: '@Frank?'
+
 - name: Te vorderen kredietvergoeding
   text: Kredietvergoeding over de reeds vervallen termijnen van het saneringskrediet.
 
-- name: Depot
-  text: Nog niet vervallen vordering.
-
 - name: Lopende rente
   text: Rente die berekend wordt vanaf de laatste vervaldag tot heden. 
+
+- name: Verzekerd bedrag
+  text: '@Frank (bruto kredietsom vs. uitstaand saldo)'
   
 - name: Stichting Bemiddeling en Fondsbeheer (SBF)
   alias:

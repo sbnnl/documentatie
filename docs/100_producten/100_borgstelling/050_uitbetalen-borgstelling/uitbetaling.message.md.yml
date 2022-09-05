@@ -7,9 +7,8 @@ model:
     netto: € 1.550.77
   betalingen:
     aflossing: € -300.47
-  vorderingen:
+  achterstanden:
     kredietvergoeding: € 24,45
-  voorstand: € -10,15
   lopende_rente: € 0,12
   uit_te_betalen: € 1.264,72
   bankrekening:

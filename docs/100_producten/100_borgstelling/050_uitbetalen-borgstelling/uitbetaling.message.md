@@ -10,8 +10,7 @@ Het bedrag dat wij uitbetalen hebben wij vastgesteld en is als volgt opgebouwd:
 | ----------------------------------------- | ----------------------------- |
 | Netto kredietsom                          | *{{ model.kredietsom.netto }}*                  |
 | Aflossingen                               | *{{ model.betalingen.aflossing }}*              |
-| Vordering kredietvergoeding               | *{{ model.vorderingen.kredietvergoeding }}*     |
-| Voorstand                                 | *{{ model.voorstand }}*                         |
+| Achterstanden kredietvergoeding           | *{{ model.achterstanden.kredietvergoeding }}*   |
 | Lopende rente                             | *{{ model.lopende_rente }}*                     |
 | __Totaal uit te betalen__                 | __*{{ model.uit_te_betalen }}*__                |
 

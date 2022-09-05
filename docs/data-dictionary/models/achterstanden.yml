@@ -1,6 +1,6 @@
 type: object
-title: vorderingen
-description: Wat zijn de totale vorderingen op de client?
+title: achterstanden
+description: Wat zijn de achterstanden van de client?
 properties:
   aflossing:
     $ref: "../types/saneringskrediet_aflossing.yml"
@@ -8,7 +8,10 @@ properties:
     $ref: "../types/saneringskrediet_kredietvergoeding.yml"
   vertragingsrente:
     $ref: "../types/saneringskrediet_vertragingsrente.yml"
+  boete_rente:
+    $ref: "../types/saneringskrediet_boete_rente.yml"
 required:
   - aflossing
   - kredietvergoeding
   - vertragingsrente
+  - boete_rente

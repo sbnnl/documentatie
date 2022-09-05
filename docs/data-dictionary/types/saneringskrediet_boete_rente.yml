@@ -1,0 +1,6 @@
+type: number
+minimum: 0
+title: boete rente
+description: |
+  {{Boete rente}}
+example: 1.12

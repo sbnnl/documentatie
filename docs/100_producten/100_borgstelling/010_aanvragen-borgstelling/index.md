@@ -13,6 +13,8 @@ Uit onderzoek is gebleken dat 92% van de aanvragen standaard aanvragen zijn. Dez
 
 Voor een maatwerk aanvraag borgstelling kan optioneel een verwijzing naar een pro-forma aanvraag opgegeven worden. Wanneer deze verwijzing bestaat dan mag die eenmalig meewegen in de acceptatie van de aanvraag.
 
+@Frank: verzekerd bedrag nog verwerken in deze tekst zodat de definitie zichtbaar is.
+
 <!-- einde -->
 
 [Formulier](product.user-task.yml)

@@ -24,15 +24,13 @@ allOf:
                 $ref: "../types/saneringskrediet_aflossing.yml"
             required:
               - aflossing
-          vorderingen:
+          achterstanden:
             type: object
             properties:
               kredietvergoeding:
                 $ref: "../types/saneringskrediet_kredietvergoeding.yml"
             required:
               - kredietvergoeding
-          depot:
-            $ref: "../types/saneringskrediet_depot.yml"
           voorstand:
             $ref: "../types/saneringskrediet_voorstand.yml"
           lopende_rente:
@@ -40,8 +38,7 @@ allOf:
         required:
           - kredietsom
           - betalingen
-          - vorderingen
-          - depot
+          - achterstanden
           - voorstand
           - lopende_rente
     required:

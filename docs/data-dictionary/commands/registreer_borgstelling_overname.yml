@@ -7,13 +7,14 @@ allOf:
       soort_aanvraag:
         type: string
         example: overname
-      statistieken:
-        $ref: "../models/statistieken.yml"
-      required:
-        - statistieken
+      uitstaand_saldo:
+        $ref: "../types/saneringskrediet_uitstaand_saldo.yml"
       datum_uitbetaald:
         $ref: "../types/saneringskrediet_uitbetaaldatum.yml"
+      statistieken:
+        $ref: "../models/statistieken.yml"
     required:
-      - statistieken
+      - uitstaand_saldo
       - datum_uitbetaald
+      - statistieken
   - $ref: "../models/borgstelling_aanvraag.yml"
