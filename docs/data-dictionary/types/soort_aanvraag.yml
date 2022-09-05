@@ -1,3 +1,4 @@
 type: string
+title: soort aanvraag
 description: Er bestaan verschillende soorten aanvragen. Via dit veld wordt vastgelegd om wat voor soort aanvraag het gaat.
 example: aanvraag

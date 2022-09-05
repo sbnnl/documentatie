@@ -1,4 +1,5 @@
 type: string
+title: statistiek code
 description: De statistiek code.
 example: Leeftijdsgroep
 enum:

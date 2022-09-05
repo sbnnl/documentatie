@@ -1,4 +1,5 @@
 type: string
+title: actie
 description: Welke acties zijn ondernomen om het krediet te innen?
 enum:
   - herinnering gestuurd

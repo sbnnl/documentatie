@@ -8,3 +8,4 @@ actions:
         - command_id
         - correlation_id
         - causation_id
+        - soort_aanvraag
