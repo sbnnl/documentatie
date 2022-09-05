@@ -31,10 +31,10 @@
   text: De vergoeding die een kredietbank ontvangt voor de verstrekking en inning van een saneringskrediet.
 
 - name: Vertragingsrente
-  text: '@Frank?'
+  text: De vergoeding die berekend wordt over de achterstand.
   
 - name: Boete rente
-  text: '@Frank?'
+  text: De vergoeding die wordt berekend bij vervroegde aflossing of de kosten die extra in rekening worden gebracht.
 
 - name: Te vorderen kredietvergoeding
   text: Kredietvergoeding over de reeds vervallen termijnen van het saneringskrediet.
@@ -43,7 +43,7 @@
   text: Rente die berekend wordt vanaf de laatste vervaldag tot heden. 
 
 - name: Verzekerd bedrag
-  text: '@Frank (bruto kredietsom vs. uitstaand saldo)'
+  text: Bij een nieuw saneringskrediet is dit het bruto kredietbedrag en bij een portefeuille overname is dit het uitstaandsaldo op het moment van de overname.
   
 - name: Stichting Bemiddeling en Fondsbeheer (SBF)
   alias:
