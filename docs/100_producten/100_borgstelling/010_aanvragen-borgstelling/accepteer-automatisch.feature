@@ -2,15 +2,16 @@
 Functionaliteit: Accepteer automatisch use-case
 
   Abstract Scenario: Beoordeel aanvraag zonder pro-forma aanvraag: "<reden>"
-    Gegeven aanvraag met buto kredietsom <kredietsom> en looptijd <looptijd> maanden
+    Gegeven aanvraag waarbij de gemeente <in gemeentelijst> voorkomt in de lijst van aangesloten gemeenten met buto kredietsom <kredietsom> en looptijd <looptijd> maanden
     Wanneer beoordeeld
     Dan is de uitkomst "<uitkomst>"
 
     Voorbeelden:
-    | kredietsom | looptijd | uitkomst     | reden                                       |
-    | 4999,99    | 36       | geaccepteerd | Bruto kredietsom < 5000 en looptijd <= 36 maanden |
-    | 5000       | 36       | maatwerk     | Bruto kredietsom > 5000                           |
-    | 4999,99    | 37       | maatwerk     | Looptijd is > 36 maanden                    |
+    | kredietsom | looptijd | in gemeentelijst | uitkomst     | reden                                                             |
+    | 4999,99    | 36       | niet             | maatwerk     | De gemeente komt niet voor in de gemeentelijst van de kredietbank |
+    | 4999,99    | 36       | wel              | geaccepteerd | Bruto kredietsom < 5000 en looptijd <= 36 maanden                 |
+    | 5000       | 36       | wel              | maatwerk     | Bruto kredietsom > 5000                                           |
+    | 4999,99    | 37       | wel              | maatwerk     | Looptijd is > 36 maanden                                          |
 
   Abstract Scenario: Beoordeel aanvraag met pro-forma aanvraag: "<reden>"
     Gegeven pro-forma aanvraag met bruto kredietsom <pro-forma aanvraag_kredietsom> en looptijd <pro-forma aanvraag_looptijd> maanden en uitkomst "<pro-forma aanvraag_uitkomst>"

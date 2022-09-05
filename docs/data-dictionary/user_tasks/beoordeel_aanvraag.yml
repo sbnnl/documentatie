@@ -7,7 +7,9 @@ properties:
   aanvraag:
     type: object
     title: aanvraag
-    properties:      
+    properties:
+      reden_maatwerk:
+        $ref: "../types/reden_maatwerk.yml"
       bruto_kredietsom:
         $ref: "../types/bruto_kredietsom.yml"
       looptijd:
