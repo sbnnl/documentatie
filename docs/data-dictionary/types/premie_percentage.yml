@@ -3,4 +3,4 @@ title: premie percentage
 description: De premie percentage die gebruikt wordt voor het vaststellen van de borgstelling premie.
 example: 0.05
 minimum: 0
-maximun: 1
+maximum: 1
