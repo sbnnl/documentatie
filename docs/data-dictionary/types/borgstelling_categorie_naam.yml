@@ -1,0 +1,6 @@
+type: string
+title: borgstelling categorie naam
+description: De naam van de borgstelling categorie.
+examples:
+  - Regulier
+  - Pilot JPF
