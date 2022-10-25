@@ -3,20 +3,20 @@ Functionaliteit: Accepteer automatisch use-case
 
   Abstract Scenario: Beoordeel aanvraag zonder pro-forma aanvraag: "<reden>"
     Gegeven aanvraag waarbij de gemeente <in gemeentelijst> voorkomt in de lijst van aangesloten gemeenten met buto kredietsom <kredietsom> en looptijd <looptijd> maanden
-    En geaccepteerd vanaf <geaccepteerd>
-    En maatwerk vanaf <maatwerk>
-    En afgewezen vanaf <afgewezen>
+    En geaccepteerd vanaf <geaccepteerd_vanaf>
+    En maatwerk vanaf <maatwerk_vanaf>
+    En afgewezen vanaf <afgewezen_vanaf>
     Wanneer beoordeeld
     Dan is de uitkomst "<uitkomst>"
 
     Voorbeelden:
-    | kredietsom | looptijd | in gemeentelijst | geaccepteerd | maatwerk | afgewezen | uitkomst     | reden                                                                    |
+    | kredietsom | looptijd | in gemeentelijst | geaccepteerd_vanaf | maatwerk_vanaf | afgewezen_vanaf | uitkomst     | reden                                                                    |
     | 4999,99    | 36       | niet             | 0            | 5000     | 10000     | maatwerk     | De gemeente komt niet voor in de gemeentelijst van de kredietbank        |
-    | 4999,99    | 36       | wel              | 0            | 5000     | 10000     | geaccepteerd | Bruto kredietsom >= geaccepteerd en < maatwerk en looptijd <= 36 maanden |
-    | 5000       | 36       | wel              | 0            | 5000     | 10000     | maatwerk     | Bruto kredietsom >= geaccepteerd en < afgewezen                          |
-    | 10000      | 36       | wel              | 0            | 5000     | 10000     | afgewezen    | Bruto kredietsom >= afgewezen                                            |
-    | 1999,99    | 36       | wel              | 0            | 2000     | 0         | geaccepteerd | Bruto kredietsom >= geaccepteerd en < maatwerk en looptijd <= 36 maanden |
-    | 2000       | 36       | wel              | 0            | 2000     | 0         | afgewezen    | Bruto kredietsom >= afgewezen (pilot JPF)                                |
+    | 4999,99    | 36       | wel              | 0            | 5000     | 10000     | geaccepteerd | Bruto kredietsom >= geaccepteerd_vanaf en < maatwerk_vanaf en looptijd <= 36 maanden |
+    | 5000       | 36       | wel              | 0            | 5000     | 10000     | maatwerk     | Bruto kredietsom >= geaccepteerd_vanaf en < afgewezen_vanaf en looptijd <= 36 maanden                         |
+    | 10000      | 36       | wel              | 0            | 5000     | 10000     | afgewezen    | Bruto kredietsom >= afgewezen_vanaf                                            |
+    | 1999,99    | 36       | wel              | 0            | 2000     | 0         | geaccepteerd | Bruto kredietsom >= geaccepteerd_vanaf en < maatwerk_vanaf en looptijd <= 36 maanden |
+    | 2000       | 36       | wel              | 0            | 2000     | 0         | afgewezen    | Bruto kredietsom >= afgewezen_vanaf (pilot JPF)                                |
     | 4999,99    | 37       | wel              | 0            | 5000     | 10000     | maatwerk     | Looptijd is > 36 maanden                                                 |
 
   Abstract Scenario: Beoordeel aanvraag met pro-forma aanvraag: "<reden>"

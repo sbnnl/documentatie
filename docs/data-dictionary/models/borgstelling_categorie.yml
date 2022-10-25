@@ -4,8 +4,7 @@ properties:
   borgstelling_categorie_id:
     $ref: "../types/borgstelling_categorie_id.yml"
   naam:
-    $ref: "../types/borgstelling_categorie_naam.yml"
-  
+    $ref: "../types/borgstelling_categorie_naam.yml"  
   premie_percentage:
     $ref: "../types/premie_percentage.yml"
   beslissingstabel:
@@ -13,23 +12,16 @@ properties:
     title: kredietsom grenzen
     description: Deze grenzen worden gebruikt voor het automatisch accepteren van een borgstelling aanvraag.
     properties:
-      examples:
-        - geaccepteerd: 0
-          maatwerk: 5000
-          afgewezen: 100000
-        - geaccepteerd: 0
-          maatwerk: 2000
-          afgewezen: 2000
-      geaccepteerd:
+      geaccepteerd_vanaf:
         $ref: "../types/bruto_kredietsom.yml"
-      maatwerk:
+      maatwerk_vanaf:
         $ref: "../types/bruto_kredietsom.yml"
-      afgewezen:
+      afgewezen_vanaf:
         $ref: "../types/bruto_kredietsom.yml"
     required:
-      - geaccepteerd
-      - maatwerk
-      - afgewezen
+      - geaccepteerd_vanaf
+      - maatwerk_vanaf
+      - afgewezen_vanaf
   referenties:
     type: object
     properties:
