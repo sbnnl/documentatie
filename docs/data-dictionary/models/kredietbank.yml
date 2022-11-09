@@ -21,6 +21,7 @@ properties:
   schuldhulpverleners:
     type: array
     description: Een verzameling email adressen van schuldhulpverleners die gemachtigd zijn om een pro-forma borgstelling aan te vragen namens de kredietbank.
+    minItems: 0
     items:
       oneOf:
         - type: string
@@ -43,6 +44,8 @@ required:
   - kredietbank_id
   - naam
   - iban
+  - contact
+  - adres
   - gemeenten
   - schuldhulpverleners
   - referenties
