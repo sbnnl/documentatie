@@ -3,15 +3,21 @@ Functionaliteit: Accepteer automatisch use-case
 
   Abstract Scenario: Beoordeel aanvraag zonder pro-forma aanvraag: "<reden>"
     Gegeven aanvraag waarbij de gemeente <in gemeentelijst> voorkomt in de lijst van aangesloten gemeenten met buto kredietsom <kredietsom> en looptijd <looptijd> maanden
+    En geaccepteerd vanaf <geaccepteerd_vanaf>
+    En maatwerk vanaf <maatwerk_vanaf>
+    En afgewezen vanaf <afgewezen_vanaf>
     Wanneer beoordeeld
     Dan is de uitkomst "<uitkomst>"
 
     Voorbeelden:
-    | kredietsom | looptijd | in gemeentelijst | uitkomst     | reden                                                             |
-    | 4999,99    | 36       | niet             | maatwerk     | De gemeente komt niet voor in de gemeentelijst van de kredietbank |
-    | 4999,99    | 36       | wel              | geaccepteerd | Bruto kredietsom < 5000 en looptijd <= 36 maanden                 |
-    | 5000       | 36       | wel              | maatwerk     | Bruto kredietsom > 5000                                           |
-    | 4999,99    | 37       | wel              | maatwerk     | Looptijd is > 36 maanden                                          |
+    | kredietsom | looptijd | in gemeentelijst | geaccepteerd_vanaf | maatwerk_vanaf | afgewezen_vanaf | uitkomst     | reden                                                                    |
+    | 4999,99    | 36       | niet             | 0            | 5000     | 10000     | maatwerk     | De gemeente komt niet voor in de gemeentelijst van de kredietbank        |
+    | 4999,99    | 36       | wel              | 0            | 5000     | 10000     | geaccepteerd | Bruto kredietsom >= geaccepteerd_vanaf en < maatwerk_vanaf en looptijd <= 36 maanden |
+    | 5000       | 36       | wel              | 0            | 5000     | 10000     | maatwerk     | Bruto kredietsom >= geaccepteerd_vanaf en < afgewezen_vanaf en looptijd <= 36 maanden                         |
+    | 10000      | 36       | wel              | 0            | 5000     | 10000     | afgewezen    | Bruto kredietsom >= afgewezen_vanaf                                            |
+    | 1999,99    | 36       | wel              | 0            | 2000     | 0         | geaccepteerd | Bruto kredietsom >= geaccepteerd_vanaf en < maatwerk_vanaf en looptijd <= 36 maanden |
+    | 2000       | 36       | wel              | 0            | 2000     | 0         | afgewezen    | Bruto kredietsom >= afgewezen_vanaf (pilot JPF)                                |
+    | 4999,99    | 37       | wel              | 0            | 5000     | 10000     | maatwerk     | Looptijd is > 36 maanden                                                 |
 
   Abstract Scenario: Beoordeel aanvraag met pro-forma aanvraag: "<reden>"
     Gegeven pro-forma aanvraag met bruto kredietsom <pro-forma aanvraag_kredietsom> en looptijd <pro-forma aanvraag_looptijd> maanden en uitkomst "<pro-forma aanvraag_uitkomst>"
@@ -19,14 +25,14 @@ Functionaliteit: Accepteer automatisch use-case
     Dan is de uitkomst "<uitkomst>"
 
     Voorbeelden:
-    | pro-forma aanvraag_kredietsom | pro-forma aanvraag_looptijd | pro-forma aanvraag_uitkomst | kredietsom | looptijd | uitkomst     | reden                                                         |
-    | 5000                          | 36                          | geaccepteerd                | 5000       | 36       | geaccepteerd | Aanvraag is gelijk aan pro-forma aanvraag                     |
-    | 5000                          | 36                          | afgewezen                   | 4999,99    | 36       | geaccepteerd | Standaard aanvraag                                            |
-    | 5000                          | 36                          | geaccepteerd                | 5249       | 36       | geaccepteerd | Bruto kredietsom wijkt minder dan 5% af van de pro-forma aanvraag   |
-    | 5000                          | 36                          | afgewezen                   | 5249       | 36       | afgewezen    | Bruto kredietsom wijkt minder dan 5% af van de pro-forma aanvraag   |
-    | 5000                          | 36                          | geaccepteerd                | 5250       | 36       | maatwerk     | Bruto kredietsom wijkt meer dan 5% af van de pro-forma aanvraag     |
-    | 5000                          | 36                          | geaccepteerd                | 5000       | 37       | maatwerk     | Looptijd wijkt af en > 36                                     |
-    | 5250                          | 36                          | afgewezen                   | 5000       | 36       | maatwerk     | Bruto kredietsom wijkt meer dan 5% af van de pro-forma aanvraag     |
+    | pro-forma aanvraag_kredietsom | pro-forma aanvraag_looptijd | pro-forma aanvraag_uitkomst | kredietsom | looptijd | uitkomst     | reden                                                             |
+    | 5000                          | 36                          | geaccepteerd                | 5000       | 36       | geaccepteerd | Aanvraag is gelijk aan pro-forma aanvraag                         |
+    | 5000                          | 36                          | afgewezen                   | 4999,99    | 36       | geaccepteerd | Standaard aanvraag                                                |
+    | 5000                          | 36                          | geaccepteerd                | 5249       | 36       | geaccepteerd | Bruto kredietsom wijkt minder dan 5% af van de pro-forma aanvraag |
+    | 5000                          | 36                          | afgewezen                   | 5249       | 36       | afgewezen    | Bruto kredietsom wijkt minder dan 5% af van de pro-forma aanvraag |
+    | 5000                          | 36                          | geaccepteerd                | 5250       | 36       | maatwerk     | Bruto kredietsom wijkt meer dan 5% af van de pro-forma aanvraag   |
+    | 5000                          | 36                          | geaccepteerd                | 5000       | 37       | maatwerk     | Looptijd wijkt af en > 36                                         |
+    | 5250                          | 36                          | afgewezen                   | 5000       | 36       | maatwerk     | Bruto kredietsom wijkt meer dan 5% af van de pro-forma aanvraag   |
   
   Scenario: Borgstelling aanvraag vanuit een portefeuille overname waarbij het saneringskrediet korter dan 36 maanden heeft gelopen wordt geaccepteerd
     Gegeven overname

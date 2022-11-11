@@ -1,0 +1,40 @@
+type: object
+title: borgstelling categorie
+properties:
+  borgstelling_categorie_id:
+    $ref: "../types/borgstelling_categorie_id.yml"
+  naam:
+    $ref: "../types/borgstelling_categorie_naam.yml"  
+  premie_percentage:
+    $ref: "../types/premie_percentage.yml"
+  beslissingstabel:
+    type: object
+    title: kredietsom grenzen
+    description: Deze grenzen worden gebruikt voor het automatisch accepteren van een borgstelling aanvraag.
+    properties:
+      geaccepteerd_vanaf:
+        $ref: "../types/bruto_kredietsom.yml"
+      maatwerk_vanaf:
+        $ref: "../types/bruto_kredietsom.yml"
+      afgewezen_vanaf:
+        $ref: "../types/bruto_kredietsom.yml"
+    required:
+      - geaccepteerd_vanaf
+      - maatwerk_vanaf
+      - afgewezen_vanaf
+  referenties:
+    type: object
+    properties:
+      statistiek:
+        allOf:
+          - description: Op basis van statisiek wordt de borgstelling categorie vastgesteld in de schuldenknooppunt adapter.
+          - $ref: "./statistiek.yml"
+    required:
+      - statistiek
+required:
+  - borgstelling_categorie_id
+  - naam
+  - statisiek
+  - premie_percentage
+  - beslissingstabel
+  - referenties

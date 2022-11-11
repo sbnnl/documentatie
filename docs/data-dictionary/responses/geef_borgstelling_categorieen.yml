@@ -1,0 +1,10 @@
+allOf:
+  - title: geef borgstelling categorieen
+    properties:
+      items:
+        type: array
+        items:
+          $ref: "../models/borgstelling_categorie.yml"
+    required:
+      - items
+  - $ref: "types/offset_response.yml" 

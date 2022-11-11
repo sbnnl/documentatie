@@ -27,17 +27,23 @@ Berichten worden in context van een kredietbank door het schuldenknooppunt besch
 
 [Schuldenknooppunt bericht](https://innovadis.atlassian.net/wiki/spaces/NVVK/pages/3316645913/Registreer+voorbeoordeling) omzetten naar Wsk opdracht en use-case uitvoeren.
 
+De borgstelling categorie moet worden vastgesteld op basis van de statistiek code zoals die bij [borgstelling categorien beheeren](../producten/borgstelling-categorien-beheeren) zijn vastgelegd.
+
 Zie de documentatie van het product [pro-forma aanvragen borgstelling] voor meer informatie.
 
 ### Registreer aanvraag
 
 [Schuldenknooppunt bericht](https://innovadis.atlassian.net/wiki/spaces/NVVK/pages/3322740737/Aanvraag+borgstelling) omzetten naar Wsk opdracht en use-case uitvoeren.
 
+De borgstelling categorie moet worden vastgesteld op basis van de statistiek code zoals die bij [borgstelling categorien beheeren](../producten/borgstelling-categorien-beheeren) zijn vastgelegd.
+
 Zie de documentatie van het product [aanvragen borgstelling] voor meer informatie.
 
 ### Registreer overname
 
 [Schuldenknooppunt bericht](https://innovadis.atlassian.net/wiki/spaces/NVVK/pages/3322740754/Aanvraag+overname) omzetten naar Wsk opdracht en use-case uitvoeren.
+
+De borgstelling categorie moet worden vastgesteld op basis van de statistiek code zoals die bij [borgstelling categorien beheeren](../producten/borgstelling-categorien-beheeren) zijn vastgelegd.
 
 Zie de documentatie van het product [aanvragen borgstelling] voor meer informatie.
 
