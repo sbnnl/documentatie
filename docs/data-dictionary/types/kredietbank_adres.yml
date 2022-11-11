@@ -1,0 +1,7 @@
+type: string
+title: kredietbank adres
+description: Postadres van de kredietbank
+example: |
+  t.a.v. afdeling kredietverlening
+  Postbus 100070
+  8000 GA Zwolle

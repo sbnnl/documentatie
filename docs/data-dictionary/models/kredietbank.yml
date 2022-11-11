@@ -11,6 +11,8 @@ properties:
     $ref: "../types/iban.yml"
   contact:
     $ref: "../types/email.yml"
+  adres:
+    $ref: "../types/kredietbank_adres.yml"
   gemeenten:
     type: array
     description: Een verzameling gemeenten voor wie de kredietbank saneringskredieten verstrekt.
@@ -19,6 +21,7 @@ properties:
   schuldhulpverleners:
     type: array
     description: Een verzameling email adressen van schuldhulpverleners die gemachtigd zijn om een pro-forma borgstelling aan te vragen namens de kredietbank.
+    minItems: 0
     items:
       oneOf:
         - type: string
@@ -26,10 +29,23 @@ properties:
           description: Een email domein zoals die na de @ eruit ziet.
           title: email domain
           example: zwolle.nl
-        - $ref: "../types/email.yml"            
+        - $ref: "../types/email.yml"
+  referenties:
+    type: object
+    properties:
+      schuldenknooppunt:
+        type: string
+        format: uuid
+        description: Het schuldenknooppunt referentie id van de kredietbank. Dit id wordt gebruikt door de schuldenknooppunt adapter.
+        example: d41341dc-7111-44f9-b823-108f01223704
+    required:
+      - schuldenknooppunt
 required:
   - kredietbank_id
   - naam
   - iban
+  - contact
+  - adres
   - gemeenten
   - schuldhulpverleners
+  - referenties
