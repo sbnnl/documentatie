@@ -1,17 +1,16 @@
 :root {
     /* Colors */
-    --sbn-color-purple: #3C2A60;
-    --sbn-color-purple-surface: #D9D3DE;
-    --sbn-color-purple-dark: #23104a;
-    --sbn-color-aqua: #6CCACF;
-    --sbn-color-aqua-surface: #CFE5E8;
-    --sbn-color-aqua-dark: #6aa7b7;
+    --sbn-rgb-purple: 60, 42, 96;
+    --sbn-rgb-purple-surface: 217, 211, 222;
+    --sbn-rgb-purple-dark: 35, 16, 74;
+    --sbn-rgb-aqua: 108, 202, 207;
+    --sbn-rgb-aqua-surface: 207, 229, 232;
+    --sbn-rgb-aqua-dark: 106, 167, 183;
 
     --wsk-color-green: #74cb56;
     --wsk-color-blue: #252e48;
 
     /* Theming */
-    --color-brand-base: var(--sbn-color-aqua);
-    --color-brand-light: var(--sbn-color-aqua-surface);
-    --text-color-heading: var(--sbn-color-purple);
+    --rgb-brand: var(--sbn-rgb-aqua-dark);
+    --text-color-heading: rgb(var(--sbn-rgb-purple));
 }
