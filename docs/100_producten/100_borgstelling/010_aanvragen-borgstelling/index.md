@@ -63,7 +63,7 @@ Nadat de aanvraag is goedgekeurd wordt er een borgstelling contract aangemaakt e
 Er bestaan twee soorten contracten:
 
 1. aanvraag: bruto kredietsom is verzekerd bedrag.
-2. portefuille overname: uitstaand saldo is het verzekerd bedrag en de looptijd is de resterende looptijd zijn op basis van de uitbetaaldatum en looptijd.
+2. portefuille overname: uitstaand saldo is het verzekerd bedrag en de looptijd is de resterende looptijd op basis van de uitbetaaldatum en looptijd.
 
 <!-- einde -->
 
