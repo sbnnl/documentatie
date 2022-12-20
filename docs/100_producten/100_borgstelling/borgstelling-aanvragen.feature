@@ -81,10 +81,22 @@ Functionaliteit: Borgstelling aanvragen
     En is "het contract" gearchiveerd
     En is er een verkoop geregistreerd van € "20.0"
     En is het "borgstelling afgegeven" bericht ontvangen door het Schuldenknooppunt
-
-  Scenario: Maatwerk borgstelling vanuit een portefeuille overname op basis van bruto kredietsom aanvragen
+    
+  Scenario: Standaard borgstelling aanvragen vanuit een portefeuille overname op basis van uitstaand saldo
     Gegeven een looptijd van "35" maanden
     En een bruto kredietsom van € "5000"
+    En een uitstaand saldo van € "4999.99"
+    Wanneer het "aanvraag overname" bericht is verstuurd via het Schuldenknooppunt
+    En het Schuldenknooppunt bericht is verwerkt
+    Dan is de status van de borgstelling "afgegeven"
+    En is "het contract" gearchiveerd
+    En is er een verkoop geregistreerd van € "20.0"
+    En is het "borgstelling afgegeven" bericht ontvangen door het Schuldenknooppunt
+
+  Scenario: Maatwerk borgstelling vanuit een portefeuille overname op basis van verzekerd bedrag aanvragen
+    Gegeven een looptijd van "35" maanden
+    En een bruto kredietsom van € "5000"
+    En een uitstaand saldo van € "5000"
     Wanneer het "aanvraag overname" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
     Dan is de status van de borgstelling "maatwerk"
