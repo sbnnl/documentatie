@@ -65,25 +65,6 @@ In deze epic wordt de dossier weergave geoptimaliseerd zodat het aansluit bij de
 1. IAM
 1. UX design beheerscherm
 
-## Uitbetalen borgstelling
-
-In deze epic wordt een deel van het uitbetalen borgstelling proces gerealiseerd.
-De email interactie met de kredietbank vanuit het systeem valt buiten de scope van deze epic.
-
-**Features:**
-
-1. [Uitbetalen borgstelling]
-2. [Beoordelen uitbetalingsverzoek]
-    1. Ontvangen van email berichten valt buiten de scope
-    2. Geef aanvullende informatie valt buiten de scope
-    3. Beantwoord aanvullende vragen valt buiten de scope
-
-**Afhankelijkheden:**
-
-1. Portaal
-1. IAM
-1. [Takenlijst]
-
 ## Maatwerk aanvragen borgstelling
 
 Het waarborgfonds kan m.b.v. deze epic maatwerk aanvragen via het systeem afhandelen.
@@ -105,6 +86,25 @@ Het waarborgfonds kan m.b.v. deze epic maatwerk aanvragen via het systeem afhand
 1. IAM
 1. [Takenlijst]
 
+## Uitbetalen borgstelling
+
+In deze epic wordt een deel van het uitbetalen borgstelling proces gerealiseerd.
+De email interactie met de kredietbank vanuit het systeem valt buiten de scope van deze epic.
+
+**Features:**
+
+1. [Uitbetalen borgstelling]
+2. [Beoordelen uitbetalingsverzoek]
+    1. Ontvangen van email berichten valt buiten de scope
+    2. Geef aanvullende informatie valt buiten de scope
+    3. Beantwoord aanvullende vragen valt buiten de scope
+
+**Afhankelijkheden:**
+
+1. Portaal
+1. IAM
+1. [Takenlijst]
+
 ## Dashboard
 
 Met deze epic wordt er een invulling gegeven aan het dashboard. De borgstellingen informatie wordt beschikbaar gesteld zodat het gekoppeld kan worden aan Excel document.
@@ -119,13 +119,12 @@ Met deze epic wordt er een invulling gegeven aan het dashboard. De borgstellinge
 1. Portaal
 1. IAM
 
-## Pro forma aanvragen en externe schuldhulpverlener
+## Externe schuldhulpverlener
 
-De kredietbank is niet in alle gevallen ook de schuldhulpverlener. Met deze epic kan de kredietbank en schuldhulpverlener, namens de kredietbank, een pro-forma borgstelling aanvragen.
+De kredietbank is niet in alle gevallen ook de schuldhulpverlener. Met deze epic kan schuldhulpverlener, namens de kredietbank, een pro-forma borgstelling aanvragen.
 
 **Features:**
 
-1. [Pro-forma aanvragen borgstelling]
 1. [Pro-forma aanvraag adapter]
 
 **Afhankelijkheden:**
