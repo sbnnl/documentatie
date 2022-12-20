@@ -73,7 +73,6 @@ De email interactie met de kredietbank vanuit het systeem valt buiten de scope v
 **Features:**
 
 1. [Uitbetalen borgstelling]
-   1. Betaal borgstelling uit valt buiten scope
 2. [Beoordelen uitbetalingsverzoek]
     1. Ontvangen van email berichten valt buiten de scope
     2. Geef aanvullende informatie valt buiten de scope
