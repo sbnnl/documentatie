@@ -77,7 +77,6 @@ De email interactie met de kredietbank vanuit het systeem valt buiten de scope v
     1. Ontvangen van email berichten valt buiten de scope
     2. Geef aanvullende informatie valt buiten de scope
     3. Beantwoord aanvullende vragen valt buiten de scope
-    4. Fiatteer uitbetaling valt buiten scope
 
 **Afhankelijkheden:**
 
