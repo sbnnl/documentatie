@@ -60,6 +60,11 @@ De informatie van de aanvraag wordt automatisch geaccepteerd op basis van regels
 
 Nadat de aanvraag is goedgekeurd wordt er een borgstelling contract aangemaakt en opgeslagen in het archief. De wettelijke bewaartermijn voor dit soort documenten is 7 jaar.
 
+Er bestaan twee soorten contracten:
+
+1. aanvraag: bruto kredietsom is verzekerd bedrag.
+2. portefuille overname: uitstaand saldo is het verzekerd bedrag en de looptijd is de resterende looptijd zijn op basis van de uitbetaaldatum en looptijd.
+
 <!-- einde -->
 
 * [Document](contract.message.md)
@@ -67,7 +72,7 @@ Nadat de aanvraag is goedgekeurd wordt er een borgstelling contract aangemaakt e
 
 ### Registreer verkoop
 
-Sbf maakt gebruik van Exact online. Voor **1% van de bruto kredietsom** van de geaccepteerde borgstelling aanvraag moet er automatisch een factuurregel aangemaakt worden via de [API van Exact online](https://start.exactonline.nl/docs/HlpRestAPIResourcesDetails.aspx?name=SalesInvoiceSalesInvoiceLines).
+Sbf maakt gebruik van Exact online.  Voor **1% van het verzekerd bedrag** van de geaccepteerde borgstelling aanvraag moet er automatisch een factuurregel aangemaakt worden via de [API van Exact online](https://start.exactonline.nl/docs/HlpRestAPIResourcesDetails.aspx?name=SalesInvoiceSalesInvoiceLines).
 
 <!-- einde -->
 
