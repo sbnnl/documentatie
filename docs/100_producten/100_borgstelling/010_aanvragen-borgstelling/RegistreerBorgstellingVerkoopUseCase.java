@@ -56,12 +56,23 @@ public class ExactService implements PortHandler<RegistreerBorgstellingVerkoop>
         salesOrder.Description = String.format("Borgstelling voor saneringskrediet met kenmerk %s.", port.Aanvraag.Kenmerk);
 
         const salesOrderLine = new SalesOrderLine();
-        salesOrderLine.AmountFC = port.Aanvraag.BrutoKredietsom * port.BorgstellingCategorie.PremiePercentage;;
+        salesOrderLine.AmountFC = calculatePrice(port);
         salesOrderLine.itemId = itemId;
         salesOrderLine.Description = String.format("Borgstelling %s voor saneringskrediet met kenmerk %s.", port.BorgstellingCategorie.Naam, port.Aanvraag.Kenmerk);
 
         salesOrder.SalesOrderLines = { salesOrderLine };
 
         api.createSalesOrder(salesOrder);
+    }
+
+    public Double calculatePrice(RegistreerVerkoop port) {
+        switch(port.Aanvraag.SoortAanvraag) {
+            case "aanvraag":
+                return port.Aanvraag.BrutoKredietsom * port.BorgstellingCategorie.PremiePercentage;
+            case "portefeuille overname":
+                return port.Aanvraag.UitstaandSaldo * port.BorgstellingCategorie.PremiePercentage;
+            default:
+                throw;
+        }
     }
 }
