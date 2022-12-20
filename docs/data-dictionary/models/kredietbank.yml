@@ -40,6 +40,11 @@ properties:
         example: d41341dc-7111-44f9-b823-108f01223704
     required:
       - schuldenknooppunt
+  portefeuille_overname_datum:
+    type: string
+    format: date
+    description: De minimale uitbetaal datum dat een krediet moet hebben om in aanmerking te kunnen komen voor een portefeuille overname.
+    example: 2022-01-01
 required:
   - kredietbank_id
   - naam
