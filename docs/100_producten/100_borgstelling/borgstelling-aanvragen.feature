@@ -18,7 +18,7 @@ Functionaliteit: Borgstelling aanvragen
     En een uitstaand saldo van € "2000"
 
   Scenario: Aanvraag borgstelling wordt juist geregistreerd
-    Wanneer de "aanvraag borgstelling" is verstuurd via het Schuldenknooppunt
+    Wanneer het "aanvraag borgstelling" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
     Dan is het kenmerk juist geregistreerd
     En is de bruto kredietsom juist geregistreerd
@@ -29,31 +29,33 @@ Functionaliteit: Borgstelling aanvragen
     En is de geregistreerde gemeente "Baarn"
 
   Scenario: Standaard borgstelling aanvragen
-    Wanneer de "aanvraag borgstelling" is verstuurd via het Schuldenknooppunt
+    Wanneer het "aanvraag borgstelling" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
-    Dan is de status van de borgstelling aanvraag "geaccepteerd"
+    Dan is de status van de borgstelling "afgegeven"
+    En is "het contract" gearchiveerd
     En is er een verkoop geregistreerd van € "50.0"
-    En is het "borgstelling afgegeven bericht" ontvangen door het Schuldenknooppunt
+    En is het "borgstelling afgegeven" bericht ontvangen door het Schuldenknooppunt
 
   Scenario: Maatwerk borgstelling op basis van bruto kredietsom aanvragen
     Gegeven een bruto kredietsom van € "5000"
-    Wanneer de "aanvraag borgstelling" is verstuurd via het Schuldenknooppunt
+    Wanneer het "aanvraag borgstelling" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
-    Dan is de status van de borgstelling aanvraag "maatwerk"
+    Dan is de status van de borgstelling "maatwerk"
     En is er een "beoordeel maatwerk borgstelling" taak actief
 
   Scenario: Maatwerk borgstelling op basis van looptijd aanvragen
     Gegeven een looptijd van "37" maanden
-    Wanneer de "aanvraag borgstelling" is verstuurd via het Schuldenknooppunt
+    Wanneer het "aanvraag borgstelling" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
-    Dan is de status van de borgstelling aanvraag "maatwerk"
+    Dan is de status van de borgstelling "maatwerk"
     En is er een "beoordeel maatwerk borgstelling" taak actief
 
   Scenario: Maatwerk borgstelling accepteren
     Gegeven een bruto kredietsom van € "5000"
     En een "beoordeel maatwerk borgstelling" taak is actief
     Wanneer de aanvraag wordt goedgekeurd
-    Dan is de status van de borgstelling aanvraag "geaccepteerd"
+    Dan is de status van de borgstelling "afgegeven"
+    En is "het contract" gearchiveerd
     En is er een verkoop geregistreerd van € "50.0"
     En is het "borgstelling afgegeven" bericht ontvangen door het Schuldenknooppunt
 
@@ -61,34 +63,38 @@ Functionaliteit: Borgstelling aanvragen
     Gegeven een bruto kredietsom van € "5000"
     En een "beoordeel maatwerk borgstelling" taak is actief
     Wanneer de aanvraag wordt afgewezen
-    Dan is de status van de borgstelling aanvraag "afgewezen"
+    Dan is de status van de borgstelling "afgewezen"
+    En is "de afwijzing" gearchiveerd
     En is er geen verkoop geregistreerd
     En is het "borgstelling afgewezen" bericht ontvangen door het Schuldenknooppunt
 
   Scenario: Aanvraag borgstelling vanuit een portefeuille overname wordt juist geregistreerd
-    Wanneer de "aanvraag borgstelling" is verstuurd via het Schuldenknooppunt
+    Wanneer het "portefeuille overname" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
     Dan is het uitstaand saldo juist geregistreerd
 
   Scenario: Standaard borgstelling aanvragen vanuit een portefeuille overname
     Gegeven een looptijd van "35" maanden
-    Wanneer de "portefeuille overname" is verstuurd via het Schuldenknooppunt
+    Wanneer het "portefeuille overname" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
-    Dan is de status van de borgstelling aanvraag "geaccepteerd"
+    Dan is de status van de borgstelling "afgegeven"
+    En is "het contract" gearchiveerd
     En is er een verkoop geregistreerd van € "20.0"
-    En is het "borgstelling afgegeven bericht" ontvangen door het Schuldenknooppunt
+    En is het "borgstelling afgegeven" bericht ontvangen door het Schuldenknooppunt
 
-  Scenario: Maatwerk borgstelling op basis van bruto kredietsom aanvragen
-    Gegeven een bruto kredietsom van € "5000"
-    Wanneer de "portefeuille overname" is verstuurd via het Schuldenknooppunt
+  Scenario: Maatwerk borgstelling vanuit een portefeuille overname op basis van bruto kredietsom aanvragen
+    Gegeven een looptijd van "35" maanden
+    En een bruto kredietsom van € "5000"
+    Wanneer het "portefeuille overname" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
-    Dan is de status van de borgstelling aanvraag "maatwerk"
+    Dan is de status van de borgstelling "maatwerk"
     En is er een "beoordeel maatwerk borgstelling" taak actief
 
-  Scenario: Verlopen standaard borgstelling aanvragen vanuit een portefeuille overname
+  Scenario: Maatwerk borgstelling vanuit een portefeuille overname op basis van looptijd afwijzen
     Gegeven een portefeuille overname
-    Wanneer de "portefeuille overname" is verstuurd via het Schuldenknooppunt
+    Wanneer het "portefeuille overname" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
-    Dan is de status van de borgstelling aanvraag "afgewezen"
+    Dan is de status van de borgstelling "afgewezen"
+    En is "de afwijzing" gearchiveerd
     En is er geen verkoop geregistreerd
     En is het "borgstelling afgewezen" bericht ontvangen door het Schuldenknooppunt
