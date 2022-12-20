@@ -10,4 +10,5 @@ Functionaliteit: Borgstelling beëindigen
     En het Schuldenknooppunt bericht is verwerkt
     Dan is de status van de borgstelling "beëindigd"
     En is "de beëindiging" gearchiveerd
+    En is de datum beëindiging juist geregistreerd
     En is het "borgstelling beëindigd" bericht ontvangen door het Schuldenknooppunt
