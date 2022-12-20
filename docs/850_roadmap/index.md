@@ -37,6 +37,9 @@ Op basis van voortschrijdend inzicht zijn de volgende features nog noodzakelijk 
 1. De portefeuille overname datum toevoegen aan [kredietbank beheer](../producten/kredietbanken-beheeren/index.html).
 1. Voor portefeuille overnames moet het uitstaand saldo gebruikt worden i.p.v. de bruto kredietsom bij het [registreren van de verkoop](../producten/borgstelling/aanvragen-borgstelling/index.html#registreer-verkoop).
 1. [Borgstellingen categorien](../producten/borgstelling-categorien-beheeren/index.html) realiseren en implementeren voor het vaststellen van de premiepercentage en de automatische acceptatie.
+1. Afwijkende logica voor portefeuille overname:
+   1. Uitstaand saldo gebruiken i.p.v. bruto kredietsom (voor automatische beoordeling, premie berekening en in de brief als verzekerd bedrag)
+   2. Looptijd in maanden in contract berekenen (uitbetaal datum + looptijd in maanden - huidige datum) 
 
 ## Intrekken borgstelling
 
