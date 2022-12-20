@@ -6,7 +6,7 @@ Functionaliteit: Borgstelling beëindigen
 
   Scenario: Borgstelling beëindigen
     Gegeven een afgegeven borgstelling
-    Wanneer het "beeindig borgstelling" bericht is verstuurd via het Schuldenknooppunt
+    Wanneer het "beëindiging borgstelling" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
     Dan is de status van de borgstelling "beëindigd"
     En is "de beëindiging" gearchiveerd

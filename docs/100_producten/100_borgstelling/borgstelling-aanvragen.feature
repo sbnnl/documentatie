@@ -69,13 +69,13 @@ Functionaliteit: Borgstelling aanvragen
     En is het "borgstelling afgewezen" bericht ontvangen door het Schuldenknooppunt
 
   Scenario: Aanvraag borgstelling vanuit een portefeuille overname wordt juist geregistreerd
-    Wanneer het "portefeuille overname" bericht is verstuurd via het Schuldenknooppunt
+    Wanneer het "aanvraag overname" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
     Dan is het uitstaand saldo juist geregistreerd
 
   Scenario: Standaard borgstelling aanvragen vanuit een portefeuille overname
     Gegeven een looptijd van "35" maanden
-    Wanneer het "portefeuille overname" bericht is verstuurd via het Schuldenknooppunt
+    Wanneer het "aanvraag overname" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
     Dan is de status van de borgstelling "afgegeven"
     En is "het contract" gearchiveerd
@@ -85,14 +85,14 @@ Functionaliteit: Borgstelling aanvragen
   Scenario: Maatwerk borgstelling vanuit een portefeuille overname op basis van bruto kredietsom aanvragen
     Gegeven een looptijd van "35" maanden
     En een bruto kredietsom van € "5000"
-    Wanneer het "portefeuille overname" bericht is verstuurd via het Schuldenknooppunt
+    Wanneer het "aanvraag overname" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
     Dan is de status van de borgstelling "maatwerk"
     En is er een "beoordeel maatwerk borgstelling" taak actief
 
   Scenario: Maatwerk borgstelling vanuit een portefeuille overname op basis van looptijd afwijzen
     Gegeven een portefeuille overname
-    Wanneer het "portefeuille overname" bericht is verstuurd via het Schuldenknooppunt
+    Wanneer het "aanvraag overname" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
     Dan is de status van de borgstelling "afgewezen"
     En is "de afwijzing" gearchiveerd
