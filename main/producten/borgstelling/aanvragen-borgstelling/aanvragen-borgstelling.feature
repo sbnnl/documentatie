@@ -1,5 +1,5 @@
-#language: nl (2710c77bd657f00bdbf5da8b1a659d31)
-Functionaliteit: Aanvragen borgstelling use-case
+#language: nl
+Functionaliteit: Aanvragen borgstelling use-case (2710c77bd657f00bdbf5da8b1a659d31)
 
   Abstract Scenario: Use-case permissie is juist
     Gegeven een gebruiker met de rollen "<rollen>"

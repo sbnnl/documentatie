@@ -1,5 +1,5 @@
-#language: nl (3ba5161b1f8bc57b4852f5677033347d)
-Functionaliteit: Geef gebeurtenissen use-case
+#language: nl
+Functionaliteit: Geef gebeurtenissen use-case (3ba5161b1f8bc57b4852f5677033347d)
 
   Abstract Scenario: Use-case permissie is juist
     Gegeven een gebruiker met de rollen "<rollen>"

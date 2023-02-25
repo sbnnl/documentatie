@@ -1,5 +1,5 @@
-#language: nl (30ceab1b218349262bad13c809d3f25b)
-Functionaliteit: Aanvraag borgstelling proces
+#language: nl
+Functionaliteit: Aanvraag borgstelling proces (30ceab1b218349262bad13c809d3f25b)
 
   Scenario: Aanvraag geaccepteerd route is actief
     Gegeven proces informatie "{ beoordeling: 'geaccepteerd' }"

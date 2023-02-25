@@ -1,5 +1,5 @@
-#language: nl (f0dc95e457ab943a704d649e24fcfe99)
-Functionaliteit: Kredietbanken beheren
+#language: nl
+Functionaliteit: Kredietbanken beheren (f0dc95e457ab943a704d649e24fcfe99)
 
   Abstract Scenario: "KREDIETBANK_OPVRAGEN" permissie is juist
     Gegeven een gebruiker met de rollen "<rollen>"

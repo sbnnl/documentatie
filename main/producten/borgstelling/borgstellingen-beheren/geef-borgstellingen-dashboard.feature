@@ -1,5 +1,5 @@
-#language: nl (55e1287b1f1b6d94c032af40dca65501)
-Functionaliteit: Geef borgstellingen dashboard use-case
+#language: nl
+Functionaliteit: Geef borgstellingen dashboard use-case (55e1287b1f1b6d94c032af40dca65501)
 
   Abstract Scenario: Use-case permissie is juist
     Gegeven een gebruiker met de rollen "<rollen>"

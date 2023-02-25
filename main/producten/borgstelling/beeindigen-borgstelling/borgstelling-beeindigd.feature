@@ -1,5 +1,5 @@
-#language: nl (32233e0a34c2f02b62642fae9850ba3c)
-Functionaliteit: Beëindig borgstelling use-case
+#language: nl
+Functionaliteit: Beëindig borgstelling use-case (32233e0a34c2f02b62642fae9850ba3c)
 
   Abstract Scenario: Use-case permissie is juist
     Gegeven een gebruiker met de rollen "<rollen>"

@@ -1,5 +1,5 @@
-# language: nl (0d35b041eb08b6ec11c68a2825315b29)
-Functionaliteit: Accepteer automatisch use-case
+# language: nl
+Functionaliteit: Accepteer automatisch use-case (0d35b041eb08b6ec11c68a2825315b29)
 
   Abstract Scenario: Beoordeel aanvraag zonder pro-forma aanvraag: "<reden>"
     Gegeven aanvraag waarbij de gemeente <in gemeentelijst> voorkomt in de lijst van aangesloten gemeenten met buto kredietsom <kredietsom> en looptijd <looptijd> maanden

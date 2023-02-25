@@ -1,5 +1,5 @@
-#language: nl (a70820e55f855ad78f00f8f96d60de04)
-Functionaliteit: Geef borgstellingen use-case
+#language: nl
+Functionaliteit: Geef borgstellingen use-case (a70820e55f855ad78f00f8f96d60de04)
 
   Abstract Scenario: Use-case permissie is juist
     Gegeven een gebruiker met de rollen "<rollen>"

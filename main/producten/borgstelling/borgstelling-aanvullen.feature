@@ -1,5 +1,5 @@
-# language: nl (89cda69f7dfb1baa0141743fd647f6a0)
-Functionaliteit: Borgstelling aanvullen
+# language: nl
+Functionaliteit: Borgstelling aanvullen (89cda69f7dfb1baa0141743fd647f6a0)
 
   Achtergrond:
     Gegeven een kredietbank

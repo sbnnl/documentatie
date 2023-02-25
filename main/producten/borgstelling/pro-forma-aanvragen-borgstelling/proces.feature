@@ -1,5 +1,5 @@
-#language: nl (feed176e76d99b349f5d61bff122776e)
-Functionaliteit: Aanvraag borgstelling proces
+#language: nl
+Functionaliteit: Aanvraag borgstelling proces (feed176e76d99b349f5d61bff122776e)
 
   Scenario: Aanvraag geaccepteerd route is actief
     Gegeven proces informatie "{ beoordeling: 'geaccepteerd' }"

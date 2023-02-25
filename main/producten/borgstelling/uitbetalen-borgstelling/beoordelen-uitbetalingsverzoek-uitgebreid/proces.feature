@@ -1,5 +1,5 @@
-#language: nl (2022724905bb22094f1c53cde03930ca)
-Functionaliteit: Uitebataling borgstelling proces
+#language: nl
+Functionaliteit: Uitebataling borgstelling proces (2022724905bb22094f1c53cde03930ca)
 
   Scenario: Aanvullende vragen route is actief
     Gegeven proces informatie "{ beoordeling: 'aanvullende_vragen' }"

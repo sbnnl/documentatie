@@ -1,5 +1,5 @@
-# language: nl (e46fcf7a5d093c1bac9f806c01738cbe)
-Functionaliteit: Borgstelling beëindigen
+# language: nl
+Functionaliteit: Borgstelling beëindigen (e46fcf7a5d093c1bac9f806c01738cbe)
 
   Achtergrond:
     Gegeven een kredietbank

@@ -1,5 +1,5 @@
-#language: nl (85bf393f34e2c3c7233b5bbeba47cf48)
-Functionaliteit: Verstuur email use-case
+#language: nl
+Functionaliteit: Verstuur email use-case (85bf393f34e2c3c7233b5bbeba47cf48)
 
   Abstract Scenario: Use-case permissie is juist
     Gegeven een gebruiker met de rollen "<rollen>"

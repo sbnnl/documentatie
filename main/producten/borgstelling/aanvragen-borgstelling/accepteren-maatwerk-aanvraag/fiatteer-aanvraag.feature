@@ -1,5 +1,5 @@
-#language: nl (4889e825bded86c87101421bdbf9fec0)
-Functionaliteit: Beoordeel aanvraag use-case
+#language: nl
+Functionaliteit: Beoordeel aanvraag use-case (4889e825bded86c87101421bdbf9fec0)
 
   Abstract Scenario: Use-case permissie is juist
     Gegeven een gebruiker met de rollen "<rollen>"

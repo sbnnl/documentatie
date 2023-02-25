@@ -1,5 +1,5 @@
-#language: nl (5ae8e71c856583a1c72f07b655568dc6)
-Functionaliteit: Registreer verkoop use-case
+#language: nl
+Functionaliteit: Registreer verkoop use-case (5ae8e71c856583a1c72f07b655568dc6)
   
   Abstract Scenario: Use-case permissie is juist
     Gegeven een gebruiker met de rollen "<rollen>"

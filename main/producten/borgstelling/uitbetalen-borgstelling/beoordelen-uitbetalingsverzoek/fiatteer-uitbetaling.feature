@@ -1,5 +1,5 @@
-#language: nl (983c6436b1bafa996edf6911b4999af8)
-Functionaliteit: Fiattteer uitbetaling use-case
+#language: nl
+Functionaliteit: Fiattteer uitbetaling use-case (983c6436b1bafa996edf6911b4999af8)
 
   Abstract Scenario: Use-case permissie is juist
     Gegeven een gebruiker met de rollen "<rollen>"

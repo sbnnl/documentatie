@@ -1,5 +1,5 @@
-#language: nl (3e331d4fe1504f41320b4c135b4923d2)
-Functionaliteit: Beoordeel uitbetaling verzoek use-case
+#language: nl
+Functionaliteit: Beoordeel uitbetaling verzoek use-case (3e331d4fe1504f41320b4c135b4923d2)
 
   Abstract Scenario: Use-case permissie is juist
     Gegeven een gebruiker met de rollen "<rollen>"

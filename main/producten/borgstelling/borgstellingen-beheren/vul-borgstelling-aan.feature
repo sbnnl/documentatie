@@ -1,6 +1,6 @@
 
-#language: nl (9a5d3dbd1f6e84a4e9b66ef7469efa91)
-Functionaliteit: Vul borgstelling aan use-case
+#language: nl
+Functionaliteit: Vul borgstelling aan use-case (9a5d3dbd1f6e84a4e9b66ef7469efa91)
 
   Abstract Scenario: Use-case permissie is juist
     Gegeven een gebruiker met de rollen "<rollen>"

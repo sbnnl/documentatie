@@ -1,5 +1,5 @@
-# language: nl (626a38df46a222e055b5cb3d192209bf)
-Functionaliteit: Borgstelling aanvragen
+# language: nl
+Functionaliteit: Borgstelling aanvragen (626a38df46a222e055b5cb3d192209bf)
 
   Achtergrond:
     Gegeven het kenmerk "093e08db-6791-454b-a172-068099514907"

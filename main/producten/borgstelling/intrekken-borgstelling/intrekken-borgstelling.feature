@@ -1,5 +1,5 @@
-#language: nl (7e02f0af33a4f0debf90eb53f759a58a)
-Functionaliteit: Intrekken borgstelling use-case
+#language: nl
+Functionaliteit: Intrekken borgstelling use-case (7e02f0af33a4f0debf90eb53f759a58a)
 
   Abstract Scenario: Use-case permissie is juist
     Gegeven een gebruiker met de rollen "<rollen>"

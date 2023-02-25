@@ -1,5 +1,5 @@
-#language: nl (b8ccc67909ae45841567434aa34de160)
-Functionaliteit: Trek borgstelling in use-case
+#language: nl
+Functionaliteit: Trek borgstelling in use-case (b8ccc67909ae45841567434aa34de160)
 
   Abstract Scenario: Use-case permissie is juist
     Gegeven een gebruiker met de rollen "<rollen>"

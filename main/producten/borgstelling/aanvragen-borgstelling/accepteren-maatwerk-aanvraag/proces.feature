@@ -1,5 +1,5 @@
-#language: nl (85a3b6b8f72226bec2da5bbf232fd47c)
-Functionaliteit: Beoordeel maatwerk aanvraag proces
+#language: nl
+Functionaliteit: Beoordeel maatwerk aanvraag proces (85a3b6b8f72226bec2da5bbf232fd47c)
 
   Scenario: Aanvraag geaccepteerd route is actief
     Gegeven proces informatie "{ beoordeling: 'geaccepteerd' }"

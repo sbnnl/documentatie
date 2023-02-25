@@ -1,5 +1,5 @@
-#language: nl (025ced024264f5462de47dc47a519b5d)
-Functionaliteit: Geef aanvullende informatie use-case
+#language: nl
+Functionaliteit: Geef aanvullende informatie use-case (025ced024264f5462de47dc47a519b5d)
 
   Abstract Scenario: Use-case permissie is juist
     Gegeven een gebruiker met de rollen "<rollen>"

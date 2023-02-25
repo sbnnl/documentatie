@@ -1,5 +1,5 @@
-#language: nl (03f60a60c051a0d6706fb0e7d87ed24e)
-Functionaliteit: Verstuur gebeurtenis use-case
+#language: nl
+Functionaliteit: Verstuur gebeurtenis use-case (03f60a60c051a0d6706fb0e7d87ed24e)
 
   Abstract Scenario: Use-case permissie is juist
     Gegeven een gebruiker met de rollen "<rollen>"

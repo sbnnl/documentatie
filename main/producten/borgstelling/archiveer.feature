@@ -1,5 +1,5 @@
-#language: nl (e509056348d2c4fc85f37031bef4ced2)
-Functionaliteit: Archiveer contract use-case
+#language: nl
+Functionaliteit: Archiveer contract use-case (e509056348d2c4fc85f37031bef4ced2)
   
   Abstract Scenario: Use-case permissie is juist
     Gegeven een gebruiker met de rollen "<rollen>"

@@ -1,5 +1,5 @@
-#language: nl (30a40547827ec01ef5c883ad6fe806eb)
-Functionaliteit: Betaal borgstelling uit use-case
+#language: nl
+Functionaliteit: Betaal borgstelling uit use-case (30a40547827ec01ef5c883ad6fe806eb)
 
   Abstract Scenario: Use-case permissie is juist
     Gegeven een gebruiker met de rollen "<rollen>"
