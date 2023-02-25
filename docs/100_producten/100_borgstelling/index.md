@@ -1,5 +1,7 @@
 # Borgstelling
 
+[dashboard](./borgstelling.dashboard.yml)
+
 ## Proces
 
 [proces](proces.bpmn)
