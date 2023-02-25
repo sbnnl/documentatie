@@ -1,4 +1,0 @@
-type: string
-format: uri
-description: De link naar de api resource van deze taak.
-example: https://waarborgfonds.sbn.nl/api/kredietbanken/88b33783-0a04-4d94-afae-a6d117d63ad8/beoordeel-aanvraag-taken/f242f4e7-4ddc-4dbb-a3c1-9ab1a1dea74e

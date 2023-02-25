@@ -1,6 +1,0 @@
-type: string
-format: markdown
-title: opmerkingen
-description: Om welke reden is het saneringskrediet oninbaar gebleken?
-example: |
-  De klant is overleden.

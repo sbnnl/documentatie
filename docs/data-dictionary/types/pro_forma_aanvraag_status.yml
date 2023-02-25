@@ -1,8 +1,0 @@
-type: string
-title: status
-description: Status van de pro-forma aanvraag.
-enum:
-  - aangevraagd
-  - afgewezen
-  - goedgekeurd
-example: goedgekeurd

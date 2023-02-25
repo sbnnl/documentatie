@@ -1,5 +1,0 @@
-type: number
-title: stand
-description: |
-  Geeft aan of er sprake is van een voorstand (groter dan 0), achterstand (kleiner dan 0) of aflossing is op niveau (gelijk aan 0).
-example: 0

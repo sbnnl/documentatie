@@ -1,4 +1,0 @@
-type: string
-format: uuid
-description: Uniek identificerend kenmerk van de borgstelling categorie.
-example: d18843f6-fa00-49df-814a-1312326da0d0

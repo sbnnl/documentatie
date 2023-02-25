@@ -1,4 +1,0 @@
-type: string
-format: date
-description: De gewenste datum waarop de taak afgerond moet zijn.
-example: 2022-01-01

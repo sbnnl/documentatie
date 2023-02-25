@@ -1,8 +1,0 @@
-in: query
-name: afgifte-jaar
-description: Het jaar waarin de borgstelling is afgegeven.
-schema:
-  type: integer
-  minimum: 2021
-  maximum: 9999
-  example: 2021

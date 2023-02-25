@@ -1,5 +1,0 @@
-allOf:
-  - in: query    
-    name: kenmerk-aanvrager
-    required: false
-  - $ref: "../types/kenmerk_aanvrager.yml"

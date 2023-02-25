@@ -1,6 +1,0 @@
-type: number
-minimum: 0
-title: theoretisch saldo
-description: |
-  {{Theoretisch saldo}}
-example: 535.45

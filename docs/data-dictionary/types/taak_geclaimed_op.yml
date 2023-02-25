@@ -1,4 +1,0 @@
-type: string
-format: date-time
-description: Het tijdstip waarop de taak geclaimed is.
-example: 2022-01-01T17:32:28Z

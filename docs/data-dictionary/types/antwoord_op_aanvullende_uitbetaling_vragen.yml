@@ -1,6 +1,0 @@
-type: string
-format: markdown
-title: antwoord
-description: Het antwoord / antwoorden van de kredietbank op vragen van de beoordelaar van het uitbetalingverzoek.
-example: |
-  Het uitbetalingsverzoek is later dan gebruikelijk ingediend omdat de hulpverlening nog een poging heeft gedaan om met de klant in contact te komen. 

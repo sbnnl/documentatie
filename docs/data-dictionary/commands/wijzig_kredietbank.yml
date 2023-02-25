@@ -1,5 +1,0 @@
-allOf:
-  - $ref: "types/command.yml"
-  - type: object
-    title: wijzig kredietbank
-  - $ref: "../models/kredietbank.yml"

@@ -1,9 +1,0 @@
-type: string
-enum:
-  - Zeer zeker
-  - Redelijk zeker
-  - Redelijk onzeker
-  - Zeer onzeker
-title: inkomen zekerheid
-description: Hoe schat u de zekerheid in van het inkomen voor de duur van het saneringskrediet?
-example: Redelijk zeker

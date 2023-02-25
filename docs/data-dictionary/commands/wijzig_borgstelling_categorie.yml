@@ -1,5 +1,0 @@
-allOf:
-  - $ref: "types/command.yml"
-  - type: object
-    title: wijzig borgstelling categorie
-  - $ref: "../models/borgstelling_categorie.yml"

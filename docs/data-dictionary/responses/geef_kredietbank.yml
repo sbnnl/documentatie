@@ -1,4 +1,0 @@
-allOf:
-  - title: geef kredietbank
-  - $ref: "types/response.yml"
-  - $ref: "../models/kredietbank.yml"

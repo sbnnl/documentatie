@@ -1,6 +1,0 @@
-type: string
-format: markdown
-title: vragen
-description: De vraag / vragen die door de Kredietbank aanvullend beantwoord moeten worden voordat het uitbetaalverzoek beoordeeld kan worden.
-example: |
-  Waarom is het uitbetalingsverzoek later dan gebruikelijk ingediend?

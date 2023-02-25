@@ -1,6 +1,0 @@
-type: number
-minimum: 0
-title: uitstaand saldo
-description: |
-  {{Uitstaand saldo}}
-example: 578.12

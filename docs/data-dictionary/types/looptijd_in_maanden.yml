@@ -1,7 +1,0 @@
-type: number
-minimum: 1
-maximum: 60
-title: looptijd
-description: |
-  De looptijd, in maanden, van het saneringskrediet.
-example: 36

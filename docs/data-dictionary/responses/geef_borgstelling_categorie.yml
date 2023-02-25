@@ -1,4 +1,0 @@
-allOf:
-  - title: geef borgstelling categorie
-  - $ref: "types/response.yml"
-  - $ref: "../models/borgstelling_categorie.yml"

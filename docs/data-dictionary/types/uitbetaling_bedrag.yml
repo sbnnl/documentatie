@@ -1,6 +1,0 @@
-type: number
-minimum: 0
-title: bedrag
-description: |
-  Het bedrag dat door de beoordelaar is vastgesteld dat uitbetaald moet worden.
-example: 535.45

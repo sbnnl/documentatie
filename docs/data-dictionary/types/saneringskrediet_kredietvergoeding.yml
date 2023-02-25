@@ -1,6 +1,0 @@
-type: number
-minimum: 0
-title: kredietvergoeding
-description: |
-  {{Kredietvergoeding}}
-example: 24.45

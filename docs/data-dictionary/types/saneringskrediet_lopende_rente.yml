@@ -1,6 +1,0 @@
-type: number
-minimum: 0
-title: lopende rente
-description: |
-  {{Lopende rente}}
-example: 0.12

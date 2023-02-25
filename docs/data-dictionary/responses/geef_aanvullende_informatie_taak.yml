@@ -1,4 +1,0 @@
-allOf:
-  - title: geef aanvullende informatie taak
-  - $ref: "types/response.yml"
-  - $ref: "../user_tasks/geef_aanvullende_informatie.yml"

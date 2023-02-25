@@ -1,6 +1,0 @@
-type: number
-minimum: 0
-title: vertragingsrente
-description: |
-  {{Vertragingsrente}}
-example: 4.45

@@ -1,3 +1,0 @@
-type: string
-description: De naam van de actie die uitgevoerd wordt. De waarde wordt gebruikt om verschillende type acties op een resource te identificeren.
-example: beantwoord

@@ -1,5 +1,0 @@
-allOf:
-  - in: path    
-    name: borgstelling_id
-    required: true
-  - $ref: "../types/pro_forma_borgstelling_id.yml"

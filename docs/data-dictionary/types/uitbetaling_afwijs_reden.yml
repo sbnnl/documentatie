@@ -1,7 +1,0 @@
-
-type: string
-format: markdown
-title: reden van afwijzing
-description: De reden waarom het verzoek is afgewezen. Er is bijvoordeeld gehandeld in strijd met het fondsbeleid.
-example: |
-  Er is niet voldaan aan de gedragscode sociale kredietverlening.

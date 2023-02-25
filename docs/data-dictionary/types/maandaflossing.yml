@@ -1,7 +1,0 @@
-type: number
-format: float 
-minimum: 0
-title: afloscapaciteit per maand
-description: |
-  {{Afloscapaciteit}}
-example: 60.46
