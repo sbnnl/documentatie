@@ -1,13 +1,22 @@
 # language: nl
 Functionaliteit: Borgstelling aanvullen
 
-  Achtergrond: 
-    Gegeven het kenmerk "093e08db-6791-454b-a172-068099514907"
-    En uitbetaaldatum is "2022-06-1"
-    En kredietsom is bruto "1825.34" en netto "1550.77"
-    En betalingen laatste aflosdatum is "2022-08-01" en aflossing is "300.47" en kredietvergoeding is "24.45" en vertragingsrente is "4.45" en boete rente is "1.12"
-    En achterstanden aflossing is "100.17" en kredietvergoeding is "5.87" en vertragingsrente is "0.78" en boete rente is "0.02"
-    En voorstand is "10.15"
+  Achtergrond:
+    Gegeven een kredietbank
+    En een afgegeven borgstelling
+    En een uitbetaaldatum "2022-06-01"
+    En een bruto kredietsom van € 1825,34
+    En een netto kredietsom van € 1550,77
+    En een laatste aflosdatum "2022-08-01"
+    En een betaling aflossing is 300,47
+    En een betaling kredietvergoeding is 24,45
+    En een betaling vertragingsrente is 4,45
+    En een betaling boete rente is 1,12
+    En een achterstand aflossing is 100,17
+    En een achterstand kredietvergoeding is 5,87
+    En een achterstand vertragingsrente is 0,78
+    En een achterstand boete rente is 0,02
+    En voorstand is 10,15
     En betalingsregeling is "ja"
     En dubieus is "ja"
 
