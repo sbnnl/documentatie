@@ -17,6 +17,8 @@ properties:
     $ref: "../types/bruto_kredietsom.yml"
   looptijd:
     $ref: "../types/looptijd_in_maanden.yml"
+  statistieken:
+    $ref: "../models/statistieken.yml"
 required:
   - soort_aanvraag
   - soort_lening
@@ -26,3 +28,4 @@ required:
   - postcode_gebied
   - bruto_kredietsom
   - looptijd
+  - statistieken
