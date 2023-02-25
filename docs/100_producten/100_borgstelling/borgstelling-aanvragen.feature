@@ -37,7 +37,7 @@ Functionaliteit: Borgstelling aanvragen
     En wachten enkele momenten
     Dan is de status van de borgstelling "AFGEGEVEN"
     En is "het contract" gearchiveerd
-    En is er een verkoop geregistreerd van € 50,00
+    En is er een verkoop geregistreerd van € 49,99
     En is het "borgstelling afgegeven" bericht ontvangen door het Schuldenknooppunt
 
   Scenario: Maatwerk borgstelling op basis van bruto kredietsom aanvragen
@@ -116,7 +116,7 @@ Functionaliteit: Borgstelling aanvragen
     En wachten enkele momenten
     Dan is de status van de borgstelling "AFGEGEVEN"
     En is "het contract" gearchiveerd
-    En is er een verkoop geregistreerd van € 50,0
+    En is er een verkoop geregistreerd van € 49,99
     En is het "borgstelling afgegeven" bericht ontvangen door het Schuldenknooppunt
 
   Scenario: Maatwerk borgstelling vanuit een portefeuille overname op basis van verzekerd bedrag aanvragen
