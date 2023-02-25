@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_05sqje2" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.12.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="1.1.0">
+  <bpmn:collaboration id="Collaboration_1e4tu7v">
+    <bpmn:participant id="Participant_1xctonu" name="Intrekken borgstelling" processRef="Process_0zhsu1g" />
+    <bpmn:participant id="Participant_1kt4b9r" name="Fonds beheerder (SBN)" />
+    <bpmn:participant id="Participant_1rkw0wz" name="Archief" />
+    <bpmn:participant id="Participant_0d2iia2" name="Kredietverstrekker (Kredietbank)" />
+    <bpmn:messageFlow id="Flow_1xtk9pj" sourceRef="Participant_1kt4b9r" targetRef="StartEvent_1" />
+    <bpmn:messageFlow id="Flow_1fea9gl" sourceRef="Activity_1xef5oj" targetRef="Participant_1rkw0wz" />
+    <bpmn:messageFlow id="Flow_17886d0" sourceRef="Event_01uwuyq" targetRef="Participant_0d2iia2" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_0zhsu1g" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1" name="Intrekken borgstelling">
+      <bpmn:outgoing>Flow_0lfxy0b</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_1f4jxw4" />
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_0lfxy0b" sourceRef="StartEvent_1" targetRef="Activity_1xef5oj" />
+    <bpmn:sequenceFlow id="Flow_0e3d3pt" sourceRef="Activity_1xef5oj" targetRef="Event_01uwuyq" />
+    <bpmn:serviceTask id="Activity_1xef5oj" name="Archiveer intrekking">
+      <bpmn:incoming>Flow_0lfxy0b</bpmn:incoming>
+      <bpmn:outgoing>Flow_0e3d3pt</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="Event_01uwuyq" name="Borgstelling ingetrokken">
+      <bpmn:incoming>Flow_0e3d3pt</bpmn:incoming>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0gy1vh6" />
+    </bpmn:endEvent>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1e4tu7v">
+      <bpmndi:BPMNShape id="Participant_1xctonu_di" bpmnElement="Participant_1xctonu" isHorizontal="true">
+        <dc:Bounds x="150" y="160" width="540" height="250" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0e3d3pt_di" bpmnElement="Flow_0e3d3pt">
+        <di:waypoint x="490" y="285" />
+        <di:waypoint x="592" y="285" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0lfxy0b_di" bpmnElement="Flow_0lfxy0b">
+        <di:waypoint x="295" y="285" />
+        <di:waypoint x="390" y="285" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_0g2ydep_di" bpmnElement="StartEvent_1">
+        <dc:Bounds x="259" y="267" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="249" y="310" width="57" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0hv2rn2_di" bpmnElement="Activity_1xef5oj">
+        <dc:Bounds x="390" y="245" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0czaqrk_di" bpmnElement="Event_01uwuyq">
+        <dc:Bounds x="592" y="267" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="581" y="310" width="58" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_069mkhv_di" bpmnElement="Participant_1kt4b9r" isHorizontal="true">
+        <dc:Bounds x="127" y="80" width="300" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_1rkw0wz_di" bpmnElement="Participant_1rkw0wz" isHorizontal="true">
+        <dc:Bounds x="290" y="440" width="300" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_0d2iia2_di" bpmnElement="Participant_0d2iia2" isHorizontal="true">
+        <dc:Bounds x="470" y="80" width="300" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1xtk9pj_di" bpmnElement="Flow_1xtk9pj">
+        <di:waypoint x="277" y="140" />
+        <di:waypoint x="277" y="267" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1fea9gl_di" bpmnElement="Flow_1fea9gl">
+        <di:waypoint x="440" y="325" />
+        <di:waypoint x="440" y="440" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_17886d0_di" bpmnElement="Flow_17886d0">
+        <di:waypoint x="610" y="267" />
+        <di:waypoint x="610" y="140" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
