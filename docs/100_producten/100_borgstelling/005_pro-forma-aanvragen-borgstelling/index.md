@@ -25,7 +25,7 @@ Registreert de pro-forma aanvraag en start het pro-forma aanvragen borgstelling 
 
 <!-- einde -->
 
-* [Acceptatie criteria](../010_aanvragen-borgstelling/aanvragen-borgstelling.feature)
+* [Acceptatie criteria](../010_aanvragen-borgstelling/010_afhandelen-aanvraag-borgstelling/aanvragen-borgstelling.feature)
 
 ### Accepteer automatisch
 
@@ -36,11 +36,11 @@ De informatie van de aanvraag wordt automatisch geaccepteerd op basis van regels
 
 <!-- einde -->
 
-* [Acceptatie criteria](../010_aanvragen-borgstelling//accepteer-automatisch.feature)
+* [Acceptatie criteria](../010_aanvragen-borgstelling//010_afhandelen-aanvraag-borgstelling/accepteer-automatisch.feature)
 
 ### Accepteren maatwerk aanvraag
 
-[Zie het accepteren maatwerk aanvraag product voor meer informatie.](../aanvragen-borgstelling/accepteren-maatwerk-aanvraag/index.md)
+[Zie het accepteren maatwerk aanvraag product voor meer informatie.](../aanvragen-borgstelling/fhandelen-aanvraag-borgstelling/accepteren-maatwerk-aanvraag/index.md)
 
 ### Archiveer pro-forma aanvraag
 

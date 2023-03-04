@@ -17,7 +17,7 @@ Het doel van het product is om te komen tot een weloverwogen keuze of borgstelli
 
 De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden.
 
-* [Acceptatie criteria](../../verstuur-gebeurtenis.feature)
+* [Acceptatie criteria](../../../verstuur-gebeurtenis.feature)
 
 ### Geef aanvullende informatie
 
@@ -50,7 +50,7 @@ Deze taak kent de volgende uitkomsten:
 
 De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden.
 
-* [Acceptatie criteria](../../verstuur-gebeurtenis.feature)
+* [Acceptatie criteria](../../../verstuur-gebeurtenis.feature)
 
 ### Beantwoord aanvullende vragen
 
@@ -67,7 +67,7 @@ Er ontstaat automatisch een taak in de takenlijst van de kredietbank wanneer de 
 De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de adviserende kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. 
 De advies vragen moeten evenredig verdeeld worden over de deelnemende kredietbanken.
 
-* [Acceptatie criteria](../../verstuur-gebeurtenis.feature)
+* [Acceptatie criteria](../../../verstuur-gebeurtenis.feature)
 
 ### Geef advies
 

@@ -14,19 +14,19 @@ Het doel van het product is om te komen tot een weloverwogen keuze of borgstelli
 ### Geef aanvullende informatie
 
 * [Email](geef-aanvullende-informatie.email.md)
-* [Acceptatie criteria](../../verstuur-email.feature)
+* [Acceptatie criteria](../../../verstuur-email.feature)
 
 ### Beantwoord aanvullende vragen
 
 * [Email](beantwoord-aanvullende-vragen.email.md)
-* [Acceptatie criteria](../../verstuur-email.feature)
+* [Acceptatie criteria](../../../verstuur-email.feature)
 
 ### Geef advies
 
 Aangesloten kredietbanken kunnen door het Wsk gevraagd worden om een advies uit te brengen over een maatwerk borgstelling aanvraag. Deze "geef advies berichten" moeten evenredig over de kredietbanken verdeeld worden.
 
 * [Email](geef-advies.email.md)
-* [Acceptatie criteria](../../verstuur-email.feature)
+* [Acceptatie criteria](../../../verstuur-email.feature)
 
 ### Beoordeel aanvraag
 
