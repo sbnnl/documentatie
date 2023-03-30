@@ -16,12 +16,12 @@ Het doel van beoordelen uitbetalingsverzoek is om vast te stellen of een uitbeta
 ### Geef aanvullende informatie
 
 * [Email](geef-aanvullende-informatie.email.md)
-* [Acceptatie criteria](../../verstuur-email.feature)
+* [Acceptatie criteria](../../../verstuur-email.feature)
 
 ### Beantwoord aanvullende vragen
 
 * [Email](beantwoord-aanvullende-vragen.email.md)
-* [Acceptatie criteria](../../verstuur-email.feature)
+* [Acceptatie criteria](../../../verstuur-email.feature)
 
 ### Beoordeel uitbetalingsverzoek
 
