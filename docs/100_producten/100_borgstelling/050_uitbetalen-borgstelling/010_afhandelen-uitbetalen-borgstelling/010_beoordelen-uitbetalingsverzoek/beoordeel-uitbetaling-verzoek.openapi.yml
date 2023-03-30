@@ -8,7 +8,7 @@ paths:
 
   /api/kredietbanken/{kredietbank_id}/beoordeel-uitbetaling-verzoek-taken/{taak_id}:    
     parameters:        
-      - $ref: "../../../../data-dictionary/parameters/taak_id.yml"
+      - $ref: "../../../../../data-dictionary/parameters/taak_id.yml"
     get:
       tags:
         - beoordeel uitbetalingsverzoek taken
@@ -20,20 +20,20 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "../../../../data-dictionary/responses/beoordeel_uitbetaling_verzoek_taak.yml"
+                $ref: "../../../../../data-dictionary/responses/beoordeel_uitbetaling_verzoek_taak.yml"
         400:
-          $ref: "../../../../data-dictionary/responses/types/400.yml"
+          $ref: "../../../../../data-dictionary/responses/types/400.yml"
         401:
-          $ref: "../../../../data-dictionary/responses/types/401.yml"
+          $ref: "../../../../../data-dictionary/responses/types/401.yml"
         403:
-          $ref: "../../../../data-dictionary/responses/types/403.yml"
+          $ref: "../../../../../data-dictionary/responses/types/403.yml"
         404:
-          $ref: "../../../../data-dictionary/responses/types/404.yml"
+          $ref: "../../../../../data-dictionary/responses/types/404.yml"
     
   /api/kredietbanken/{kredietbank_id}/beoordeel-uitbetaling-verzoek-taken/{taak_id}/goedkeuren:
     parameters:
-      - $ref: "../../../../data-dictionary/parameters/kredietbank_id.yml"
-      - $ref: "../../../../data-dictionary/parameters/taak_id.yml"
+      - $ref: "../../../../../data-dictionary/parameters/kredietbank_id.yml"
+      - $ref: "../../../../../data-dictionary/parameters/taak_id.yml"
     put:
       tags:
         - beoordeel uitbetalingsverzoek taken
@@ -44,23 +44,23 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "../../../../data-dictionary/commands/keur_uitbetaling_verzoek_goed.yml"
+              $ref: "../../../../../data-dictionary/commands/keur_uitbetaling_verzoek_goed.yml"
       responses:
         202:
-          $ref: "../../../../data-dictionary/responses/types/202.yml"
+          $ref: "../../../../../data-dictionary/responses/types/202.yml"
         400:
-          $ref: "../../../../data-dictionary/responses/types/400.yml"
+          $ref: "../../../../../data-dictionary/responses/types/400.yml"
         401:
-          $ref: "../../../../data-dictionary/responses/types/401.yml"
+          $ref: "../../../../../data-dictionary/responses/types/401.yml"
         403:
-          $ref: "../../../../data-dictionary/responses/types/403.yml"
+          $ref: "../../../../../data-dictionary/responses/types/403.yml"
         404:
-          $ref: "../../../../data-dictionary/responses/types/404.yml"
+          $ref: "../../../../../data-dictionary/responses/types/404.yml"
 
   /api/kredietbanken/{kredietbank_id}/beoordeel-uitbetaling-verzoek-taken/{taak_id}/afwijzen:
     parameters:
-      - $ref: "../../../../data-dictionary/parameters/kredietbank_id.yml"
-      - $ref: "../../../../data-dictionary/parameters/taak_id.yml"
+      - $ref: "../../../../../data-dictionary/parameters/kredietbank_id.yml"
+      - $ref: "../../../../../data-dictionary/parameters/taak_id.yml"
     put:
       tags:
         - beoordeel uitbetalingsverzoek taken
@@ -71,23 +71,23 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "../../../../data-dictionary/commands/wijs_uitbetaling_verzoek_af.yml"
+              $ref: "../../../../../data-dictionary/commands/wijs_uitbetaling_verzoek_af.yml"
       responses:
         202:
-          $ref: "../../../../data-dictionary/responses/types/202.yml"
+          $ref: "../../../../../data-dictionary/responses/types/202.yml"
         400:
-          $ref: "../../../../data-dictionary/responses/types/400.yml"
+          $ref: "../../../../../data-dictionary/responses/types/400.yml"
         401:
-          $ref: "../../../../data-dictionary/responses/types/401.yml"
+          $ref: "../../../../../data-dictionary/responses/types/401.yml"
         403:
-          $ref: "../../../../data-dictionary/responses/types/403.yml"
+          $ref: "../../../../../data-dictionary/responses/types/403.yml"
         404:
-          $ref: "../../../../data-dictionary/responses/types/404.yml"
+          $ref: "../../../../../data-dictionary/responses/types/404.yml"
   
   /api/kredietbanken/{kredietbank_id}/beoordeel-uitbetaling-verzoek-taken/{taak_id}/vragen-stellen:
     parameters:
-      - $ref: "../../../../data-dictionary/parameters/kredietbank_id.yml"
-      - $ref: "../../../../data-dictionary/parameters/taak_id.yml"
+      - $ref: "../../../../../data-dictionary/parameters/kredietbank_id.yml"
+      - $ref: "../../../../../data-dictionary/parameters/taak_id.yml"
     put:
       tags:
         - beoordeel uitbetalingsverzoek taken
@@ -98,15 +98,15 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "../../../../data-dictionary/commands/stel_aanvullende_uitbetaling_vragen.yml"
+              $ref: "../../../../../data-dictionary/commands/stel_aanvullende_uitbetaling_vragen.yml"
       responses:
         202:
-          $ref: "../../../../data-dictionary/responses/types/202.yml"
+          $ref: "../../../../../data-dictionary/responses/types/202.yml"
         400:
-          $ref: "../../../../data-dictionary/responses/types/400.yml"
+          $ref: "../../../../../data-dictionary/responses/types/400.yml"
         401:
-          $ref: "../../../../data-dictionary/responses/types/401.yml"
+          $ref: "../../../../../data-dictionary/responses/types/401.yml"
         403:
-          $ref: "../../../../data-dictionary/responses/types/403.yml"
+          $ref: "../../../../../data-dictionary/responses/types/403.yml"
         404:
-          $ref: "../../../../data-dictionary/responses/types/404.yml"
+          $ref: "../../../../../data-dictionary/responses/types/404.yml"
