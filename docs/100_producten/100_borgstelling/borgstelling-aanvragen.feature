@@ -184,3 +184,31 @@ Functionaliteit: Borgstelling aanvragen
     En wachten enkele momenten
     Dan is de status van de borgstelling "AFGEWEZEN"
 
+  Scenario: Borgstelling aanvraag met lopende borgstelling aanvraag
+    Wanneer het "aanvraag borgstelling" bericht is verstuurd via het Schuldenknooppunt
+    En het Schuldenknooppunt bericht is verwerkt
+    Gegeven  een bruto kredietsom van € 5000
+    Wanneer het "aanvraag borgstelling" bericht is verstuurd via het Schuldenknooppunt
+    En het Schuldenknooppunt bericht is verwerkt
+    En wachten enkele momenten
+    Dan is de status van de borgstelling "AFGEGEVEN"
+    En is "het contract" gearchiveerd
+    En is er een verkoop geregistreerd van € 49,99
+    En is het "borgstelling afgegeven" bericht 2 keer ontvangen door het Schuldenknooppunt
+
+  Scenario: Borgstelling aanvraag met afegeronde borgstelling aanvraag
+    Wanneer het "aanvraag borgstelling" bericht is verstuurd via het Schuldenknooppunt
+    En het Schuldenknooppunt bericht is verwerkt
+    En wachten enkele momenten
+    Dan is het "borgstelling afgegeven" ontvangen door het Schuldenknooppunt
+    Gegeven  een bruto kredietsom van € 5000
+    Wanneer het "aanvraag borgstelling" bericht is verstuurd via het Schuldenknooppunt
+    En het Schuldenknooppunt bericht is verwerkt
+    En wachten enkele momenten
+    Dan is de status van de borgstelling "AFGEGEVEN"
+    En is "het contract" gearchiveerd
+    En is er een verkoop geregistreerd van € 49,99
+    Wanneer het "aanvraag borgstelling" bericht is verstuurd via het Schuldenknooppunt
+
+
+
