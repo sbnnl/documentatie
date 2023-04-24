@@ -40,7 +40,7 @@ De informatie van de aanvraag wordt automatisch geaccepteerd op basis van regels
 
 ### Accepteren maatwerk aanvraag
 
-[Zie het accepteren maatwerk aanvraag product voor meer informatie.](../aanvragen-borgstelling/fhandelen-aanvraag-borgstelling/accepteren-maatwerk-aanvraag/index.md)
+[Zie het accepteren maatwerk aanvraag product voor meer informatie.](../aanvragen-borgstelling/afhandelen-aanvraag-borgstelling/accepteren-maatwerk-aanvraag/index.md)
 
 ### Archiveer pro-forma aanvraag
 
