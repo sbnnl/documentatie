@@ -101,7 +101,7 @@
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_14sgm9f">
       <bpmndi:BPMNShape id="BPMNShape_1ed76fm" bpmnElement="Participant_1h3yfb7" isHorizontal="true">
-        <dc:Bounds x="180" y="160" width="1240" height="540" />
+        <dc:Bounds x="180" y="160" width="1240" height="490" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="BPMNShape_0jilxpu" bpmnElement="Event_05xqbu0">
@@ -240,7 +240,7 @@
         <dc:Bounds x="180" y="80" width="1240" height="60" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Participant_18qp5c3_di" bpmnElement="Participant_1wip672" isHorizontal="true">
-        <dc:Bounds x="590" y="730" width="300" height="60" />
+        <dc:Bounds x="590" y="680" width="300" height="60" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="BPMNEdge_0bywmab" bpmnElement="Flow_1cutm1t">
@@ -261,10 +261,10 @@
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1bchay7_di" bpmnElement="Flow_1bchay7">
         <di:waypoint x="840" y="390" />
-        <di:waypoint x="840" y="730" />
+        <di:waypoint x="840" y="680" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_16qdtu0_di" bpmnElement="Flow_16qdtu0">
-        <di:waypoint x="690" y="730" />
+        <di:waypoint x="690" y="680" />
         <di:waypoint x="690" y="588" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
