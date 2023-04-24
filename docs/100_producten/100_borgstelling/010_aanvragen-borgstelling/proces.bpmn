@@ -75,10 +75,6 @@
       <bpmn:incoming>Flow_1goduox</bpmn:incoming>
       <bpmn:messageEventDefinition id="MessageEventDefinition_01j40jn" messageRef="Message_0dgofr5" />
     </bpmn:endEvent>
-    <bpmn:serviceTask id="Activity_0sw0r5n" name="Bepaal borgstelling aanvraag resultaat">
-      <bpmn:incoming>Flow_1smzuqr</bpmn:incoming>
-      <bpmn:outgoing>Flow_178mvg9</bpmn:outgoing>
-    </bpmn:serviceTask>
     <bpmn:sequenceFlow id="Flow_0mpab21" sourceRef="Activity_1ddq77p" targetRef="Activity_1hrg376" />
     <bpmn:sequenceFlow id="Flow_05govwb" sourceRef="Activity_1hrg376" targetRef="Gateway_05fjjl9" />
     <bpmn:sendTask id="Activity_1hrg376" name="Borgstelling aanvraag afgehandeld">
@@ -95,6 +91,10 @@
       <bpmn:incoming>Flow_19ae4yi</bpmn:incoming>
       <bpmn:outgoing>Flow_1smzuqr</bpmn:outgoing>
     </bpmn:exclusiveGateway>
+    <bpmn:serviceTask id="Activity_0sw0r5n" name="Bepaal borgstelling aanvraag resultaat">
+      <bpmn:incoming>Flow_1smzuqr</bpmn:incoming>
+      <bpmn:outgoing>Flow_178mvg9</bpmn:outgoing>
+    </bpmn:serviceTask>
   </bpmn:process>
   <bpmn:message id="Message_0vgbwpb" name="AanvraagAfgehandeld" />
   <bpmn:message id="Message_0dgofr5" name="AanvraagBeeindigd" />
@@ -150,10 +150,6 @@
           <dc:Bounds x="1291" y="515" width="58" height="40" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_109ar4k_di" bpmnElement="Activity_0sw0r5n">
-        <dc:Bounds x="920" y="450" width="100" height="80" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_1ni0rj8_di" bpmnElement="Activity_1hrg376">
         <dc:Bounds x="790" y="310" width="100" height="80" />
       </bpmndi:BPMNShape>
@@ -165,6 +161,10 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_19gzs8f_di" bpmnElement="Gateway_19gzs8f" isMarkerVisible="true">
         <dc:Bounds x="765" y="545" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_109ar4k_di" bpmnElement="Activity_0sw0r5n">
+        <dc:Bounds x="920" y="530" width="100" height="80" />
+        <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="BPMNEdge_12wzmsx" bpmnElement="Flow_0lsku7x">
         <di:waypoint x="298" y="350" />
@@ -217,13 +217,12 @@
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_178mvg9_di" bpmnElement="Flow_178mvg9">
-        <di:waypoint x="970" y="450" />
+        <di:waypoint x="970" y="530" />
         <di:waypoint x="970" y="375" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1smzuqr_di" bpmnElement="Flow_1smzuqr">
         <di:waypoint x="815" y="570" />
-        <di:waypoint x="970" y="570" />
-        <di:waypoint x="970" y="530" />
+        <di:waypoint x="920" y="570" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_19ae4yi_di" bpmnElement="Flow_19ae4yi">
         <di:waypoint x="708" y="570" />
