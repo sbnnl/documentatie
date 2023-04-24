@@ -58,11 +58,7 @@ Er bestaan twee soorten contracten:
 
 ### Registreer verkoop
 
-Sbf maakt gebruik van Exact online.  Voor **de premie percentage (borgsetelling categorie) van het verzekerd bedrag** van de geaccepteerde borgstelling aanvraag moet er automatisch een factuurregel aangemaakt worden via de [API van Exact online](https://start.exactonline.nl/docs/HlpRestAPIResourcesDetails.aspx?name=SalesInvoiceSalesInvoiceLines).
-
-[Pseudo code](RegistreerBorgstellingVerkoopUseCase.java)
-
-Zie [exact knowledge base](https://support.exactonline.com/community/s/knowledge-base#All-All-DNO-Content-restapibusinessexamplesalesorder) voor meer informatie.
+Voegt de borgstelling afgegeven domein gebeurtenis toe aan een wachtrij zodat die later a-synchroon verwerkt kan worden.
 
 ### Borgstelling afgegeven
 
