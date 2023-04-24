@@ -22,6 +22,10 @@ Om dit probleem op te lossen is de verwerking van Exact opdrachten losgekoppeld 
 
 ## Use-cases
 
+### Bepaal Exact opdracht
+
+Bepaalt de volgende exact opdracht op basis van first in / first out principe.
+
 ### Registreer verkoop
 
 Registreert een verkoop in Exact op basis van de borgstelling afgegeven domein gebeurtenis.
@@ -31,3 +35,17 @@ Sbf maakt gebruik van Exact online.  Voor **de premie percentage (borgsetelling 
 [Pseudo code](RegistreerBorgstellingVerkoopUseCase.java)
 
 Zie [exact knowledge base](https://support.exactonline.com/community/s/knowledge-base#All-All-DNO-Content-restapibusinessexamplesalesorder) voor meer informatie.
+
+### Betaal borgstelling uit
+
+Registreert een credit factuur in Exact op basis van de borgstelling uitbetaald domein gebeurtenis.
+
+Sbf maakt gebruik van Exact online. Voor het vastgestelde borgstelling bedrag wordt er automatisch via de API van Exact online een credit factuur en een betaalopdracht aangemaakt.
+
+### Handel Exact fout af
+
+Verwachten en onverwachte fouten kunnen via dit scherm afgehandeld. Dit scherm toont alleen de foutmelding en wanneer bekent de oplossing. Een voorbeeld is het ontbreken van Kredietbank informatie die via Valtimo opgevoerd kan worden.
+
+### Bepaal wachttijd
+
+De wachttijd wordt berekend op basis van het tijdstip dat het laatste bericht naar Exact is verstuurd rekening houdend met de rate-limit van de Exact API.
