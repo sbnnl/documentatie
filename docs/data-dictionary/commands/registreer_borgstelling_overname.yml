@@ -4,9 +4,6 @@ allOf:
     description: |
       Een borgstelling aanvraag vanuit een portefeuille overname van actieve saneringskredieten.
     properties:
-      soort_aanvraag:
-        type: string
-        example: overname
       uitstaand_saldo:
         $ref: "../types/saneringskrediet_uitstaand_saldo.yml"
       datum_uitbetaald:
