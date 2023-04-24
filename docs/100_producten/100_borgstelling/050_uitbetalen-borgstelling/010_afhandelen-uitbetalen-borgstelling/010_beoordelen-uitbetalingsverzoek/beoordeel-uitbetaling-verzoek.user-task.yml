@@ -1,7 +1,7 @@
 user-task:
   name: Beoordel uitbetaling verzoek
   schema:
-    $ref: "../../../../data-dictionary/user_tasks/beoordeel_uitbetaling_verzoek.yml"
+    $ref: "../../../../../data-dictionary/user_tasks/beoordeel_uitbetaling_verzoek.yml"
   ui:
     hidden:
       - taak_id
@@ -14,7 +14,7 @@ actions:
   goedkeuren:
     name: Goedkeuren
     schema: 
-      $ref: "../../../../data-dictionary/commands/keur_uitbetaling_verzoek_goed.yml"
+      $ref: "../../../../../data-dictionary/commands/keur_uitbetaling_verzoek_goed.yml"
     ui:
       hidden:
         - command_id
@@ -24,7 +24,7 @@ actions:
   afwijzen:
     name: Afwijzen
     schema: 
-      $ref: "../../../../data-dictionary/commands/wijs_uitbetaling_verzoek_af.yml"
+      $ref: "../../../../../data-dictionary/commands/wijs_uitbetaling_verzoek_af.yml"
     ui:
       hidden:
         - command_id
@@ -34,7 +34,7 @@ actions:
   vragen:
     name: Vraag stellen
     schema: 
-      $ref: "../../../../data-dictionary/commands/stel_aanvullende_uitbetaling_vragen.yml"
+      $ref: "../../../../../data-dictionary/commands/stel_aanvullende_uitbetaling_vragen.yml"
     ui:
       hidden:
         - command_id

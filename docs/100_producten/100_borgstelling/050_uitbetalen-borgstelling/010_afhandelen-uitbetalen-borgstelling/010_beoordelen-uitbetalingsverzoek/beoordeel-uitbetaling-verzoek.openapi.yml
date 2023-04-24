@@ -1,0 +1,112 @@
+openapi: 3.0.3
+
+info:
+  version: 0.0.1
+  title: Waarborgfonds saneringskredieten
+  description: |
+paths:
+
+  /api/kredietbanken/{kredietbank_id}/beoordeel-uitbetaling-verzoek-taken/{taak_id}:    
+    parameters:        
+      - $ref: "../../../../../data-dictionary/parameters/taak_id.yml"
+    get:
+      tags:
+        - beoordeel uitbetalingsverzoek taken
+      summary: Geeft een beoordeel uitbetalingsverzoek taak.
+      operationId: GeefBeoordeelUitbetalingVerzoekTaakV1
+      responses:
+        200:          
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "../../../../../data-dictionary/responses/beoordeel_uitbetaling_verzoek_taak.yml"
+        400:
+          $ref: "../../../../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../../../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../../../../data-dictionary/responses/types/403.yml"
+        404:
+          $ref: "../../../../../data-dictionary/responses/types/404.yml"
+    
+  /api/kredietbanken/{kredietbank_id}/beoordeel-uitbetaling-verzoek-taken/{taak_id}/goedkeuren:
+    parameters:
+      - $ref: "../../../../../data-dictionary/parameters/kredietbank_id.yml"
+      - $ref: "../../../../../data-dictionary/parameters/taak_id.yml"
+    put:
+      tags:
+        - beoordeel uitbetalingsverzoek taken
+      summary: Keurt het uitbetalingsverzoek van de borgstelling goed.
+      operationId: VoltooiBeoordeelUitbetalingVerzoekTaakMetGoedkeurenV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "../../../../../data-dictionary/commands/keur_uitbetaling_verzoek_goed.yml"
+      responses:
+        202:
+          $ref: "../../../../../data-dictionary/responses/types/202.yml"
+        400:
+          $ref: "../../../../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../../../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../../../../data-dictionary/responses/types/403.yml"
+        404:
+          $ref: "../../../../../data-dictionary/responses/types/404.yml"
+
+  /api/kredietbanken/{kredietbank_id}/beoordeel-uitbetaling-verzoek-taken/{taak_id}/afwijzen:
+    parameters:
+      - $ref: "../../../../../data-dictionary/parameters/kredietbank_id.yml"
+      - $ref: "../../../../../data-dictionary/parameters/taak_id.yml"
+    put:
+      tags:
+        - beoordeel uitbetalingsverzoek taken
+      summary: Wijst het uitbetalingsverzoek van de borgstelling af.
+      operationId: VoltooiBeoordeelUitbetalingVerzoekMetAfwijzenV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "../../../../../data-dictionary/commands/wijs_uitbetaling_verzoek_af.yml"
+      responses:
+        202:
+          $ref: "../../../../../data-dictionary/responses/types/202.yml"
+        400:
+          $ref: "../../../../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../../../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../../../../data-dictionary/responses/types/403.yml"
+        404:
+          $ref: "../../../../../data-dictionary/responses/types/404.yml"
+  
+  /api/kredietbanken/{kredietbank_id}/beoordeel-uitbetaling-verzoek-taken/{taak_id}/vragen-stellen:
+    parameters:
+      - $ref: "../../../../../data-dictionary/parameters/kredietbank_id.yml"
+      - $ref: "../../../../../data-dictionary/parameters/taak_id.yml"
+    put:
+      tags:
+        - beoordeel uitbetalingsverzoek taken
+      summary: Voltooit de taak met vragen stellen.
+      operationId: VoltooiBeoordeelUitbetalingVerzoekTaakMetVragenStellenV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "../../../../../data-dictionary/commands/stel_aanvullende_uitbetaling_vragen.yml"
+      responses:
+        202:
+          $ref: "../../../../../data-dictionary/responses/types/202.yml"
+        400:
+          $ref: "../../../../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../../../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../../../../data-dictionary/responses/types/403.yml"
+        404:
+          $ref: "../../../../../data-dictionary/responses/types/404.yml"

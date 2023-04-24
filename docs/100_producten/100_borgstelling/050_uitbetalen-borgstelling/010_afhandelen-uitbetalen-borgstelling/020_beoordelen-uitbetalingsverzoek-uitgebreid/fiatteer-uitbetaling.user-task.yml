@@ -1,20 +1,20 @@
 user-task:
   name: Fiatteer uitbetaling
   schema:
-    $ref: "../../../../data-dictionary/user_tasks/fiatteer_uitbetaling.yml"
+    $ref: "../../../../../data-dictionary/user_tasks/fiatteer_uitbetaling.yml"
   ui:
     hidden:
       - taak_id
       - borgstelling_id
       - redenen_oninbaar.oneOf.type
       - redenen_oninbaar.oneOf.mime_type
-      - redenen_oninbaar.oneOf.links
+      - redenen_oninbaar.oneOf.data
       - inning_acties.oneOf.type
 actions:
   fiatteren:
     name: Fiatteren
     schema: 
-      $ref: "../../../../data-dictionary/commands/fiatteer_uitbetaling.yml"
+      $ref: "../../../../../data-dictionary/commands/fiatteer_uitbetaling.yml"
     ui:
       hidden:
         - command_id
@@ -24,7 +24,7 @@ actions:
   afwijzen:
     name: Afwijzen
     schema: 
-      $ref: "../../../../data-dictionary/commands/wijs_uitbetaling_verzoek_af.yml"
+      $ref: "../../../../../data-dictionary/commands/wijs_uitbetaling_verzoek_af.yml"
     ui:
       hidden:
         - command_id
