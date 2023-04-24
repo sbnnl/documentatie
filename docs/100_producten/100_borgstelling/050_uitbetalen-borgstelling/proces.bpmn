@@ -20,7 +20,7 @@
     <bpmn:sequenceFlow id="Flow_1y2u1wp" sourceRef="Gateway_0ztfu80" targetRef="Gateway_1cb3gyp" />
     <bpmn:sequenceFlow id="Flow_04ewke0" sourceRef="Gateway_1cb3gyp" targetRef="Event_1w0cdjq" />
     <bpmn:sequenceFlow id="Flow_0p8lm1t" sourceRef="Gateway_1cb3gyp" targetRef="Event_1v4hj9k" />
-    <bpmn:exclusiveGateway id="Gateway_0pfa16i" name="Uitbetaling verzoek?">
+    <bpmn:exclusiveGateway id="Gateway_0pfa16i" name="Uitbetaling verzoek?" default="Flow_1l7wqum">
       <bpmn:incoming>Flow_05d49u7</bpmn:incoming>
       <bpmn:outgoing>Flow_1l7wqum</bpmn:outgoing>
       <bpmn:outgoing>Flow_0ya5lrl</bpmn:outgoing>
@@ -78,16 +78,12 @@
       <bpmn:outgoing>Flow_1ewhcvn</bpmn:outgoing>
     </bpmn:exclusiveGateway>
     <bpmn:sequenceFlow id="Flow_1ewhcvn" sourceRef="Gateway_08g2w5b" targetRef="Activity_13nfz0t" />
-    <bpmn:textAnnotation id="TextAnnotation_1h1ga4o" />
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_0ebzpnf">
       <bpmndi:BPMNShape id="Participant_0c3sb98_di" bpmnElement="Participant_0c3sb98" isHorizontal="true">
         <dc:Bounds x="152" y="125" width="1068" height="465" />
         <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="TextAnnotation_1h1ga4o_di" bpmnElement="TextAnnotation_1h1ga4o">
-        <dc:Bounds x="370" y="210" width="100" height="30" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_1ua7y3w_di" bpmnElement="StartEvent_1">
         <dc:Bounds x="222" y="232" width="36" height="36" />
