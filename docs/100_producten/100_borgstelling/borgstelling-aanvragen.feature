@@ -185,7 +185,8 @@ Functionaliteit: Borgstelling aanvragen
     Dan is de status van de borgstelling "AFGEWEZEN"
 
   Scenario: Borgstelling aanvraag met lopende borgstelling aanvraag
-    Gegeven een actieve borgstelling 
+    Gegeven een actieve borgstelling
+    En een bruto kredietsom van € 2000,00
     En een "beoordeel maatwerk borgstelling" taak is actief
     Wanneer het "aanvraag borgstelling" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
@@ -194,17 +195,20 @@ Functionaliteit: Borgstelling aanvragen
     En wachten enkele momenten
     Dan is de status van de borgstelling "AFGEGEVEN"
     En is "het contract" gearchiveerd
-    En is er een verkoop geregistreerd van € 49,99
+    En is er één verkoop geregistreerd van € 49,99
+    En is er geen verkoop geregistreerd van € 20,00
     En is het "borgstelling afgegeven" bericht 2 keer ontvangen door het Schuldenknooppunt
 
   Scenario: Borgstelling aanvraag met afgeronde borgstelling aanvraag
     Gegeven een afgegeven borgstelling
+    En een bruto kredietsom van € 2000,00
     Wanneer het "aanvraag borgstelling" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
     En wachten enkele momenten
     Dan is de status van de borgstelling "AFGEGEVEN"
     En is geen "het contract" gearchiveerd 
-    En is geen verkoop geregistreerd
+    En is er één verkoop geregistreerd van € 49,99
+    En is er geen verkoop geregistreerd van € 20,00
     En is het "borgstelling afgegeven" bericht 1 keer ontvangen door het Schuldenknooppunt
 
 
