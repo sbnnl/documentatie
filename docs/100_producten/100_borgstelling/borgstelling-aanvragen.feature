@@ -204,7 +204,7 @@ Functionaliteit: Borgstelling aanvragen
     En wachten enkele momenten
     Dan is de status van de borgstelling "AFGEGEVEN"
     En is geen "het contract" gearchiveerd 
-    en is geen verkoop geregistreerd
+    En is geen verkoop geregistreerd
     En is het "borgstelling afgegeven" bericht 1 keer ontvangen door het Schuldenknooppunt
 
 
