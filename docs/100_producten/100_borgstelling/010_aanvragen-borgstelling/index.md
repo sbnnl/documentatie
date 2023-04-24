@@ -23,20 +23,36 @@ Voor een maatwerk aanvraag borgstelling kan optioneel een verwijzing naar een pr
  
 ## Use cases
 
-### Bepaal lopende borgstelling
+### Bepaal aanvraag borgstelling
 
 > Er zit een periode tussen de aanvraag van de borgstelling en de uitbetaling van het krediet. In die periode, die soms maanden kan duren, is het mogelijk dat het onderliggede krediet aangepast wordt waardoor er, na fiattering van de wijziging, een nieuwe aanvraag borgstelling wordt gedaan voor hetzelfde kenmerk.
 
-Stel vast of er al een lopende (aanvraag) borgstelling voor dit kenmerk is.
+Stel vast op basis van het kenmerk welke van de onderstaande situaties van toepassing is:
+
+1. Nieuw: er bestaat geen borgstelling aanvraag voor dit kenmerk;
+2. Lopend: er bestaat een borgstelling aanvraag voor dit kenmerk maar de aanvraag is nog niet afgerond;
+3. Afgerond: er bestaat een borgstelling aanvraag voor dit kenmerk en de aanvraag is afgerond;
 
 ### Afhandelen aanvraag borgstelling
 
 Er is nog geen lopende (aanvraag) borgstelling voor dit kenmerk, de aanvraag moet worden afgehandeld.
 
-Zie het [afhandelen aanvraag borgstelling proces](afhandelen-aanvraag-borgstelling/index.html) voor meer informatie.
+### Borgstelling aanvraag afgehandeld
 
-### Afhandelen lopende aanvraag borgstelling
+De oorspronkelijke borgstelling aanvraag is afgehandeld. Eventuele processen die wachten tot de lopende borgstelling aanvraag is afgerond worden hiermee geinformeerd dat ze verder kunnen gaan in het proces.
 
-Er is een lopende (aanvraag) borgstelling voor dit kenmerk. Het resultaat van de aanvraag borgstelling moet nogmaals gecomuniceerd worden. Wanneer de lopende aanvraag nog niet is afgerond dan moet het resultaat afgewacht worden.
+### Borgstelling aanvraag afgewezen
 
-Zie het [afhandelen lopende aanvraag borgstelling proces](afhandelen-lopende-aanvraag-borgstelling/index.html) voor meer informatie.
+De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. 
+
+### Borgstelling afgegeven
+
+De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. 
+
+### Borgstelling aanvraag beëindigd
+
+De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. 
+
+### Bepaal borgstelling aanvraag resultaat
+
+Het resultaat van de eerste, en oorspronkelijke, borgstelling aanvraag moet worden vastgesteld zodat exact hetzelfde rersultaat opnieuw wordt gecommuniceerd als gebeurtenis naar de kredietbank.

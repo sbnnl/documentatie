@@ -20,6 +20,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      # aws s3 cp s3://wsk-valtimo-acc-cucumber-test-results-f1403diq .temp/executions/main/ --region eu-central-1 --recursive --no-sign-request
+
       # - name: Download
       #   uses: synionnl/md-docs-actions/azure/download@main
       #   with:

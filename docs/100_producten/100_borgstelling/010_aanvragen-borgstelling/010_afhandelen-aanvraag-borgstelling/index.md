@@ -78,11 +78,7 @@ Zie [exact knowledge base](https://support.exactonline.com/community/s/knowledge
 
 ### Borgstelling afgegeven
 
-De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wijzigt in **afgegeven**.
-
-<!-- einde -->
-
-* [Acceptatie criteria](../../verstuur-gebeurtenis.feature)
+ De status van de borgstelling wijzigt in **afgegeven**.
 
 ### Archiveer afwijzing
 
@@ -95,11 +91,7 @@ Nadat de aanvraag is afgewezen wordt er een afwijzing aangemaakt en opgeslagen i
 
 ### Borgstelling aanvraag afgewezen
 
-De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wijzigt in **afgewezen**.
-
-<!-- einde -->
-
-* [Acceptatie criteria](../../verstuur-gebeurtenis.feature)
+De status van de borgstelling wijzigt in **afgewezen**.
 
 ### Archiveer beëindiging
 
@@ -112,11 +104,7 @@ Nadat de aanvraag is beëindigd wordt er een beëindiging aangemaakt en opgeslag
 
 ### Borgstelling aanvraag beëindigd
 
-De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wijzigt in **beëindigd**.
-
-<!-- einde -->
-
-* [Acceptatie criteria](../../verstuur-gebeurtenis.feature)
+De status van de borgstelling wijzigt in **beëindigd**.
 
 ## Business requirements
 
