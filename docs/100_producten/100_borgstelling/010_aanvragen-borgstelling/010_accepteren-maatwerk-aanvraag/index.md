@@ -4,29 +4,23 @@
 
 Het doel van het product is om te komen tot een weloverwogen keuze of borgstelling mogelijk is. Deze keuze wordt gemaakt door de medewerker van SBN en gefiatteerd door een medewerker van SBF. Onderzoek wijst uit dat voor 8% van de aanvragen een maatwerk beoordeling noodzakelijk is.
 
-<!-- einde -->
-
 ## Proces
 
-* [Proces](proces.bpmn)
-* [Acceptatie criteria](proces.feature)in
+[Proces](proces.bpmn)
 
 ### Geef aanvullende informatie
 
-* [Email](geef-aanvullende-informatie.email.md)
-* [Acceptatie criteria](../../verstuur-email.feature)
+[Email](geef-aanvullende-informatie.email.md)
 
 ### Beantwoord aanvullende vragen
 
-* [Email](beantwoord-aanvullende-vragen.email.md)
-* [Acceptatie criteria](../../verstuur-email.feature)
+[Email](beantwoord-aanvullende-vragen.email.md)
 
 ### Geef advies
 
 Aangesloten kredietbanken kunnen door het Wsk gevraagd worden om een advies uit te brengen over een maatwerk borgstelling aanvraag. Deze "geef advies berichten" moeten evenredig over de kredietbanken verdeeld worden.
 
-* [Email](geef-advies.email.md)
-* [Acceptatie criteria](../../verstuur-email.feature)
+[Email](geef-advies.email.md)
 
 ### Beoordeel aanvraag
 
@@ -43,7 +37,6 @@ Deze taak kent de volgende uitkomsten:
 
 * [Formulier](beoordeel-aanvraag.user-task.yml)
 * [API](beoordeel-aanvraag.openapi.yml)
-* [Acceptatie criteria](beoordeel-aanvraag.feature)
 
 ### Fiatteer aanvraag
 
@@ -53,7 +46,6 @@ Elke maatwerk aanvraag moet gefiatteerd worden door SBF als invulling van het vi
 
 * [Formulier](fiatteer-aanvraag.user-task.yml)
 * [API](fiatteer-aanvraag.openapi.yml)
-* [Acceptatie criteria](fiatteer-aanvraag.feature)
 
 ## Business requirements
 

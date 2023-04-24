@@ -18,8 +18,6 @@ Het laatste opgeslagen kenmerk moet meegeven worden als offset om alleen niet ve
 
 Geeft een lijst met gebeurtenissen. Het gaat om arme gebeurtenissen, d.w.z. dat er geen informatie wordt toegevoegd aan de gebeurtenissen. De gebeurtenis verwijst alleen naar een API resource waar je meer informatie over de gebeurtenis op kan vragen.
 
-* [Acceptatie criteria](geeft-gebeurtenissen.feature)
-
 ## Business requirements
 
 | Nummer | Omschrijving                         | Eigenaar                  |

@@ -18,20 +18,15 @@ Het doel van de intrekking borgstelling is om in geval van oninbaarheid van een 
 
 Start het proces intrekken borgstelling.
 
-* [Acceptatie criteria](intrekken-borgstelling.feature)
-
 ### Archiveer intrekking
 
 Nadat de borgstelling is ingetrokken wordt er een document aangemaakt en opgeslagen in het archief. De wettelijke bewaartermijn voor dit soort documenten is 7 jaar.
 
-* [Document](intrekking.message.md)
-* [Acceptatie criteria](../archiveer.feature)
+[Document](intrekking.message.md)
 
 ### Borgstelling ingetrokken
 
 De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wijzigt in **ingetrokken**.
-
-* [Acceptatie criteria](../verstuur-gebeurtenis.feature)
 
 ## Business requirements
 

@@ -19,8 +19,7 @@ Voor een maatwerk aanvraag borgstelling kan optioneel een verwijzing naar een pr
 
 ## Proces
 
-* [Proces](proces.bpmn)
-* [Acceptatie criteria](proces.feature)
+[Proces](proces.bpmn)
 
 ## Use-cases
 
@@ -30,15 +29,9 @@ Registreert de aanvraag borgstelling met de status **aangevraagd** en start het 
 
 Aan de hand van het postcode gebied wordt de gemeente code vastgesteld. Het postcode gebied wordt niet opgeslagen, de gemeente code wel.
 
-<!-- einde -->
-
-* [Acceptatie criteria](aanvragen-borgstelling.feature)
-
 ### Bepaal pro-forma borgstelling
 
 Zoekt o.b.v. het "pro-forma borgstelling kenmerk" de pro-forma borgstelling op. De gevonden pro-forma borgstelling wordt toegevoegd aan het proces zodat het mee kan meewegen in de acceptatie van de aanvraag.
-
-* [Acceptatie criteria](bepaal-pro-forma_borgstelling.feature)
 
 ### Accepteer automatisch
 
@@ -47,10 +40,6 @@ De informatie van de aanvraag wordt automatisch geaccepteerd op basis van regels
 * geaccepteerd
 * afgewezen
 * maatwerk
-
-<!-- einde -->
-
-* [Acceptatie criteria](accepteer-automatisch.feature)
 
 ### Accepteren maatwerk aanvraag
 
@@ -65,19 +54,13 @@ Er bestaan twee soorten contracten:
 1. aanvraag: bruto kredietsom is verzekerd bedrag.
 2. portefuille overname: uitstaand saldo is het verzekerd bedrag en de looptijd is de resterende looptijd op basis van de uitbetaaldatum en looptijd.
 
-<!-- einde -->
-
-* [Document](contract.message.md)
-* [Acceptatie criteria](../archiveer.feature)
+[Document](contract.message.md)
 
 ### Registreer verkoop
 
 Sbf maakt gebruik van Exact online.  Voor **de premie percentage (borgsetelling categorie) van het verzekerd bedrag** van de geaccepteerde borgstelling aanvraag moet er automatisch een factuurregel aangemaakt worden via de [API van Exact online](https://start.exactonline.nl/docs/HlpRestAPIResourcesDetails.aspx?name=SalesInvoiceSalesInvoiceLines).
 
-<!-- einde -->
-
-* [Pseudo code](RegistreerBorgstellingVerkoopUseCase.java)
-* [Acceptatie criteria](registreer-verkoop.feature)
+[Pseudo code](RegistreerBorgstellingVerkoopUseCase.java)
 
 Zie [exact knowledge base](https://support.exactonline.com/community/s/knowledge-base#All-All-DNO-Content-restapibusinessexamplesalesorder) voor meer informatie.
 
@@ -85,43 +68,25 @@ Zie [exact knowledge base](https://support.exactonline.com/community/s/knowledge
 
 De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wijzigt in **afgegeven**.
 
-<!-- einde -->
-
-* [Acceptatie criteria](../verstuur-gebeurtenis.feature)
-
 ### Archiveer afwijzing
 
 Nadat de aanvraag is afgewezen wordt er een afwijzing aangemaakt en opgeslagen in het archief. De wettelijke bewaartermijn voor dit soort documenten is 7 jaar.
 
-<!-- einde -->
-
-* [Document](afwijzing.message.md)
-* [Acceptatie criteria](../archiveer.feature)
+[Document](afwijzing.message.md)
 
 ### Borgstelling aanvraag afgewezen
 
 De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wijzigt in **afgewezen**.
 
-<!-- einde -->
-
-* [Acceptatie criteria](../verstuur-gebeurtenis.feature)
-
 ### Archiveer beëindiging
 
 Nadat de aanvraag is beëindigd wordt er een beëindiging aangemaakt en opgeslagen in het archief. De wettelijke bewaartermijn voor dit soort documenten is 7 jaar.
 
-<!-- einde -->
-
-* [Document](beeindiging.message.md)
-* [Acceptatie criteria](../archiveer.feature)
+[Document](beeindiging.message.md)
 
 ### Borgstelling aanvraag beëindigd
 
 De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wijzigt in **beëindigd**.
-
-<!-- einde -->
-
-* [Acceptatie criteria](../verstuur-gebeurtenis.feature)
 
 ## Business requirements
 
