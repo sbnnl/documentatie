@@ -4,4 +4,4 @@ release/
 .temp/
 *.bkp
 *.dtmp
-*.DS_Store
+.DS_Store
