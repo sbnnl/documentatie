@@ -12,43 +12,28 @@ Het doel van uitbetalen borgstelling is om tot een beoordeling te komen of de bo
 
 ## Use-cases
 
-### Uitbetalen borgstelling
+### Bepaal uitbetaling verzoek
 
-Start het proces uitbetalen borgstelling.
+> Een kredietbank kan meerdere uitbetalingsverzoeken doen totdat de borgstelling uitbetaald of -ingetrokken is.
 
-### Beoordelen uitbetalingsverzoek
+Stel vast op basis van het kenmerk welke van de onderstaande situaties van toepassing is:
 
-[Zie het beoordelen uitbetalingsverzoek product voor meer informatie.](beoordelen-uitbetalingsverzoek/index.md)
+1. Nieuw: als de volgende scenario's niet van toepassing zijn.
+2. Lopend: er bestaat een uitbetaalverzoek voor dit kenmerk maar de aanvraag is nog niet afgerond;
+3. Uitbetaald: er bestaat een uitbetaalverzoek voor dit kenmerk en de borgstelling is uitbetaald;
 
-### Betaal borgstelling uit
+### Uitbetaling verzoek afgehandeld
 
-Sbf maakt gebruik van Exact online. Voor het vastgestelde borgstelling bedrag wordt er automatisch via de API van Exact online een credit factuur en een betaalopdracht aangemaakt.
+Het lopende uitbetalingsverzoek is afgehandeld. Eventuele processen die wachten tot de lopende uitbetalingsverzoek is afgerond worden hiermee geïnformeerd dat ze verder kunnen gaan in het proces.
 
-### Archiveer uitbetaling
+### Borgstelling aanvraag afgewezen
 
-Nadat de borgstelling is uitbetaald wordt er een document aangemaakt en opgeslagen in het archief. De wettelijke bewaartermijn voor dit soort documenten is 7 jaar.
-
-[Document](uitbetaling.message.md)
+De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. 
 
 ### Borgstelling uitbetaald
 
-De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wijzigt in **uitbetaald**.
+De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden.
 
-### Archiveer afwijzing
+### Borgstelling verzoek afgewezen
 
-Nadat het verzoek is afgewezen wordt er een document aangemaakt en opgeslagen in het archief. De wettelijke bewaartermijn voor dit soort documenten is 7 jaar.
-
-[Document](afwijzing.message.md)
-
-### Uitbetalingsverzoek afgewezen
-
-De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wijzigt in **uitbetalingsverzoek afgewezen**.
-
-## Business requirements
-
-| Nummer | Omschrijving                                                                                                                         | Eigenaar                  |
-| -------| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------- |
-| 1      | Financiële mutaties moeten in Exact online vastgelegd worden.                                                                        | Frank Dijkstra |
-| 2      | Er moet ruimte zijn voor maatwerk in de beoordeling.                                                                                 | Frank Dijkstra |
-| 3      | Goedgekeurde uitbetalingen moeten gefiatteerd worden door het Sbf.                                                                   | Frank Dijkstra |
-| 4      | Vertragingsrente wordt niet vergoedt.                                                                                                | Frank Dijkstra |
+De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden.
