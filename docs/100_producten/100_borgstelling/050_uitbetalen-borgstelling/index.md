@@ -8,16 +8,13 @@ Het doel van uitbetalen borgstelling is om tot een beoordeling te komen of de bo
 
 ## Proces
 
-* [Proces](proces.bpmn)
-* [Acceptatie criteria](proces.feature)
+[Proces](proces.bpmn)
 
 ## Use-cases
 
 ### Uitbetalen borgstelling
 
 Start het proces uitbetalen borgstelling.
-
-* [Acceptatie criteria](uitbetalen-borgstelling.feature)
 
 ### Beoordelen uitbetalingsverzoek
 
@@ -27,33 +24,25 @@ Start het proces uitbetalen borgstelling.
 
 Sbf maakt gebruik van Exact online. Voor het vastgestelde borgstelling bedrag wordt er automatisch via de API van Exact online een credit factuur en een betaalopdracht aangemaakt.
 
-* [Acceptatie criteria](betaal-borgstelling-uit.feature)
-
 ### Archiveer uitbetaling
 
 Nadat de borgstelling is uitbetaald wordt er een document aangemaakt en opgeslagen in het archief. De wettelijke bewaartermijn voor dit soort documenten is 7 jaar.
 
-* [Document](uitbetaling.message.md)
-* [Acceptatie criteria](../archiveer.feature)
+[Document](uitbetaling.message.md)
 
 ### Borgstelling uitbetaald
 
 De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wijzigt in **uitbetaald**.
 
-* [Acceptatie criteria](../verstuur-gebeurtenis.feature)
-
 ### Archiveer afwijzing
 
 Nadat het verzoek is afgewezen wordt er een document aangemaakt en opgeslagen in het archief. De wettelijke bewaartermijn voor dit soort documenten is 7 jaar.
 
-* [Document](afwijzing.message.md)
-* [Acceptatie criteria](../archiveer.feature)
+[Document](afwijzing.message.md)
 
 ### Uitbetalingsverzoek afgewezen
 
 De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wijzigt in **uitbetalingsverzoek afgewezen**.
-
-* [Acceptatie criteria](../verstuur-gebeurtenis.feature)
 
 ## Business requirements
 

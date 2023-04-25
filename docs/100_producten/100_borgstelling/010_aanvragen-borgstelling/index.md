@@ -11,7 +11,7 @@ Het doel van de aanvraag borgstelling is om tot een beoordeling te komen of er v
 
 Uit onderzoek is gebleken dat 92% van de aanvragen standaard aanvragen zijn. Deze aanvragen worden via een STP proces automatisch verwerkt waardoor er binnen enkele seconden een resultaat naar de kredietverstrekker verstuurd wordt.
 
-Voor een maatwerk aanvraag borgstelling kan optioneel een verwijzing naar een pro-forma aanvraag opgegeven worden. Wanneer deze verwijzing bestaat dan mag die eenmalig meewegen in de acceptatie van de aanvraag.
+Voor een maatwerk aanvraag borgstelling kan optioneel een verwijzing naar een pro-forma-aanvraag opgegeven worden. Wanneer deze verwijzing bestaat dan mag die eenmalig meewegen in de acceptatie van de aanvraag.
 
 <!-- einde -->
 
@@ -25,7 +25,7 @@ Voor een maatwerk aanvraag borgstelling kan optioneel een verwijzing naar een pr
 
 ### Bepaal aanvraag borgstelling
 
-> Er zit een periode tussen de aanvraag van de borgstelling en de uitbetaling van het krediet. In die periode, die soms maanden kan duren, is het mogelijk dat het onderliggede krediet aangepast wordt waardoor er, na fiattering van de wijziging, een nieuwe aanvraag borgstelling wordt gedaan voor hetzelfde kenmerk.
+> Er zit een periode tussen de aanvraag van de borgstelling en de uitbetaling van het krediet. In die periode, die soms maanden kan duren, is het mogelijk dat het onderliggende krediet aangepast wordt waardoor er, na fiattering van de wijziging, een nieuwe aanvraag borgstelling wordt gedaan voor hetzelfde kenmerk.
 
 Stel vast op basis van het kenmerk welke van de onderstaande situaties van toepassing is:
 
@@ -39,7 +39,7 @@ Er is nog geen lopende (aanvraag) borgstelling voor dit kenmerk, de aanvraag moe
 
 ### Borgstelling aanvraag afgehandeld
 
-De oorspronkelijke borgstelling aanvraag is afgehandeld. Eventuele processen die wachten tot de lopende borgstelling aanvraag is afgerond worden hiermee geinformeerd dat ze verder kunnen gaan in het proces.
+De oorspronkelijke borgstelling aanvraag is afgehandeld. Eventuele processen die wachten tot de lopende borgstelling aanvraag is afgerond worden hiermee geïnformeerd dat ze verder kunnen gaan in het proces.
 
 ### Borgstelling aanvraag afgewezen
 

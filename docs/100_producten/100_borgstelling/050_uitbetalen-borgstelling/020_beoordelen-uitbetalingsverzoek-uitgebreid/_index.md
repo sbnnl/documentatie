@@ -8,8 +8,7 @@ Het doel van beoordelen uitbetalingsverzoek is om vast te stellen of een uitbeta
 
 ## Proces
 
-* [Proces](proces.bpmn)
-* [Acceptatie criteria](proces.feature)
+[Proces](proces.bpmn)
 
 ## Use-cases
 
@@ -17,15 +16,12 @@ Het doel van beoordelen uitbetalingsverzoek is om vast te stellen of een uitbeta
 
 De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden.
 
-* [Acceptatie criteria](../../verstuur-gebeurtenis.feature)
-
 ### Geef aanvullende informatie
 
 Vraagt de kredietbank om aanvullende informatie aan te leveren.
 
 * [Formulier](geef-aanvullende-informatie.user-task.yml)
 * [API](geef-aanvullende-informatie.openapi.yml)
-* [Acceptatie criteria](geef-aanvullende-informatie.feature)
 
 ### Beoordeel uitbetalingsverzoek
 
@@ -33,13 +29,10 @@ Beoordeelt het verzoek tot uitbetaling van de borgstelling en stelt het uit te b
 
 * [Formulier](beoordeel-uitbetaling-verzoek.user-task.yml)
 * [API](beoordeel-uitbetaling-verzoek.openapi.yml)
-* [Acceptatie criteria](beoordeel-uitbetaling-verzoek.feature)
 
 ### Aanvullende vragen gesteld
 
 De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden.
-
-* [Acceptatie criteria](../../verstuur-gebeurtenis.feature)
 
 ### Beantwoord aanvullende vragen
 
@@ -47,7 +40,6 @@ Er ontstaat automatisch een taak in de takenlijst van de kredietbank wanneer de 
 
 * [Formulier](beantwoord-aanvullende-vragen.user-task.yml)
 * [API](beantwoord-aanvullende-vragen.openapi.yml)
-* [Acceptatie criteria](beantwoord-aanvullende-vragen.feature)
 
 ### Fiatteer uitbetaling
 
@@ -55,7 +47,6 @@ Elk geaccepteerd verzoek tot uitbetaling van de borgstelling moet gefiatteerd wo
 
 * [Formulier](fiatteer-uitbetaling.user-task.yml)
 * [API](fiatteer-uitbetaling.openapi.yml)
-* [Acceptatie criteria](fiatteer-uitbetaling.feature)
 
 ## Business requirements
 

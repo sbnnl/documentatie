@@ -25,15 +25,9 @@ Registreert de aanvraag borgstelling met de status **aangevraagd** en start het 
 
 Aan de hand van het postcode gebied wordt de gemeente code vastgesteld. Het postcode gebied wordt niet opgeslagen, de gemeente code wel.
 
-<!-- einde -->
-
-* [Acceptatie criteria](aanvragen-borgstelling.feature)
-
 ### Bepaal pro-forma borgstelling
 
 Zoekt o.b.v. het "pro-forma borgstelling kenmerk" de pro-forma borgstelling op. De gevonden pro-forma borgstelling wordt toegevoegd aan het proces zodat het mee kan meewegen in de acceptatie van de aanvraag.
-
-* [Acceptatie criteria](bepaal-pro-forma_borgstelling.feature)
 
 ### Accepteer automatisch
 
@@ -42,10 +36,6 @@ De informatie van de aanvraag wordt automatisch geaccepteerd op basis van regels
 * geaccepteerd
 * afgewezen
 * maatwerk
-
-<!-- einde -->
-
-* [Acceptatie criteria](accepteer-automatisch.feature)
 
 ### Accepteren maatwerk aanvraag
 
@@ -62,8 +52,7 @@ Er bestaan twee soorten contracten:
 
 <!-- einde -->
 
-* [Document](contract.message.md)
-* [Acceptatie criteria](../../archiveer.feature)
+[Document](contract.message.md)
 
 ### Registreer verkoop
 
@@ -71,14 +60,13 @@ Sbf maakt gebruik van Exact online.  Voor **de premie percentage (borgsetelling 
 
 <!-- einde -->
 
-* [Pseudo code](RegistreerBorgstellingVerkoopUseCase.java)
-* [Acceptatie criteria](registreer-verkoop.feature)
+[Pseudo code](RegistreerBorgstellingVerkoopUseCase.java)
 
 Zie [exact knowledge base](https://support.exactonline.com/community/s/knowledge-base#All-All-DNO-Content-restapibusinessexamplesalesorder) voor meer informatie.
 
 ### Borgstelling afgegeven
 
- De status van de borgstelling wijzigt in **afgegeven**.
+De status van de borgstelling wijzigt in **afgegeven**.
 
 ### Archiveer afwijzing
 
@@ -86,8 +74,7 @@ Nadat de aanvraag is afgewezen wordt er een afwijzing aangemaakt en opgeslagen i
 
 <!-- einde -->
 
-* [Document](afwijzing.message.md)
-* [Acceptatie criteria](../../archiveer.feature)
+[Document](afwijzing.message.md)
 
 ### Borgstelling aanvraag afgewezen
 
@@ -99,8 +86,7 @@ Nadat de aanvraag is beëindigd wordt er een beëindiging aangemaakt en opgeslag
 
 <!-- einde -->
 
-* [Document](beeindiging.message.md)
-* [Acceptatie criteria](../../archiveer.feature)
+[Document](beeindiging.message.md)
 
 ### Borgstelling aanvraag beëindigd
 

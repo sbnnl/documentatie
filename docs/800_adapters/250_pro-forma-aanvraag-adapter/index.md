@@ -28,13 +28,11 @@ Stelt de kredietbank vast aan de hand van de email adres van de ontvanger en ste
 
 ### Verstuur autorisatie
 
-* [Email](autorisatie.email.md)
-* [Acceptatie criteria](../../100_producten/100_borgstelling/verstuur-email.feature)
+[Email](autorisatie.email.md)
 
 ### Verstuur afwijzing
 
-* [Email](afwijzing.email.md)
-* [Acceptatie criteria](../../100_producten/100_borgstelling/verstuur-email.feature)
+[Email](afwijzing.email.md)
 
 ## Business requirements
 

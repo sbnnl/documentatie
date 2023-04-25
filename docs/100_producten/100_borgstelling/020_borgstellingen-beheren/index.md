@@ -12,8 +12,7 @@ Geeft de informatie voor het borgstellingen dashboard dat door SBF en SBN gebrui
 
 <!-- einde -->
 
-* [API](geef-borgstellingen-dashboard.openapi.yml)
-* [Acceptatie criteria](geef-borgstellingen-dashboard.feature)
+[API](geef-borgstellingen-dashboard.openapi.yml)
 
 ### Geef borgstellingen
 
@@ -21,8 +20,7 @@ Geeft een lijst met borgstellingen. Deze use-case kan gebruikt worden om kenmerk
 
 <!-- einde -->
 
-* [API](geef-borgstellingen.openapi.yml)
-* [Acceptatie criteria](geef-borgstellingen.feature)
+[API](geef-borgstellingen.openapi.yml)
 
 ### Geef borgstelling
 
@@ -32,7 +30,6 @@ Geeft een borgstelling van de kredietbank. Deze use-case wordt gebruikt door het
 
 * [Scherm](geef-borgstelling.drawio)
 * [API](geef-borgstelling.openapi.yml)
-* [Acceptatie criteria](geef-borgstelling.feature)
 
 ### Vul borgstelling aan
 
@@ -42,8 +39,7 @@ Deze use-case kan in enkelvoud aangeroepen worden of in meervoud om batch verwer
 
 <!-- einde -->
 
-* [API](vul-borgstelling-aan.openapi.yml)
-* [Acceptatie criteria](vul-borgstelling-aan.feature)
+[API](vul-borgstelling-aan.openapi.yml)
 
 ## Business requirements
 
