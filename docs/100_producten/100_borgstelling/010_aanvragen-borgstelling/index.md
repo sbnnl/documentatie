@@ -51,8 +51,4 @@ De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de krediet
 
 ### Borgstelling aanvraag beëindigd
 
-De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. 
-
-### Bepaal borgstelling aanvraag resultaat
-
-Het resultaat van de eerste, en oorspronkelijke, borgstelling aanvraag moet worden vastgesteld zodat exact hetzelfde rersultaat opnieuw wordt gecommuniceerd als gebeurtenis naar de kredietbank.
+De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden.
