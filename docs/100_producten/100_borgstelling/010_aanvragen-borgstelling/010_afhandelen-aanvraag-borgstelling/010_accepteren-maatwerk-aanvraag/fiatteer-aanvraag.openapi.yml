@@ -1,0 +1,87 @@
+openapi: 3.0.3
+
+info:
+  version: 0.0.1
+  title: Waarborgfonds saneringskredieten
+  description: |
+
+paths:
+
+  /api/kredietbanken/{kredietbank_id}/fiatteer-aanvraag-taken/{taak_id}:    
+    parameters:
+      - $ref: "../../../../../data-dictionary/parameters/kredietbank_id.yml"
+      - $ref: "../../../../../data-dictionary/parameters/taak_id.yml"
+    get:
+      tags:
+        - fiatteer aanvraag taken
+      summary: Geeft een fiatteer aanvraag taak.
+      operationId: GeefFiatteerAanvraagTaakV1
+      responses:
+        200:          
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "../../../../../data-dictionary/responses/fiatteer_aanvraag_taak.yml"
+        400:
+          $ref: "../../../../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../../../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../../../../data-dictionary/responses/types/403.yml"
+        404:
+          $ref: "../../../../../data-dictionary/responses/types/404.yml"  
+
+  /api/kredietbanken/{kredietbank_id}/fiatteer-aanvraag-taken/{taak_id}/fiatteren:
+    parameters:
+      - $ref: "../../../../../data-dictionary/parameters/kredietbank_id.yml"
+      - $ref: "../../../../../data-dictionary/parameters/taak_id.yml"
+    put:
+      tags:
+        - fiatteer aanvraag taken
+      summary: Fiatteert de aanvraag borgstelling goed.
+      operationId: VoltooiFiatteerAanvraagTaakMetFiatterenV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "../../../../../data-dictionary/commands/fiatteer_aanvraag.yml"
+      responses:
+        202:
+          $ref: "../../../../../data-dictionary/responses/types/202.yml"
+        400:
+          $ref: "../../../../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../../../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../../../../data-dictionary/responses/types/403.yml"
+        404:
+          $ref: "../../../../../data-dictionary/responses/types/404.yml"
+
+  /api/kredietbanken/{kredietbank_id}/fiatteer-aanvraag-taken/{taak_id}/afwijzen:
+    parameters:
+      - $ref: "../../../../../data-dictionary/parameters/kredietbank_id.yml"
+      - $ref: "../../../../../data-dictionary/parameters/taak_id.yml"
+    put:
+      tags:
+        - fiatteer aanvraag taken
+      summary: Wijst de aanvraag borgstelling af.
+      operationId: VoltooiFiatteerAanvraagMetAfwijzenV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "../../../../../data-dictionary/commands/wijs_aanvraag_af.yml"
+      responses:
+        202:
+          $ref: "../../../../../data-dictionary/responses/types/202.yml"
+        400:
+          $ref: "../../../../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../../../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../../../../data-dictionary/responses/types/403.yml"
+        404:
+          $ref: "../../../../../data-dictionary/responses/types/404.yml"

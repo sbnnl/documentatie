@@ -11,7 +11,7 @@ Het doel van de aanvraag borgstelling is om tot een beoordeling te komen of er v
 
 Uit onderzoek is gebleken dat 92% van de aanvragen standaard aanvragen zijn. Deze aanvragen worden via een STP proces automatisch verwerkt waardoor er binnen enkele seconden een resultaat naar de kredietverstrekker verstuurd wordt.
 
-Voor een maatwerk aanvraag borgstelling kan optioneel een verwijzing naar een pro-forma aanvraag opgegeven worden. Wanneer deze verwijzing bestaat dan mag die eenmalig meewegen in de acceptatie van de aanvraag.
+Voor een maatwerk aanvraag borgstelling kan optioneel een verwijzing naar een pro-forma-aanvraag opgegeven worden. Wanneer deze verwijzing bestaat dan mag die eenmalig meewegen in de acceptatie van de aanvraag.
 
 <!-- einde -->
 
@@ -19,86 +19,36 @@ Voor een maatwerk aanvraag borgstelling kan optioneel een verwijzing naar een pr
 
 ## Proces
 
-[Proces](proces.bpmn)
+* [Proces](proces.bpmn)
+ 
+## Use cases
 
-## Use-cases
+### Bepaal aanvraag borgstelling
 
-### Aanvragen borgstelling
+> Er zit een periode tussen de aanvraag van de borgstelling en de uitbetaling van het krediet. In die periode, die soms maanden kan duren, is het mogelijk dat het onderliggende krediet aangepast wordt waardoor er, na fiattering van de wijziging, een nieuwe aanvraag borgstelling wordt gedaan voor hetzelfde kenmerk.
 
-Registreert de aanvraag borgstelling met de status **aangevraagd** en start het aanvragen borgstelling proces.
+Stel vast op basis van het kenmerk welke van de onderstaande situaties van toepassing is:
 
-Aan de hand van het postcode gebied wordt de gemeente code vastgesteld. Het postcode gebied wordt niet opgeslagen, de gemeente code wel.
+1. Nieuw: er bestaat geen borgstelling aanvraag voor dit kenmerk;
+2. Lopend: er bestaat een borgstelling aanvraag voor dit kenmerk maar de aanvraag is nog niet afgerond;
+3. Afgerond: er bestaat een borgstelling aanvraag voor dit kenmerk en de aanvraag is afgerond;
 
-### Bepaal pro-forma borgstelling
+### Afhandelen aanvraag borgstelling
 
-Zoekt o.b.v. het "pro-forma borgstelling kenmerk" de pro-forma borgstelling op. De gevonden pro-forma borgstelling wordt toegevoegd aan het proces zodat het mee kan meewegen in de acceptatie van de aanvraag.
+Er is nog geen lopende (aanvraag) borgstelling voor dit kenmerk, de aanvraag moet worden afgehandeld.
 
-### Accepteer automatisch
+### Borgstelling aanvraag afgehandeld
 
-De informatie van de aanvraag wordt automatisch geaccepteerd op basis van regels in het beslissingsmodel. Het beslissingsmodel kent de volgende uitkomsten:
-
-* geaccepteerd
-* afgewezen
-* maatwerk
-
-### Accepteren maatwerk aanvraag
-
-[Zie het accepteren maatwerk aanvraag product voor meer informatie.](accepteren-maatwerk-aanvraag/index.md)
-
-### Archiveer contract
-
-Nadat de aanvraag is goedgekeurd wordt er een borgstelling contract aangemaakt en opgeslagen in het archief. De wettelijke bewaartermijn voor dit soort documenten is 7 jaar.
-
-Er bestaan twee soorten contracten:
-
-1. aanvraag: bruto kredietsom is verzekerd bedrag.
-2. portefeuille overname: uitstaand saldo is het verzekerd bedrag en de looptijd is de resterende looptijd op basis van de uitbetaaldatum en looptijd.
-
-[Document](contract.message.md)
-
-### Registreer verkoop
-
-Voegt de borgstelling afgegeven domein gebeurtenis toe aan een wachtrij zodat die later a-synchroon verwerkt kan worden.
-
-### Borgstelling afgegeven
-
-De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wijzigt in **afgegeven**.
-
-### Archiveer afwijzing
-
-Nadat de aanvraag is afgewezen wordt er een afwijzing aangemaakt en opgeslagen in het archief. De wettelijke bewaartermijn voor dit soort documenten is 7 jaar.
-
-[Document](afwijzing.message.md)
+De oorspronkelijke borgstelling aanvraag is afgehandeld. Eventuele processen die wachten tot de lopende borgstelling aanvraag is afgerond worden hiermee geïnformeerd dat ze verder kunnen gaan in het proces.
 
 ### Borgstelling aanvraag afgewezen
 
-De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wijzigt in **afgewezen**.
+De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. 
 
-### Archiveer beëindiging
+### Borgstelling afgegeven
 
-Nadat de aanvraag is beëindigd wordt er een beëindiging aangemaakt en opgeslagen in het archief. De wettelijke bewaartermijn voor dit soort documenten is 7 jaar.
-
-[Document](beeindiging.message.md)
+De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. 
 
 ### Borgstelling aanvraag beëindigd
 
-De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de borgstelling wijzigt in **beëindigd**.
-
-## Business requirements
-
-| Nummer | Omschrijving                                                                                                                         | Eigenaar                  |
-| -------| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------- |
-| 1      | Financiële mutaties moeten in Exact online vastgelegd worden.                                                                        | Frank Dijkstra |
-| 2      | Er moet ruimte zijn voor maatwerk in de beoordeling.                                                                                 | Frank Dijkstra |
-| 3      | Een afgegeven borgstelling moet automatisch in rekening gebracht worden.                                                             | Frank Dijkstra |
-| 4      | Aanvragen tot € 5.000,- en een looptijd t/m 36 maanden moeten automatisch geaccepteerd worden.                                       | Frank Dijkstra |
-| 5      | Aanvragen vanaf € 5.000,- of met een looptijd langer dan 36 maanden moeten handmatig beoordeeld worden.                              | Frank Dijkstra |
-| 6      | Aanvragen vanaf € 5.000,- die minder dan 5% hoger zijn dan een afgegeven pro-forma botgstelling moeten automatisch geaccepteerd worden. | Frank Dijkstra |
-| 7      | Handmatige beoordelingen moeten gefiatteerd worden door het Sbf.                                                                     | Frank Dijkstra |
-| 8      | Het moet eenvoudig mogelijk zijn om verschillende soorten aanvragen met verschillende informatie modellen te introduceren.           | Frank Dijkstra |
-| 9      | Beslisregegels moeten configureerbaar zijn zodat die eenvoudig kunnen wijzigen.                                                      | Frank Dijkstra |
-| 10     | Facturatie percentage moet configureerbaar zijn zodat die eenvoudig kan wijzigen.                                                    | Frank Dijkstra |
-| 11     | Een pro-forma borgstelling mag maar 1 keer gebruikt worden in een aanvraag.                                                                 | Frank Dijkstra |
-| 12      | Gemeente moet afgeleid worden op basis van postcode gebied. Het postcode gebied mag niet worden opgeslagen.                          | Frank Dijkstra |
-| 13     | De aanvraag wordt een maatwerk aanvraag wanneer de afgeleide gemeente niet in de lijst van aangesloten gemeenten van de kredietbank voorkomt.   | Frank Dijkstra |
-| 14 | Kredieten vanuit een portefeuille overname moeten genegeerd worden wanneer de portefeuille overname datum van de kredietbank gevuld is en de uitbetaal datum kleiner is dan de opgegeven datum. | Frank Dijkstra |
+De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden.
