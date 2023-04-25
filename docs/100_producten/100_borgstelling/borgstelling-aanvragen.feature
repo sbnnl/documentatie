@@ -41,11 +41,6 @@ Functionaliteit: Borgstelling aanvragen
     Gegeven een portefeuille overname
     En een uitbetaaldatum
     En een uitstaand saldo van € 2000,00
-
-  Scenario: {{type}} met een onbekende borgstelling categorie
-    Gegeven "{{type}}" borgstelling categorie is -1
-    Wanneer het "aanvraag overname" bericht is verstuurd via het Schuldenknooppunt
-    Dan is het Schuldenknooppunt bericht niet geaccepteerd
 #{{#types}}
 
   Scenario: {{type}} wordt juist geregistreerd
@@ -135,6 +130,11 @@ Functionaliteit: Borgstelling aanvragen
       |          0 |     5000 |        0 | AFGEGEVEN |
       |          0 |  4999,99 |        0 | MAATWERK  |
       |          0 |        0 |  4999,99 | AFGEWEZEN |
+
+  Scenario: {{type}} met een onbekende borgstelling categorie
+    Gegeven "{{type}}" borgstelling categorie is -1
+    Wanneer het "aanvraag overname" bericht is verstuurd via het Schuldenknooppunt
+    Dan is het Schuldenknooppunt bericht niet geaccepteerd
 #{{/types}}
 
   Abstract Scenario: Aanvraag borgstelling met verschillende premies
