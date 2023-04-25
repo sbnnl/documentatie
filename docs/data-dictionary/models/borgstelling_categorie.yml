@@ -22,19 +22,9 @@ properties:
       - geaccepteerd_vanaf
       - maatwerk_vanaf
       - afgewezen_vanaf
-  referenties:
-    type: object
-    properties:
-      statistiek:
-        allOf:
-          - description: Op basis van statisiek wordt de borgstelling categorie vastgesteld in de schuldenknooppunt adapter.
-          - $ref: "./statistiek.yml"
-    required:
-      - statistiek
 required:
   - borgstelling_categorie_id
   - naam
   - statisiek
   - premie_percentage
   - beslissingstabel
-  - referenties

@@ -1,0 +1,29 @@
+user-task:
+  name: Fiatteer aanvraag
+  schema:
+    $ref: "../../../../../data-dictionary/user_tasks/fiatteer_aanvraag.yml"
+  ui:
+    hidden:
+      - taak_id
+      - borgstelling_id
+actions:
+  fiatteren:
+    name: Fiatteren
+    schema: 
+      $ref: "../../../../../data-dictionary/commands/fiatteer_aanvraag.yml"
+    ui:
+      hidden:
+        - command_id
+        - correlation_id
+        - causation_id
+        - actie
+  afwijzen:
+    name: Afwijzen
+    schema: 
+      $ref: "../../../../../data-dictionary/commands/wijs_aanvraag_af.yml"
+    ui:
+      hidden:
+        - command_id
+        - correlation_id
+        - causation_id
+        - actie

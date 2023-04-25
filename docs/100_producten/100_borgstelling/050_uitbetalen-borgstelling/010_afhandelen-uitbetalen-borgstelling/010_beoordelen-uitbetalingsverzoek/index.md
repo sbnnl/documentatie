@@ -8,20 +8,17 @@ Het doel van beoordelen uitbetalingsverzoek is om vast te stellen of een uitbeta
 
 ## Proces
 
-* [Proces](proces.bpmn)
-* [Acceptatie criteria](proces.feature)
+[Proces](proces.bpmn)
 
 ## Use-cases
 
 ### Geef aanvullende informatie
 
-* [Email](geef-aanvullende-informatie.email.md)
-* [Acceptatie criteria](../../../verstuur-email.feature)
+[Email](geef-aanvullende-informatie.email.md)
 
 ### Beantwoord aanvullende vragen
 
-* [Email](beantwoord-aanvullende-vragen.email.md)
-* [Acceptatie criteria](../../../verstuur-email.feature)
+[Email](beantwoord-aanvullende-vragen.email.md)
 
 ### Beoordeel uitbetalingsverzoek
 
@@ -29,7 +26,6 @@ Beoordeelt het verzoek tot uitbetaling van de borgstelling en stelt het uit te b
 
 * [Formulier](beoordeel-uitbetaling-verzoek.user-task.yml)
 * [API](beoordeel-uitbetaling-verzoek.openapi.yml)
-* [Acceptatie criteria](beoordeel-uitbetaling-verzoek.feature)
 
 ### Fiatteer uitbetaling
 
@@ -37,7 +33,6 @@ Elk geaccepteerd verzoek tot uitbetaling van de borgstelling moet gefiatteerd wo
 
 * [Formulier](../020_beoordelen-uitbetalingsverzoek-uitgebreid/fiatteer-uitbetaling.user-task.yml)
 * [API](../020_beoordelen-uitbetalingsverzoek-uitgebreid/fiatteer-uitbetaling.openapi.yml)
-* [Acceptatie criteria](../020_beoordelen-uitbetalingsverzoek-uitgebreid/fiatteer-uitbetaling.feature)
 
 ## Business requirements
 

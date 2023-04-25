@@ -4,14 +4,7 @@ allOf:
     description: |
       Een aanvraag borgstelling voor een nog te verstrekken saneringskrediet.
     properties:
-      soort_aanvraag:
-        type: string
-        example: aanvraag
       pro_forma_borgstelling:
         $ref: "../types/pro_forma_borgstelling_id.yml"
-      statistieken:
-        $ref: "../models/statistieken.yml"
-    required:
-      - statistieken
   - $ref: "../models/borgstelling_aanvraag.yml"
     

@@ -8,24 +8,17 @@ Via een pro-forma aanvraag kan de kredietbank laten toetsen of het Wsk de aflosc
 
 Een pro-forma aanvraag is alleen relevant voor maatwerk-aanvragen. Onderzoek heeft uitgewezen dat dit ongeveer 8% van de aanvragen zijn.
 
-<!-- einde -->
-
 [Formulier](product.user-task.yml)
 
 ## Proces
 
-* [Proces](proces.bpmn)
-* [Acceptatie criteria](proces.feature)
+[Proces](proces.bpmn)
 
 ## Use-cases
 
 ### Pro-forma aanvragen borgstelling
 
 Registreert de pro-forma aanvraag en start het pro-forma aanvragen borgstelling proces.
-
-<!-- einde -->
-
-* [Acceptatie criteria](../010_aanvragen-borgstelling/aanvragen-borgstelling.feature)
 
 ### Accepteer automatisch
 
@@ -34,47 +27,29 @@ De informatie van de aanvraag wordt automatisch geaccepteerd op basis van regels
 * geaccepteerd
 * maatwerk
 
-<!-- einde -->
-
-* [Acceptatie criteria](../010_aanvragen-borgstelling//accepteer-automatisch.feature)
-
 ### Accepteren maatwerk aanvraag
 
-[Zie het accepteren maatwerk aanvraag product voor meer informatie.](../aanvragen-borgstelling/accepteren-maatwerk-aanvraag/index.md)
+[Zie het accepteren maatwerk aanvraag product voor meer informatie.](../aanvragen-borgstelling/afhandelen-aanvraag-borgstelling/accepteren-maatwerk-aanvraag/index.md)
 
 ### Archiveer pro-forma aanvraag
 
 Nadat de aanvraag is goedgekeurd wordt er een pro-forma aanvraag aangemaakt en opgeslagen in het archief. De wettelijke bewaartermijn voor dit soort documenten is 7 jaar.
 
-<!-- einde -->
-
-* [Document](pro-forma_aanvraag.message.md)
-* [Acceptatie criteria](../archiveer.feature)
+[Document](pro-forma_aanvraag.message.md)
 
 ### Pro-forma borgstelling afgegeven
 
 De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de pro-forma borgstelling wijzigt in **afgegeven**.
 
-<!-- einde -->
-
-* [Acceptatie criteria](../verstuur-gebeurtenis.feature)
-
 ### Archiveer afwijzing
 
 Nadat de aanvraag is afgewezen wordt er een afwijzing aangemaakt en opgeslagen in het archief. De wettelijke bewaartermijn voor dit soort documenten is 7 jaar.
 
-<!-- einde -->
-
-* [Document](afwijzing.message.md)
-* [Acceptatie criteria](../archiveer.feature)
+[Document](afwijzing.message.md)
 
 ### Pro-forma aanvraag afgewezen
 
 De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. De status van de pro-forma borgstelling wijzigt in **afgewezen**.
-
-<!-- einde -->
-
-* [Acceptatie criteria](../verstuur-gebeurtenis.feature)
 
 ## Business requirements
 
