@@ -36,8 +36,4 @@ De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de krediet
 
 ### Borgstelling verzoek afgewezen
 
-De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden. 
-
-### Bepaal borgstelling aanvraag resultaat
-
-@Niels is dit nodig?
+De gebeurtenis wordt toegevoegd aan de gebeurtenissen verzameling van de kredietbank zodat de gebeurtenis door de kredietbank, decentraal, verder verwerkt kan worden.
