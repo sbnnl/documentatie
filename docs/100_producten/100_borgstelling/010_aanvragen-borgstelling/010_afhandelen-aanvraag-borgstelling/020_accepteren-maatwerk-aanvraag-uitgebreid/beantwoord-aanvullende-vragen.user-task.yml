@@ -1,7 +1,7 @@
 user-task:
   name: Beoordeel aanvraag
   schema:
-    $ref: "../../../../data-dictionary/user_tasks/beantwoord_aanvullende_vragen.yml"
+    $ref: "../../../../../data-dictionary/user_tasks/beantwoord_aanvullende_vragen.yml"
   ui:
     hidden:
       - taak_id
@@ -10,7 +10,7 @@ actions:
   beantwoorden:
     name: Beantwoorden
     schema: 
-      $ref: "../../../../data-dictionary/commands/beantwoord_aanvullende_vragen.yml"
+      $ref: "../../../../../data-dictionary/commands/beantwoord_aanvullende_vragen.yml"
     ui:
       hidden:
         - command_id

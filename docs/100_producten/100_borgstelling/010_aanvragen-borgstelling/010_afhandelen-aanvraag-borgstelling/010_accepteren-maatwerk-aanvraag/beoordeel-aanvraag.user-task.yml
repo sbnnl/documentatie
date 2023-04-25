@@ -1,7 +1,7 @@
 user-task:
   name: Beoordeel aanvraag
   schema:
-    $ref: "../../../../data-dictionary/user_tasks/beoordeel_aanvraag.yml"
+    $ref: "../../../../../data-dictionary/user_tasks/beoordeel_aanvraag.yml"
   ui:
     hidden:
       - taak_id
@@ -10,7 +10,7 @@ actions:
   goedkeuren:
     name: Goedkeuren
     schema: 
-      $ref: "../../../../data-dictionary/commands/keur_aanvraag_goed.yml"
+      $ref: "../../../../../data-dictionary/commands/keur_aanvraag_goed.yml"
     ui:
       hidden:
         - command_id
@@ -20,7 +20,7 @@ actions:
   afwijzen:
     name: Afwijzen
     schema: 
-      $ref: "../../../../data-dictionary/commands/wijs_aanvraag_af.yml"
+      $ref: "../../../../../data-dictionary/commands/wijs_aanvraag_af.yml"
     ui:
       hidden:
         - command_id
@@ -30,7 +30,7 @@ actions:
   vraag_stellen:
     name: Vraag stellen
     schema: 
-      $ref: "../../../../data-dictionary/commands/stel_aanvullende_vragen.yml"
+      $ref: "../../../../../data-dictionary/commands/stel_aanvullende_vragen.yml"
     ui:
       hidden:
         - command_id
@@ -40,7 +40,7 @@ actions:
   advies_vragen:
     name: Advies vragen
     schema: 
-      $ref: "../../../../data-dictionary/commands/vraag_advies.yml"
+      $ref: "../../../../../data-dictionary/commands/vraag_advies.yml"
     ui:
       hidden:
         - command_id
