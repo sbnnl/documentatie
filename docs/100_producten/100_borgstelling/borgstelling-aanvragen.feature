@@ -133,7 +133,7 @@ Functionaliteit: Borgstelling aanvragen
 
   Scenario: {{type}} met een onbekende borgstelling categorie
     Gegeven "{{type}}" borgstelling categorie is -1
-    Wanneer het "aanvraag overname" bericht is verstuurd via het Schuldenknooppunt
+    Wanneer het "{{type}}" bericht is verstuurd via het Schuldenknooppunt
     Dan is het Schuldenknooppunt bericht niet geaccepteerd
 #{{/types}}
 
