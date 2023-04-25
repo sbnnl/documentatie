@@ -20,7 +20,7 @@ Start het proces uitbetalen borgstelling.
 
 ### Betaal borgstelling uit
 
-Sbf maakt gebruik van Exact online. Voor het vastgestelde borgstelling bedrag wordt er automatisch via de API van Exact online een credit factuur en een betaalopdracht aangemaakt.
+Voegt de betaald borgstelling uit command toe aan een wachtrij zodat die later, a-synchroon, verwerkt kan worden.
 
 ### Archiveer uitbetaling
 

@@ -3,7 +3,7 @@
   <bpmn:collaboration id="Collaboration_1qbgt8p">
     <bpmn:participant id="Participant_0fmyfu8" name="Uitbetalen borgstelling" processRef="Process_1kj01nt" />
     <bpmn:participant id="Participant_1uo4ada" name="Kredietverstrekker (Kredietbank)" />
-    <bpmn:participant id="Participant_0wg69up" name="Exact online (SBF)" />
+    <bpmn:participant id="Participant_0wg69up" name="Exact adapter" />
     <bpmn:participant id="rol-archief" name="Archief" />
     <bpmn:messageFlow id="Flow_1lc1t45" sourceRef="Participant_1uo4ada" targetRef="gebeurtenis-uitbetaling-verzoek-ontvangen" />
     <bpmn:messageFlow id="Flow_15wx6h8" sourceRef="Event_1kip4f9" targetRef="Participant_1uo4ada" />
@@ -23,10 +23,6 @@
     <bpmn:startEvent id="gebeurtenis-uitbetaling-verzoek-ontvangen" name="Uitbetaling verzoek ontvangen">
       <bpmn:outgoing>Flow_0rwo315</bpmn:outgoing>
     </bpmn:startEvent>
-    <bpmn:serviceTask id="Activity_0fcsy6h" name="Betaal borgstelling uit">
-      <bpmn:incoming>Flow_1eo67ic</bpmn:incoming>
-      <bpmn:outgoing>Flow_0a1w30w</bpmn:outgoing>
-    </bpmn:serviceTask>
     <bpmn:exclusiveGateway id="Gateway_0xa8w0i">
       <bpmn:incoming>Flow_1rjsbhi</bpmn:incoming>
       <bpmn:outgoing>Flow_1eo67ic</bpmn:outgoing>
@@ -53,6 +49,10 @@
       <bpmn:incoming>Flow_0a1w30w</bpmn:incoming>
       <bpmn:outgoing>Flow_17r2yru</bpmn:outgoing>
     </bpmn:serviceTask>
+    <bpmn:sendTask id="Activity_0fcsy6h" name="Betaal borgstelling uit">
+      <bpmn:incoming>Flow_1eo67ic</bpmn:incoming>
+      <bpmn:outgoing>Flow_0a1w30w</bpmn:outgoing>
+    </bpmn:sendTask>
   </bpmn:process>
   <bpmn:message id="Message_19mvjbm" name="UitbetalingVerzochtV1" />
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
@@ -66,9 +66,6 @@
         <bpmndi:BPMNLabel>
           <dc:Bounds x="204" y="325" width="52" height="40" />
         </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0ch2lba_di" bpmnElement="Activity_0fcsy6h">
-        <dc:Bounds x="620" y="255" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_0xa8w0i_di" bpmnElement="Gateway_0xa8w0i" isMarkerVisible="true">
         <dc:Bounds x="485" y="270" width="50" height="50" />
@@ -93,6 +90,9 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_1r6e7ul_di" bpmnElement="Activity_174c7h3">
         <dc:Bounds x="880" y="255" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_13xpxpo_di" bpmnElement="Activity_0fcsy6h">
+        <dc:Bounds x="620" y="255" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_0yk2pct_di" bpmnElement="Flow_0yk2pct">
         <di:waypoint x="870" y="410" />
@@ -137,6 +137,7 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Participant_0wg69up_di" bpmnElement="Participant_0wg69up" isHorizontal="true">
         <dc:Bounds x="440" y="520" width="300" height="60" />
+        <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="rol-archief_di" bpmnElement="rol-archief" isHorizontal="true">
         <dc:Bounds x="760" y="520" width="300" height="60" />
