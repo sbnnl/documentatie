@@ -1,4 +1,7 @@
 :root {
-    /* Dimension */
-    --logo-height: 6rem;
+    /* Dimensions */
+    --logo-height: 5rem;
+
+    /* Link */
+    --link-text-color: rgb(18 106 120);
 }
