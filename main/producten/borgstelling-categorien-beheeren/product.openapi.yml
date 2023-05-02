@@ -1,0 +1,868 @@
+openapi: 3.0.3
+info:
+  version: 0.0.1
+  title: Waarborgfonds saneringskredieten
+  description: ""
+paths:
+  /api/borgstelling-categorieen:
+    post:
+      tags:
+        - borgstelling categorieën
+      summary: Maakt een borgstelling categorie
+      operationId: MaakBorgstellingCategorieV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - beslissingstabel
+                - borgstelling_categorie_id
+                - command_id
+                - correlation_id
+                - naam
+                - premie_percentage
+                - statisiek
+              title: maak borgstelling categorie
+              properties:
+                command_id:
+                  type: string
+                  format: uuid
+                  description: Unique of the command. May be used as an idemptotency key.
+                  example: afa0f657-ba5b-4f6f-bc4e-6ac8dd63d76b
+                correlation_id:
+                  type: string
+                  format: uuid
+                  description: Id of the first command which has started a chain of commands. May
+                    be empty if it's the beginning of a command chain.
+                  example: 48c274d1-0976-49ca-bb70-6e3ced85b629
+                causation_id:
+                  type: string
+                  format: uuid
+                  description: Id of the (last) command which has caused this command to be
+                    triggered.
+                  example: e62c8928-026e-493b-9ad1-1ffca6e19e61
+                borgstelling_categorie_id:
+                  type: integer
+                  description: Uniek identificerend kenmerk van de borgstelling categorie.
+                  example: 100
+                  minimum: 1
+                naam:
+                  type: string
+                  title: borgstelling categorie naam
+                  description: De naam van de borgstelling categorie.
+                  example: Regulier Saneringskrediet
+                  examples:
+                    - Regulier Saneringskrediet
+                    - Pilot Flexibel Saneringskrediet
+                    - Pilot Jongerenperspectieffonds
+                    - Pilot Ondernemers
+                    - Pilot Schuldhulpmaatje
+                premie_percentage:
+                  type: number
+                  title: premie percentage
+                  description: De premie percentage die gebruikt wordt voor het vaststellen van de
+                    borgstelling premie.
+                  example: 0.05
+                  minimum: 0
+                  maximum: 1
+                beslissingstabel:
+                  type: object
+                  title: kredietsom grenzen
+                  description: Deze grenzen worden gebruikt voor het automatisch accepteren van
+                    een borgstelling aanvraag.
+                  required:
+                    - geaccepteerd_vanaf
+                    - maatwerk_vanaf
+                    - afgewezen_vanaf
+                  properties:
+                    geaccepteerd_vanaf:
+                      type: number
+                      minimum: 0
+                      title: bruto kredietsom
+                      description: >
+                        Bedrag uitbetaald aan schuldeisers plus een
+                        kredietvergoeding uitgaande van maandaflossing maal de
+                        looptijd bij aanvang krediet.
+                      example: 1825.34
+                    maatwerk_vanaf:
+                      type: number
+                      minimum: 0
+                      title: bruto kredietsom
+                      description: >
+                        Bedrag uitbetaald aan schuldeisers plus een
+                        kredietvergoeding uitgaande van maandaflossing maal de
+                        looptijd bij aanvang krediet.
+                      example: 1825.34
+                    afgewezen_vanaf:
+                      type: number
+                      minimum: 0
+                      title: bruto kredietsom
+                      description: >
+                        Bedrag uitbetaald aan schuldeisers plus een
+                        kredietvergoeding uitgaande van maandaflossing maal de
+                        looptijd bij aanvang krediet.
+                      example: 1825.34
+      responses:
+        "201":
+          description: Created
+          headers:
+            Location:
+              schema:
+                type: string
+                format: uri
+              description: The location of the created resource.
+        "400":
+          description: Bad request
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "401":
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "403":
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+    get:
+      tags:
+        - borgstelling categorieën
+      summary: Geeft een lijst van borgstelling categorieën
+      operationId: GeefGorgstellingCategorieenV1
+      parameters:
+        - in: query
+          name: limit
+          description: Value indicating the maximum number requested responses.
+          schema:
+            type: integer
+            default: 10
+            example: 10
+            minimum: 1
+            maximum: 100
+            description: Limit the number of responses.
+        - in: query
+          name: offset
+          description: An id reference to indicate until where items must be skipped.
+          schema:
+            type: string
+            example: fff29f18-b3f0-490c-a9b9-b795c8eb856b
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                title: geef borgstelling categorieen
+                required:
+                  - items
+                  - links
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      title: borgstelling categorie
+                      required:
+                        - borgstelling_categorie_id
+                        - naam
+                        - statisiek
+                        - premie_percentage
+                        - beslissingstabel
+                      properties:
+                        borgstelling_categorie_id:
+                          type: integer
+                          description: Uniek identificerend kenmerk van de borgstelling categorie.
+                          example: 100
+                          minimum: 1
+                        naam:
+                          type: string
+                          title: borgstelling categorie naam
+                          description: De naam van de borgstelling categorie.
+                          example: Regulier Saneringskrediet
+                          examples:
+                            - Regulier Saneringskrediet
+                            - Pilot Flexibel Saneringskrediet
+                            - Pilot Jongerenperspectieffonds
+                            - Pilot Ondernemers
+                            - Pilot Schuldhulpmaatje
+                        premie_percentage:
+                          type: number
+                          title: premie percentage
+                          description: De premie percentage die gebruikt wordt voor het vaststellen van de
+                            borgstelling premie.
+                          example: 0.05
+                          minimum: 0
+                          maximum: 1
+                        beslissingstabel:
+                          type: object
+                          title: kredietsom grenzen
+                          description: Deze grenzen worden gebruikt voor het automatisch accepteren van
+                            een borgstelling aanvraag.
+                          required:
+                            - geaccepteerd_vanaf
+                            - maatwerk_vanaf
+                            - afgewezen_vanaf
+                          properties:
+                            geaccepteerd_vanaf:
+                              type: number
+                              minimum: 0
+                              title: bruto kredietsom
+                              description: >
+                                Bedrag uitbetaald aan schuldeisers plus een
+                                kredietvergoeding uitgaande van maandaflossing
+                                maal de looptijd bij aanvang krediet.
+                              example: 1825.34
+                            maatwerk_vanaf:
+                              type: number
+                              minimum: 0
+                              title: bruto kredietsom
+                              description: >
+                                Bedrag uitbetaald aan schuldeisers plus een
+                                kredietvergoeding uitgaande van maandaflossing
+                                maal de looptijd bij aanvang krediet.
+                              example: 1825.34
+                            afgewezen_vanaf:
+                              type: number
+                              minimum: 0
+                              title: bruto kredietsom
+                              description: >
+                                Bedrag uitbetaald aan schuldeisers plus een
+                                kredietvergoeding uitgaande van maandaflossing
+                                maal de looptijd bij aanvang krediet.
+                              example: 1825.34
+                  messages:
+                    type: array
+                    items:
+                      type: object
+                      required:
+                        - type
+                        - message
+                      properties:
+                        type:
+                          type: string
+                          description: The type of message.
+                          enum:
+                            - ERROR
+                            - WARN
+                            - INFO
+                          example: ERROR
+                        message:
+                          type: string
+                          description: The message.
+                          example: Service x could not be reached.
+                  links:
+                    type: object
+                    required:
+                      - next
+                    properties:
+                      next:
+                        type: string
+                        format: uri
+                        description: Link to the next offset.
+                        example: https://service.domain.com/api/action?offset=f64910e7-1006-4c0c-b1fa-10033855770f&limit=100
+        "400":
+          description: Bad request
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "401":
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "403":
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+  "/api/borgstelling-categorieen/{borgstelling_categorie_id}":
+    parameters:
+      - in: path
+        name: borgstelling categorie id
+        required: true
+        type: integer
+        description: Uniek identificerend kenmerk van de borgstelling categorie.
+        example: 100
+        minimum: 1
+    get:
+      tags:
+        - borgstelling categorieën
+      summary: Geeft een borgstelling categorie
+      operationId: GeefBorgstellingCategorieV1
+      responses:
+        "200":
+          description: OKmaak
+          content:
+            application/json:
+              schema:
+                title: geef borgstelling categorie
+                type: object
+                required:
+                  - borgstelling_categorie_id
+                  - naam
+                  - statisiek
+                  - premie_percentage
+                  - beslissingstabel
+                properties:
+                  messages:
+                    type: array
+                    items:
+                      type: object
+                      required:
+                        - type
+                        - message
+                      properties:
+                        type:
+                          type: string
+                          description: The type of message.
+                          enum:
+                            - ERROR
+                            - WARN
+                            - INFO
+                          example: ERROR
+                        message:
+                          type: string
+                          description: The message.
+                          example: Service x could not be reached.
+                  borgstelling_categorie_id:
+                    type: integer
+                    description: Uniek identificerend kenmerk van de borgstelling categorie.
+                    example: 100
+                    minimum: 1
+                  naam:
+                    type: string
+                    title: borgstelling categorie naam
+                    description: De naam van de borgstelling categorie.
+                    example: Regulier Saneringskrediet
+                    examples:
+                      - Regulier Saneringskrediet
+                      - Pilot Flexibel Saneringskrediet
+                      - Pilot Jongerenperspectieffonds
+                      - Pilot Ondernemers
+                      - Pilot Schuldhulpmaatje
+                  premie_percentage:
+                    type: number
+                    title: premie percentage
+                    description: De premie percentage die gebruikt wordt voor het vaststellen van de
+                      borgstelling premie.
+                    example: 0.05
+                    minimum: 0
+                    maximum: 1
+                  beslissingstabel:
+                    type: object
+                    title: kredietsom grenzen
+                    description: Deze grenzen worden gebruikt voor het automatisch accepteren van
+                      een borgstelling aanvraag.
+                    required:
+                      - geaccepteerd_vanaf
+                      - maatwerk_vanaf
+                      - afgewezen_vanaf
+                    properties:
+                      geaccepteerd_vanaf:
+                        type: number
+                        minimum: 0
+                        title: bruto kredietsom
+                        description: >
+                          Bedrag uitbetaald aan schuldeisers plus een
+                          kredietvergoeding uitgaande van maandaflossing maal de
+                          looptijd bij aanvang krediet.
+                        example: 1825.34
+                      maatwerk_vanaf:
+                        type: number
+                        minimum: 0
+                        title: bruto kredietsom
+                        description: >
+                          Bedrag uitbetaald aan schuldeisers plus een
+                          kredietvergoeding uitgaande van maandaflossing maal de
+                          looptijd bij aanvang krediet.
+                        example: 1825.34
+                      afgewezen_vanaf:
+                        type: number
+                        minimum: 0
+                        title: bruto kredietsom
+                        description: >
+                          Bedrag uitbetaald aan schuldeisers plus een
+                          kredietvergoeding uitgaande van maandaflossing maal de
+                          looptijd bij aanvang krediet.
+                        example: 1825.34
+        "400":
+          description: Bad request
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "401":
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "403":
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "404":
+          description: Not found
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+    put:
+      tags:
+        - borgstelling categorieën
+      summary: Wijzigt een borgstelling categorie
+      operationId: WijzigBorgstellingCategorieV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - beslissingstabel
+                - borgstelling_categorie_id
+                - command_id
+                - correlation_id
+                - naam
+                - premie_percentage
+                - statisiek
+              title: wijzig borgstelling categorie
+              properties:
+                command_id:
+                  type: string
+                  format: uuid
+                  description: Unique of the command. May be used as an idemptotency key.
+                  example: afa0f657-ba5b-4f6f-bc4e-6ac8dd63d76b
+                correlation_id:
+                  type: string
+                  format: uuid
+                  description: Id of the first command which has started a chain of commands. May
+                    be empty if it's the beginning of a command chain.
+                  example: 48c274d1-0976-49ca-bb70-6e3ced85b629
+                causation_id:
+                  type: string
+                  format: uuid
+                  description: Id of the (last) command which has caused this command to be
+                    triggered.
+                  example: e62c8928-026e-493b-9ad1-1ffca6e19e61
+                borgstelling_categorie_id:
+                  type: integer
+                  description: Uniek identificerend kenmerk van de borgstelling categorie.
+                  example: 100
+                  minimum: 1
+                naam:
+                  type: string
+                  title: borgstelling categorie naam
+                  description: De naam van de borgstelling categorie.
+                  example: Regulier Saneringskrediet
+                  examples:
+                    - Regulier Saneringskrediet
+                    - Pilot Flexibel Saneringskrediet
+                    - Pilot Jongerenperspectieffonds
+                    - Pilot Ondernemers
+                    - Pilot Schuldhulpmaatje
+                premie_percentage:
+                  type: number
+                  title: premie percentage
+                  description: De premie percentage die gebruikt wordt voor het vaststellen van de
+                    borgstelling premie.
+                  example: 0.05
+                  minimum: 0
+                  maximum: 1
+                beslissingstabel:
+                  type: object
+                  title: kredietsom grenzen
+                  description: Deze grenzen worden gebruikt voor het automatisch accepteren van
+                    een borgstelling aanvraag.
+                  required:
+                    - geaccepteerd_vanaf
+                    - maatwerk_vanaf
+                    - afgewezen_vanaf
+                  properties:
+                    geaccepteerd_vanaf:
+                      type: number
+                      minimum: 0
+                      title: bruto kredietsom
+                      description: >
+                        Bedrag uitbetaald aan schuldeisers plus een
+                        kredietvergoeding uitgaande van maandaflossing maal de
+                        looptijd bij aanvang krediet.
+                      example: 1825.34
+                    maatwerk_vanaf:
+                      type: number
+                      minimum: 0
+                      title: bruto kredietsom
+                      description: >
+                        Bedrag uitbetaald aan schuldeisers plus een
+                        kredietvergoeding uitgaande van maandaflossing maal de
+                        looptijd bij aanvang krediet.
+                      example: 1825.34
+                    afgewezen_vanaf:
+                      type: number
+                      minimum: 0
+                      title: bruto kredietsom
+                      description: >
+                        Bedrag uitbetaald aan schuldeisers plus een
+                        kredietvergoeding uitgaande van maandaflossing maal de
+                        looptijd bij aanvang krediet.
+                      example: 1825.34
+      responses:
+        "202":
+          description: Accepted
+        "400":
+          description: Bad request
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "401":
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "403":
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "404":
+          description: Not found
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+    delete:
+      tags:
+        - borgstelling categorieën
+      summary: Zet een borgstelling categorie uit
+      operationId: ZetborgstellingCategorieUitV1
+      responses:
+        "202":
+          description: Accepted
+        "400":
+          description: Bad request
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "401":
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "403":
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "404":
+          description: Not found
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title

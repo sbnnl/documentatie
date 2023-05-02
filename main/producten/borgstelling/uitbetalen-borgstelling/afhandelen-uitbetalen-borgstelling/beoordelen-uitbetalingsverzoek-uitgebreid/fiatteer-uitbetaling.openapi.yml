@@ -1,0 +1,874 @@
+openapi: 3.0.3
+info:
+  version: 0.0.1
+  title: Waarborgfonds saneringskredieten
+  description: ""
+paths:
+  "/api/kredietbanken/{kredietbank_id}/fiatteer-uitbetaling-taken/{taak_id}":
+    parameters:
+      - in: path
+        name: kredietbank_id
+        required: true
+        type: string
+        format: uuid
+        title: kredietbank id
+        description: Uniek identificerend kenmerk van een kredietbank.
+        example: 88b33783-0a04-4d94-afae-a6d117d63ad8
+      - in: path
+        name: taak-id
+        required: true
+        type: string
+        format: uuid
+        description: Unieke identificerend kenmerk van een taak.
+        title: taak
+        example: 12a0f16b-7d4c-436b-9a6c-f324eac52922
+    get:
+      tags:
+        - fiatteer uitbetaling taken
+      summary: Geeft een fiatteer uitbetaling taak.
+      operationId: GeefFiatteerUitbetalingTaakV1
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                title: fiatteer uitbetaling taak
+                type: object
+                required:
+                  - berichten
+                  - borgstelling_id
+                  - opgegeven
+                  - saneringskrediet
+                  - taak_id
+                properties:
+                  messages:
+                    type: array
+                    items:
+                      type: object
+                      required:
+                        - type
+                        - message
+                      properties:
+                        type:
+                          type: string
+                          description: The type of message.
+                          enum:
+                            - ERROR
+                            - WARN
+                            - INFO
+                          example: ERROR
+                        message:
+                          type: string
+                          description: The message.
+                          example: Service x could not be reached.
+                  taak_id:
+                    type: string
+                    format: uuid
+                    description: Unieke identificerend kenmerk van een taak.
+                    title: taak
+                    example: 12a0f16b-7d4c-436b-9a6c-f324eac52922
+                  borgstelling_id:
+                    type: string
+                    format: uuid
+                    title: borgstelling
+                    description: Uniek identificerend kenmerk van de borgstelling aanvraag.
+                    example: afa0f657-ba5b-4f6f-bc4e-6ac8dd63d76b
+                  saneringskrediet:
+                    description: >
+                      De saneringskrediet informatie zoals die als laatste, via
+                      een automatische aanlevering, is geregistreerd.
+                    required:
+                      - betalingen
+                      - betalingsregeling
+                      - dubieus
+                      - kenmerk
+                      - kredietsom
+                      - laatste_aanlevering
+                      - uitbetaaldatum
+                    type: object
+                    properties:
+                      laatste_aanlevering:
+                        type: string
+                        format: date-time
+                        title: laatste aanlevering
+                        description: Het tijdstip waarom de laatste aanlevering van saneringskrediet
+                          informatie is verwerkt.
+                        example: 2022-01-01T17:32:28Z
+                      kenmerk:
+                        type: string
+                        title: kenmerk
+                        description: >
+                          Uniek identificerend kenmerk vastgesteld en
+                          geregistreerd door de aanvager. Dit kenmerk moet uniek
+                          zijn voor de aanvager.
+                        example: 5461135-1
+                      uitbetaaldatum:
+                        type: string
+                        format: date
+                        title: uitbetaaldatum
+                        description: De datum waarop het saneringskrediet is uitbetaald.
+                        example: 2022-01-01
+                      kredietsom:
+                        type: object
+                        title: kredietsom
+                        required:
+                          - bruto
+                          - netto
+                        properties:
+                          bruto:
+                            type: number
+                            minimum: 0
+                            title: bruto kredietsom
+                            description: >
+                              Bedrag uitbetaald aan schuldeisers plus een
+                              kredietvergoeding uitgaande van maandaflossing
+                              maal de looptijd bij aanvang krediet.
+                            example: 1825.34
+                          netto:
+                            type: number
+                            minimum: 0
+                            title: netto kredietsom
+                            description: |
+                              Bedrag uitbetaald aan schuldeisers
+                            example: 1550.77
+                      betalingen:
+                        type: object
+                        title: betalingen
+                        description: Hoeveel heeft de client betaald?
+                        required:
+                          - laatste_aflosdatum
+                          - aflossing
+                          - kredietvergoeding
+                          - vertragingsrente
+                          - boete_rente
+                        properties:
+                          laatste_aflosdatum:
+                            type: string
+                            format: date
+                            title: laatste aflosdatum
+                            description: De datum van de laatste aflossing op het saneringskrediet.
+                            example: 2022-01-01
+                          aflossing:
+                            type: number
+                            minimum: 0
+                            title: aflossing
+                            example: 300.47
+                          kredietvergoeding:
+                            type: number
+                            minimum: 0
+                            title: kredietvergoeding
+                            description: >
+                              De vergoeding die een kredietbank ontvangt voor de
+                              verstrekking en inning van een saneringskrediet.
+                            example: 24.45
+                          vertragingsrente:
+                            type: number
+                            minimum: 0
+                            title: vertragingsrente
+                            description: >
+                              De vergoeding die berekend wordt over de
+                              achterstand.
+                            example: 4.45
+                          boete_rente:
+                            type: number
+                            minimum: 0
+                            title: boete rente
+                            description: >
+                              De vergoeding die wordt berekend bij vervroegde
+                              aflossing of de kosten die extra in rekening
+                              worden gebracht.
+                            example: 1.12
+                      achterstanden:
+                        type: object
+                        title: achterstanden
+                        description: Wat zijn de achterstanden van de client?
+                        required:
+                          - aflossing
+                          - kredietvergoeding
+                          - vertragingsrente
+                          - boete_rente
+                        properties:
+                          aflossing:
+                            type: number
+                            minimum: 0
+                            title: aflossing
+                            example: 300.47
+                          kredietvergoeding:
+                            type: number
+                            minimum: 0
+                            title: kredietvergoeding
+                            description: >
+                              De vergoeding die een kredietbank ontvangt voor de
+                              verstrekking en inning van een saneringskrediet.
+                            example: 24.45
+                          vertragingsrente:
+                            type: number
+                            minimum: 0
+                            title: vertragingsrente
+                            description: >
+                              De vergoeding die berekend wordt over de
+                              achterstand.
+                            example: 4.45
+                          boete_rente:
+                            type: number
+                            minimum: 0
+                            title: boete rente
+                            description: >
+                              De vergoeding die wordt berekend bij vervroegde
+                              aflossing of de kosten die extra in rekening
+                              worden gebracht.
+                            example: 1.12
+                      voorstand:
+                        type: number
+                        minimum: 0
+                        title: voorstand
+                        description: >
+                          Er is sprake van een voorstand wanneer het uitstaand
+                          saldo kleiner is dan het theoretisch saldo.
+                        example: 10.15
+                      betalingsregeling:
+                        type: boolean
+                        title: betalingsregeling
+                        description: Is er een betalingsregeling actief voor de achterstand op het
+                          saneringskrediet
+                        example: true
+                      dubieus:
+                        type: boolean
+                        title: dubieus
+                        description: Is het saneringskrediet als dubieus aangemerkt?
+                        example: true
+                  berichten:
+                    type: array
+                    minItems: 1
+                    items:
+                      type: object
+                      required:
+                        - van
+                        - aan
+                        - onderwerp
+                        - bericht
+                      properties:
+                        verstuurd:
+                          type: string
+                          format: date-time
+                          description: Het tijdstip waarop het email bericht verstuurd is.
+                          example: 2022-01-01T17:32:28Z
+                        van:
+                          type: object
+                          required:
+                            - email
+                          properties:
+                            naam:
+                              type: string
+                              example: Piet de Vries
+                            email:
+                              type: string
+                              format: email
+                              example: afa0f657-ba5b-4f6f-bc4e-6ac8dd63d76b@waarborgfonds.sbn.nl
+                        aan:
+                          type: object
+                          required:
+                            - email
+                          properties:
+                            naam:
+                              type: string
+                              example: Kredietbank Zwolle
+                            email:
+                              type: string
+                              format: email
+                              example: kredietverlening@zwolle.nl
+                        onderwerp:
+                          type: string
+                          example: Borgstelling aanvraag voor saneringskrediet met kenmerk 5461135-1
+                        bericht:
+                          type: string
+                          format: html
+                          example: >
+                            Beste heer, mevrouw,
+
+
+                            Zijn er omstandigheden die de terugbetaling in gevaar kunnen brengen zoals hoge kosten voor de reparatie van een auto of iets dergelijks?
+
+
+                            Met vriendelijke groet,
+
+
+                            Waarborgfonds Saneringskredieten
+                        bijlagen:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              naam:
+                                type: string
+                                example: herberekening-bewijs.pdf
+                              link:
+                                type: string
+                                format: uri
+                                description: Link naar het document.
+                                readOnly: true
+                                example: https://waarborgfonds.sbn.nl/kredietbanken/88b33783-0a04-4d94-afae-a6d117d63ad8/documenten/f242f4e7-4ddc-4dbb-a3c1-9ab1a1dea74e.pdf
+                  opgegeven:
+                    description: >
+                      De vastgestelde saneringskrediet informatie zop basis van
+                      de uitgevraagde informatie. Deze informatie kan afwijken
+                      van wat er als laatste, via een automatische aanlevering,
+                      is geregistreerd.
+                    type: object
+                    required:
+                      - kenmerk
+                      - uitbetaaldatum
+                      - kredietsom
+                      - betalingen
+                      - betalingsregeling
+                      - dubieus
+                    properties:
+                      lopende_rente:
+                        type: number
+                        minimum: 0
+                        title: lopende rente
+                        description: >
+                          Rente die berekend wordt vanaf de laatste vervaldag
+                          tot heden.
+                        example: 0.12
+                      required: {}
+                      kenmerk:
+                        type: string
+                        title: kenmerk
+                        description: >
+                          Uniek identificerend kenmerk vastgesteld en
+                          geregistreerd door de aanvager. Dit kenmerk moet uniek
+                          zijn voor de aanvager.
+                        example: 5461135-1
+                      uitbetaaldatum:
+                        type: string
+                        format: date
+                        title: uitbetaaldatum
+                        description: De datum waarop het saneringskrediet is uitbetaald.
+                        example: 2022-01-01
+                      kredietsom:
+                        type: object
+                        title: kredietsom
+                        required:
+                          - bruto
+                          - netto
+                        properties:
+                          bruto:
+                            type: number
+                            minimum: 0
+                            title: bruto kredietsom
+                            description: >
+                              Bedrag uitbetaald aan schuldeisers plus een
+                              kredietvergoeding uitgaande van maandaflossing
+                              maal de looptijd bij aanvang krediet.
+                            example: 1825.34
+                          netto:
+                            type: number
+                            minimum: 0
+                            title: netto kredietsom
+                            description: |
+                              Bedrag uitbetaald aan schuldeisers
+                            example: 1550.77
+                      betalingen:
+                        type: object
+                        title: betalingen
+                        description: Hoeveel heeft de client betaald?
+                        required:
+                          - laatste_aflosdatum
+                          - aflossing
+                          - kredietvergoeding
+                          - vertragingsrente
+                          - boete_rente
+                        properties:
+                          laatste_aflosdatum:
+                            type: string
+                            format: date
+                            title: laatste aflosdatum
+                            description: De datum van de laatste aflossing op het saneringskrediet.
+                            example: 2022-01-01
+                          aflossing:
+                            type: number
+                            minimum: 0
+                            title: aflossing
+                            example: 300.47
+                          kredietvergoeding:
+                            type: number
+                            minimum: 0
+                            title: kredietvergoeding
+                            description: >
+                              De vergoeding die een kredietbank ontvangt voor de
+                              verstrekking en inning van een saneringskrediet.
+                            example: 24.45
+                          vertragingsrente:
+                            type: number
+                            minimum: 0
+                            title: vertragingsrente
+                            description: >
+                              De vergoeding die berekend wordt over de
+                              achterstand.
+                            example: 4.45
+                          boete_rente:
+                            type: number
+                            minimum: 0
+                            title: boete rente
+                            description: >
+                              De vergoeding die wordt berekend bij vervroegde
+                              aflossing of de kosten die extra in rekening
+                              worden gebracht.
+                            example: 1.12
+                      achterstanden:
+                        type: object
+                        title: achterstanden
+                        description: Wat zijn de achterstanden van de client?
+                        required:
+                          - aflossing
+                          - kredietvergoeding
+                          - vertragingsrente
+                          - boete_rente
+                        properties:
+                          aflossing:
+                            type: number
+                            minimum: 0
+                            title: aflossing
+                            example: 300.47
+                          kredietvergoeding:
+                            type: number
+                            minimum: 0
+                            title: kredietvergoeding
+                            description: >
+                              De vergoeding die een kredietbank ontvangt voor de
+                              verstrekking en inning van een saneringskrediet.
+                            example: 24.45
+                          vertragingsrente:
+                            type: number
+                            minimum: 0
+                            title: vertragingsrente
+                            description: >
+                              De vergoeding die berekend wordt over de
+                              achterstand.
+                            example: 4.45
+                          boete_rente:
+                            type: number
+                            minimum: 0
+                            title: boete rente
+                            description: >
+                              De vergoeding die wordt berekend bij vervroegde
+                              aflossing of de kosten die extra in rekening
+                              worden gebracht.
+                            example: 1.12
+                      voorstand:
+                        type: number
+                        minimum: 0
+                        title: voorstand
+                        description: >
+                          Er is sprake van een voorstand wanneer het uitstaand
+                          saldo kleiner is dan het theoretisch saldo.
+                        example: 10.15
+                      betalingsregeling:
+                        type: boolean
+                        title: betalingsregeling
+                        description: Is er een betalingsregeling actief voor de achterstand op het
+                          saneringskrediet
+                        example: true
+                      dubieus:
+                        type: boolean
+                        title: dubieus
+                        description: Is het saneringskrediet als dubieus aangemerkt?
+                        example: true
+        "400":
+          description: Bad request
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "401":
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "403":
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "404":
+          description: Not found
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+  "/api/kredietbanken/{kredietbank_id}/fiatteer-uitbetaling-taken/{taak_id}/fiatteren":
+    parameters:
+      - in: path
+        name: kredietbank_id
+        required: true
+        type: string
+        format: uuid
+        title: kredietbank id
+        description: Uniek identificerend kenmerk van een kredietbank.
+        example: 88b33783-0a04-4d94-afae-a6d117d63ad8
+      - in: path
+        name: taak-id
+        required: true
+        type: string
+        format: uuid
+        description: Unieke identificerend kenmerk van een taak.
+        title: taak
+        example: 12a0f16b-7d4c-436b-9a6c-f324eac52922
+    put:
+      tags:
+        - fiatteer uitbetaling taken
+      summary: Fiatteert de uitbetaling van de borgstelling goed.
+      operationId: VoltooiFiatteerUitbetalingTaakMetFiatterenV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - actie
+                - command_id
+                - correlation_id
+              title: fiatteren
+              properties:
+                command_id:
+                  type: string
+                  format: uuid
+                  description: Unique of the command. May be used as an idemptotency key.
+                  example: afa0f657-ba5b-4f6f-bc4e-6ac8dd63d76b
+                correlation_id:
+                  type: string
+                  format: uuid
+                  description: Id of the first command which has started a chain of commands. May
+                    be empty if it's the beginning of a command chain.
+                  example: 48c274d1-0976-49ca-bb70-6e3ced85b629
+                causation_id:
+                  type: string
+                  format: uuid
+                  description: Id of the (last) command which has caused this command to be
+                    triggered.
+                  example: e62c8928-026e-493b-9ad1-1ffca6e19e61
+                actie:
+                  example: fiatteren
+                  type: string
+                  description: De naam van de actie die uitgevoerd wordt. De waarde wordt gebruikt
+                    om verschillende type acties op een resource te
+                    identificeren.
+      responses:
+        "202":
+          description: Accepted
+        "400":
+          description: Bad request
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "401":
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "403":
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "404":
+          description: Not found
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+  "/api/kredietbanken/{kredietbank_id}/fiatteer-uitbetaling-taken/{taak_id}/afwijzen":
+    parameters:
+      - in: path
+        name: kredietbank_id
+        required: true
+        type: string
+        format: uuid
+        title: kredietbank id
+        description: Uniek identificerend kenmerk van een kredietbank.
+        example: 88b33783-0a04-4d94-afae-a6d117d63ad8
+      - in: path
+        name: taak-id
+        required: true
+        type: string
+        format: uuid
+        description: Unieke identificerend kenmerk van een taak.
+        title: taak
+        example: 12a0f16b-7d4c-436b-9a6c-f324eac52922
+    put:
+      tags:
+        - fiatteer uitbetaling taken
+      summary: Wijst de uitbetaling van de borgstelling af.
+      operationId: VoltooiFiatteerUitbetalingMetAfwijzenV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - actie
+                - command_id
+                - correlation_id
+                - reden
+              title: afwijzen
+              properties:
+                command_id:
+                  type: string
+                  format: uuid
+                  description: Unique of the command. May be used as an idemptotency key.
+                  example: afa0f657-ba5b-4f6f-bc4e-6ac8dd63d76b
+                correlation_id:
+                  type: string
+                  format: uuid
+                  description: Id of the first command which has started a chain of commands. May
+                    be empty if it's the beginning of a command chain.
+                  example: 48c274d1-0976-49ca-bb70-6e3ced85b629
+                causation_id:
+                  type: string
+                  format: uuid
+                  description: Id of the (last) command which has caused this command to be
+                    triggered.
+                  example: e62c8928-026e-493b-9ad1-1ffca6e19e61
+                actie:
+                  example: afwijzen
+                  type: string
+                  description: De naam van de actie die uitgevoerd wordt. De waarde wordt gebruikt
+                    om verschillende type acties op een resource te
+                    identificeren.
+                reden:
+                  type: string
+                  format: markdown
+                  title: reden van afwijzing
+                  description: De reden waarom het verzoek is afgewezen. Er is bijvoordeeld
+                    gehandeld in strijd met het fondsbeleid.
+                  example: >
+                    Er is niet voldaan aan de gedragscode sociale
+                    kredietverlening.
+      responses:
+        "202":
+          description: Accepted
+        "400":
+          description: Bad request
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "401":
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "403":
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "404":
+          description: Not found
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title

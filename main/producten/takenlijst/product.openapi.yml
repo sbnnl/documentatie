@@ -1,0 +1,367 @@
+openapi: 3.0.3
+info:
+  version: 0.0.1
+  title: Waarborgfonds saneringskredieten
+  description: ""
+paths:
+  /api/mijn-taken:
+    get:
+      tags:
+        - mijn taken
+      summary: Geeft een persoonlijke geagregeerde lijst van taken.
+      description: >
+        Geeft een lijst van geclaimde taken. Wanneer de gebruiker geen taken
+        heeft geclaimed dan worden de niet geclaimde takem met de hoogste
+        prioriteit waarvoor de gebruiker geautoiriseerd is getoond.
+      operationId: GeefMijnGeagregeerdeTakenV1
+      parameters:
+        - in: query
+          name: limit
+          description: Value indicating the maximum number requested responses.
+          schema:
+            type: integer
+            default: 10
+            example: 10
+            minimum: 1
+            maximum: 100
+            description: Limit the number of responses.
+        - in: query
+          name: offset
+          description: An id reference to indicate until where items must be skipped.
+          schema:
+            type: string
+            example: fff29f18-b3f0-490c-a9b9-b795c8eb856b
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                title: mijn taken
+                type: object
+                properties:
+                  messages:
+                    type: array
+                    items:
+                      type: object
+                      required:
+                        - type
+                        - message
+                      properties:
+                        type:
+                          type: string
+                          description: The type of message.
+                          enum:
+                            - ERROR
+                            - WARN
+                            - INFO
+                          example: ERROR
+                        message:
+                          type: string
+                          description: The message.
+                          example: Service x could not be reached.
+                  taken:
+                    type: array
+                    items:
+                      type: object
+                      title: taak
+                      description: Een meta beschijving van een taak.
+                      required:
+                        - taak_id
+                        - naam
+                        - opleveringsdatum
+                        - links
+                      properties:
+                        taak_id:
+                          type: string
+                          format: uuid
+                          description: Unieke identificerend kenmerk van een taak.
+                          title: taak
+                          example: 12a0f16b-7d4c-436b-9a6c-f324eac52922
+                        naam:
+                          type: string
+                          description: Naam van de taak.
+                          example: Beoordeel aanvraag
+                        omschrijving:
+                          type: string
+                          description: Omschijving van de taak.
+                          example: Aanvraag van Kredietbank Nederland met kenmerk 5461135-1
+                        icoon:
+                          type: string
+                          format: material icon
+                          description: Een icoon die past bij de context van de taak.
+                          example: Today
+                        badge:
+                          title: Badge
+                          type: object
+                          description: Geeft additionele meta informatie over een taak.
+                          required:
+                            - type
+                            - bericht
+                          properties:
+                            type:
+                              type: string
+                              enum:
+                                - FOUT
+                                - WAARSCHUWING
+                                - INFO
+                              example: INFO
+                            bericht:
+                              type: string
+                              example: De taak verloopt bijna.
+                        opleveringsdatum:
+                          type: string
+                          format: date
+                          description: De gewenste datum waarop de taak afgerond moet zijn.
+                          example: 2022-01-01
+                        geclaimed_op:
+                          type: string
+                          format: date-time
+                          description: Het tijdstip waarop de taak geclaimed is.
+                          example: 2022-01-01T17:32:28Z
+                        links:
+                          type: object
+                          required:
+                            - pagina
+                            - api
+                          properties:
+                            pagina:
+                              type: string
+                              format: uri
+                              description: De link naar pagina waar de taak door de gebruiker afgerond kan
+                                worden.
+                              example: https://waarborgfonds.sbn.nl/beoordeel-aanvraag/f242f4e7-4ddc-4dbb-a3c1-9ab1a1dea74e
+                            api:
+                              type: string
+                              format: uri
+                              description: De link naar de api resource van deze taak.
+                              example: https://waarborgfonds.sbn.nl/api/kredietbanken/88b33783-0a04-4d94-afae-a6d117d63ad8/beoordeel-aanvraag-taken/f242f4e7-4ddc-4dbb-a3c1-9ab1a1dea74e
+        "401":
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "403":
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+  "/api/kredietbanken/{kredietbank_id}/mijn-taken":
+    parameters:
+      - in: path
+        name: kredietbank_id
+        required: true
+        type: string
+        format: uuid
+        title: kredietbank id
+        description: Uniek identificerend kenmerk van een kredietbank.
+        example: 88b33783-0a04-4d94-afae-a6d117d63ad8
+    get:
+      tags:
+        - mijn taken
+      summary: Geeft een persoonlijke lijst van taken.
+      description: >
+        Geeft een lijst van geclaimde taken. Wanneer de gebruiker geen taken
+        heeft geclaimed dan worden de niet geclaimde takem met de hoogste
+        prioriteit waarvoor de gebruiker geautoiriseerd is getoond.
+      operationId: GeefMijnTakenV1
+      parameters:
+        - in: query
+          name: limit
+          description: Value indicating the maximum number requested responses.
+          schema:
+            type: integer
+            default: 10
+            example: 10
+            minimum: 1
+            maximum: 100
+            description: Limit the number of responses.
+        - in: query
+          name: offset
+          description: An id reference to indicate until where items must be skipped.
+          schema:
+            type: string
+            example: fff29f18-b3f0-490c-a9b9-b795c8eb856b
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                title: mijn taken
+                type: object
+                properties:
+                  messages:
+                    type: array
+                    items:
+                      type: object
+                      required:
+                        - type
+                        - message
+                      properties:
+                        type:
+                          type: string
+                          description: The type of message.
+                          enum:
+                            - ERROR
+                            - WARN
+                            - INFO
+                          example: ERROR
+                        message:
+                          type: string
+                          description: The message.
+                          example: Service x could not be reached.
+                  taken:
+                    type: array
+                    items:
+                      type: object
+                      title: taak
+                      description: Een meta beschijving van een taak.
+                      required:
+                        - taak_id
+                        - naam
+                        - opleveringsdatum
+                        - links
+                      properties:
+                        taak_id:
+                          type: string
+                          format: uuid
+                          description: Unieke identificerend kenmerk van een taak.
+                          title: taak
+                          example: 12a0f16b-7d4c-436b-9a6c-f324eac52922
+                        naam:
+                          type: string
+                          description: Naam van de taak.
+                          example: Beoordeel aanvraag
+                        omschrijving:
+                          type: string
+                          description: Omschijving van de taak.
+                          example: Aanvraag van Kredietbank Nederland met kenmerk 5461135-1
+                        icoon:
+                          type: string
+                          format: material icon
+                          description: Een icoon die past bij de context van de taak.
+                          example: Today
+                        badge:
+                          title: Badge
+                          type: object
+                          description: Geeft additionele meta informatie over een taak.
+                          required:
+                            - type
+                            - bericht
+                          properties:
+                            type:
+                              type: string
+                              enum:
+                                - FOUT
+                                - WAARSCHUWING
+                                - INFO
+                              example: INFO
+                            bericht:
+                              type: string
+                              example: De taak verloopt bijna.
+                        opleveringsdatum:
+                          type: string
+                          format: date
+                          description: De gewenste datum waarop de taak afgerond moet zijn.
+                          example: 2022-01-01
+                        geclaimed_op:
+                          type: string
+                          format: date-time
+                          description: Het tijdstip waarop de taak geclaimed is.
+                          example: 2022-01-01T17:32:28Z
+                        links:
+                          type: object
+                          required:
+                            - pagina
+                            - api
+                          properties:
+                            pagina:
+                              type: string
+                              format: uri
+                              description: De link naar pagina waar de taak door de gebruiker afgerond kan
+                                worden.
+                              example: https://waarborgfonds.sbn.nl/beoordeel-aanvraag/f242f4e7-4ddc-4dbb-a3c1-9ab1a1dea74e
+                            api:
+                              type: string
+                              format: uri
+                              description: De link naar de api resource van deze taak.
+                              example: https://waarborgfonds.sbn.nl/api/kredietbanken/88b33783-0a04-4d94-afae-a6d117d63ad8/beoordeel-aanvraag-taken/f242f4e7-4ddc-4dbb-a3c1-9ab1a1dea74e
+        "401":
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "403":
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title

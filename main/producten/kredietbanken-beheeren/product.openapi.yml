@@ -1,0 +1,956 @@
+openapi: 3.0.3
+info:
+  version: 0.0.1
+  title: Waarborgfonds saneringskredieten
+  description: ""
+paths:
+  /api/kredietbanken:
+    post:
+      tags:
+        - kredietbanken
+      summary: Maakt een kredietbank
+      operationId: MaakKredietbankV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - adres
+                - command_id
+                - contact
+                - correlation_id
+                - gemeenten
+                - iban
+                - kredietbank_id
+                - naam
+                - referenties
+                - schuldhulpverleners
+              title: maak kredietbank
+              properties:
+                command_id:
+                  type: string
+                  format: uuid
+                  description: Unique of the command. May be used as an idemptotency key.
+                  example: afa0f657-ba5b-4f6f-bc4e-6ac8dd63d76b
+                correlation_id:
+                  type: string
+                  format: uuid
+                  description: Id of the first command which has started a chain of commands. May
+                    be empty if it's the beginning of a command chain.
+                  example: 48c274d1-0976-49ca-bb70-6e3ced85b629
+                causation_id:
+                  type: string
+                  format: uuid
+                  description: Id of the (last) command which has caused this command to be
+                    triggered.
+                  example: e62c8928-026e-493b-9ad1-1ffca6e19e61
+                kredietbank_id:
+                  type: string
+                  format: uuid
+                  title: kredietbank id
+                  description: Uniek identificerend kenmerk van een kredietbank.
+                  example: 88b33783-0a04-4d94-afae-a6d117d63ad8
+                  readOnly: true
+                naam:
+                  type: string
+                  title: kredietbank
+                  description: Naam van de kredietbank
+                  example: Kredietbank Nederland
+                iban:
+                  type: string
+                  pattern: "^[A-Z]{2}\\d{2} (?:\\d{4} ){3}\\d{4}(?: \\d\\d?)?$"
+                  title: IBAN
+                  description: Een International Bank Account Number (IBAN) wordt gebruikt om
+                    internationale transacties tussen rekeningen en banken
+                    gelegen in verschillende landen vlotter te laten verlopen.
+                  example: NL37INGB0674629892
+                contact:
+                  type: string
+                  format: email
+                  description: Email adres
+                  example: kredietverlening@zwolle.nl
+                adres:
+                  type: string
+                  title: kredietbank adres
+                  description: Postadres van de kredietbank
+                  example: |
+                    t.a.v. afdeling kredietverlening
+                    Postbus 100070
+                    8000 GA Zwolle
+                gemeenten:
+                  type: array
+                  description: Een verzameling gemeenten voor wie de kredietbank
+                    saneringskredieten verstrekt.
+                  items:
+                    type: integer
+                    minimum: 1
+                    maximum: 9999
+                    title: gemeente
+                    description: |
+                      CBS code voor gemeenten.
+                    example: 1940
+                schuldhulpverleners:
+                  type: array
+                  description: Een verzameling email adressen van schuldhulpverleners die
+                    gemachtigd zijn om een pro-forma borgstelling aan te vragen
+                    namens de kredietbank.
+                  minItems: 0
+                  items:
+                    oneOf:
+                      - type: string
+                        pattern: \b((?=[a-z0-9-]{1,63}\.)(xn--)?[a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]{2,63}\b
+                        description: Een email domein zoals die na de @ eruit ziet.
+                        title: email domain
+                        example: zwolle.nl
+                      - type: string
+                        format: email
+                        description: Email adres
+                        example: kredietverlening@zwolle.nl
+                referenties:
+                  type: object
+                  required:
+                    - schuldenknooppunt
+                  properties:
+                    schuldenknooppunt:
+                      type: string
+                      format: uuid
+                      description: Het schuldenknooppunt referentie id van de kredietbank. Dit id
+                        wordt gebruikt door de schuldenknooppunt adapter.
+                      example: d41341dc-7111-44f9-b823-108f01223704
+                portefeuille_overname_datum:
+                  type: string
+                  format: date
+                  description: De minimale uitbetaal datum dat een krediet moet hebben om in
+                    aanmerking te kunnen komen voor een portefeuille overname.
+                  example: 2022-01-01
+      responses:
+        "201":
+          description: Created
+          headers:
+            Location:
+              schema:
+                type: string
+                format: uri
+              description: The location of the created resource.
+        "400":
+          description: Bad request
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "401":
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "403":
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+    get:
+      tags:
+        - kredietbanken
+      summary: Geeft een lijst van kredietbanken
+      operationId: GeefKredietbankenV1
+      parameters:
+        - in: query
+          name: limit
+          description: Value indicating the maximum number requested responses.
+          schema:
+            type: integer
+            default: 10
+            example: 10
+            minimum: 1
+            maximum: 100
+            description: Limit the number of responses.
+        - in: query
+          name: offset
+          description: An id reference to indicate until where items must be skipped.
+          schema:
+            type: string
+            example: fff29f18-b3f0-490c-a9b9-b795c8eb856b
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                title: geef kredietbanken
+                required:
+                  - items
+                  - links
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      title: kredietbank
+                      required:
+                        - kredietbank_id
+                        - naam
+                        - iban
+                        - contact
+                        - adres
+                        - gemeenten
+                        - schuldhulpverleners
+                        - referenties
+                      properties:
+                        kredietbank_id:
+                          type: string
+                          format: uuid
+                          title: kredietbank id
+                          description: Uniek identificerend kenmerk van een kredietbank.
+                          example: 88b33783-0a04-4d94-afae-a6d117d63ad8
+                          readOnly: true
+                        naam:
+                          type: string
+                          title: kredietbank
+                          description: Naam van de kredietbank
+                          example: Kredietbank Nederland
+                        iban:
+                          type: string
+                          pattern: "^[A-Z]{2}\\d{2} (?:\\d{4} ){3}\\d{4}(?: \\d\\d?)?$"
+                          title: IBAN
+                          description: Een International Bank Account Number (IBAN) wordt gebruikt om
+                            internationale transacties tussen rekeningen en
+                            banken gelegen in verschillende landen vlotter te
+                            laten verlopen.
+                          example: NL37INGB0674629892
+                        contact:
+                          type: string
+                          format: email
+                          description: Email adres
+                          example: kredietverlening@zwolle.nl
+                        adres:
+                          type: string
+                          title: kredietbank adres
+                          description: Postadres van de kredietbank
+                          example: |
+                            t.a.v. afdeling kredietverlening
+                            Postbus 100070
+                            8000 GA Zwolle
+                        gemeenten:
+                          type: array
+                          description: Een verzameling gemeenten voor wie de kredietbank
+                            saneringskredieten verstrekt.
+                          items:
+                            type: integer
+                            minimum: 1
+                            maximum: 9999
+                            title: gemeente
+                            description: |
+                              CBS code voor gemeenten.
+                            example: 1940
+                        schuldhulpverleners:
+                          type: array
+                          description: Een verzameling email adressen van schuldhulpverleners die
+                            gemachtigd zijn om een pro-forma borgstelling aan te
+                            vragen namens de kredietbank.
+                          minItems: 0
+                          items:
+                            oneOf:
+                              - type: string
+                                pattern: \b((?=[a-z0-9-]{1,63}\.)(xn--)?[a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]{2,63}\b
+                                description: Een email domein zoals die na de @ eruit ziet.
+                                title: email domain
+                                example: zwolle.nl
+                              - type: string
+                                format: email
+                                description: Email adres
+                                example: kredietverlening@zwolle.nl
+                        referenties:
+                          type: object
+                          required:
+                            - schuldenknooppunt
+                          properties:
+                            schuldenknooppunt:
+                              type: string
+                              format: uuid
+                              description: Het schuldenknooppunt referentie id van de kredietbank. Dit id
+                                wordt gebruikt door de schuldenknooppunt
+                                adapter.
+                              example: d41341dc-7111-44f9-b823-108f01223704
+                        portefeuille_overname_datum:
+                          type: string
+                          format: date
+                          description: De minimale uitbetaal datum dat een krediet moet hebben om in
+                            aanmerking te kunnen komen voor een portefeuille
+                            overname.
+                          example: 2022-01-01
+                  messages:
+                    type: array
+                    items:
+                      type: object
+                      required:
+                        - type
+                        - message
+                      properties:
+                        type:
+                          type: string
+                          description: The type of message.
+                          enum:
+                            - ERROR
+                            - WARN
+                            - INFO
+                          example: ERROR
+                        message:
+                          type: string
+                          description: The message.
+                          example: Service x could not be reached.
+                  links:
+                    type: object
+                    required:
+                      - next
+                    properties:
+                      next:
+                        type: string
+                        format: uri
+                        description: Link to the next offset.
+                        example: https://service.domain.com/api/action?offset=f64910e7-1006-4c0c-b1fa-10033855770f&limit=100
+        "400":
+          description: Bad request
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "401":
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "403":
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+  "/api/kredietbanken/{kredietbank_id}":
+    parameters:
+      - in: path
+        name: kredietbank_id
+        required: true
+        type: string
+        format: uuid
+        title: kredietbank id
+        description: Uniek identificerend kenmerk van een kredietbank.
+        example: 88b33783-0a04-4d94-afae-a6d117d63ad8
+    get:
+      tags:
+        - kredietbanken
+      summary: Geeft een kredietbank
+      operationId: GeefKredietbankV1
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                title: geef kredietbank
+                type: object
+                required:
+                  - kredietbank_id
+                  - naam
+                  - iban
+                  - contact
+                  - adres
+                  - gemeenten
+                  - schuldhulpverleners
+                  - referenties
+                properties:
+                  messages:
+                    type: array
+                    items:
+                      type: object
+                      required:
+                        - type
+                        - message
+                      properties:
+                        type:
+                          type: string
+                          description: The type of message.
+                          enum:
+                            - ERROR
+                            - WARN
+                            - INFO
+                          example: ERROR
+                        message:
+                          type: string
+                          description: The message.
+                          example: Service x could not be reached.
+                  kredietbank_id:
+                    type: string
+                    format: uuid
+                    title: kredietbank id
+                    description: Uniek identificerend kenmerk van een kredietbank.
+                    example: 88b33783-0a04-4d94-afae-a6d117d63ad8
+                    readOnly: true
+                  naam:
+                    type: string
+                    title: kredietbank
+                    description: Naam van de kredietbank
+                    example: Kredietbank Nederland
+                  iban:
+                    type: string
+                    pattern: "^[A-Z]{2}\\d{2} (?:\\d{4} ){3}\\d{4}(?: \\d\\d?)?$"
+                    title: IBAN
+                    description: Een International Bank Account Number (IBAN) wordt gebruikt om
+                      internationale transacties tussen rekeningen en banken
+                      gelegen in verschillende landen vlotter te laten verlopen.
+                    example: NL37INGB0674629892
+                  contact:
+                    type: string
+                    format: email
+                    description: Email adres
+                    example: kredietverlening@zwolle.nl
+                  adres:
+                    type: string
+                    title: kredietbank adres
+                    description: Postadres van de kredietbank
+                    example: |
+                      t.a.v. afdeling kredietverlening
+                      Postbus 100070
+                      8000 GA Zwolle
+                  gemeenten:
+                    type: array
+                    description: Een verzameling gemeenten voor wie de kredietbank
+                      saneringskredieten verstrekt.
+                    items:
+                      type: integer
+                      minimum: 1
+                      maximum: 9999
+                      title: gemeente
+                      description: |
+                        CBS code voor gemeenten.
+                      example: 1940
+                  schuldhulpverleners:
+                    type: array
+                    description: Een verzameling email adressen van schuldhulpverleners die
+                      gemachtigd zijn om een pro-forma borgstelling aan te
+                      vragen namens de kredietbank.
+                    minItems: 0
+                    items:
+                      oneOf:
+                        - type: string
+                          pattern: \b((?=[a-z0-9-]{1,63}\.)(xn--)?[a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]{2,63}\b
+                          description: Een email domein zoals die na de @ eruit ziet.
+                          title: email domain
+                          example: zwolle.nl
+                        - type: string
+                          format: email
+                          description: Email adres
+                          example: kredietverlening@zwolle.nl
+                  referenties:
+                    type: object
+                    required:
+                      - schuldenknooppunt
+                    properties:
+                      schuldenknooppunt:
+                        type: string
+                        format: uuid
+                        description: Het schuldenknooppunt referentie id van de kredietbank. Dit id
+                          wordt gebruikt door de schuldenknooppunt adapter.
+                        example: d41341dc-7111-44f9-b823-108f01223704
+                  portefeuille_overname_datum:
+                    type: string
+                    format: date
+                    description: De minimale uitbetaal datum dat een krediet moet hebben om in
+                      aanmerking te kunnen komen voor een portefeuille overname.
+                    example: 2022-01-01
+        "400":
+          description: Bad request
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "401":
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "403":
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "404":
+          description: Not found
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+    put:
+      tags:
+        - kredietbanken
+      summary: Wijzigt een kredietbank
+      operationId: WijzigKredietbankV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - adres
+                - command_id
+                - contact
+                - correlation_id
+                - gemeenten
+                - iban
+                - kredietbank_id
+                - naam
+                - referenties
+                - schuldhulpverleners
+              title: wijzig kredietbank
+              properties:
+                command_id:
+                  type: string
+                  format: uuid
+                  description: Unique of the command. May be used as an idemptotency key.
+                  example: afa0f657-ba5b-4f6f-bc4e-6ac8dd63d76b
+                correlation_id:
+                  type: string
+                  format: uuid
+                  description: Id of the first command which has started a chain of commands. May
+                    be empty if it's the beginning of a command chain.
+                  example: 48c274d1-0976-49ca-bb70-6e3ced85b629
+                causation_id:
+                  type: string
+                  format: uuid
+                  description: Id of the (last) command which has caused this command to be
+                    triggered.
+                  example: e62c8928-026e-493b-9ad1-1ffca6e19e61
+                kredietbank_id:
+                  type: string
+                  format: uuid
+                  title: kredietbank id
+                  description: Uniek identificerend kenmerk van een kredietbank.
+                  example: 88b33783-0a04-4d94-afae-a6d117d63ad8
+                  readOnly: true
+                naam:
+                  type: string
+                  title: kredietbank
+                  description: Naam van de kredietbank
+                  example: Kredietbank Nederland
+                iban:
+                  type: string
+                  pattern: "^[A-Z]{2}\\d{2} (?:\\d{4} ){3}\\d{4}(?: \\d\\d?)?$"
+                  title: IBAN
+                  description: Een International Bank Account Number (IBAN) wordt gebruikt om
+                    internationale transacties tussen rekeningen en banken
+                    gelegen in verschillende landen vlotter te laten verlopen.
+                  example: NL37INGB0674629892
+                contact:
+                  type: string
+                  format: email
+                  description: Email adres
+                  example: kredietverlening@zwolle.nl
+                adres:
+                  type: string
+                  title: kredietbank adres
+                  description: Postadres van de kredietbank
+                  example: |
+                    t.a.v. afdeling kredietverlening
+                    Postbus 100070
+                    8000 GA Zwolle
+                gemeenten:
+                  type: array
+                  description: Een verzameling gemeenten voor wie de kredietbank
+                    saneringskredieten verstrekt.
+                  items:
+                    type: integer
+                    minimum: 1
+                    maximum: 9999
+                    title: gemeente
+                    description: |
+                      CBS code voor gemeenten.
+                    example: 1940
+                schuldhulpverleners:
+                  type: array
+                  description: Een verzameling email adressen van schuldhulpverleners die
+                    gemachtigd zijn om een pro-forma borgstelling aan te vragen
+                    namens de kredietbank.
+                  minItems: 0
+                  items:
+                    oneOf:
+                      - type: string
+                        pattern: \b((?=[a-z0-9-]{1,63}\.)(xn--)?[a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]{2,63}\b
+                        description: Een email domein zoals die na de @ eruit ziet.
+                        title: email domain
+                        example: zwolle.nl
+                      - type: string
+                        format: email
+                        description: Email adres
+                        example: kredietverlening@zwolle.nl
+                referenties:
+                  type: object
+                  required:
+                    - schuldenknooppunt
+                  properties:
+                    schuldenknooppunt:
+                      type: string
+                      format: uuid
+                      description: Het schuldenknooppunt referentie id van de kredietbank. Dit id
+                        wordt gebruikt door de schuldenknooppunt adapter.
+                      example: d41341dc-7111-44f9-b823-108f01223704
+                portefeuille_overname_datum:
+                  type: string
+                  format: date
+                  description: De minimale uitbetaal datum dat een krediet moet hebben om in
+                    aanmerking te kunnen komen voor een portefeuille overname.
+                  example: 2022-01-01
+      responses:
+        "202":
+          description: Accepted
+        "400":
+          description: Bad request
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "401":
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "403":
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "404":
+          description: Not found
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+    delete:
+      tags:
+        - kredietbanken
+      summary: Zet een kredietbank uit
+      operationId: ZetKredietbankUitV1
+      responses:
+        "202":
+          description: Accepted
+        "400":
+          description: Bad request
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "401":
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "403":
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "404":
+          description: Not found
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title

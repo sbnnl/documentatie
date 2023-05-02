@@ -1,0 +1,573 @@
+openapi: 3.0.3
+info:
+  version: 0.0.1
+  title: Waarborgfonds saneringskredieten
+  description: ""
+paths:
+  "/api/kredietbanken/{kredietbank_id}/fiatteer-aanvraag-taken/{taak_id}":
+    parameters:
+      - in: path
+        name: kredietbank_id
+        required: true
+        type: string
+        format: uuid
+        title: kredietbank id
+        description: Uniek identificerend kenmerk van een kredietbank.
+        example: 88b33783-0a04-4d94-afae-a6d117d63ad8
+      - in: path
+        name: taak-id
+        required: true
+        type: string
+        format: uuid
+        description: Unieke identificerend kenmerk van een taak.
+        title: taak
+        example: 12a0f16b-7d4c-436b-9a6c-f324eac52922
+    get:
+      tags:
+        - fiatteer aanvraag taken
+      summary: Geeft een fiatteer aanvraag taak.
+      operationId: GeefFiatteerAanvraagTaakV1
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                title: fiatteer aanvraag taak
+                type: object
+                required:
+                  - taak_id
+                  - borgstelling_id
+                  - aanvraag
+                  - berichten
+                properties:
+                  messages:
+                    type: array
+                    items:
+                      type: object
+                      required:
+                        - type
+                        - message
+                      properties:
+                        type:
+                          type: string
+                          description: The type of message.
+                          enum:
+                            - ERROR
+                            - WARN
+                            - INFO
+                          example: ERROR
+                        message:
+                          type: string
+                          description: The message.
+                          example: Service x could not be reached.
+                  taak_id:
+                    type: string
+                    format: uuid
+                    description: Unieke identificerend kenmerk van een taak.
+                    title: taak
+                    example: 12a0f16b-7d4c-436b-9a6c-f324eac52922
+                  borgstelling_id:
+                    type: string
+                    format: uuid
+                    title: borgstelling
+                    description: Uniek identificerend kenmerk van de borgstelling aanvraag.
+                    example: afa0f657-ba5b-4f6f-bc4e-6ac8dd63d76b
+                  aanvraag:
+                    type: object
+                    title: aanvraag
+                    required:
+                      - bruto_kredietsom
+                      - looptijd
+                    properties:
+                      reden_maatwerk:
+                        type: string
+                        format: markdown
+                        title: reden
+                        description: De reden waarom het systeem heeft beoordeeld dat het om een
+                          maatwerk aanvraag gaat.
+                        example: >
+                          De gemeente komt niet voor in de gemeentelijst van de
+                          kredietbank
+                      bruto_kredietsom:
+                        type: number
+                        minimum: 0
+                        title: bruto kredietsom
+                        description: >
+                          Bedrag uitbetaald aan schuldeisers plus een
+                          kredietvergoeding uitgaande van maandaflossing maal de
+                          looptijd bij aanvang krediet.
+                        example: 1825.34
+                      looptijd:
+                        type: number
+                        minimum: 1
+                        maximum: 60
+                        title: looptijd
+                        description: |
+                          De looptijd, in maanden, van het saneringskrediet.
+                        example: 36
+                  berichten:
+                    type: array
+                    minItems: 1
+                    items:
+                      type: object
+                      required:
+                        - van
+                        - aan
+                        - onderwerp
+                        - bericht
+                      properties:
+                        verstuurd:
+                          type: string
+                          format: date-time
+                          description: Het tijdstip waarop het email bericht verstuurd is.
+                          example: 2022-01-01T17:32:28Z
+                        van:
+                          type: object
+                          required:
+                            - email
+                          properties:
+                            naam:
+                              type: string
+                              example: Piet de Vries
+                            email:
+                              type: string
+                              format: email
+                              example: afa0f657-ba5b-4f6f-bc4e-6ac8dd63d76b@waarborgfonds.sbn.nl
+                        aan:
+                          type: object
+                          required:
+                            - email
+                          properties:
+                            naam:
+                              type: string
+                              example: Kredietbank Zwolle
+                            email:
+                              type: string
+                              format: email
+                              example: kredietverlening@zwolle.nl
+                        onderwerp:
+                          type: string
+                          example: Borgstelling aanvraag voor saneringskrediet met kenmerk 5461135-1
+                        bericht:
+                          type: string
+                          format: html
+                          example: >
+                            Beste heer, mevrouw,
+
+
+                            Zijn er omstandigheden die de terugbetaling in gevaar kunnen brengen zoals hoge kosten voor de reparatie van een auto of iets dergelijks?
+
+
+                            Met vriendelijke groet,
+
+
+                            Waarborgfonds Saneringskredieten
+                        bijlagen:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              naam:
+                                type: string
+                                example: herberekening-bewijs.pdf
+                              link:
+                                type: string
+                                format: uri
+                                description: Link naar het document.
+                                readOnly: true
+                                example: https://waarborgfonds.sbn.nl/kredietbanken/88b33783-0a04-4d94-afae-a6d117d63ad8/documenten/f242f4e7-4ddc-4dbb-a3c1-9ab1a1dea74e.pdf
+        "400":
+          description: Bad request
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "401":
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "403":
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "404":
+          description: Not found
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+  "/api/kredietbanken/{kredietbank_id}/fiatteer-aanvraag-taken/{taak_id}/fiatteren":
+    parameters:
+      - in: path
+        name: kredietbank_id
+        required: true
+        type: string
+        format: uuid
+        title: kredietbank id
+        description: Uniek identificerend kenmerk van een kredietbank.
+        example: 88b33783-0a04-4d94-afae-a6d117d63ad8
+      - in: path
+        name: taak-id
+        required: true
+        type: string
+        format: uuid
+        description: Unieke identificerend kenmerk van een taak.
+        title: taak
+        example: 12a0f16b-7d4c-436b-9a6c-f324eac52922
+    put:
+      tags:
+        - fiatteer aanvraag taken
+      summary: Fiatteert de aanvraag borgstelling goed.
+      operationId: VoltooiFiatteerAanvraagTaakMetFiatterenV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - actie
+                - command_id
+                - correlation_id
+              title: fiatteren
+              properties:
+                command_id:
+                  type: string
+                  format: uuid
+                  description: Unique of the command. May be used as an idemptotency key.
+                  example: afa0f657-ba5b-4f6f-bc4e-6ac8dd63d76b
+                correlation_id:
+                  type: string
+                  format: uuid
+                  description: Id of the first command which has started a chain of commands. May
+                    be empty if it's the beginning of a command chain.
+                  example: 48c274d1-0976-49ca-bb70-6e3ced85b629
+                causation_id:
+                  type: string
+                  format: uuid
+                  description: Id of the (last) command which has caused this command to be
+                    triggered.
+                  example: e62c8928-026e-493b-9ad1-1ffca6e19e61
+                actie:
+                  example: fiatteren
+                  type: string
+                  description: De naam van de actie die uitgevoerd wordt. De waarde wordt gebruikt
+                    om verschillende type acties op een resource te
+                    identificeren.
+      responses:
+        "202":
+          description: Accepted
+        "400":
+          description: Bad request
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "401":
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "403":
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "404":
+          description: Not found
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+  "/api/kredietbanken/{kredietbank_id}/fiatteer-aanvraag-taken/{taak_id}/afwijzen":
+    parameters:
+      - in: path
+        name: kredietbank_id
+        required: true
+        type: string
+        format: uuid
+        title: kredietbank id
+        description: Uniek identificerend kenmerk van een kredietbank.
+        example: 88b33783-0a04-4d94-afae-a6d117d63ad8
+      - in: path
+        name: taak-id
+        required: true
+        type: string
+        format: uuid
+        description: Unieke identificerend kenmerk van een taak.
+        title: taak
+        example: 12a0f16b-7d4c-436b-9a6c-f324eac52922
+    put:
+      tags:
+        - fiatteer aanvraag taken
+      summary: Wijst de aanvraag borgstelling af.
+      operationId: VoltooiFiatteerAanvraagMetAfwijzenV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - actie
+                - command_id
+                - correlation_id
+                - reden
+              title: afwijzen
+              properties:
+                command_id:
+                  type: string
+                  format: uuid
+                  description: Unique of the command. May be used as an idemptotency key.
+                  example: afa0f657-ba5b-4f6f-bc4e-6ac8dd63d76b
+                correlation_id:
+                  type: string
+                  format: uuid
+                  description: Id of the first command which has started a chain of commands. May
+                    be empty if it's the beginning of a command chain.
+                  example: 48c274d1-0976-49ca-bb70-6e3ced85b629
+                causation_id:
+                  type: string
+                  format: uuid
+                  description: Id of the (last) command which has caused this command to be
+                    triggered.
+                  example: e62c8928-026e-493b-9ad1-1ffca6e19e61
+                actie:
+                  example: afwijzen
+                  type: string
+                  description: De naam van de actie die uitgevoerd wordt. De waarde wordt gebruikt
+                    om verschillende type acties op een resource te
+                    identificeren.
+                reden:
+                  type: string
+                  format: markdown
+                  title: reden van afwijzing
+                  description: De reden waarom de aanvraag is afgewezen door de beoordelaar.
+                  example: Door een combinatie van een onzeker inkomen en een onduidelijke
+                    schuldpositie van de klant is de aanvraag afgewezen.
+      responses:
+        "202":
+          description: Accepted
+        "400":
+          description: Bad request
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "401":
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "403":
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
+        "404":
+          description: Not found
+          content:
+            application/problem+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The HTTP status code.
+                    example: 404
+                  title:
+                    type: string
+                    description: A short, human-readable summary of the problem type.
+                    example: Resource not found
+                  detail:
+                    type: string
+                    description: A human-readable explanation specific to this occurrence of the
+                      problem.
+                required:
+                  - status
+                  - title
