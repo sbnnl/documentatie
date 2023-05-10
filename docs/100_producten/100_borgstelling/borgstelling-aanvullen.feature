@@ -3,30 +3,44 @@ Functionaliteit: Borgstelling aanvullen
 
   Achtergrond:
     Gegeven een kredietbank
-    En een afgegeven borgstelling
-    En een uitbetaaldatum "2022-06-01"
-    En een bruto kredietsom van € 1825,34
-    En een netto kredietsom van € 1550,77
-    En een laatste aflosdatum "2022-08-01"
-    En een betaling aflossing is 300,47
-    En een betaling kredietvergoeding is 24,45
-    En een betaling vertragingsrente is 4,45
-    En een betaling boete rente is 1,12
-    En een achterstand aflossing is 100,17
-    En een achterstand kredietvergoeding is 5,87
-    En een achterstand vertragingsrente is 0,78
-    En een achterstand boete rente is 0,02
-    En voorstand is 10,15
-    En betalingsregeling is "ja"
-    En dubieus is "ja"
+    Gegeven een afgegeven borgstelling met kenmerk "SK-1232432-2"
+    Gegeven een afgegeven borgstelling met kenmerk "SK-323232-1"
+    Gegeven kredietinformatie
+      | kenmerk                       | SK-1232432-2 |
+      | uitbetaaldatum                | 2022-06-01   |
+      | bruto kredietsom              | € 1825,34    |
+      | netto kredietsom              | € 1550,77    |
+      | laatste aflosdatum            | 2022-08-01   |
+      | betaling aflossing            | 300,47       |
+      | betaling kredietvergoeding    | 24,45        |
+      | betaling vertragingsrente     | 4,45         |
+      | betaling boete rente          | 1,12         |
+      | achterstand aflossing         | 100,17       |
+      | achterstand kredietvergoeding | 5,87         |
+      | achterstand vertragingsrente  | 0,78         |
+      | achterstand boete rente       | 0,02         |
+      | voorstand                     | 10,15        |
+      | betalingsregeling             | ja           |
+      | dubieus                       | ja           |
+    Gegeven kredietinformatie
+      | kenmerk                       | SK-323232-1 |
+      | uitbetaaldatum                | 2022-01-05  |
+      | bruto kredietsom              | € 2300,98   |
+      | netto kredietsom              | € 2198,34   |
+      | laatste aflosdatum            | 2022-09-02  |
+      | betaling aflossing            | 233,64      |
+      | betaling kredietvergoeding    | 12,34       |
+      | betaling vertragingsrente     | 2,01        |
+      | betaling boete rente          | 0,23        |
+      | achterstand aflossing         | 99,23       |
+      | achterstand kredietvergoeding | 2,23        |
+      | achterstand vertragingsrente  | 0,2         |
+      | achterstand boete rente       | 0,12        |
+      | voorstand                     | 1,23        |
+      | betalingsregeling             | nee         |
+      | dubieus                       | nee         |
 
   Scenario: Borgstelling bijwerken wordt juist geregistreerd
     Wanneer het "bijwerken borgstelling" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
-    Dan is de uitbetaaldatum juist geregistreerd
-    En is de kredietsom juist geregistreerd
-    En zijn de betalingen juist geregistreerd
-    En zijn de achterstanden juist geregistreerd
-    En is de voorstand juist geregistreerd
-    En is de betalingsregeling juist geregistreerd
-    En is dubieus juist geregistreerd
+    Dan zijn de borgstellingen juist aangevuld
