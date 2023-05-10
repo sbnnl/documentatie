@@ -46,7 +46,7 @@ Functionaliteit: Borgstelling aanvragen
       | bruto kredietsom | € 5000,0 |
     Wanneer het "{{type}}" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
-    Dan is de status van de "{{type}}" "MAATWERK"
+    Dan is de status van de "{{type}}" "BEOORDEEL_AANVRAAG"
     En is er een "beoordeel maatwerk {{type}}" taak actief
 
   Scenario: {{type}} op basis van bruto kredietsom afwijzen
@@ -81,7 +81,7 @@ Functionaliteit: Borgstelling aanvragen
       | looptijd | 37 maanden |
     Wanneer het "{{type}}" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
-    Dan is de status van de "{{type}}" "MAATWERK"
+    Dan is de status van de "{{type}}" "BEOORDEEL_AANVRAAG"
     En is er een "beoordeel maatwerk {{type}}" taak actief
 
   Scenario: Maatwerk {{type}} afwijzen
@@ -105,10 +105,10 @@ Functionaliteit: Borgstelling aanvragen
     Dan is de status van de "{{type}}" "AFGEWEZEN"
 
     Voorbeelden:
-      | accepteren | maatwerk | afwijzen | status    |
-      | 0          | 5000     | 0        | AFGEGEVEN |
-      | 0          | 4999,99  | 0        | MAATWERK  |
-      | 0          | 0        | 4999,99  | AFGEWEZEN |
+      | accepteren | maatwerk | afwijzen | status             |
+      | 0          | 5000     | 0        | AFGEGEVEN          |
+      | 0          | 4999,99  | 0        | BEOORDEEL_AANVRAAG |
+      | 0          | 0        | 4999,99  | AFGEWEZEN          |
 
   Abstract Scenario: {{type}} met een onbekende borgstelling categorie
     Gegeven borgstelling categorie

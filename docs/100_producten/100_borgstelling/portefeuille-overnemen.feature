@@ -47,7 +47,7 @@ Functionaliteit: Portefeuille overnemen
     Wanneer het "aanvraag overname" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
     En wachten enkele momenten
-    Dan is de status van de borgstelling "MAATWERK"
+    Dan is de status van de borgstelling "BEOORDEEL_AANVRAAG"
     En is er een "beoordeel maatwerk aanvraag borgstelling" taak actief
 
   Scenario: Aanvraag borgstelling vanuit een portefeuille overname op basis van uitbetaaldatum afwijzen

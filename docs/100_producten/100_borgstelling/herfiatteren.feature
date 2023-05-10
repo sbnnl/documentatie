@@ -30,7 +30,7 @@ Functionaliteit: Herfiatteren
       | bruto kredietsom | € 5000,00 |
     Wanneer het "aanvraag borgstelling" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
-    Dan is de status van de borgstelling "MAATWERK"
+    Dan is de status van de borgstelling "BEOORDEEL_AANVRAAG"
     Gegeven een aanvraag borgstelling bericht
       | bruto kredietsom | € 2000,00 |
     Wanneer het "aanvraag borgstelling" bericht is verstuurd via het Schuldenknooppunt

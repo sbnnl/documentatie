@@ -3,8 +3,10 @@ Functionaliteit: Borgstelling aanvullen
 
   Achtergrond:
     Gegeven een kredietbank
-    Gegeven een afgegeven borgstelling met kenmerk "SK-1232432-2"
-    Gegeven een afgegeven borgstelling met kenmerk "SK-323232-1"
+    Gegeven een borgstelling
+      | kenmerk | SK-1232432-2 |
+    Gegeven een borgstelling
+      | kenmerk | SK-323232-1 |
     Gegeven kredietinformatie
       | kenmerk                       | SK-1232432-2 |
       | uitbetaaldatum                | 2022-06-01   |

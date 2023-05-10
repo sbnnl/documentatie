@@ -36,12 +36,12 @@ Functionaliteit: Pro-forma borgstelling gebruiken
     Dan is de status van de borgstelling "<status>"
 
     Voorbeelden:
-      | pro forma bruto kredietsom | pro forma status | bruto kredietsom | status    |
-      | 4999,99                    | AFGEGEVEN        | 4999,99          | AFGEGEVEN |
-      | 5000                       | AFGEWEZEN        | 4999,99          | AFGEGEVEN |
-      | 5000                       | AFGEGEVEN        | 5249             | AFGEGEVEN |
-      | 5000                       | AFGEGEVEN        | 5250             | MAATWERK  |
-      | 6000                       | AFGEGEVEN        | 5700             | MAATWERK  |
+      | pro forma bruto kredietsom | pro forma status | bruto kredietsom | status             |
+      | 4999,99                    | AFGEGEVEN        | 4999,99          | AFGEGEVEN          |
+      | 5000                       | AFGEWEZEN        | 4999,99          | AFGEGEVEN          |
+      | 5000                       | AFGEGEVEN        | 5249             | AFGEGEVEN          |
+      | 5000                       | AFGEGEVEN        | 5250             | BEOORDEEL_AANVRAAG |
+      | 6000                       | AFGEGEVEN        | 5700             | BEOORDEEL_AANVRAAG |
 
   Abstract Scenario: Aanvraag borgstelling met pro forma aanvraag met afwijkende looptijden
     Gegeven een pro-forma borgstelling
@@ -53,7 +53,7 @@ Functionaliteit: Pro-forma borgstelling gebruiken
     Dan is de status van de borgstelling "<status>"
 
     Voorbeelden:
-      | pro forma looptijd | looptijd | status    |
-      | 36                 | 35       | AFGEGEVEN |
-      | 36                 | 37       | MAATWERK  |
-      | 37                 | 36       | AFGEGEVEN |
+      | pro forma looptijd | looptijd | status             |
+      | 36                 | 35       | AFGEGEVEN          |
+      | 36                 | 37       | BEOORDEEL_AANVRAAG |
+      | 37                 | 36       | AFGEGEVEN          |
