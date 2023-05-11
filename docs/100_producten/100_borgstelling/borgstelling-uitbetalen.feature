@@ -20,14 +20,14 @@ Functionaliteit: Borgstelling uitbetalen
     Dan is de status van de borgstelling "BEOORDEEL_UITBETALING"
     En is er een "beoordeel uitbetaling" taak actief
     Wanneer de "beoordeel uitbetaling" taak is goedgekeurd
-      | netto_kredietsom  | 1 |
-      | aflossing         | 1 |
-      | kredietvergoeding | 1 |
-      | voorstand         | 1 |
-      | lopende_rente     | 1 |
+      | netto_kredietsom  | € 1550,77 |
+      | aflossing         | € 300,47  |
+      | kredietvergoeding | € 24,45   |
+      | voorstand         | € 0,0     |
+      | lopende_rente     | € 0,12    |
     Dan is de status van de "{{type}}" "UITBETAALD"
     En is "de uitbetaling" gearchiveerd
-    En is er een uitbetaling geregistreerd van € 50,0
+    En is er een uitbetaling geregistreerd van € 1264,72
     En is het "borgstelling uitbetaald" bericht ontvangen door het Schuldenknooppunt
 
   Scenario: Borgstelling uitbetaling aanvraag afwijzen
@@ -60,6 +60,7 @@ Functionaliteit: Borgstelling uitbetalen
     Wanneer het "uitbetalen borgstelling" bericht is verstuurd via het Schuldenknooppunt
     Dan is het Schuldenknooppunt bericht niet geaccepteerd
 
+    #@Niels zou je deze lijst kunnen controleren / aanvullen?
     Voorbeelden:
       | status                |
       | AFGEWEZEN             |
@@ -67,5 +68,3 @@ Functionaliteit: Borgstelling uitbetalen
       | UITBETAALD            |
       | UITBETALING_AFGEWEZEN |
       | BEOORDEEL_AANVRAAG    |
-#@Niels zou je deze lijst kunnen aanvullenn?
-
