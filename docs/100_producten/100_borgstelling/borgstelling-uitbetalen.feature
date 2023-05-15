@@ -23,8 +23,8 @@ Functionaliteit: Borgstelling uitbetalen
       | netto_kredietsom  | € 1550,77 |
       | aflossing         | € 300,47  |
       | kredietvergoeding | € 24,45   |
-      | voorstand         | € 0,0     |
       | lopende_rente     | € 0,12    |
+      | voorstand         | € 10,15   |
     Dan is de status van de "{{type}}" "UITBETAALD"
     En is "de uitbetaling" gearchiveerd
     En is er een uitbetaling geregistreerd van € 1264,72
@@ -60,11 +60,13 @@ Functionaliteit: Borgstelling uitbetalen
     Wanneer het "uitbetalen borgstelling" bericht is verstuurd via het Schuldenknooppunt
     Dan is het Schuldenknooppunt bericht niet geaccepteerd
 
-    #@Niels zou je deze lijst kunnen controleren / aanvullen?
     Voorbeelden:
       | status                |
       | AFGEWEZEN             |
+      | AANVRAAG_BEEINDIGD    |
       | BEEINDIGD             |
       | UITBETAALD            |
       | UITBETALING_AFGEWEZEN |
       | BEOORDEEL_AANVRAAG    |
+      | INGETROKKEN           |
+      | WORDT_INGETROKKEN     |

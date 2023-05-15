@@ -10,6 +10,7 @@ model:
   achterstanden:
     kredietvergoeding: € 24,45
   lopende_rente: € 0,12
+  voorstand: € -10,15
   uit_te_betalen: € 1.264,72
   bankrekening:
     naam: Kredietbank Zwolle
