@@ -6,13 +6,14 @@ Wij hebben van u een verzoek ontvangen voor de uitbetaling van de borgstelling v
 
 Het bedrag dat wij uitbetalen hebben wij vastgesteld en is als volgt opgebouwd:
 
-|                                           |                               |
-| ----------------------------------------- | ----------------------------- |
-| Netto kredietsom                          | *{{ model.kredietsom.netto }}*                  |
-| Aflossingen                               | *{{ model.betalingen.aflossing }}*              |
-| Achterstanden kredietvergoeding           | *{{ model.achterstanden.kredietvergoeding }}*   |
-| Lopende rente                             | *{{ model.lopende_rente }}*                     |
-| __Totaal uit te betalen__                 | __*{{ model.uit_te_betalen }}*__                |
+|                                 |                                               |
+| ------------------------------- | --------------------------------------------- |
+| Netto kredietsom                | *{{ model.kredietsom.netto }}*                |
+| Aflossingen                     | *{{ model.betalingen.aflossing }}*            |
+| Achterstanden kredietvergoeding | *{{ model.achterstanden.kredietvergoeding }}* |
+| Lopende rente                   | *{{ model.lopende_rente }}*                   |
+| Voorstand                       | *{{ model.voorstand }}*                       |
+| __Totaal uit te betalen__       | __*{{ model.uit_te_betalen }}*__              |
 
 Het bedrag wordt uitbetaald op rekeningnummer *{{ model.bankrekening.naam }}* t.n.v. *{{ model.bankrekening.nummer }}*.
 
