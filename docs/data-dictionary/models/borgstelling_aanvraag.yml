@@ -1,28 +1,7 @@
-type: object
-title: borgstelling aanvraag
-properties:
-  soort_lening:
-    $ref: "../types/soort_lening.yml"
-  borgstelling_categorie:
-    $ref: "../types/borgstelling_categorie_id.yml"
-  kenmerk:
-    $ref: "../types/kenmerk_aanvrager.yml"
-  contact:
-    $ref: "../types/email.yml"
-  postcode_gebied:
-    $ref: "../types/postcode_gebied.yml"
-  bruto_kredietsom:
-    $ref: "../types/bruto_kredietsom.yml"
-  looptijd:
-    $ref: "../types/looptijd_in_maanden.yml"
-  statistieken:
-    $ref: "../models/statistieken.yml"
-required:
-  - soort_lening
-  - borgstelling_categorie
-  - kenmerk
-  - email
-  - postcode_gebied
-  - bruto_kredietsom
-  - looptijd
-  - statistieken
+allOf:
+  - $ref: "./borgstelling_aanvraag_basis.yml"
+  - properties:
+      statistieken:
+        $ref: "../models/statistieken.yml"
+    required:
+      - statistieken

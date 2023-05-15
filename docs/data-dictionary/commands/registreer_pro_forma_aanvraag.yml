@@ -3,4 +3,4 @@ allOf:
   - title: registreer pro-forma aanvraag
     description: |
       Een aanvraag borgstelling voor een nog te verstrekken saneringskrediet.
-  - $ref: "../models/borgstelling_aanvraag.yml"
+  - $ref: "../models/borgstelling_aanvraag_basis.yml"
