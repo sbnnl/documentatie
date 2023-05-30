@@ -60,7 +60,6 @@ Functionaliteit: Borgstelling aanvragen
       | looptijd | 37 maanden |
     Wanneer het "aanvraag borgstelling" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
-    En wachten enkele momenten
     En is er een "beoordeel maatwerk aanvraag borgstelling" taak actief
 
   Scenario: Maatwerk aanvraag borgstelling accepteren
@@ -112,7 +111,7 @@ Functionaliteit: Borgstelling aanvragen
       | kenmerk | <kenmerk> |
     Wanneer het "aanvraag borgstelling" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
-    Dan is het Schuldenknooppunt bericht geaccepteerd
+    Dan is de "aanvraag borgstelling" juist geregistreerd
 
     Voorbeelden:
       | kenmerk |
