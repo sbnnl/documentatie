@@ -5,7 +5,7 @@ Functionaliteit: Portefeuille overnemen
     Gegeven een kredietbank
     Gegeven een borgstelling categorie
       | kenmerk          | 100       |
-      | premie           | 10%       |
+      | premie           | 1%       |
       | accepteren vanaf | € 0,0     |
       | maatwerk vanaf   | € 5000,0  |
       | afwijzen vanaf   | € 10000,0 |
@@ -17,7 +17,7 @@ Functionaliteit: Portefeuille overnemen
       | looptijd               | 36 maanden                           |
       | soort lening           | SK                                   |
       | contact emailadres     | test@test.nl                         |
-      | uitbetaaldatum         | 01-01-2023                           |
+      | uitbetaaldatum         | 2023-01-01                           |
       | uitstaand saldo        | € 2000,00                            |
     En portefeuille overname bericht statistieken
       | code                | waarde |
@@ -40,20 +40,20 @@ Functionaliteit: Portefeuille overnemen
     En is er een verkoop geregistreerd van € 20,0
     En is het "borgstelling afgegeven" bericht ontvangen door het Schuldenknooppunt
 
-  Scenario: Maatwerk aanvraag borgstelling vanuit een portefeuille overname op basis van verzekerd bedrag aanvragen
-    Gegeven een aanvraag overname bericht
-      | bruto kredietsom | € 5000,0  |
-      | uitstaand saldo  | € 4999,99 |
-    Wanneer het "aanvraag overname" bericht is verstuurd via het Schuldenknooppunt
+  Abstract Scenario: Maatwerk aanvraag borgstelling vanuit een portefeuille overname op basis van verzekerd bedrag aanvragen
+    Gegeven een portefeuille overname bericht
+      | bruto kredietsom | € 5000  |
+      | uitstaand saldo  | € 5001  |
+    Wanneer het "portefeuille overname" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
     En wachten enkele momenten
     Dan is de status van de borgstelling "BEOORDEEL_AANVRAAG"
     En is er een "beoordeel maatwerk aanvraag borgstelling" taak actief
 
   Scenario: Aanvraag borgstelling vanuit een portefeuille overname op basis van uitbetaaldatum afwijzen
-    Gegeven een aanvraag overname bericht
+    Gegeven een portefeuille overname bericht
       | uitbetaaldatum | 2002-01-01 |
-    Wanneer het "aanvraag overname" bericht is verstuurd via het Schuldenknooppunt
+    Wanneer het "portefeuille overname" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
     En wachten enkele momenten
     Dan is de status van de borgstelling "AFGEWEZEN"

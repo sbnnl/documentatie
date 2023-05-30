@@ -2,9 +2,11 @@
 Functionaliteit: Pro-forma borgstelling gebruiken
 
   Achtergrond:
+    Gegeven een kredietbank
     Gegeven een pro-forma borgstelling
       | borgstelling id  | 0955bece-b75a-4368-b9d3-5c5a2596e920 |
       | bruto kredietsom | € 4999,99                            |
+      | looptijd         | 36 maanden                           |
       | status           | AFGEGEVEN                            |
     Gegeven een aanvraag borgstelling bericht
       | kenmerk                   | 093e08db-6791-454b-a172-068099514907 |
@@ -27,8 +29,6 @@ Functionaliteit: Pro-forma borgstelling gebruiken
     Gegeven een pro-forma borgstelling
       | bruto kredietsom | € <pro forma bruto kredietsom> |
       | status           | <pro forma status>             |
-    Wanneer het "aanvraag borgstelling" bericht is verstuurd via het Schuldenknooppunt
-    En het Schuldenknooppunt bericht is verwerkt
     Gegeven een aanvraag borgstelling bericht
       | bruto kredietsom | € <bruto kredietsom> |
     Wanneer het "aanvraag borgstelling" bericht is verstuurd via het Schuldenknooppunt
@@ -45,9 +45,9 @@ Functionaliteit: Pro-forma borgstelling gebruiken
 
   Abstract Scenario: Aanvraag borgstelling met pro forma aanvraag met afwijkende looptijden
     Gegeven een pro-forma borgstelling
-      | looptijd | <looptijd> maanden |
-    Gegeven een aanvraag borgstelling bericht
       | looptijd | <pro forma looptijd> maanden |
+    Gegeven een aanvraag borgstelling bericht
+      | looptijd | <looptijd> maanden |
     Wanneer het "aanvraag borgstelling" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
     Dan is de status van de borgstelling "<status>"
@@ -57,3 +57,4 @@ Functionaliteit: Pro-forma borgstelling gebruiken
       | 36                 | 35       | AFGEGEVEN          |
       | 36                 | 37       | BEOORDEEL_AANVRAAG |
       | 37                 | 36       | AFGEGEVEN          |
+      | 37                 | 37       | AFGEGEVEN          |
