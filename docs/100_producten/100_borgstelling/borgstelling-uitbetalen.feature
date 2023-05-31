@@ -47,6 +47,7 @@ Functionaliteit: Borgstelling uitbetalen
     Gegeven een borgstelling
       | status | <status> |
     Wanneer het "uitbetalen borgstelling" bericht is verstuurd via het Schuldenknooppunt
+    En het Schuldenknooppunt bericht is verwerkt
     Dan is het Schuldenknooppunt bericht niet geaccepteerd
 
     Voorbeelden:
