@@ -35,7 +35,6 @@ paths:
                 - looptijd
                 - postcode_gebied
                 - soort_lening
-                - statistieken
               title: registreer pro-forma aanvraag
               description: >
                 Een aanvraag borgstelling voor een nog te verstrekken
@@ -110,35 +109,6 @@ paths:
                   description: |
                     De looptijd, in maanden, van het saneringskrediet.
                   example: 36
-                statistieken:
-                  type: array
-                  title: statistieken
-                  description: Een verzameling statistieken die betrekking hebben op de lening.
-                  uniqueItems: true
-                  minItems: 4
-                  maxItems: 4
-                  items:
-                    type: object
-                    description: Een statistiek waarde.
-                    required:
-                      - code
-                      - waarde
-                    properties:
-                      code:
-                        type: string
-                        title: code
-                        description: De statistiek code.
-                        example: Leeftijdsgroep
-                        enum:
-                          - Betalende instantie
-                          - Leeftijdsgroep
-                          - Bevolkingsgroep
-                          - Kredietdoel
-                      waarde:
-                        type: string
-                        title: waarde
-                        example: NAZ
-                        nullable: true
       responses:
         "201":
           description: Created
@@ -332,8 +302,6 @@ paths:
                       title: statistieken
                       description: Een verzameling statistieken die betrekking hebben op de lening.
                       uniqueItems: true
-                      minItems: 4
-                      maxItems: 4
                       items:
                         type: object
                         description: Een statistiek waarde.
@@ -468,8 +436,6 @@ paths:
                       title: statistieken
                       description: Een verzameling statistieken die betrekking hebben op de lening.
                       uniqueItems: true
-                      minItems: 4
-                      maxItems: 4
                       items:
                         type: object
                         description: Een statistiek waarde.
