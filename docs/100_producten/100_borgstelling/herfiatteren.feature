@@ -5,7 +5,7 @@ Functionaliteit: Herfiatteren
     Gegeven een kredietbank
     Gegeven een borgstelling categorie
       | kenmerk          | 100       |
-      | premie           | 10%       |
+      | premie           | 1%        |
       | accepteren vanaf | € 0,0     |
       | maatwerk vanaf   | € 5000,0  |
       | afwijzen vanaf   | € 10000,0 |
@@ -36,13 +36,12 @@ Functionaliteit: Herfiatteren
     Wanneer het "aanvraag borgstelling" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
     Dan zijn er 2 borgstelling aanvragen actief
-    En is de status van de borgstelling "WACHTEN"
-    Wanneer de "beoordeel maatwerk borgstelling aanvraag" taak is goedgekeurd
+    Wanneer de "beoordeel maatwerk aanvraag borgstelling" taak is goedgekeurd
     En is de status van de borgstelling "AFGEGEVEN"
     En is "het contract" gearchiveerd
-    En is er één verkoop geregistreerd van € 49,99
+    En is er één verkoop geregistreerd van € 50,00
     En is er geen verkoop geregistreerd van € 20,00
-    En is het "borgstelling afgegeven" bericht 2 keer ontvangen door het Schuldenknooppunt
+    En is het "aanvraag borgstelling afgegeven" bericht 2 keer ontvangen door het Schuldenknooppunt
 
   Scenario: Borgstelling aanvraag met afgeronde borgstelling aanvraag
     Wanneer het "aanvraag borgstelling" bericht is verstuurd via het Schuldenknooppunt
@@ -55,4 +54,4 @@ Functionaliteit: Herfiatteren
     Dan is de status van de borgstelling "AFGEGEVEN"
     En is er één verkoop geregistreerd van € 49,99
     En is er geen verkoop geregistreerd van € 20,00
-    En is het "borgstelling afgegeven" bericht 2 keer ontvangen door het Schuldenknooppunt
+    En is het "aanvraag borgstelling afgegeven" bericht 2 keer ontvangen door het Schuldenknooppunt
