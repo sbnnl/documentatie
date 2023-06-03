@@ -132,7 +132,7 @@ Functionaliteit: Borgstelling aanvragen
     En is er een verkoop geregistreerd van € <verkoop>
 
     Voorbeelden:
-      | bruto kredietsom | premie | verkoop  |
-      | 4999,99          | 10     | 499,99   |
-      | 2000,00          | 10     | 200,00   |
-      | 2000,00          | 5      | 100,00   |
+      | bruto kredietsom | premie | verkoop |
+      | 4999,99          | 10     | 499,99  |
+      | 2000,00          | 10     | 200,00  |
+      | 2000,00          | 5      | 100,00  |

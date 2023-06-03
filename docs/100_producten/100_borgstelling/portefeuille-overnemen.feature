@@ -5,7 +5,7 @@ Functionaliteit: Portefeuille overnemen
     Gegeven een kredietbank
     Gegeven een borgstelling categorie
       | kenmerk          | 100       |
-      | premie           | 1%       |
+      | premie           | 1%        |
       | accepteren vanaf | € 0,0     |
       | maatwerk vanaf   | € 5000,0  |
       | afwijzen vanaf   | € 10000,0 |
@@ -32,7 +32,7 @@ Functionaliteit: Portefeuille overnemen
     En het Schuldenknooppunt bericht is verwerkt
     Dan is de "portefeuille overname" juist geregistreerd
 
-  Scenario: Aanvraag borgstelling vanuit een portefeuille overname premie op basis van uitstaand saldo
+  Abstract Scenario: Aanvraag borgstelling vanuit een portefeuille overname premie op basis van uitstaand saldo
     Wanneer het "portefeuille overname" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
     Dan is de status van de borgstelling "AFGEGEVEN"
@@ -40,10 +40,15 @@ Functionaliteit: Portefeuille overnemen
     En is er een verkoop geregistreerd van € 20,0
     En is het "borgstelling afgegeven" bericht ontvangen door het Schuldenknooppunt
 
-  Abstract Scenario: Maatwerk aanvraag borgstelling vanuit een portefeuille overname op basis van verzekerd bedrag aanvragen
+    Voorbeelden:
+      | bruto kredietsom | uitstaand saldo | verkoop |
+      | € 4999,99        | € 2000          | € 20,0  |
+      | € 6000           | € 4999,99       | € 49,99 |
+
+  Scenario: Maatwerk aanvraag borgstelling vanuit een portefeuille overname op basis van verzekerd bedrag aanvragen
     Gegeven een portefeuille overname bericht
-      | bruto kredietsom | € 5000  |
-      | uitstaand saldo  | € 5001  |
+      | bruto kredietsom | € 6000 |
+      | uitstaand saldo  | € 5001 |
     Wanneer het "portefeuille overname" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
     En wachten enkele momenten
