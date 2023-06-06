@@ -18,7 +18,7 @@ Functionaliteit: Pro forma aanvragen borgstelling (d76f3940b5fd052707a8288fca169
       | soort lening           | SK                                   |
       | contact emailadres     | test@test.nl                         |
 
-  Scenario: pro-forma aanvraag wordt juist geregistreerd
+  Scenario: Pro-forma aanvraag wordt juist geregistreerd
     Wanneer het "pro-forma aanvraag" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
     Dan is de "pro-forma aanvraag" juist geregistreerd
@@ -38,7 +38,7 @@ Functionaliteit: Pro forma aanvragen borgstelling (d76f3940b5fd052707a8288fca169
     Dan is de status van de "pro-forma aanvraag" "BEOORDEEL_AANVRAAG"
     En is er een "beoordeel maatwerk pro-forma aanvraag" taak actief
 
-  Scenario: pro-forma aanvraag op basis van bruto kredietsom afwijzen
+  Scenario: Pro-forma aanvraag op basis van bruto kredietsom afwijzen
     Gegeven een pro-forma aanvraag bericht
       | bruto kredietsom | € 10000,0 |
     Wanneer het "pro-forma aanvraag" bericht is verstuurd via het Schuldenknooppunt
@@ -82,7 +82,7 @@ Functionaliteit: Pro forma aanvragen borgstelling (d76f3940b5fd052707a8288fca169
     En is er geen verkoop geregistreerd
     En is het "pro-forma aanvraag afgewezen" bericht ontvangen door het Schuldenknooppunt
 
-  Abstract Scenario: pro-forma aanvraag met verschillende status grenzen
+  Abstract Scenario: Pro-forma aanvraag met verschillende status grenzen
     Gegeven een borgstelling categorie
       | accepteren vanaf | € <accepteren> |
       | maatwerk vanaf   | € <maatwerk>   |
@@ -97,7 +97,7 @@ Functionaliteit: Pro forma aanvragen borgstelling (d76f3940b5fd052707a8288fca169
       | 0          | 4999,99  | 0        | BEOORDEEL_AANVRAAG |
       | 0          | 0        | 4999,99  | BEOORDEEL_AANVRAAG |
 
-  Abstract Scenario: pro-forma aanvraag met een onbekende borgstelling categorie
+  Abstract Scenario: Pro-forma aanvraag met een onbekende borgstelling categorie
     Gegeven een borgstelling categorie
       | kenmerk | <kenmerk> |
     Wanneer het "pro-forma aanvraag" bericht is verstuurd via het Schuldenknooppunt
