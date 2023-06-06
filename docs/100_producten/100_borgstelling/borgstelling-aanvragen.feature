@@ -25,7 +25,7 @@ Functionaliteit: Borgstelling aanvragen
       | Leeftijdsgroep      | 4      |
       | Soort borgstelling  | 5      |
 
-  Scenario: aanvraag borgstelling wordt juist geregistreerd
+  Scenario: Aanvraag borgstelling wordt juist geregistreerd
     Wanneer het "aanvraag borgstelling" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
     Dan is de "aanvraag borgstelling" juist geregistreerd
@@ -46,7 +46,7 @@ Functionaliteit: Borgstelling aanvragen
     Dan is de status van de "aanvraag borgstelling" "BEOORDEEL_AANVRAAG"
     En is er een "beoordeel maatwerk aanvraag borgstelling" taak actief
 
-  Scenario: aanvraag borgstelling op basis van bruto kredietsom afwijzen
+  Scenario: Aanvraag borgstelling op basis van bruto kredietsom afwijzen
     Gegeven een aanvraag borgstelling bericht
       | bruto kredietsom | € 10000,0 |
     Wanneer het "aanvraag borgstelling" bericht is verstuurd via het Schuldenknooppunt
@@ -60,6 +60,7 @@ Functionaliteit: Borgstelling aanvragen
       | looptijd | 37 maanden |
     Wanneer het "aanvraag borgstelling" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
+    Dan is de status van de "aanvraag borgstelling" "BEOORDEEL_AANVRAAG"
     En is er een "beoordeel maatwerk aanvraag borgstelling" taak actief
 
   Scenario: Maatwerk aanvraag borgstelling accepteren
@@ -72,14 +73,6 @@ Functionaliteit: Borgstelling aanvragen
     En is er een verkoop geregistreerd van € 50,0
     En is het "aanvraag borgstelling afgegeven" bericht ontvangen door het Schuldenknooppunt
 
-  Scenario: Maatwerk aanvraag borgstelling op basis van looptijd aanvragen
-    Gegeven een aanvraag borgstelling bericht
-      | looptijd | 37 maanden |
-    Wanneer het "aanvraag borgstelling" bericht is verstuurd via het Schuldenknooppunt
-    En het Schuldenknooppunt bericht is verwerkt
-    Dan is de status van de "aanvraag borgstelling" "BEOORDEEL_AANVRAAG"
-    En is er een "beoordeel maatwerk aanvraag borgstelling" taak actief
-
   Scenario: Maatwerk aanvraag borgstelling afwijzen
     Gegeven een aanvraag borgstelling bericht
       | bruto kredietsom | € 5000,0 |
@@ -91,7 +84,7 @@ Functionaliteit: Borgstelling aanvragen
     En is er geen verkoop geregistreerd
     En is het "aanvraag borgstelling afgewezen" bericht ontvangen door het Schuldenknooppunt
 
-  Abstract Scenario: aanvraag borgstelling met verschillende status grenzen
+  Abstract Scenario: Aanvraag borgstelling met verschillende status grenzen
     Gegeven een borgstelling categorie
       | accepteren vanaf | € <accepteren> |
       | maatwerk vanaf   | € <maatwerk>   |
@@ -106,7 +99,7 @@ Functionaliteit: Borgstelling aanvragen
       | 0          | 4999,99  | 0        | BEOORDEEL_AANVRAAG |
       | 0          | 0        | 4999,99  | AFGEWEZEN          |
 
-  Abstract Scenario: aanvraag borgstelling met een onbekende borgstelling categorie
+  Abstract Scenario: Aanvraag borgstelling met een onbekende borgstelling categorie
     Gegeven een borgstelling categorie
       | kenmerk | <kenmerk> |
     Wanneer het "aanvraag borgstelling" bericht is verstuurd via het Schuldenknooppunt
