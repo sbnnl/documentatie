@@ -61,6 +61,7 @@ Functionaliteit: Pro forma aanvragen borgstelling
     Wanneer de "beoordeel maatwerk pro-forma aanvraag" taak is goedgekeurd
     Dan is de status van de "pro-forma aanvraag" "AFGEGEVEN"
     En is "het pro-forma contract" gearchiveerd
+    En bevat "het pro-forma contract" het documentId als onze referentie
     En is het "pro-forma aanvraag afgegeven" bericht ontvangen door het Schuldenknooppunt
 
   Scenario: Maatwerk pro-forma aanvraag op basis van looptijd aanvragen

@@ -98,6 +98,7 @@ Functionaliteit: Borgstelling aanvragen
       | 0          | 5000     | 0        | AFGEGEVEN          |
       | 0          | 4999,99  | 0        | BEOORDEEL_AANVRAAG |
       | 0          | 0        | 4999,99  | AFGEWEZEN          |
+      | 5000       | 6000     | 0        | BEOORDEEL_AANVRAAG |
 
   Abstract Scenario: Aanvraag borgstelling met een onbekende borgstelling categorie
     Gegeven een borgstelling categorie

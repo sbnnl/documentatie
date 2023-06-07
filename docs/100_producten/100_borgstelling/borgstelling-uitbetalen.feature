@@ -55,7 +55,6 @@ Functionaliteit: Borgstelling uitbetalen
       | AFGEWEZEN             |
       | AANVRAAG_BEEINDIGD    |
       | BEEINDIGD             |
-      | UITBETAALD            |
       | BEOORDEEL_AANVRAAG    |
       | INGETROKKEN           |
       | WORDT_INGETROKKEN     |
