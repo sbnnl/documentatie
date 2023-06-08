@@ -55,7 +55,6 @@ Functionaliteit: Borgstelling uitbetalen (d7ac116abf35ba5767ade17946628144)
       | AFGEWEZEN             |
       | AANVRAAG_BEEINDIGD    |
       | BEEINDIGD             |
-      | UITBETAALD            |
       | BEOORDEEL_AANVRAAG    |
       | INGETROKKEN           |
       | WORDT_INGETROKKEN     |
