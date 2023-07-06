@@ -11,8 +11,10 @@ properties:
           $ref: "../types/soort_lening.yml"
         borgstelling_categorie:
           $ref: "../types/borgstelling_categorie_id.yml"
+        kredietbank:
+          $ref: "../types/kredietbank_id.yml"
         gemeente:
-          $ref: "../types/gemeente.yml"
+          $ref: "../types/gemeente_id.yml"
         bruto_kredietsom:
           $ref: "../types/bruto_kredietsom.yml"
         looptijd:
@@ -44,8 +46,6 @@ properties:
       properties:
         borgstelling_id:
           $ref: "../types/borgstelling_id.yml"
-        laatste_aanlevering: 
-          $ref: "../types/laatste_aanlevering_op.yml"
         mutaties:
           type: array
           items:
@@ -59,6 +59,28 @@ properties:
                 example: 2023
               saneringskrediet:
                 $ref: "../models/saneringskrediet.yml"
+  kredietbanken:
+    title: kredietbanken
+    type: array
+    items:
+      title: kredietbank
+      properties:
+        id:
+          $ref: "../types/kredietbank_id.yml"
+        naam:
+          $ref: "../types/kredietbank_naam.yml"
+        laatste_aanlevering: 
+          $ref: "../types/laatste_aanlevering_op.yml"
+  gemeenten:
+    title: gemeenten
+    type: array
+    items:
+      title: gemeente
+      properties:
+        id:
+          $ref: "../types/gemeente_id.yml"
+        naam:
+          $ref: "../types/gemeente_naam.yml"
               
         
 
