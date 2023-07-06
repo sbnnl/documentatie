@@ -6,8 +6,6 @@ info:
   description: |
 paths:
   /api/borgstellingen-dashboard:
-    parameters:
-      - $ref: "../../../data-dictionary/parameters/kredietbank_id.yml"
     get:
       tags:
         - borgstellingen dashboard
