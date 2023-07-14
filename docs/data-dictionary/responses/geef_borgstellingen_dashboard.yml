@@ -20,6 +20,7 @@ properties:
         looptijd:
           $ref: "../types/looptijd_in_maanden.yml"
   borgstelling_gebeurtenissen:
+    title: borgstellingen gebeurtenissen
     type: array
     items:
       title: borgstelling gebeurtenissen
@@ -40,16 +41,17 @@ properties:
                 $ref: "../types/gebeurtenis_naam.yml"
   saneringskredieten:
     title: saneringskredieten
+    type: array
     description: Geeft alle sanerinsgkredietinformatie gerelateerd aan een borgstelling.
     items:
-      title: saneringskrediet mutaties
+      title: saneringskredieten mutaties
       properties:
         borgstelling_id:
           $ref: "../types/borgstelling_id.yml"
         mutaties:
           type: array
           items:
-            title: borgstelling krediet mutatie
+            title: saneringskrediet mutaties
             properties:
               maand:
                 type: integer
