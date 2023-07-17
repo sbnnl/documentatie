@@ -74,18 +74,6 @@ Nadat de aanvraag is afgewezen wordt er een afwijzing aangemaakt en opgeslagen i
 
 De status van de borgstelling wijzigt in **afgewezen**.
 
-### Archiveer beëindiging
-
-Nadat de aanvraag is beëindigd wordt er een beëindiging aangemaakt en opgeslagen in het archief. De wettelijke bewaartermijn voor dit soort documenten is 7 jaar.
-
-<!-- einde -->
-
-[Document](beeindiging.message.md)
-
-### Borgstelling aanvraag beëindigd
-
-De status van de borgstelling wijzigt in **beëindigd**.
-
 ## Business requirements
 
 | Nummer | Omschrijving                                                                                                                         | Eigenaar                  |
