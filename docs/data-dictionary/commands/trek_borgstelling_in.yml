@@ -2,9 +2,16 @@ allOf:
   - $ref: "types/command.yml"
   - title: trek borgstelling in
     properties:
+      categorie:
+        type: string
+        enum:
+          - A
+          - B
+          - C
       reden:
         $ref: "../types/reden_intrekken.yml"
     required:
+      - categorie
       - reden
 
     
