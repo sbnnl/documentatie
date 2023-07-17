@@ -1,0 +1,23 @@
+type: object
+title: borgstelling categorie
+properties:
+  handmatige_actie_id:
+    $ref: "../types/handmatige_actie_id.yml"
+  opdracht:
+    type: string
+    enum:
+      - WIJS_AANVRAAG_AF
+      - WIJS_UITBETALING_VERZOEK_AF
+      - KEUR_UITBETALING_VERZOEK_GOED
+      - TREK_BORGSTELLING_IN
+    example: TREK_BORGSTELLING_IN
+  naam:
+    type: string
+    example: Client is overleden
+  text:
+    type: string
+    example: De borgstelling is ingetrokken omdat de client is overleden.
+required:
+  - handmatige_actie_id
+  - naam
+  - tekst
