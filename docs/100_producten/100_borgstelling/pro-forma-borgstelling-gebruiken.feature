@@ -58,3 +58,35 @@ Functionaliteit: Pro-forma borgstelling gebruiken
       | 36                 | 37       | BEOORDEEL_AANVRAAG |
       | 37                 | 36       | AFGEGEVEN          |
       | 37                 | 37       | AFGEGEVEN          |
+
+  Scenario: Pro forma aanvraag eenmalig gebruiken
+    Gegeven een pro-forma borgstelling
+      | borgstelling id  | 0955bece-b75a-4368-b9d3-5c5a2596e920 |
+      | bruto kredietsom | € 7000,00                            |
+      | looptijd         | 36 maanden                           |
+      | status           | AFGEGEVEN                            |
+    Gegeven een aanvraag borgstelling bericht
+      | kenmerk                   | 093e08db-6791-454b-a172-068099514907 |
+      | pro-forma borgstelling id | 0955bece-b75a-4368-b9d3-5c5a2596e920 |
+      | borgstelling categorie    | 100                                  |
+      | bruto kredietsom          | € 7001,00                            |
+      | postcode                  | 3743                                 |
+      | looptijd                  | 36 maanden                           |
+      | soort lening              | SK                                   |
+      | contact emailadres        | test@test.nl                         |
+    Wanneer het "aanvraag borgstelling" bericht is verstuurd via het Schuldenknooppunt
+    En het Schuldenknooppunt bericht is verwerkt
+    Dan is de status van de borgstelling "AFGEGEVEN"
+
+    Gegeven een aanvraag borgstelling bericht
+      | kenmerk                   | 290d9da7-d892-42ff-83a5-0399a03b59b6 |
+      | pro-forma borgstelling id | 0955bece-b75a-4368-b9d3-5c5a2596e920 |
+      | borgstelling categorie    | 100                                  |
+      | bruto kredietsom          | € 7001,00                            |
+      | postcode                  | 3743                                 |
+      | looptijd                  | 36 maanden                           |
+      | soort lening              | SK                                   |
+      | contact emailadres        | test@test.nl                         |
+    Wanneer het "aanvraag borgstelling" bericht is verstuurd via het Schuldenknooppunt
+    En het Schuldenknooppunt bericht is verwerkt
+    Dan is de status van de borgstelling "MAATWERK"
