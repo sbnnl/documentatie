@@ -19,6 +19,16 @@ properties:
           $ref: "../types/bruto_kredietsom.yml"
         looptijd:
           $ref: "../types/looptijd_in_maanden.yml"
+        einde_borgstelling:
+          type: object
+          properties:
+            datum:
+              type: string
+              format: date
+            status:
+              $ref: "../types/gebeurtenis_naam.yml"
+            reden:
+              $ref: "../types/handmatige_actie_id.yml"
   borgstelling_gebeurtenissen:
     title: borgstellingen gebeurtenissen
     type: array
@@ -61,6 +71,14 @@ properties:
                 example: 2023
               saneringskrediet:
                 $ref: "../models/saneringskrediet.yml"
+  handmatige_acties_id:
+    title: categorien
+    type: array
+    properties:
+      id:
+        $ref: "../types/handmatige_actie_id.yml"
+      naam:
+        type: string
   kredietbanken:
     title: kredietbanken
     type: array
