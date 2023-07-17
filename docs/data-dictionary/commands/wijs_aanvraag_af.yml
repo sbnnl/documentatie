@@ -9,10 +9,6 @@ allOf:
           - $ref: "../types/actie.yml"
       categorie:
         type: string
-        enum:
-          - A
-          - B
-          - C
       reden:
         $ref: "../types/afwijs_reden.yml"
     required:

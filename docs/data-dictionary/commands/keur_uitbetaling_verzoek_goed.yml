@@ -7,6 +7,8 @@ allOf:
         allOf:
           - example: goedkeuren
           - $ref: "../types/actie.yml"
+      categorie:
+        type: string
       uitbetaling:
         type: object
         properties:
@@ -43,4 +45,5 @@ allOf:
           - lopende_rente
     required:
       - actie
+      - categorie
       - uitbetaling

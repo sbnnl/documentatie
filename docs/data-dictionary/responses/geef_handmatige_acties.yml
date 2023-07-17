@@ -1,0 +1,10 @@
+allOf:
+  - title: geef handmatige acties
+    properties:
+      items:
+        type: array
+        items:
+          $ref: "../models/handmatige_actie.yml"
+    required:
+      - items
+  - $ref: "types/offset_response.yml" 

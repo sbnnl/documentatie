@@ -1,0 +1,113 @@
+openapi: 3.0.3
+
+info:
+  version: 0.0.1
+  title: Waarborgfonds saneringskredieten
+  description: |
+
+paths:
+  
+  /api/handmatige-acties:
+    post:
+      tags:
+        - handmatige acties
+      summary: Maakt een handmatige actie
+      operationId: MaakHandmatigeActieV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "../../data-dictionary/commands/maak_handmatige_actie.yml"
+      responses:
+        201:
+          $ref: "../../data-dictionary/responses/types/201.yml"
+        400:
+          $ref: "../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../data-dictionary/responses/types/403.yml"
+    get:
+      tags:
+        - handmatige acties
+      summary: Geeft een lijst met handmatige acties
+      operationId: GeefGorgstellingCategorieenV1
+      parameters:
+        - $ref: "../../data-dictionary/parameters/limit.yml"
+        - $ref: "../../data-dictionary/parameters/offset.yml"
+      responses:
+        200:          
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "../../data-dictionary/responses/geef_handmatige_acties.yml"
+        400:
+          $ref: "../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../data-dictionary/responses/types/403.yml"
+
+  /api/handmatige-acties/{handmatige_actie_id}:
+    parameters:
+      - $ref: "../../data-dictionary/parameters/handmatige_actie_id.yml"
+    get:
+      tags:
+        - handmatige acties
+      summary: Geeft een handmatige actie
+      operationId: GeefHandmatigeActieV1
+      responses:
+        200:          
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "../../data-dictionary/responses/geef_handmatige_actie.yml"
+        400:
+          $ref: "../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../data-dictionary/responses/types/403.yml"
+        404:
+          $ref: "../../data-dictionary/responses/types/404.yml"
+    put:
+      tags:
+        - handmatige acties
+      summary: Wijzigt een handmatige actie
+      operationId: WijzigHandmatigeActieV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "../../data-dictionary/commands/wijzig_handmatige_actie.yml"
+      responses:
+        202:
+          $ref: "../../data-dictionary/responses/types/202.yml"
+        400:
+          $ref: "../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../data-dictionary/responses/types/403.yml"
+        404:
+          $ref: "../../data-dictionary/responses/types/404.yml"
+    delete:
+      tags:
+        - handmatige acties
+      summary: Zet een handmatige actie uit
+      operationId: ZethandmatigeActieUitV1
+      responses:
+        202:
+          $ref: "../../data-dictionary/responses/types/202.yml"
+        400:
+          $ref: "../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../data-dictionary/responses/types/403.yml"
+        404:
+          $ref: "../../data-dictionary/responses/types/404.yml"

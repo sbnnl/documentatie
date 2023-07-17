@@ -4,10 +4,6 @@ allOf:
     properties:
       categorie:
         type: string
-        enum:
-          - A
-          - B
-          - C
       reden:
         $ref: "../types/reden_intrekken.yml"
     required:
