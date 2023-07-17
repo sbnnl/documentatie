@@ -71,14 +71,16 @@ properties:
                 example: 2023
               saneringskrediet:
                 $ref: "../models/saneringskrediet.yml"
-  handmatige_acties_id:
-    title: categorien
+  handmatige_acties:
+    title: handmatige acties
     type: array
-    properties:
-      id:
-        $ref: "../types/handmatige_actie_id.yml"
-      naam:
-        type: string
+    items:
+      title: handmatige actie
+      properties:
+        id:
+          $ref: "../types/handmatige_actie_id.yml"
+        naam:
+          $ref: "../types/handmatige_actie_naam.yml"
   kredietbanken:
     title: kredietbanken
     type: array

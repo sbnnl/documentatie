@@ -12,8 +12,7 @@ properties:
       - TREK_BORGSTELLING_IN
     example: TREK_BORGSTELLING_IN
   naam:
-    type: string
-    example: Client is overleden
+    $ref: "../types/handmatige_actie_naam.yml"
   text:
     type: string
     example: De borgstelling is ingetrokken omdat de client is overleden.
