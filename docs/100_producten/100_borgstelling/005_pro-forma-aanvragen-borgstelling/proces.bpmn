@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_15cggpc" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.9.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="1.1.0">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_15cggpc" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.10.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="1.1.0">
   <bpmn:collaboration id="Collaboration_14sgm9f">
     <bpmn:participant id="Participant_07uypnn" name="Pro-forma aanvragen borgstelling" processRef="proces-aanvragen-borgstelling-v1" />
     <bpmn:participant id="rol-aanvrager" name="Schuldhulpverlener (Kredietbank of namens Kredietbank)" />
@@ -30,9 +30,9 @@
         <bpmn:terminateEventDefinition id="TerminateEventDefinition_1yp4f1t" />
       </bpmn:endEvent>
       <bpmn:sequenceFlow id="Flow_0r8t8o4" sourceRef="Event_1fewofl" targetRef="Event_0zxe472" />
-      <bpmn:startEvent id="Event_1fewofl" name="Beëindig lopende processen">
+      <bpmn:startEvent id="Event_1fewofl" name="Beëindig lopende processen" isInterrupting="false">
         <bpmn:outgoing>Flow_0r8t8o4</bpmn:outgoing>
-        <bpmn:signalEventDefinition id="SignalEventDefinition_1omln3y" />
+        <bpmn:messageEventDefinition id="MessageEventDefinition_004kd4w" />
       </bpmn:startEvent>
     </bpmn:subProcess>
     <bpmn:startEvent id="gebeurtenis-aanvraag-ontvangen" name="Pro-forma aanvraag ontvangen">
@@ -102,6 +102,25 @@
       <bpmndi:BPMNShape id="Participant_07uypnn_di" bpmnElement="Participant_07uypnn" isHorizontal="true">
         <dc:Bounds x="159" y="160" width="1295" height="530" />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_0a1rx2z" bpmnElement="Activity_098eukf" isExpanded="true">
+        <dc:Bounds x="330" y="190" width="220" height="140" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_13wkeor" bpmnElement="Event_0zxe472">
+        <dc:Bounds x="462" y="232" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="438" y="275" width="86" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_19wn6i9_di" bpmnElement="Event_1fewofl">
+        <dc:Bounds x="370" y="232" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="345" y="275" width="86" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_09euss3" bpmnElement="Flow_0r8t8o4">
+        <di:waypoint x="406" y="250" />
+        <di:waypoint x="462" y="250" />
+      </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Event_0cwobnn_di" bpmnElement="gebeurtenis-aanvraag-ontvangen">
         <dc:Bounds x="259" y="442" width="36" height="36" />
         <bpmndi:BPMNLabel>
@@ -141,25 +160,6 @@
       <bpmndi:BPMNShape id="taak-archiveer-afwijzing_di" bpmnElement="taak-archiveer-afwijzing">
         <dc:Bounds x="910" y="563" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_0a1rx2z" bpmnElement="Activity_098eukf" isExpanded="true">
-        <dc:Bounds x="330" y="190" width="220" height="140" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_13wkeor" bpmnElement="Event_0zxe472">
-        <dc:Bounds x="462" y="232" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="438" y="275" width="86" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_00binki_di" bpmnElement="Event_1fewofl">
-        <dc:Bounds x="370" y="232" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="345" y="275" width="86" height="27" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="BPMNEdge_09euss3" bpmnElement="Flow_0r8t8o4">
-        <di:waypoint x="406" y="250" />
-        <di:waypoint x="462" y="250" />
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Event_1etalqd_di" bpmnElement="gebeurtenis-maatwerk-aanvraag-afgewezen">
         <dc:Bounds x="702" y="482" width="36" height="36" />
         <bpmndi:BPMNLabel>
