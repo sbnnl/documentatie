@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_15cggpc" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.9.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="1.1.0">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_15cggpc" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.10.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="1.1.0">
   <bpmn:collaboration id="Collaboration_14sgm9f">
     <bpmn:participant id="Participant_1h3yfb7" name="Aanvragen borgstelling" processRef="Process_0a2km3x" />
     <bpmn:participant id="Participant_0d1zdxe" name="Kredietverstrekker (Kredietbank)" />
@@ -89,9 +89,9 @@
         <bpmn:terminateEventDefinition id="TerminateEventDefinition_1yp4f1t" />
       </bpmn:endEvent>
       <bpmn:sequenceFlow id="Flow_0r8t8o4" sourceRef="Event_1fewofl" targetRef="Event_0zxe472" />
-      <bpmn:startEvent id="Event_1fewofl" name="Beëindig lopende processen">
+      <bpmn:startEvent id="Event_1fewofl" name="Beëindig lopende processen" isInterrupting="false">
         <bpmn:outgoing>Flow_0r8t8o4</bpmn:outgoing>
-        <bpmn:signalEventDefinition id="SignalEventDefinition_109gt39" />
+        <bpmn:messageEventDefinition id="MessageEventDefinition_0ife92x" />
       </bpmn:startEvent>
     </bpmn:subProcess>
   </bpmn:process>
@@ -158,21 +158,21 @@
       <bpmndi:BPMNShape id="BPMNShape_0a1rx2z" bpmnElement="Activity_098eukf" isExpanded="true">
         <dc:Bounds x="350" y="180" width="220" height="140" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_13wkeor" bpmnElement="Event_0zxe472">
-        <dc:Bounds x="482" y="222" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="458" y="265" width="86" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_04z6ja1_di" bpmnElement="Event_1fewofl">
+      <bpmndi:BPMNShape id="Event_0hxsceh_di" bpmnElement="Event_1fewofl">
         <dc:Bounds x="390" y="222" width="36" height="36" />
         <bpmndi:BPMNLabel>
           <dc:Bounds x="365" y="265" width="86" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_13wkeor" bpmnElement="Event_0zxe472">
+        <dc:Bounds x="502" y="222" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="478" y="265" width="86" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="BPMNEdge_09euss3" bpmnElement="Flow_0r8t8o4">
         <di:waypoint x="426" y="240" />
-        <di:waypoint x="482" y="240" />
+        <di:waypoint x="502" y="240" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="BPMNEdge_12wzmsx" bpmnElement="Flow_0lsku7x">
         <di:waypoint x="298" y="440" />
