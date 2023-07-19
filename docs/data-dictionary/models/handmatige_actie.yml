@@ -1,5 +1,5 @@
 type: object
-title: borgstelling categorie
+title: handmatige actie
 properties:
   handmatige_actie_id:
     $ref: "../types/handmatige_actie_id.yml"
