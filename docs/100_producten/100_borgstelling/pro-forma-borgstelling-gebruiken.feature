@@ -89,4 +89,4 @@ Functionaliteit: Pro-forma borgstelling gebruiken
       | contact emailadres        | test@test.nl                         |
     Wanneer het "aanvraag borgstelling" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
-    Dan is de status van de borgstelling "MAATWERK"
+    Dan is de status van de borgstelling "BEOORDEEL_AANVRAAG"
