@@ -28,7 +28,7 @@ properties:
             status:
               $ref: "../types/gebeurtenis_naam.yml"
             statistiekcode:
-              $ref: "../types/statistiekcodese_id.yml"
+              $ref: "../types/statistiekcode_id.yml"
   borgstelling_gebeurtenissen:
     title: borgstellingen gebeurtenissen
     type: array
@@ -50,7 +50,7 @@ properties:
               gebeurtenis:
                 $ref: "../types/gebeurtenis_naam.yml"
               statistiekcode:
-                $ref: "../types/statistiekcodese_id.yml"
+                $ref: "../types/statistiekcode_id.yml"
   saneringskredieten:
     title: saneringskredieten
     type: array
@@ -80,9 +80,9 @@ properties:
       title: handmatige actie
       properties:
         id:
-          $ref: "../types/statistiekcodese_id.yml"
+          $ref: "../types/statistiekcode_id.yml"
         naam:
-          $ref: "../types/statistiekcodes_naam.yml"
+          $ref: "../types/statistiekcode_naam.yml"
   kredietbanken:
     title: kredietbanken
     type: array

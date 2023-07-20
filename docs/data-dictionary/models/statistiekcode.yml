@@ -12,7 +12,7 @@ properties:
       - TREK_BORGSTELLING_IN
     example: TREK_BORGSTELLING_IN
   naam:
-    $ref: "../types/handmatige_actie_naam.yml"
+    $ref: "../types/statistiekcode_naam.yml"
   actief:
     type: boolean
 required:
