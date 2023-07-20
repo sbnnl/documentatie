@@ -1,4 +1,0 @@
-allOf:
-  - title: geef handmatige actie
-  - $ref: "types/response.yml"
-  - $ref: "../models/handmatige_actie.yml"

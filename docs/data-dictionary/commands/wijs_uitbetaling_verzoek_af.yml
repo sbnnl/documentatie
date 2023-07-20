@@ -7,11 +7,11 @@ allOf:
         allOf:
           - example: afwijzen
           - $ref: "../types/actie.yml"
-      categorie:
-        type: string
+      statistiekcode:
+        $ref: "../types/statistiekcode_id.yml"
       reden:
         $ref: "../types/uitbetaling_afwijs_reden.yml"
     required:
       - actie
-      - categorie
+      - statistiekcode
       - reden

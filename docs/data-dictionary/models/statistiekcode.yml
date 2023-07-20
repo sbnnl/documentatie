@@ -1,8 +1,8 @@
 type: object
-title: handmatige actie
+title: statistiekcode
 properties:
-  handmatige_actie_id:
-    $ref: "../types/handmatige_actie_id.yml"
+  statistiekcode_id:
+    $ref: "../types/statistiekcode_id.yml"
   opdracht:
     type: string
     enum:
@@ -14,10 +14,10 @@ properties:
   naam:
     type: string
     example: Client is overleden
-  text:
-    type: string
-    example: De borgstelling is ingetrokken omdat de client is overleden.
+  actief:
+    type: boolean
 required:
-  - handmatige_actie_id
+  - statistiekcode_id
+  - opdracht
   - naam
-  - tekst
+  - actief

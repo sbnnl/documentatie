@@ -1,5 +1,0 @@
-allOf:
-  - $ref: "types/command.yml"
-  - type: object
-    title: maak handmatige actie
-  - $ref: "../models/handmatige_actie.yml"

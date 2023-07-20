@@ -1,0 +1,4 @@
+allOf:
+  - title: geef statistiekcode
+  - $ref: "types/response.yml"
+  - $ref: "../models/statistiekcode.yml"

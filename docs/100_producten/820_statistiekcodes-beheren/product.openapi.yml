@@ -7,18 +7,18 @@ info:
 
 paths:
   
-  /api/handmatige-acties:
+  /api/statistiekcodes:
     post:
       tags:
-        - handmatige acties
-      summary: Maakt een handmatige actie
-      operationId: MaakHandmatigeActieV1
+        - statistiekcodes
+      summary: Maakt een statistiekcode
+      operationId: MaakStatistiekcodeV1
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: "../../data-dictionary/commands/maak_handmatige_actie.yml"
+              $ref: "../../data-dictionary/commands/maak_statistiekcode.yml"
       responses:
         201:
           $ref: "../../data-dictionary/responses/types/201.yml"
@@ -30,9 +30,9 @@ paths:
           $ref: "../../data-dictionary/responses/types/403.yml"
     get:
       tags:
-        - handmatige acties
-      summary: Geeft een lijst met handmatige acties
-      operationId: GeefGorgstellingCategorieenV1
+        - statistiekcodes
+      summary: Geeft een lijst met statistiekcodes
+      operationId: GeefStatistiekcodesV1
       parameters:
         - $ref: "../../data-dictionary/parameters/limit.yml"
         - $ref: "../../data-dictionary/parameters/offset.yml"
@@ -42,7 +42,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "../../data-dictionary/responses/geef_handmatige_acties.yml"
+                $ref: "../../data-dictionary/responses/geef_statistiekcodes.yml"
         400:
           $ref: "../../data-dictionary/responses/types/400.yml"
         401:
@@ -50,21 +50,21 @@ paths:
         403:
           $ref: "../../data-dictionary/responses/types/403.yml"
 
-  /api/handmatige-acties/{handmatige_actie_id}:
+  /api/statistiekcodes/{statistiekcode_id}:
     parameters:
-      - $ref: "../../data-dictionary/parameters/handmatige_actie_id.yml"
+      - $ref: "../../data-dictionary/parameters/statistiekcode_id.yml"
     get:
       tags:
-        - handmatige acties
-      summary: Geeft een handmatige actie
-      operationId: GeefHandmatigeActieV1
+        - statistiekcodes
+      summary: Geeft een statistiekcode
+      operationId: GeefStatistiekcodeV1
       responses:
         200:          
           description: OK
           content:
             application/json:
               schema:
-                $ref: "../../data-dictionary/responses/geef_handmatige_actie.yml"
+                $ref: "../../data-dictionary/responses/geef_statistiekcode.yml"
         400:
           $ref: "../../data-dictionary/responses/types/400.yml"
         401:
@@ -75,15 +75,15 @@ paths:
           $ref: "../../data-dictionary/responses/types/404.yml"
     put:
       tags:
-        - handmatige acties
-      summary: Wijzigt een handmatige actie
-      operationId: WijzigHandmatigeActieV1
+        - statistiekcodes
+      summary: Wijzigt een statistiekcode
+      operationId: WijzigStatistiekcodeV1
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: "../../data-dictionary/commands/wijzig_handmatige_actie.yml"
+              $ref: "../../data-dictionary/commands/wijzig_statistiekcode.yml"
       responses:
         202:
           $ref: "../../data-dictionary/responses/types/202.yml"
@@ -97,9 +97,9 @@ paths:
           $ref: "../../data-dictionary/responses/types/404.yml"
     delete:
       tags:
-        - handmatige acties
-      summary: Zet een handmatige actie uit
-      operationId: ZethandmatigeActieUitV1
+        - statistiekcodes
+      summary: Zet een statistiekcode uit
+      operationId: ZetstatistiekcodeUitV1
       responses:
         202:
           $ref: "../../data-dictionary/responses/types/202.yml"
