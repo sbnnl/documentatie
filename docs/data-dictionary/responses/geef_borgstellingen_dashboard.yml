@@ -27,8 +27,8 @@ properties:
               format: date
             status:
               $ref: "../types/gebeurtenis_naam.yml"
-            reden:
-              $ref: "../types/handmatige_actie_id.yml"
+            statistiekcode:
+              $ref: "../types/statistiekcodese_id.yml"
   borgstelling_gebeurtenissen:
     title: borgstellingen gebeurtenissen
     type: array
@@ -49,6 +49,8 @@ properties:
                 format: date-time
               gebeurtenis:
                 $ref: "../types/gebeurtenis_naam.yml"
+              statistiekcode:
+                $ref: "../types/statistiekcodese_id.yml"
   saneringskredieten:
     title: saneringskredieten
     type: array
@@ -71,16 +73,16 @@ properties:
                 example: 2023
               saneringskrediet:
                 $ref: "../models/saneringskrediet.yml"
-  handmatige_acties:
-    title: handmatige acties
+  statistiekcodes:
+    title: statistiekcodes
     type: array
     items:
       title: handmatige actie
       properties:
         id:
-          $ref: "../types/handmatige_actie_id.yml"
+          $ref: "../types/statistiekcodese_id.yml"
         naam:
-          $ref: "../types/handmatige_actie_naam.yml"
+          $ref: "../types/statistiekcodes_naam.yml"
   kredietbanken:
     title: kredietbanken
     type: array
