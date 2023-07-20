@@ -1,0 +1,5 @@
+allOf:
+  - in: path    
+    name: statistiekcode id
+    required: true
+  - $ref: "../types/statistiekcode_id.yml"

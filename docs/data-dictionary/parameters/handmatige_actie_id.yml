@@ -1,5 +1,0 @@
-allOf:
-  - in: path    
-    name: handmatige actie id
-    required: true
-  - $ref: "../types/handmatige_actie_id.yml"

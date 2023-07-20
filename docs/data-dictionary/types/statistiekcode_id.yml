@@ -1,0 +1,4 @@
+type: string
+format: uuid
+description: Uniek identificerend kenmerk van een statistiekcode.
+example: 3c23191e-aa44-4020-9b36-01334633fab0

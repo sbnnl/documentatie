@@ -1,8 +1,8 @@
 type: object
-title: borgstelling categorie
+title: statistiekcode
 properties:
-  handmatige_actie_id:
-    $ref: "../types/handmatige_actie_id.yml"
+  statistiekcode_id:
+    $ref: "../types/statistiekcode_id.yml"
   opdracht:
     type: string
     enum:
@@ -13,10 +13,10 @@ properties:
     example: TREK_BORGSTELLING_IN
   naam:
     $ref: "../types/handmatige_actie_naam.yml"
-  text:
-    type: string
-    example: De borgstelling is ingetrokken omdat de client is overleden.
+  actief:
+    type: boolean
 required:
-  - handmatige_actie_id
+  - statistiekcode_id
+  - opdracht
   - naam
-  - tekst
+  - actief

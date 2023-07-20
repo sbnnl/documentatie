@@ -1,4 +1,0 @@
-type: integer
-description: Uniek identificerend kenmerk van een handmatige actie.
-example: 100
-minimum: 1

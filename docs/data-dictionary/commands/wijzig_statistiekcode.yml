@@ -1,0 +1,5 @@
+allOf:
+  - $ref: "types/command.yml"
+  - type: object
+    title: wijzig statistiekcode
+  - $ref: "../models/statistiekcode.yml"
