@@ -12,8 +12,7 @@ properties:
       - TREK_BORGSTELLING_IN
     example: TREK_BORGSTELLING_IN
   naam:
-    type: string
-    example: Client is overleden
+    $ref: "../types/statistiekcode_naam.yml"
   actief:
     type: boolean
 required:
