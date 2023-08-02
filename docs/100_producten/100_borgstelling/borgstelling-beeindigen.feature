@@ -14,13 +14,13 @@ Functionaliteit: Borgstelling beëindigen
       | beeindigingsdatum | 2022-01-01 |
     Wanneer het "beëindiging borgstelling" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
-    Dan is de status van de borgstelling "BEEINDIGD"
-    En is "de beëindiging" gearchiveerd
+    Dan is de status van de borgstelling "<result>"
+    En is "<file>" gearchiveerd
     En is beëindiging juist geregistreerd
     En is het "borgstelling beëindigd" bericht ontvangen door het Schuldenknooppunt
 
     Voorbeelden:
-      | status             |
-      | AFGEGEVEN          |
-      | BEOORDEEL_AANVRAAG |
-      | BEEINDIGD          |
+      | status                              | file                      |  result             |
+      | AFGEGEVEN                           | de beëindiging            |  BEEINDIGD          |
+      | UITBETAALVERZOEK_AFGEWEZEN          | de beëindiging            |  BEEINDIGD          |
+      | BEOORDEEL_AANVRAAG                  | de aanvraag beëindiging   |  AANVRAAG_BEEINDIGD |
