@@ -20,7 +20,7 @@ Functionaliteit: Borgstelling beëindigen
     En is het "borgstelling beëindigd" bericht ontvangen door het Schuldenknooppunt
 
     Voorbeelden:
-      | status                              | file                      |  result             |
+      | status                              | document                      |  eind_status             |
       | AFGEGEVEN                           | de beëindiging            |  BEEINDIGD          |
       | UITBETAALVERZOEK_AFGEWEZEN          | de beëindiging            |  BEEINDIGD          |
       | BEOORDEEL_AANVRAAG                  | de aanvraag beëindiging   |  AANVRAAG_BEEINDIGD |
