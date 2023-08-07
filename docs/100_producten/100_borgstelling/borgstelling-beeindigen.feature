@@ -14,7 +14,7 @@ Functionaliteit: Borgstelling beëindigen
       | beeindigingsdatum | 2022-01-01 |
     Wanneer het "beëindiging borgstelling" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
-    Dan is de status van de borgstelling "<result>"
+    Dan is de status van de borgstelling "<eind_status>"
     En is "<file>" gearchiveerd
     En is beëindiging juist geregistreerd
     En is het "borgstelling beëindigd" bericht ontvangen door het Schuldenknooppunt
