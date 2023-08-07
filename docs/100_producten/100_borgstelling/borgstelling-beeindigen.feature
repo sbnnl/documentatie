@@ -15,7 +15,7 @@ Functionaliteit: Borgstelling beëindigen
     Wanneer het "beëindiging borgstelling" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
     Dan is de status van de borgstelling "<eind_status>"
-    En is "<file>" gearchiveerd
+    En is "<document>" gearchiveerd
     En is beëindiging juist geregistreerd
     En is het "borgstelling beëindigd" bericht ontvangen door het Schuldenknooppunt
 
