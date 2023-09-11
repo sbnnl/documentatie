@@ -38,7 +38,7 @@ Functionaliteit: Borgstelling uitbetalen
     En is er een "beoordeel uitbetaling" taak actief
     Wanneer de "beoordeel uitbetaling" taak is afgewezen
       | reden | 879a7226-eb98-43d5-a32b-63227e868cc8 |
-    Dan is de status van de borgstelling "AFGEGEVEN"
+    Dan is de status van de borgstelling "UITBETAALVERZOEK_AFGEWEZEN"
     En is "de uitbetaling afwijzing" gearchiveerd
     En bevat "de uitbetaling afwijzing" de tekst "879a7226-eb98-43d5-a32b-63227e868cc8"
     En is het "uitbetaaling afwijzing" bericht ontvangen door het Schuldenknooppunt
