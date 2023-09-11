@@ -1,6 +1,7 @@
 - borgstelling-aanvragen.feature
 - borgstelling-aanvullen.feature
 - borgstelling-beeindigen.feature
+- borgstelling-intrekken.feature
 - borgstelling-uitbetalen.feature
 - herfiatteren.feature
 - portefeuille-overnemen.feature
