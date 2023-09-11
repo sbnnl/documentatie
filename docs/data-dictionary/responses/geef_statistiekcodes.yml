@@ -1,0 +1,10 @@
+allOf:
+  - title: geef statistiekcode
+    properties:
+      items:
+        type: array
+        items:
+          $ref: "../models/statistiekcode.yml"
+    required:
+      - items
+  - $ref: "types/offset_response.yml" 

@@ -1,0 +1,113 @@
+openapi: 3.0.3
+
+info:
+  version: 0.0.1
+  title: Waarborgfonds saneringskredieten
+  description: |
+
+paths:
+  
+  /api/statistiekcodes:
+    post:
+      tags:
+        - statistiekcodes
+      summary: Maakt een statistiekcode
+      operationId: MaakStatistiekcodeV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "../../data-dictionary/commands/maak_statistiekcode.yml"
+      responses:
+        201:
+          $ref: "../../data-dictionary/responses/types/201.yml"
+        400:
+          $ref: "../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../data-dictionary/responses/types/403.yml"
+    get:
+      tags:
+        - statistiekcodes
+      summary: Geeft een lijst met statistiekcodes
+      operationId: GeefStatistiekcodesV1
+      parameters:
+        - $ref: "../../data-dictionary/parameters/limit.yml"
+        - $ref: "../../data-dictionary/parameters/offset.yml"
+      responses:
+        200:          
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "../../data-dictionary/responses/geef_statistiekcodes.yml"
+        400:
+          $ref: "../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../data-dictionary/responses/types/403.yml"
+
+  /api/statistiekcodes/{statistiekcode_id}:
+    parameters:
+      - $ref: "../../data-dictionary/parameters/statistiekcode_id.yml"
+    get:
+      tags:
+        - statistiekcodes
+      summary: Geeft een statistiekcode
+      operationId: GeefStatistiekcodeV1
+      responses:
+        200:          
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "../../data-dictionary/responses/geef_statistiekcode.yml"
+        400:
+          $ref: "../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../data-dictionary/responses/types/403.yml"
+        404:
+          $ref: "../../data-dictionary/responses/types/404.yml"
+    put:
+      tags:
+        - statistiekcodes
+      summary: Wijzigt een statistiekcode
+      operationId: WijzigStatistiekcodeV1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "../../data-dictionary/commands/wijzig_statistiekcode.yml"
+      responses:
+        202:
+          $ref: "../../data-dictionary/responses/types/202.yml"
+        400:
+          $ref: "../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../data-dictionary/responses/types/403.yml"
+        404:
+          $ref: "../../data-dictionary/responses/types/404.yml"
+    delete:
+      tags:
+        - statistiekcodes
+      summary: Zet een statistiekcode uit
+      operationId: ZetstatistiekcodeUitV1
+      responses:
+        202:
+          $ref: "../../data-dictionary/responses/types/202.yml"
+        400:
+          $ref: "../../data-dictionary/responses/types/400.yml"
+        401:
+          $ref: "../../data-dictionary/responses/types/401.yml"
+        403:
+          $ref: "../../data-dictionary/responses/types/403.yml"
+        404:
+          $ref: "../../data-dictionary/responses/types/404.yml"

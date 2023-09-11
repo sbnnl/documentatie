@@ -1,0 +1,22 @@
+type: object
+title: statistiekcode
+properties:
+  statistiekcode_id:
+    $ref: "../types/statistiekcode_id.yml"
+  opdracht:
+    type: string
+    enum:
+      - WIJS_AANVRAAG_AF
+      - WIJS_UITBETALING_VERZOEK_AF
+      - KEUR_UITBETALING_VERZOEK_GOED
+      - TREK_BORGSTELLING_IN
+    example: TREK_BORGSTELLING_IN
+  naam:
+    $ref: "../types/statistiekcode_naam.yml"
+  actief:
+    type: boolean
+required:
+  - statistiekcode_id
+  - opdracht
+  - naam
+  - actief
