@@ -1,7 +1,7 @@
 locale: nl
 git:
   type: github
-  urlTemplate: https://github.com/{{{repository}}}/blob/{{{branch}}}
+  urlTemplate: https://github.com/{{{repository}}}/blob/{{{branch}}}/{{{file}}}
 hosting:
   type: azure-static-web-app
 #   privateAccess:
