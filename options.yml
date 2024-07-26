@@ -81,3 +81,40 @@ message:
     - name: Onze referentie
     - name: Gemeente
       value: Gemeente Zwolle
+letter:
+  googleFont: 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap'
+  subject:
+    title: Geen onderwerp
+    subtitle: Geef een onderwerp op!
+  to: |
+    Kredietbank Zwolle<br>
+    t.a.v. afdeling kredietverlening<br>
+    Postbus 100070<br>
+    8000 GA Zwolle<br/>
+    <span class="kix">8000GA</span>
+  date: Utrecht, 1 januari 2022
+  references:
+    - name: Onderwerp
+      value: Geen onderwerp gevonden, geef een onderwerp op!
+    - name: Uw referentie
+      value: 5461135-1
+    - name: Onze referentie
+    - name: Gemeente
+      value: Gemeente Zwolle
+  salutation: Beste heer, mevrouw,
+  signature: |
+    Waarborgfonds Saneringskredieten,<br/>
+    namens deze,<br/>
+    <img src="{{{root}}}assets/images/letter/signature.svg" alt="signature" /><br/>
+    Gerrit Jan Schep,<br/>
+    Bestuurder Stichting Bemiddeling en Fondsbeheer
+  contact: |
+   <p>
+        Waarborgfonds Saneringskredieten<br>
+        Koningin Wilhelminalaan 5<br>
+        3527 LA Utrecht
+    </p>
+    <p>
+        KvK: 59083441<br>
+        BTW: NL37INGB0674629892
+    </p>

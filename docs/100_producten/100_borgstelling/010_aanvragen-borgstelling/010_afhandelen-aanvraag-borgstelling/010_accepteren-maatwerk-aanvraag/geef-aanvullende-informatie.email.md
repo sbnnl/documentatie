@@ -1,5 +1,3 @@
-{{ salutation }}
-
 Bedankt voor je aanvraag voor borgstelling via het Waarborgfonds. Wij willen je graag een paar vragen stellen om meer te weten te komen over de klant en de zekerheid van terugbetaling van het saneringskrediet. Deze vragen helpen ons om het Waarborgfonds toekomstbestendig te maken en dienen als een risico-inventarisatie voorafgaand aan de borgstelling.
 
 Op basis van de antwoorden neemt het Waarborgfonds (in overleg met de aanvragende kredietbank) een besluit over de acceptatie van het krediet.

@@ -1,5 +1,3 @@
-{{ salutation }}
-
 Het Waarborgfonds Saneringskredieten (Wsk) heeft met u een overeenkomst voor de borgstelling van saneringskredieten.
 
 Wij hebben van u een aanvraag ontvangen voor de borgstelling van saneringskrediet met kenmerk *{{ model.kenmerk }}*. De aanvraag hebben wij beoordeeld.

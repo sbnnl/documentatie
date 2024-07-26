@@ -1,5 +1,3 @@
-{{ salutation }}
-
 Wij hebben een verzoek gekregen om de borgstelling voor het saneringskrediet met kenmerk *{{ model.kenmerk }}* uit te betalen. Om te beoordelen of wij tot uitbetaling over kunnen gaan willen wij je graag nog een paar vragen stellen. Deze vragen helpen ons om vast te stellen welke acties er zijn ondernomen om het saneringskrediet te kunnen innen en of er is voldaan aan het fondsbeleid.
 
 Hieronder staan de financiële gegevens zoals die bij ons bekend zijn. Deze gegevens worden gebruikt om het uit te betalen bedrag vast te stellen.
