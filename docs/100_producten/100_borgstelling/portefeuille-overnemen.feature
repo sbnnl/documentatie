@@ -33,11 +33,14 @@ Functionaliteit: Portefeuille overnemen
     Dan is de "portefeuille overname" juist geregistreerd
 
   Abstract Scenario: Aanvraag borgstelling vanuit een portefeuille overname premie op basis van uitstaand saldo
+    Gegeven een portefeuille overname bericht
+      | bruto kredietsom       | <bruto kredietsom>                            |
+      | uitstaand saldo        | <uitstaand saldo>                             |
     Wanneer het "portefeuille overname" bericht is verstuurd via het Schuldenknooppunt
     En het Schuldenknooppunt bericht is verwerkt
     Dan is de status van de borgstelling "AFGEGEVEN"
     En is "het contract" gearchiveerd
-    En is er een verkoop geregistreerd van € 20,0
+    En is er een verkoop geregistreerd van <verkoop>
     En is het "borgstelling afgegeven" bericht ontvangen door het Schuldenknooppunt
 
     Voorbeelden:
