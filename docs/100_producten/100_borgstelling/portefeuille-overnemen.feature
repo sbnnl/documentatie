@@ -45,8 +45,8 @@ Functionaliteit: Portefeuille overnemen
 
     Voorbeelden:
       | bruto kredietsom | uitstaand saldo | verkoop |
-      | € 4999,99        | € 2000          | € 20,0  |
-      | € 6000           | € 4999,99       | € 49,99 |
+      | € 4999,99        | € 2000          | € 49,99 |
+      | € 6000           | € 4999,99       | € 60,00 |
 
   Scenario: Maatwerk aanvraag borgstelling vanuit een portefeuille overname op basis van verzekerd bedrag aanvragen
     Gegeven een portefeuille overname bericht
