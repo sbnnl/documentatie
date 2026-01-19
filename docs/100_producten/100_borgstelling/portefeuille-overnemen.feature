@@ -17,7 +17,7 @@ Functionaliteit: Portefeuille overnemen
       | looptijd               | 36 maanden                           |
       | soort lening           | SK                                   |
       | contact emailadres     | test@test.nl                         |
-      | uitbetaaldatum         | 2023-01-01                           |
+      | uitbetaaldatum         | 2026-01-01                           |
       | uitstaand saldo        | € 2000,00                            |
     En portefeuille overname bericht statistieken
       | code                | waarde |
